@@ -1,0 +1,26 @@
+<div class="row">
+  <!-- <div class="row" style="padding-top: 30px;"> -->
+  <!-- <div class="row straging-fixed" style="z-index: 998; margin-top: 3px;">
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 content3 content-teb-seo" style="padding-bottom: 20px;">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content">
+
+          <ul class="nav-tabs nav menu-tabs">
+          </ul>
+
+          <select class="select-straging fixed" style="right: 1.1%;" [(ngModel)]="channelYoutubeSelected"
+            (ngModelChange)="onChannelYoutubeChange($event)">
+            <option *ngFor="let item of itemChannelYoutubeOption" [ngValue]="item.value"> {{item.channelName}} - {{item.label}} </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <select id="optionYoutubeChannelSelected" style="position: absolute; right: 25px; top: 25px; z-index: 1;"
+    class="select-straging" [(ngModel)]="channelYoutubeSelected" (ngModelChange)="onChannelYoutubeChange($event)">
+    <option *ngFor="let item of itemChannelYoutubeOption" [ngValue]="item.value">
+      {{fixedLength(item.channelName, item.label)}}
+    </option>
+  </select>
+  <router-outlet></router-outlet>
+</div>

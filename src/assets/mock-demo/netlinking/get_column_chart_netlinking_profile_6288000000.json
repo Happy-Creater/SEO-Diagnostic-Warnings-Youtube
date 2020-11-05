@@ -1,0 +1,61 @@
+{
+  "result": [
+    {
+      "total": 1,
+      "natural": 0,
+      "unnatural": 0,
+      "suspicious": 1,
+      "category": "Others"
+    },
+    {
+      "total": 0,
+      "natural": 0,
+      "unnatural": 0,
+      "suspicious": 0,
+      "category": "E-commerce or Annonce"
+    },
+    {
+      "total": 5,
+      "natural": 2,
+      "unnatural": 2,
+      "suspicious": 1,
+      "category": "Blog"
+    },
+    {
+      "total": 1,
+      "natural": 1,
+      "unnatural": 0,
+      "suspicious": 0,
+      "category": "Forum"
+    },
+    {
+      "total": 4,
+      "natural": 0,
+      "unnatural": 4,
+      "suspicious": 0,
+      "category": "Encyclopedia or News"
+    },
+    {
+      "total": 1,
+      "natural": 0,
+      "unnatural": 1,
+      "suspicious": 0,
+      "category": "Directory"
+    },
+    {
+      "total": 0,
+      "natural": 0,
+      "unnatural": 0,
+      "suspicious": 0,
+      "category": "Error"
+    },
+    {
+      "total": 3,
+      "natural": 3,
+      "unnatural": 0,
+      "suspicious": 0,
+      "category": "Social media"
+    }
+  ],
+  "status": "ok"
+}

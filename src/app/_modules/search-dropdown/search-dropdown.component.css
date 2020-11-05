@@ -1,0 +1,17 @@
+.module-dropdown {
+    padding-left: 0px !important;
+}
+
+.module-dropdown > li {
+    padding-left: 0px !important;
+}
+
+.module-dropdown li a {
+    cursor: pointer !important;
+}
+
+ul>li{
+    list-style-type: none !important;
+}
+
+input[type=text]::-ms-clear { display: none; }/*edge*/

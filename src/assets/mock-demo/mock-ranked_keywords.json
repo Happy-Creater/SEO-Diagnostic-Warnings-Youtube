@@ -1,0 +1,674 @@
+{
+  "result": [
+    {
+      "label": "All Keywords",
+      "value": -1
+    },
+    {
+      "label": "Assurance Accident",
+      "value": 12666,
+      "status": "head"
+    },
+    {
+      "label": "Assurantiel Accident",
+      "value": 12672,
+      "status": "child"
+    },
+    {
+      "label": "Famille accident",
+      "value": 12675,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Auto",
+      "value": 12678,
+      "status": "head"
+    },
+    {
+      "label": "Assurantiel auto/voiture",
+      "value": 12681,
+      "status": "child"
+    },
+    {
+      "label": "Camping/Caravane",
+      "value": 12906,
+      "status": "child"
+    },
+    {
+      "label": "Comparateur auto",
+      "value": 12909,
+      "status": "child"
+    },
+    {
+      "label": "Conseils Auto",
+      "value": 12918,
+      "status": "child"
+    },
+    {
+      "label": "Devis Auto",
+      "value": 12921,
+      "status": "child"
+    },
+    {
+      "label": "Gamme auto",
+      "value": 12924,
+      "status": "child"
+    },
+    {
+      "label": "Prix auto",
+      "value": 12927,
+      "status": "child"
+    },
+    {
+      "label": "Produits auto",
+      "value": 12930,
+      "status": "child"
+    },
+    {
+      "label": "Assurance de prêt",
+      "value": 12942,
+      "status": "head"
+    },
+    {
+      "label": "Assurantiel emprunteur",
+      "value": 12945,
+      "status": "child"
+    },
+    {
+      "label": "Comparateur emprunteur",
+      "value": 12948,
+      "status": "child"
+    },
+    {
+      "label": "Conseils emprunteur",
+      "value": 12951,
+      "status": "child"
+    },
+    {
+      "label": "Devis emprunteur",
+      "value": 12954,
+      "status": "child"
+    },
+    {
+      "label": "Taux emprunteur",
+      "value": 12957,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Décès",
+      "value": 12966,
+      "status": "head"
+    },
+    {
+      "label": "Assurance vie deces",
+      "value": 12969,
+      "status": "child"
+    },
+    {
+      "label": "Assurantiel deces",
+      "value": 12972,
+      "status": "child"
+    },
+    {
+      "label": "Capital deces",
+      "value": 12996,
+      "status": "child"
+    },
+    {
+      "label": "Conseils deces",
+      "value": 13002,
+      "status": "child"
+    },
+    {
+      "label": "Deces/Invalidité",
+      "value": 13005,
+      "status": "child"
+    },
+    {
+      "label": "Devis deces",
+      "value": 13008,
+      "status": "child"
+    },
+    {
+      "label": "Donation / Succession deces",
+      "value": 13017,
+      "status": "child"
+    },
+    {
+      "label": "Prix deces",
+      "value": 13020,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Dépendance",
+      "value": 13023,
+      "status": "head"
+    },
+    {
+      "label": "Autonomie Dépendance",
+      "value": 13032,
+      "status": "child"
+    },
+    {
+      "label": "Comparateur Dépendance",
+      "value": 13035,
+      "status": "child"
+    },
+    {
+      "label": "Conseils Dépendance",
+      "value": 13038,
+      "status": "child"
+    },
+    {
+      "label": "Devis Dépendance",
+      "value": 13044,
+      "status": "child"
+    },
+    {
+      "label": "Générique Dépendance",
+      "value": 13050,
+      "status": "child"
+    },
+    {
+      "label": "Invalidité Dépendance",
+      "value": 13053,
+      "status": "child"
+    },
+    {
+      "label": "Produit Dépendance",
+      "value": 13059,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Fonctionnaire",
+      "value": 13071,
+      "status": "head"
+    },
+    {
+      "label": "Assurance Fonctionnaire",
+      "value": 13074,
+      "status": "child"
+    },
+    {
+      "label": "Mutuelle Fonctionnaire",
+      "value": 13077,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Habitation",
+      "value": 13083,
+      "status": "head"
+    },
+    {
+      "label": "assurantiel habitation",
+      "value": 13086,
+      "status": "child"
+    },
+    {
+      "label": "conseils habitation",
+      "value": 13089,
+      "status": "child"
+    },
+    {
+      "label": "devis habitation",
+      "value": 13092,
+      "status": "child"
+    },
+    {
+      "label": "prix habitation",
+      "value": 13104,
+      "status": "child"
+    },
+    {
+      "label": "produit habitation",
+      "value": 13107,
+      "status": "child"
+    },
+    {
+      "label": "souscription habitation",
+      "value": 13110,
+      "status": "child"
+    },
+    {
+      "label": "étudiant habitation",
+      "value": 13098,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Hospitalisation",
+      "value": 13113,
+      "status": "head"
+    },
+    {
+      "label": "Assurantiel Hospi",
+      "value": 13119,
+      "status": "child"
+    },
+    {
+      "label": "Devis Hospi",
+      "value": 13122,
+      "status": "child"
+    },
+    {
+      "label": "Frais hospital",
+      "value": 13125,
+      "status": "child"
+    },
+    {
+      "label": "indemnité hospi",
+      "value": 13131,
+      "status": "child"
+    },
+    {
+      "label": "Remboursement hospi",
+      "value": 13137,
+      "status": "child"
+    },
+    {
+      "label": "Assurance pro",
+      "value": 13140,
+      "status": "head"
+    },
+    {
+      "label": "Générique pro",
+      "value": 13146,
+      "status": "child"
+    },
+    {
+      "label": "MRP",
+      "value": 13149,
+      "status": "child"
+    },
+    {
+      "label": "Pro Agri",
+      "value": 13155,
+      "status": "child"
+    },
+    {
+      "label": "Pro Artisans/Commercants",
+      "value": 13161,
+      "status": "child"
+    },
+    {
+      "label": "Pro Assurance auto",
+      "value": 13164,
+      "status": "child"
+    },
+    {
+      "label": "Pro Assurance de prêt",
+      "value": 13167,
+      "status": "child"
+    },
+    {
+      "label": "Pro Assurance Santé",
+      "value": 13173,
+      "status": "child"
+    },
+    {
+      "label": "Pro Auto entrepreneur",
+      "value": 13176,
+      "status": "child"
+    },
+    {
+      "label": "Pro BTP",
+      "value": 13179,
+      "status": "child"
+    },
+    {
+      "label": "Pro Entreprise",
+      "value": 13185,
+      "status": "child"
+    },
+    {
+      "label": "Pro Epargne",
+      "value": 13194,
+      "status": "child"
+    },
+    {
+      "label": "Pro Protection Juridique",
+      "value": 13200,
+      "status": "child"
+    },
+    {
+      "label": "Pro Prévoyance",
+      "value": 13197,
+      "status": "child"
+    },
+    {
+      "label": "Pro Responsabilité civile",
+      "value": 13203,
+      "status": "child"
+    },
+    {
+      "label": "Professionels de l'automobile",
+      "value": 13209,
+      "status": "child"
+    },
+    {
+      "label": "Professions Libérales",
+      "value": 13215,
+      "status": "child"
+    },
+    {
+      "label": "Professions Médicales",
+      "value": 13221,
+      "status": "child"
+    },
+    {
+      "label": "Assurance retraite",
+      "value": 13233,
+      "status": "head"
+    },
+    {
+      "label": "assurance retraite",
+      "value": 13239,
+      "status": "child"
+    },
+    {
+      "label": "conseils PERP",
+      "value": 13257,
+      "status": "child"
+    },
+    {
+      "label": "conseils retraite",
+      "value": 13260,
+      "status": "child"
+    },
+    {
+      "label": "devis PERP",
+      "value": 13263,
+      "status": "child"
+    },
+    {
+      "label": "devis retraite",
+      "value": 13266,
+      "status": "child"
+    },
+    {
+      "label": "fiscalité PERP",
+      "value": 13278,
+      "status": "child"
+    },
+    {
+      "label": "PERP",
+      "value": 13281,
+      "status": "child"
+    },
+    {
+      "label": "retraite CSP",
+      "value": 13284,
+      "status": "child"
+    },
+    {
+      "label": "simulateur retraite",
+      "value": 13290,
+      "status": "child"
+    },
+    {
+      "label": "épargne retraite",
+      "value": 13272,
+      "status": "child"
+    },
+    {
+      "label": "Assurance santé",
+      "value": 13296,
+      "status": "head"
+    },
+    {
+      "label": "assurance dentaire",
+      "value": 13302,
+      "status": "child"
+    },
+    {
+      "label": "assurance maladie",
+      "value": 13305,
+      "status": "child"
+    },
+    {
+      "label": "assurance optique",
+      "value": 13308,
+      "status": "child"
+    },
+    {
+      "label": "assurance santé",
+      "value": 13311,
+      "status": "child"
+    },
+    {
+      "label": "complémentaire santé",
+      "value": 13317,
+      "status": "child"
+    },
+    {
+      "label": "conseils santé",
+      "value": 13320,
+      "status": "child"
+    },
+    {
+      "label": "Devis santé",
+      "value": 13323,
+      "status": "child"
+    },
+    {
+      "label": "Mutuelle",
+      "value": 13332,
+      "status": "child"
+    },
+    {
+      "label": "prix santé",
+      "value": 13335,
+      "status": "child"
+    },
+    {
+      "label": "santé famille",
+      "value": 13344,
+      "status": "child"
+    },
+    {
+      "label": "santé senior",
+      "value": 13347,
+      "status": "child"
+    },
+    {
+      "label": "santé étudiant",
+      "value": 13341,
+      "status": "child"
+    },
+    {
+      "label": "Souscription santé",
+      "value": 13350,
+      "status": "child"
+    },
+    {
+      "label": "Assurance Scolaire",
+      "value": 13353,
+      "status": "head"
+    },
+    {
+      "label": "Assurance scolaire",
+      "value": 13356,
+      "status": "child"
+    },
+    {
+      "label": "Devis scolaire",
+      "value": 13359,
+      "status": "child"
+    },
+    {
+      "label": "Assurance vie",
+      "value": 13362,
+      "status": "head"
+    },
+    {
+      "label": "Afer",
+      "value": 13371,
+      "status": "child"
+    },
+    {
+      "label": "assurantiel assurance vie",
+      "value": 13377,
+      "status": "child"
+    },
+    {
+      "label": "conseils assurance vie",
+      "value": 13380,
+      "status": "child"
+    },
+    {
+      "label": "devis assurance vie",
+      "value": 13383,
+      "status": "child"
+    },
+    {
+      "label": "fiscalité assurance vie",
+      "value": 13386,
+      "status": "child"
+    },
+    {
+      "label": "fond euro",
+      "value": 13389,
+      "status": "child"
+    },
+    {
+      "label": "frais assurance vie",
+      "value": 13392,
+      "status": "child"
+    },
+    {
+      "label": "prix assurancce vie",
+      "value": 13395,
+      "status": "child"
+    },
+    {
+      "label": "prix assurance vie",
+      "value": 13398,
+      "status": "child"
+    },
+    {
+      "label": "rachat assurance vie",
+      "value": 13401,
+      "status": "child"
+    },
+    {
+      "label": "souscription assurance vie",
+      "value": 13407,
+      "status": "child"
+    },
+    {
+      "label": "succession asssurance vie",
+      "value": 13410,
+      "status": "child"
+    },
+    {
+      "label": "taux assurance vie",
+      "value": 13416,
+      "status": "child"
+    },
+    {
+      "label": "Générique assurance",
+      "value": 13782,
+      "status": "head"
+    },
+    {
+      "label": "Générique assurance",
+      "value": 13785,
+      "status": "child"
+    },
+    {
+      "label": "Loisirs",
+      "value": 31013,
+      "status": "head"
+    },
+    {
+      "label": "Marque",
+      "value": 13788,
+      "status": "head"
+    },
+    {
+      "label": "Marque",
+      "value": 13791,
+      "status": "child"
+    },
+    {
+      "label": "Marque Produit",
+      "value": 13794,
+      "status": "child"
+    },
+    {
+      "label": "Protection Marque",
+      "value": 13797,
+      "status": "child"
+    },
+    {
+      "label": "Obsèques",
+      "value": 13800,
+      "status": "head"
+    },
+    {
+      "label": "Assurantiel Obs",
+      "value": 13803,
+      "status": "child"
+    },
+    {
+      "label": "Comparateur Obs",
+      "value": 13806,
+      "status": "child"
+    },
+    {
+      "label": "Conseils",
+      "value": 13809,
+      "status": "child"
+    },
+    {
+      "label": "Conseils Obs",
+      "value": 13812,
+      "status": "child"
+    },
+    {
+      "label": "Contextuel Obs",
+      "value": 13818,
+      "status": "child"
+    },
+    {
+      "label": "Devis Obs",
+      "value": 13821,
+      "status": "child"
+    },
+    {
+      "label": "Frais Obseques",
+      "value": 13824,
+      "status": "child"
+    },
+    {
+      "label": "Obsèques Prévoyance",
+      "value": 13827,
+      "status": "child"
+    },
+    {
+      "label": "Prix Obs",
+      "value": 13830,
+      "status": "child"
+    },
+    {
+      "label": "Protection Juridique",
+      "value": 13833,
+      "status": "head"
+    },
+    {
+      "label": "aide/conseil juridique",
+      "value": 13836,
+      "status": "child"
+    },
+    {
+      "label": "assurance juridique",
+      "value": 13839,
+      "status": "child"
+    },
+    {
+      "label": "Test agence",
+      "value": 30982,
+      "status": "head"
+    }
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,23 @@
+/*.block-sub-search button.btn.btn-default {
+    height: 34px;
+    margin-top: 0px !important;
+}*/
+
+a.icon-edit, a.icon-remove {
+    cursor: pointer;
+}
+
+.table > thead > tr > th:first-child {
+    text-align: center;
+}
+.table.tb-confi-col-4>thead>tr>th:nth-child(2), 
+.table.tb-confi-col-4>tbody>tr>td:nth-child(2)  {
+    width: unset;
+}
+.center {
+    text-align: center !important;
+}
+
+.small-dialog {
+    width: 100px;
+}

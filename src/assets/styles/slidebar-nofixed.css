@@ -1,0 +1,88 @@
+   
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: #f0f1f1;
+  position: relative;
+  height:50px;
+}
+
+.wrapper .next-slide, .wrapper .prev-slide {
+  background: #fff;
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  color: #6b6b6b;
+  text-align: center;
+  line-height: 3.5em;
+  cursor: pointer;
+  transition: background .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out;
+  -webkit-transition: background .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out;
+  z-index: 2;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: -2px 2px 26px -1px rgba(221,221,221,1);
+-moz-box-shadow: -2px 2px 26px -1px rgba(221,221,221,1);
+box-shadow: -2px 2px 26px -1px rgba(221,221,221,1);
+}
+
+.wrapper .next-slide:hover, .wrapper .prev-slide:hover {
+  -webkit-box-shadow: -2px 2px 26px -1px rgba(221,221,221,1);
+-moz-box-shadow: -2px 2px 26px -1px rgba(221,221,221,1);
+box-shadow: -2px 2px 26px -1px rgba(221,221,221,1);
+
+}
+
+.wrapper .next-slide {
+  right: -50px;
+}
+
+.wrapper .prev-slide {
+  left: -50px;
+}
+
+.wrapper .tab-container {
+ margin: 0 !important;
+ padding: 0 !important;
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 50px;
+ transition: left .3s ease-in-out;
+ -webkit-transition: left .3s ease-in-out;
+ -moz-transition: left .3s ease-in-out;
+
+
+}
+.wrapper .tab-container li {
+  list-style: none;
+  float: left;
+  border-right: 1px solid #fff;
+  height:50px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper .tab-container li.here, .wrapper .tab-container li.here a {
+  font-weight: normal !important;
+  color: #00ac7f !important;
+}

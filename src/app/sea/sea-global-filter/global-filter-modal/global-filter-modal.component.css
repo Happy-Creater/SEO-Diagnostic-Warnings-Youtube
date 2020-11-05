@@ -1,0 +1,36 @@
+:host ::ng-deep ul.menu-n-tabs{
+    padding: 0 0;
+}
+
+#filter_score_tbl td{
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+}
+
+hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.my-profil .btn.btn-default:hover, .my-profil .btn.btn-default.active {
+    margin: auto;
+}
+
+input[type=text]::-ms-clear { display: none; }/*edge*/
+
+.icon-remove {
+    margin: 0 auto -3px auto;
+}
+
+.icon-remove.red {
+    cursor: pointer;
+}
+
+.form-control{
+    height: 32px !important;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}

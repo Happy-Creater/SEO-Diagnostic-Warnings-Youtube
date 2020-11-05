@@ -1,0 +1,19 @@
+.btn-default.blue {
+    color: #519FFC !important;
+    background-color: #FFFFFF !important;
+    border-color: #519FFC !important;
+    margin-bottom: 5px !important;
+}
+
+.btn-default.orange {
+    color: #F69B28 !important;
+    background-color: #FFFFFF !important;
+    border-color: #F69B28 !important;
+    margin-bottom: 5px !important;
+}
+
+.icon-remove.orange {
+    background: url(/assets/images/icon-remove-orange.png)top center no-repeat;
+    vertical-align: bottom;
+    cursor: pointer;
+}

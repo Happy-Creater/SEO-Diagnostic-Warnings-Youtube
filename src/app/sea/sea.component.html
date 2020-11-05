@@ -1,0 +1,100 @@
+<div menu-left id="menu-left" class=" col-lg-2 col-sm-2 col-md-2 col-xs-12 sea">
+  <ul>
+    <li class="head-page">
+      <p class="title-link sea">SEA</p>
+    </li>
+    <li>
+      <a id="GlobalView" routerLink="./global-view" [menu-item]="'global-view'" [menu-item-link]="['/global-view']"
+        [category]="'sea-global-view'">Global view</a>
+    </li>
+    <li>
+      <a id="Overview" routerLink="./overview" [menu-item]="'overview'" [menu-item-link]="['/overview']" [category]="'sea-overview'">{{'SEA.Overview'
+        | translate}}</a>
+    </li>
+    <li>
+      <a id="Information" routerLink="./information" [menu-item]="'information'" [menu-item-link]="['/information']"
+        [category]="'sea-information'">Information</a>
+    </li>
+    <li>
+      <a id="Structure" routerLink="./structure" [menu-item]="'structure'" [menu-item-link]="['/structure']" [category]="'sea-structure'">Structure</a>
+    </li>
+    <li>
+      <a id="Diagnostic" [menu-item]="'diagnostic'" [category]="'sea-diagnostic'">Diagnostic</a>
+    </li>
+    <li class="submenu-left dropdown-Diagnostic" [sub-menu]="'diagnostic'">
+      <ul class="sub-menu">
+        <li>
+          <a routerLink="./warnings" [menu-item]="'warnings'" [menu-item-link]="['warnings']" [category]="'sea-diagnostic-warnings'">Warnings</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a id="Keywords" [menu-item]="'keywords'" [category]="'sea-keywords'">Keywords</a>
+    </li>
+    <li class="submenu-left dropdown-Keywords" [sub-menu]="'keywords'">
+      <ul class="sub-menu">
+        <li>
+          <a routerLink="./searchterms" [menu-item]="'searchterms'" [menu-item-link]="['searchterms']" [category]="'sea-keywords-searchterms'">Search Terms</a>
+        </li>
+        <li>
+          <a routerLink="./opportunities" [menu-item]="'opportunities'" [menu-item-link]="['opportunities']" [category]="'sea-keywords-opportunities'">Opportunities</a>
+        </li>
+        <li>
+          <a routerLink="./sea-keywords-seo-sea-synergy" [menu-item]="'sea-keywords-seo-sea-synergy'" [menu-item-link]="['sea-keywords-seo-sea-synergy']" [category]="'sea-keywords-seo-sea-synergy'">SEO & SEA Synergy</a>
+        </li>
+        <li>
+          <a routerLink="./negative-keywords" [menu-item]="'negative-keywords'" [menu-item-link]="['negative-keywords']"
+            [category]="'sea-keywords-negative-keywords'">Negative keywords</a>
+        </li>
+        <li>
+          <a routerLink="./controller" [menu-item]="'controller'" [menu-item-link]="['controller']" [category]="'sea-keywords-controller'">Controller</a>
+        </li>
+        <li>
+          <a routerLink="./sea-words-analysis" [menu-item]="'sea-words-analysis'" [menu-item-link]="['sea-words-analysis']" [category]="'sea-words-analysis'">Search Terms Analysis</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a id="Ads" routerLink="./ads" [menu-item]="'ads'" [menu-item-link]="['/ads']" [category]="'sea-ads'">{{'SEA.Ads'
+        | translate}}</a>
+    </li>
+    <li>
+      <a id="Campaign" [menu-item]="'campaign'" [category]="'sea-campaign-manager'">Campaign manager</a>
+    </li>
+    <li class="submenu-left dropdown-Campaign" [sub-menu]="'campaign'">
+      <ul class="sub-menu">
+        <li>
+          <a routerLink="./landing-pages" [menu-item]="'landing-pages'" [menu-item-link]="['landing-pages']" [category]="'sea-campaign-manager-landing-pages'">Landing
+            pages</a>
+        </li>
+        <li>
+          <a routerLink="./bid-generator" [menu-item]="'bid-generator'" [menu-item-link]="['bid-generator']" [category]="'sea-campaign-manager-bid-generator'">Bid
+            generator</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a id="BenchmarkCompetitors" routerLink="./benchmark-competitors" [menu-item]="'benchmark-competitors'"
+        [menu-item-link]="['/benchmark-competitors']" [category]="'sea-benchmark-competitors'">Benchmark competitors</a>
+    </li>
+    <li>
+      <a id="Reporting" routerLink="./reporting" [menu-item]="'reporting'" [menu-item-link]="['/reporting']" [category]="'sea-reporting'">Reporting</a>
+    </li>
+
+    <video-tutor [isMenu]="true" [module]="'setting'"></video-tutor>
+
+  </ul>
+</div>
+
+<div id="content" class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 ">
+  <div class="row">
+    <!--start row content1-->
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+      <div class="line-menu sea"></div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div style="padding-top:20px;"></div>
+</div>
+
+<video-tutor [isModal]="true" [module]="'setting'"></video-tutor>

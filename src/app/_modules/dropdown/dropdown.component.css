@@ -1,0 +1,15 @@
+.module-dropdown {
+    padding-left: 0px;
+}
+
+.module-dropdown > li {
+    padding-left: 0px;
+}
+
+.module-dropdown li a {
+    cursor: pointer;
+}
+
+ul>li{
+    list-style-type: none;
+}

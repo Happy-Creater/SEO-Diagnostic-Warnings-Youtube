@@ -1,0 +1,7 @@
+
+
+#menu-left  a{
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+}

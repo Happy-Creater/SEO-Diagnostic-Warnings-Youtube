@@ -1,0 +1,61 @@
+<div menu-left id="menu-left" class=" col-lg-2 col-sm-2 col-md-2 col-xs-12">
+
+  <ul>
+    <li class="head-page">
+      <p class="title-link">DATA</p>
+    </li>
+    <li>
+      <a routerLink="./tracking" id="Tracking" [menu-item]="'tracking'" [menu-item-link]="['/tracking']">Tracking</a>
+    </li>
+    <li>
+      <a id="Reporting" [menu-item]="'report'">Reporting</a>
+    </li>
+    <li class="submenu-left dropdown-Reporting" [sub-menu]="'report'">
+      <ul class="sub-menu">
+        <li>
+          <a routerLink="./report-kpis" [menu-item]="'report-kpis'" [menu-item-link]="['report-kpis']">KPIs</a>
+        </li>
+        <li>
+          <a routerLink="./report-pis" [menu-item]="'report-pis'" [menu-item-link]="['report-pis']">PIs</a>
+        </li>
+        <li>
+          <a routerLink="./report-opis-portee" [menu-item]="'report-opis-portee'"
+            [menu-item-link]="['report-opis-portee']">OPIs
+            : Scope</a>
+        </li>
+        <li>
+          <a routerLink="./report-opis-engagement" [menu-item]="'report-opis-engagement'"
+            [menu-item-link]="['report-opis-engagement']">OPIs
+            : Engagement</a>
+        </li>
+        <li>
+          <a routerLink="./report-opis-conversion" [menu-item]="'report-opis-conversion'"
+            [menu-item-link]="['report-opis-conversion']">OPIs
+            : Conversion</a>
+        </li>
+        <li>
+          <a routerLink="./report-opis-fidelite" [menu-item]="'report-opis-fidelite'"
+            [menu-item-link]="['report-opis-fidelite']">OPIs
+            : Loyalty</a>
+        </li>
+        <!-- <li>
+          <a routerLink="./report-glossary" [menu-item]="'report-glossary'" [menu-item-link]="['report-glossary']">Glossary</a>
+        </li> -->
+      </ul>
+    </li>
+    <video-tutor [isMenu]="true" [module]="'setting'"></video-tutor>
+  </ul>
+</div>
+
+<div id="content" class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 ">
+  <div class="row">
+    <!--start row content1-->
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+      <div class="line-menu "></div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div style="padding-top:20px;"></div>
+</div>
+
+<video-tutor [isModal]="true" [module]="'setting'"></video-tutor>

@@ -1,0 +1,77 @@
+<div>
+  <div class="modal-header">
+    <button type="button" (click)="close()" class="close" data-dismiss="modal" aria-label="Close"><span
+        aria-hidden="true">×</span></button>
+    <h4>GLOBAL FILTER</h4>
+  </div>
+  <div class="modal-body">
+    <ul class="my-profil">
+      <li>
+        <table id="filter_score_tbl">
+          <tr>
+            <td><b>Focus on : </b></td>
+            <td>
+              <select class="selectpicker" [(ngModel)]="globalFilter.mainSelector.campaign_type"
+                (ngModelChange)="refreshFilter()">
+                <option value=0>All campaigns</option>ngClass
+                <option [ngClass]="globalFilter.mainSelector.isEnabledOnlyCampaign ? 'disabled' : ''" value=1>Branded
+                  campaigns
+                </option>
+                <option [ngClass]="globalFilter.mainSelector.isEnabledOnlyCampaign ? 'disabled' : ''" value=2>
+                  Non-branded campaigns
+                </option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <hr style="text-align:center; width: 100%; color:gray; border-top: 1px solid #d5d0bf;" />
+      </li>
+      <ng-template ngFor let-filter [ngForOf]="_filterTemp" let-index="index">
+        <li *ngIf="!isDisabledInput(index)">
+          <select class="selectpicker" [(ngModel)]="_filterTemp[index][0]" #select1
+            (change)="onFilterChange(index, 0, select1.value)">
+            <option *ngFor="let entry of filterBox[0].data" [value]="entry.value">{{entry.label}}</option>
+          </select>
+          <select class="selectpicker" [(ngModel)]="_filterTemp[index][1]" #select2
+            (change)="onFilterChange(index, 1, select2.value)">
+            <option *ngFor="let entry of getFilterBoxIndex(index)" [value]="entry.value">{{entry.label}}
+            </option>
+          </select>
+          <input id="filterInput-{{index}}" style="padding-top: 4px !important; margin: unset !important;"
+            class="form-control form-set" [block-clear-width]="'25%'" textbox-clearable text-filter [max-width]="'50'"
+            type="text" [value]="_filterTemp[index][2]" (input)="onFilterChange(index, 2, $event.target.value)">
+          <span (click)="removeFilterBox(index)" class="icon-remove red"></span>
+        </li>
+
+        <li *ngIf="isDisabledInput(index)">
+          <select class="selectpicker" [(ngModel)]="_filterTemp[index][0]" #select1
+            (change)="onFilterChange(index, 0, select1.value)">
+            <option *ngFor="let entry of filterBox[0].data" [value]="entry.value">{{entry.label}}</option>
+          </select>
+          <div style="display: inline-block; margin-right: 20px">
+            <app-multiselect-dropdown *ngIf="getFilterDataByIndex(index) === 'Campaign'" [isEnableClickOption]="false"
+              [isLeftStyleSetting]="false" [offSetTop]="1" [initialSelectedValues]="_filterTemp[index][1][1]"
+              [placeholder]="'Search a campaign...'" [fixedTitle]="_filterTemp[index][1][2]"
+              [ddOptions]="_filterTemp[index][1][0]" (onChange)="onCampaignListChange(index, $event)">
+            </app-multiselect-dropdown>
+            <app-multiselect-dropdown *ngIf="getFilterDataByIndex(index) === 'Label'" [isEnableClickOption]="false"
+              [isLeftStyleSetting]="false" [offSetTop]="1" [initialSelectedValues]="_filterTemp[index][1][1]"
+              [placeholder]="'Search a label...'" [fixedTitle]="_filterTemp[index][1][2]"
+              [ddOptions]="_filterTemp[index][1][0]" (onChange)="onLabelListChange(index, $event)">
+            </app-multiselect-dropdown>
+          </div>
+          <span (click)="removeFilterBox(index)" class="icon-remove red"></span>
+        </li>
+      </ng-template>
+      <li>
+        <button class="btn btn-default" (click)="addFilterBox()">+ Add filter</button>
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" (click)="onApply()">Apply</button>
+    <button class="btn btn-default" (click)="onReset()">Reset</button>
+  </div>
+</div>

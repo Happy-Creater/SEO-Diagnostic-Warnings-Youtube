@@ -1,0 +1,19 @@
+<ul [class.disabled]="isDisabled" class="module-dropdown" [ngClass]="extraClasses" (click-outside)="closeItem()">
+  <li class="dropdown" [class.open]="showItem">
+    <a (click)="toggleDropdown()">
+      <span *ngIf="selectedItem">
+        <ng-container *ngIf="titleBold">
+          <strong [innerHTML]="selectedItem.label"></strong>
+        </ng-container>
+        <div *ngIf="!titleBold" [innerHTML]="selectedItem.label"></div>
+      </span>
+      <span *ngIf="isShowIcon" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+    </a>
+    <ul #dropdownMenu class="dropdown-menu" [ngStyle]="setStyleHeightDropdown()">
+      <li *ngFor="let item of items">
+        <a [class.active]="item == this.itemActive" [class.disabled]="item.disabled" (click)="selectItem(item)"
+          [innerHTML]="item.labelOption?item.labelOption:item.label" (mouseover)="onItemMouseOver(item)"></a>
+      </li>
+    </ul>
+  </li>
+</ul>

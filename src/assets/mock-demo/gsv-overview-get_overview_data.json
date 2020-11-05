@@ -1,0 +1,384 @@
+{
+	"youtube": {
+		"technicalScoreGlobal": 8.572086592829784,
+		"performance": 1.5164519547250548,
+		"netlinking": 3.759813847226612
+	},
+	"avgLandingPageOpt": 29.570614035087723,
+	"loadingTime": {
+		"desktopCategory": 9.14,
+		"mobileHomepage": 4.46,
+		"mobileCategory": 4,
+		"mobileProduct": 2.94,
+		"desktopProduct": 8.26,
+		"avgDesktop": 8.906666666666667,
+		"desktopHomepage": 9.319999999999999,
+		"avgMobile": 3.8
+	},
+	"piracy": 29,
+	"tableResult": [
+		{
+			"continent": "Europe",
+			"countryName": "Germany",
+			"nbrScanned": 617,
+			"loadingTime": {
+				"desktopCategory": 9,
+				"mobileHomepage": 4.6,
+				"mobileCategory": 3.6,
+				"mobileProduct": 2.8,
+				"desktopProduct": 8,
+				"avgDesktop": 8.766666666666668,
+				"desktopHomepage": 9.3,
+				"avgMobile": 3.6666666666666667
+			},
+			"technicalScore": {
+				"mobileScore": 6.22372,
+				"onsiteScore": 9.0004,
+				"offsiteScore": 10,
+				"speedScore": 5.591807573231722,
+				"globalScore": 8.349862857142858,
+				"contentScore": 5.903443042777198,
+				"structureScore": 7.073870903561379
+			},
+			"countryCode": "de"
+		},
+		{
+			"continent": "Europe",
+			"share_of_visibility": 6.407156905341428,
+			"avgLandingPageOpt": 34.31578947368421,
+			"nbrScanned": 626,
+			"loadingTime": {
+				"desktopCategory": 9.2,
+				"mobileHomepage": 4.7,
+				"mobileCategory": 3.9,
+				"mobileProduct": 2.9,
+				"desktopProduct": 8.7,
+				"avgDesktop": 9.1,
+				"desktopHomepage": 9.4,
+				"avgMobile": 3.8333333333333337
+			},
+			"countryCode": "es",
+			"countryName": "Spain",
+			"technicalScore": {
+				"mobileScore": 6.20896,
+				"onsiteScore": 9.02006,
+				"offsiteScore": 10,
+				"speedScore": 5.591756255574856,
+				"globalScore": 8.35688,
+				"contentScore": 5.903141361256544,
+				"structureScore": 7.037203047960556
+			},
+			"gmb": 6.25
+		},
+		{
+			"continent": "Europe",
+			"youtube": {
+				"technicalScoreGlobal": 8.572086592829784,
+				"performance": 1.5164519547250548,
+				"netlinking": 3.759813847226612
+			},
+			"share_of_visibility": 23.424367507520949,
+			"avgLandingPageOpt": 33.81666666666667,
+			"nbrScanned": 657,
+			"loadingTime": {
+				"desktopCategory": 9.3,
+				"mobileHomepage": 4.5,
+				"mobileCategory": 4.1,
+				"mobileProduct": 3.5,
+				"desktopProduct": 8.6,
+				"avgDesktop": 9.066666666666669,
+				"desktopHomepage": 9.3,
+				"avgMobile": 4.033333333333333
+			},
+			"countryCode": "fr",
+			"countryName": "France",
+			"piracy": 29,
+			"technicalScore": {
+				"mobileScore": 6.26365,
+				"onsiteScore": 9.03932,
+				"offsiteScore": 10,
+				"speedScore": 5.591590248266607,
+				"globalScore": 8.383511428571428,
+				"contentScore": 5.902165196471532,
+				"structureScore": 7.174011691535648
+			},
+			"gmb": 7.26
+		},
+		{
+			"continent": "Europe",
+			"avgLandingPageOpt": 19,
+			"nbrScanned": 617,
+			"loadingTime": {
+				"desktopCategory": 9,
+				"mobileHomepage": 4.2,
+				"mobileCategory": 4.5,
+				"mobileProduct": 2.2,
+				"desktopProduct": 7.3,
+				"avgDesktop": 8.533333333333334,
+				"desktopHomepage": 9.3,
+				"avgMobile": 3.633333333333333
+			},
+			"countryCode": "gb",
+			"countryName": "United Kingdom",
+			"technicalScore": {
+				"mobileScore": 6.23102,
+				"onsiteScore": 9.02187,
+				"offsiteScore": 10,
+				"speedScore": 5.591807573231722,
+				"globalScore": 8.364217142857143,
+				"contentScore": 5.903443042777198,
+				"structureScore": 7.092061506977802
+			}
+		},
+		{
+			"continent": "Europe",
+			"share_of_visibility": 12.339627072345423,
+			"avgLandingPageOpt": 31.15,
+			"nbrScanned": 674,
+			"loadingTime": {
+				"desktopCategory": 9.2,
+				"mobileHomepage": 4.3,
+				"mobileCategory": 3.9,
+				"mobileProduct": 3.3,
+				"desktopProduct": 8.7,
+				"avgDesktop": 9.066666666666667,
+				"desktopHomepage": 9.3,
+				"avgMobile": 3.8333333333333337
+			},
+			"countryCode": "it",
+			"countryName": "Italy",
+			"technicalScore": {
+				"mobileScore": 6.23025,
+				"onsiteScore": 9.15315,
+				"offsiteScore": 10,
+				"speedScore": 5.591505690489687,
+				"globalScore": 8.439014285714285,
+				"contentScore": 5.901667824878388,
+				"structureScore": 7.090965861781848
+			},
+			"gmb": 8.73
+		}
+	],
+	"globalScore": 7.575355961904762,
+	"chartMapData": {
+		"0": [
+			[
+				"de",
+				7.3656065476190479
+			],
+			[
+				"it",
+				7.731264857142857
+			],
+			[
+				"gb",
+				7.426032761904762
+			],
+			[
+				"fr",
+				7.6145182857142859
+			],
+			[
+				"es",
+				7.581776666666667
+			]
+		],
+		"1": [
+			[
+				"de",
+				8.349862857142858
+			],
+			[
+				"it",
+				8.439014285714285
+			],
+			[
+				"gb",
+				8.364217142857143
+			],
+			[
+				"fr",
+				8.383511428571428
+			],
+			[
+				"es",
+				8.35688
+			]
+		],
+		"2": [
+			[
+				"it",
+				8.63808
+			],
+			[
+				"gb",
+				8.12667
+			],
+			[
+				"fr",
+				7.90985
+			],
+			[
+				"es",
+				7.93944
+			]
+		],
+		"3": [
+			[
+				"de",
+				8.67923
+			],
+			[
+				"it",
+				8.67923
+			],
+			[
+				"gb",
+				8.47261
+			],
+			[
+				"fr",
+				8.67923
+			],
+			[
+				"es",
+				8.67923
+			]
+		],
+		"4": [
+			[
+				"de",
+				6.216666666666666
+			],
+			[
+				"it",
+				6.45
+			],
+			[
+				"gb",
+				6.083333333333333
+			],
+			[
+				"fr",
+				6.550000000000001
+			],
+			[
+				"es",
+				6.466666666666666
+			]
+		],
+		"5": [
+			[
+				"it",
+				12.339627072345423
+			],
+			[
+				"fr",
+				23.424367507520949
+			],
+			[
+				"es",
+				6.407156905341428
+			]
+		],
+		"6": [
+			[
+				"it",
+				31.15
+			],
+			[
+				"gb",
+				19
+			],
+			[
+				"fr",
+				33.81666666666667
+			],
+			[
+				"es",
+				34.31578947368421
+			]
+		],
+		"7": [
+			[
+				"fr",
+				4.61611746492715
+			]
+		],
+		"8": [
+			[
+				"it",
+				8.73
+			],
+			[
+				"fr",
+				7.26
+			],
+			[
+				"es",
+				6.25
+			]
+		],
+		"9": []
+	},
+	"content": 8.15351,
+	"netlinking": 8.637906000000001,
+	"share_of_visibility": 14.057050495069268,
+	"technicalScore": {
+		"mobileScore": 6.231520000000001,
+		"onsiteScore": 9.04696,
+		"offsiteScore": 10,
+		"speedScore": 5.59169346815892,
+		"globalScore": 8.378697142857142,
+		"contentScore": 5.902772093632172,
+		"structureScore": 7.093622602363446
+	},
+	"gmb": 7.413333333333334,
+	"todoWebsites": [
+		{
+			"gmb_accounts": "[{\"account\":\"Hotel BB FR\"}]",
+			"scan_results_id": 6337,
+			"country": "fr",
+			"scan_results_date": "2019-11-24 02:00:03",
+			"id": 418,
+			"url": "https://www.hotel-bb.com/fr/",
+			"date_id_content_piracy": "fd47ec452c51054956ba4c16c3cda93b"
+		},
+		{
+			"gmb_accounts": "[{\"account\":\"Hotel BB IT\",\"scanSchedule\":2}]",
+			"scan_results_id": 6338,
+			"country": "it",
+			"scan_results_date": "2019-11-24 04:00:03",
+			"id": 420,
+			"url": "https://www.hotel-bb.com/it/"
+		},
+		{
+			"gmb_accounts": "[{\"account\":\"B&B Spain\",\"scanSchedule\":2}]",
+			"scan_results_id": 6339,
+			"country": "es",
+			"date_id_content_piracy": "fd47ec452c51054956ba4c16c3cda93b",
+			"scan_results_date": "2019-11-24 06:00:03",
+			"id": 426,
+			"url": "https://www.hotel-bb.com/es"
+		},
+		{
+			"gmb_accounts": "[]",
+			"scan_results_id": 6336,
+			"country": "de",
+			"date_id_content_piracy": "fd47ec452c51054956ba4c16c3cda93b",
+			"scan_results_date": "2019-11-23 22:00:03",
+			"id": 429,
+			"url": "https://www.hotel-bb.com/de"
+		},
+		{
+			"gmb_accounts": "[]",
+			"scan_results_id": 6318,
+			"country": "gb",
+			"scan_results_date": "2019-11-12 22:30:03",
+			"date_id_content_piracy": "fd47ec452c51054956ba4c16c3cda93b",
+			"id": 430,
+			"url": "https://www.hotel-bb.com/en"
+		}
+	],
+	"status": "ok"
+}

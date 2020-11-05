@@ -1,0 +1,15 @@
+<div class="modal-standard" [ngStyle]="getModalLayoutStyle()">
+  <div>
+    <div class="modal-content" [ngStyle]="getModalStyle()">
+      <div class="modal-header" *ngIf="options.showHeader">
+        <ng-content select=".app-modal-header"></ng-content>
+      </div>
+      <div class="modal-body">
+        <ng-content select=".app-modal-body"></ng-content>
+      </div>
+      <div class="modal-footer" *ngIf="options.showFooter">
+        <ng-content select=".app-modal-footer"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

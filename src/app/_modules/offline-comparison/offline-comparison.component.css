@@ -1,0 +1,76 @@
+.bold{
+    font-family: Proxima Nova Bold
+
+}
+.notdown{
+    margin-left : 85%
+}
+.down{
+    margin-left : 56%
+}
+.sub-content-box {
+    margin-left: 0;
+    margin-right: 0;
+}
+.text-line-through {
+    text-decoration: line-through;
+}
+.block-view-result ul.list-3block li{     width: 33.33%;display: inline-block;padding: 5px 0;margin: 0 -2px;}
+.block-view-result ul.list-3block li:nth-child(6n-5),.block-view-result ul.list-3block li:nth-child(6n-1),.block-view-result ul.list-3block li:nth-child(6n){ background: #f7f7f7; }
+.box-border ul.list-3block li{     width: 33.33%;display: inline-block;padding: 5px 0;margin: 0 -2px;}
+.box-border ul.list-3block li:nth-child(6n-5),.box-border ul.list-3block li:nth-child(6n-1),.box-border ul.list-3block li:nth-child(6n){ background: #f7f7f7; }
+.box-border ul.list-3block li:nth-child(6n-2){
+    background : white;
+}
+.block-view-result ul.list-3block li:nth-child(6n-2){
+    background : white;
+}
+.strikediag {
+    background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 56.5%, transparent 52.25%);
+    padding: 0 0.15em;
+  }
+.notWhite{
+    background: #f7f7f7;
+}
+.icon-check-green-small {
+    background: url(assets/images/icon-check_green.png)top center no-repeat;
+    width: 13px;
+    height: 13px;
+    margin-right: 2px;
+}
+.normal{
+    top: -23.5px;
+}
+.Nonormal{
+    top: -22px;
+}
+.progress {
+    border-radius: 15px;
+    overflow: visible;
+    height: 10px;
+    background: #f0f0f0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 15px 0;
+}
+:host >>> .semantic-enrichment progress-bar .progress-layout {
+    margin-top: 30px;
+}
+
+:host >>> .semantic-enrichment progress-bar .progress {
+    height: 10px;
+    margin-bottom: 10px;
+}
+:host>>>progress-bar .progress-layout {
+    margin-top: 30px;
+}
+
+:host>>>progress-bar .progress {
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+

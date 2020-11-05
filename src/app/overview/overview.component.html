@@ -1,0 +1,88 @@
+<div class="container-fluid container-web con-fixed">
+	<div class="row">
+		<div class=" col-lg-2 col-sm-2 col-md-2 col-xs-12" id="menu-left">
+			<p class="title-link-over">OVERVIEW</p>
+		</div>
+		<div class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 " id="content" style="padding-bottom: 17px;">
+			<div class="row"> <!--start row content1-->
+				<div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+					<div class="line-menu-over"></div>
+				</div>
+			</div><!--end row content1-->
+			<div class="row"> <!--start row content2-->
+				<form class="form-group ">
+					<div class=" col-lg-8 col-sm-6 col-md-6 col-xs-12 col-search">
+						<input class="form-control" placeholder="Search an account ..." type="text">
+					</div>
+					<div class=" col-lg-4 col-sm-6 col-md-6 col-xs-12 form-date col-date">
+                        <!--<input type="text" class="form-control" placeholder="From 10 mai 2016"/>
+                        <input type="text" class="form-control" placeholder="To 10 mai 2016"/>-->
+                        <div class="row">
+                        	<div class="input-group date form_date col-lg-6 col-sm-6 col-md-6 col-xs-6 " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="background:#fff;">
+                        		<span class="h-form ">From</span>
+                        		<input class="form-control" value="" placeholder="10 mai 2016" type="text">
+                        		<span class="input-group-addon cilck-date" style="border-right:0;"><span class="glyphicon glyphicon-menu-down"><span class="glyphicon glyphicon-calendar" style="visibility: hidden;"></span></span></span>
+                        	</div>
+                        	<input id="dtp_input2" value="" type="hidden">
+                        	<div class="input-group date form_date col-lg-6 col-sm-6 col-md-6 col-xs-6" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="background:#fff;">
+                        		<span class="h-form ">To</span>
+                        		<input class="form-control" value="" placeholder="10 mai 2016" style="border-left:0;" type="text">
+                        		<span class="input-group-addon cilck-date"><span class="glyphicon glyphicon-menu-down"><span class="glyphicon glyphicon-calendar" style="visibility: hidden;"></span></span></span>
+                        	</div>
+                        	<input id="dtp_input2" value="" type="hidden">
+                        </div>
+                    </div>
+                </form>
+            </div><!--end row content2-->
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid container-web" style="margin-top: 62px;">
+	<div class="row">
+		<div class=" col-lg-2 col-sm-2 col-md-2 col-xs-12" id="menu-left">
+			<p class="title-link-over">OVERVIEW</p>
+			<ul>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Lorem ipsum</a></li>
+			</ul>
+		</div>
+		<div class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 " id="content">
+			<div class="row"> <!--start row content1-->
+				<div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+					<div class="line-menu-over"></div>
+				</div>
+			</div><!--end row content1-->
+			<div class="row"> <!--start row content2-->
+				<form class="form-group ">
+					<div class=" col-lg-8 col-sm-6 col-md-6 col-xs-12 col-search">
+						<input class="form-control" placeholder="Search an account ..." type="text">
+					</div>
+					<div class=" col-lg-4 col-sm-6 col-md-6 col-xs-12 form-date col-date">
+                    		<!--<input type="text" class="form-control" placeholder="From 10 mai 2016"/>
+                    		<input type="text" class="form-control" placeholder="To 10 mai 2016"/>-->
+                    		<div class="row">
+                    			<div class="input-group date form_date col-lg-6 col-sm-6 col-md-6 col-xs-6 " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="background:#fff;">
+                    				<span class="h-form ">From</span>
+                    				<input class="form-control" value="" placeholder="10 mai 2016" type="text">
+                    				<span class="input-group-addon cilck-date" style="border-right:0;"><span class="glyphicon glyphicon-menu-down"><span class="glyphicon glyphicon-calendar" style="visibility: hidden;"></span></span></span>
+                    			</div>
+                    			<input id="dtp_input2" value="" type="hidden">
+                    			<div class="input-group date form_date col-lg-6 col-sm-6 col-md-6 col-xs-6" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="background:#fff;">
+                    				<span class="h-form ">To</span>
+                    				<input class="form-control" value="" placeholder="10 mai 2016" style="border-left:0;" type="text">
+                    				<span class="input-group-addon cilck-date"><span class="glyphicon glyphicon-menu-down"><span class="glyphicon glyphicon-calendar" style="visibility: hidden;"></span></span></span>
+                    			</div>
+                    			<input id="dtp_input2" value="" type="hidden">
+                    		</div>
+                    	</div>
+                    </form>
+                </div><!--end row content2-->
+
+                <router-outlet name="overview_outlet"></router-outlet>
+                
+            </div>
+        </div>
+    </div>

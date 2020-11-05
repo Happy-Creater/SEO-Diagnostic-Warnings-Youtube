@@ -1,0 +1,32 @@
+{
+  "result": {
+    "contact_host": {
+      "subject": "Avertissement contrefaçon de contenu website.com",
+      "email_found": [
+        {
+          "email": "contact@moteurdevolet.com"
+        }
+      ],
+      "message": "Bonjour,\n\nVotre client, dont le site moteurdevolet.com est hébergé chez vous, plagie les contenus suivants :\nSa page : \nhttp://www.moteurdevolet.com/119280-.html\nduplique la page suivante de notre site internet  : https://www.website.com/pro/catalogue/38165-2pt/prise-de-courant-2pt-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc\n\nMerci de faire supprimer par votre client le contenu contrefait rapidement, dans le cas contraire, nous transmettrons le dossier à notre conseil juridique.\n\nCordialement,"
+    },
+    "antiiframe_solutions": {
+      "solutionPhp": "<?php header(« X-Frame-Options:sameorigin »); ?>",
+      "solutionScript": "[code=javascript]<SCRIPT language=\"JavaScript\">\nif(window.parent.length!=0) {window.top.location.replace(document.location.href);}\n<\\/script>[/code]\n",
+      "solutionHtaccess": "<IfModule mod_headers.c>\nHeader always append X-Frame-Options SAMEORIGIN\n<\\/IfModule>\n"
+    },
+    "contact_website": {
+      "subject": "Avertissement contenu dupliqué website.com",
+      "email_found": [
+        {
+          "email": "consultant@website.com"
+        }
+      ],
+      "message": "Bonjour,\n\nNous avons détecté que vous repreniez du contenu de notre site sans autorisation. Merci de le supprimer dans les plus brefs délais, dans le cas contraire, nous transmettrons les informations de plagiat listées ci-dessous à notre conseil juridique ainsi qu\\u2019à votre hébergeur et déposerons une plainte DMCA auprès de Google. \nVotre page : \nhttp://www.moteurdevolet.com/119280-.html\nduplique la page suivante de notre site internet : https://www.website.com/pro/catalogue/38165-2pt/prise-de-courant-2pt-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc\n\nMerci d\\u2019intervenir rapidement.\nCordialement,"
+    },
+    "complaint_submission": {
+      "message": "Votre page :\nhttp://www.moteurdevolet.com/119280-.html\nduplique le contenu de notre page: \nhttps://www.website.com/pro/catalogue/38165-2pt/prise-de-courant-2pt-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc\n",
+      "url": "https://www.google.com/webmasters/tools/dmca-notice?hl=fr&pid=0&pli=1"
+    },
+    "isFoundIframe": true
+  }
+}

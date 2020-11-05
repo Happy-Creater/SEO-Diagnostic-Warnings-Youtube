@@ -1,0 +1,26 @@
+<ul [class.disabled]="isDisabled" class="module-dropdown" [ngClass]="extraClasses" (click-outside)="closeItem()">
+  <li class="dropdown" [class.open]="showItem">
+    <a (click)="toggleDropdown()">
+      <span *ngIf="selectedItem">
+        <ng-container *ngIf="titleBold">
+          <strong>{{replaceLabel(selectedItem.label)}}</strong>
+        </ng-container>
+        <div *ngIf="!titleBold">{{replaceLabel(selectedItem.label)}}</div>
+      </span>
+      <span *ngIf="isShowIcon" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+    </a>
+    <ul #dropdownMenu class="dropdown-menu" [ngStyle]="setStyleDropdown()">
+      <li [ngStyle]="setDisplaySearchBlock()">
+        <input (input)="getSearchValue($event.target.value.trim())" textbox-clearable type="text" class="form-control"
+          [placeholder]="placeholder" style="min-width: 165px" [max-width]="500" [block-clear-width]="'100%'">
+      </li>
+      <virtual-scroll #scroll *ngIf="virtualItems && virtualItems.length" [items]="virtualItems"
+        (update)="viewPortItems=$event" [ngStyle]="setStyleHeightDropdown()">
+        <li style="display: block; width: 100%; height: 24px;" *ngFor="let item of viewPortItems; trackBy: trackByFn;">
+          <a [class.active]="item == this.itemActive" [class.disabled]="item.disabled" (click)="selectItem(item)"
+            (mouseover)="onItemMouseOver(item)">{{item.labelOption?item.labelOption:item.label}}</a>
+        </li>
+      </virtual-scroll>
+    </ul>
+  </li>
+</ul>

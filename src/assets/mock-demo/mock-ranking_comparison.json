@@ -1,0 +1,338 @@
+{
+  "result": [
+    {
+      "rank0": 2,
+      "competitors": "https://www.aviva.fr",
+      "comp_domain": "www.aviva.fr",
+      "rank1_to_3": 72,
+      "rank11_to_50": 749,
+      "rank51_to_100": 319,
+      "rank4_to_10": 98
+    },
+    {
+      "rank0": 3,
+      "competitors": "https://pro.axa.fr/",
+      "comp_domain": "pro.axa.fr",
+      "rank1_to_3": 45,
+      "rank11_to_50": 688,
+      "rank51_to_100": 269,
+      "rank4_to_10": 176
+    },
+    {
+      "rank0": 3,
+      "competitors": "https://www.axa.fr",
+      "comp_domain": "www.axa.fr",
+      "rank1_to_3": 45,
+      "rank11_to_50": 688,
+      "rank51_to_100": 269,
+      "rank4_to_10": 176
+    },
+    {
+      "rank0": 1,
+      "competitors": "https://www.generali.fr",
+      "comp_domain": "www.generali.fr",
+      "rank1_to_3": 27,
+      "rank11_to_50": 664,
+      "rank51_to_100": 352,
+      "rank4_to_10": 120
+    },
+    {
+      "rank0": 14,
+      "competitors": "https://www.mma.fr",
+      "comp_domain": "www.mma.fr",
+      "rank1_to_3": 87,
+      "rank11_to_50": 487,
+      "rank51_to_100": 273,
+      "rank4_to_10": 221
+    },
+    {
+      "rank0": 14,
+      "competitors": "https://entreprise.mma.fr/",
+      "comp_domain": "entreprise.mma.fr",
+      "rank1_to_3": 87,
+      "rank11_to_50": 487,
+      "rank51_to_100": 273,
+      "rank4_to_10": 221
+    },
+    {
+      "rank0": 1,
+      "competitors": "https://test.fr/",
+      "comp_domain": "test.fr",
+      "rank1_to_3": 1,
+      "rank11_to_50": 1,
+      "rank51_to_100": 1,
+      "rank4_to_10": 1
+    },
+    {
+      "rank0": 1,
+      "competitors": "https://test2.fr/",
+      "comp_domain": "test2.fr",
+      "rank1_to_3": 1,
+      "rank11_to_50": 1,
+      "rank51_to_100": 1,
+      "rank4_to_10": 1
+    },
+    {
+      "rank0": 1,
+      "competitors": "https://test3.fr/",
+      "comp_domain": "test3.fr",
+      "rank1_to_3": 1,
+      "rank11_to_50": 1,
+      "rank51_to_100": 1,
+      "rank4_to_10": 1
+    },
+    {
+      "rank0": 1,
+      "competitors": "https://test4.fr/",
+      "comp_domain": "test4.fr",
+      "rank1_to_3": 1,
+      "rank11_to_50": 1,
+      "rank51_to_100": 1,
+      "rank4_to_10": 1
+    }
+  ],
+  "progress": {
+    "currentDateId": 9886684,
+    "dateId": 9886684,
+    "dateList": [
+      {
+        "label": "15-03-2019",
+        "value": 9886684
+      },
+      {
+        "label": "31-03-2019",
+        "value": 9886666
+      },
+      {
+        "label": "28-02-2019",
+        "value": 9678508
+      },
+      {
+        "label": "15-02-2019",
+        "value": 9678498
+      },
+      {
+        "label": "31-01-2019",
+        "value": 9581199
+      },
+      {
+        "label": "15-01-2019",
+        "value": 9581127
+      },
+      {
+        "label": "31-12-2018",
+        "value": 9581013
+      },
+      {
+        "label": "15-12-2018",
+        "value": 9580997
+      },
+      {
+        "label": "15-11-2018",
+        "value": 9534013
+      },
+      {
+        "label": "30-11-2018",
+        "value": 9533959
+      },
+      {
+        "label": "31-10-2018",
+        "value": 8842531
+      },
+      {
+        "label": "15-10-2018",
+        "value": 8842513
+      },
+      {
+        "label": "30-09-2018",
+        "value": 8842511
+      },
+      {
+        "label": "15-09-2018",
+        "value": 8842510
+      },
+      {
+        "label": "31-08-2018",
+        "value": 8841138
+      },
+      {
+        "label": "15-08-2018",
+        "value": 8841120
+      },
+      {
+        "label": "15-07-2018",
+        "value": 8841119
+      },
+      {
+        "label": "31-07-2018",
+        "value": 8841117
+      },
+      {
+        "label": "30-06-2018",
+        "value": 8840269
+      },
+      {
+        "label": "15-06-2018",
+        "value": 8840251
+      },
+      {
+        "label": "31-05-2018",
+        "value": 8840141
+      },
+      {
+        "label": "15-05-2018",
+        "value": 8840140
+      },
+      {
+        "label": "30-04-2018",
+        "value": 8840129
+      },
+      {
+        "label": "15-04-2018",
+        "value": 8840128
+      },
+      {
+        "label": "31-03-2018",
+        "value": 8840127
+      },
+      {
+        "label": "15-03-2018",
+        "value": 8840126
+      },
+      {
+        "label": "15-02-2018",
+        "value": 8294045
+      },
+      {
+        "label": "28-02-2018",
+        "value": 8294041
+      },
+      {
+        "label": "31-01-2018",
+        "value": 7978454
+      },
+      {
+        "label": "15-01-2018",
+        "value": 6942339
+      },
+      {
+        "label": "15-12-2017",
+        "value": 6942337
+      },
+      {
+        "label": "31-12-2017",
+        "value": 6603188
+      },
+      {
+        "label": "30-11-2017",
+        "value": 6125911
+      },
+      {
+        "label": "15-11-2017",
+        "value": 4825203
+      },
+      {
+        "label": "31-10-2017",
+        "value": 4825201
+      },
+      {
+        "label": "15-10-2017",
+        "value": 4583977
+      },
+      {
+        "label": "30-09-2017",
+        "value": 4025041
+      },
+      {
+        "label": "15-09-2017",
+        "value": 4025035
+      },
+      {
+        "label": "15-08-2017",
+        "value": 3891630
+      },
+      {
+        "label": "31-08-2017",
+        "value": 3891625
+      },
+      {
+        "label": "31-07-2017",
+        "value": 3041911
+      },
+      {
+        "label": "15-07-2017",
+        "value": 2913538
+      },
+      {
+        "label": "30-06-2017",
+        "value": 2913440
+      },
+      {
+        "label": "15-06-2017",
+        "value": 2913425
+      },
+      {
+        "label": "15-05-2017",
+        "value": 2557665
+      },
+      {
+        "label": "31-05-2017",
+        "value": 2557662
+      },
+      {
+        "label": "15-04-2017",
+        "value": 1517526
+      },
+      {
+        "label": "30-04-2017",
+        "value": 1234844
+      },
+      {
+        "label": "31-05-2016",
+        "value": 802755
+      },
+      {
+        "label": "30-06-2016",
+        "value": 802704
+      },
+      {
+        "label": "31-07-2016",
+        "value": 802701
+      },
+      {
+        "label": "31-08-2016",
+        "value": 802698
+      },
+      {
+        "label": "30-09-2016",
+        "value": 802695
+      },
+      {
+        "label": "31-10-2016",
+        "value": 802692
+      },
+      {
+        "label": "30-11-2016",
+        "value": 802641
+      },
+      {
+        "label": "31-03-2017",
+        "value": 212751
+      },
+      {
+        "label": "28-02-2017",
+        "value": 202368
+      },
+      {
+        "label": "31-01-2017",
+        "value": 140348
+      },
+      {
+        "label": "31-12-2016",
+        "value": 2
+      }
+    ],
+    "isRankcheckerInProgress": false,
+    "inprogressDateId": 9886684
+  }
+}

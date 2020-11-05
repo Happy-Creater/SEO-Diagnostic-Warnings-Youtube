@@ -1,0 +1,21 @@
+{
+    "result": [
+      {
+        "label": "All keywords",
+        "value": -1
+      },
+      {
+        "label": "Actualités",
+        "value": "5569"
+      },
+      {
+        "label": "FAQ",
+        "value": "6019"
+      },
+      {
+        "label": "Test",
+        "value": "5496"
+      }
+    ],
+    "status": "ok"
+  }

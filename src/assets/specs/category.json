@@ -1,0 +1,349 @@
+[
+    {
+        "type": "username",
+        "values": [
+            "dev@monetoring.com"
+        ],
+        "invisibled": [],
+        "disabled": []
+    },
+    {
+        "type": "user-role",
+        "values": [
+            "CONSULTANT",
+            "PRESENTATION"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "sea-campaign-manager-bid-generator"
+        ]
+    },
+    {
+        "type": "user-role",
+        "values": [
+            "USER"
+        ],
+        "invisibled": [
+            "configuration"
+        ],
+        "disabled": [
+            "sea-campaign-manager-bid-generator"
+        ]
+    },
+    {
+        "type": "user-role",
+        "values": [
+            "USER",
+            "CONSULTANT"
+        ],
+        "invisibled": [
+            "sea-campaign-manager"
+        ],
+        "disabled": []
+    },
+    {
+        "type": "demo",
+        "values": [],
+        "invisibled": [
+            "sea-information",
+            "sea-structure"
+        ],
+        "disabled": [
+            "sea-keywords-opportunities",
+            "sea-keywords-controller",
+            "mobile-first"
+        ]
+    },
+    {
+        "type": "not-demo",
+        "values": [],
+        "invisibled": [
+            "sea-information",
+            "sea-structure",
+            "sea-benchmark-competitors",
+            "mobile-first",
+            "sea-keywords-negative-keywords",
+            "sea-campaign-manager-bid-generator"
+        ],
+        "disabled": [
+            "sea-reporting",
+            "sea-campaign-manager-landing-pages",
+            "sea-keywords-opportunities"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "sea"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "sea"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "data"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "data"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "logs"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "logs"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-staging"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-staging"
+        ]
+    },
+    {
+        "type": "normal",
+        "values": [],
+        "invisibled": [],
+        "disabled": []
+    },
+    {
+        "type": "not-test",
+        "values": [],
+        "invisibled": [],
+        "disabled": []
+    },
+    {
+        "type": "account",
+        "values": [
+            "evermaps"
+        ],
+        "invisibled": [
+            "seo-overview",
+            "seo-keywords-optimized",
+            "seo-onsite",
+            "seo-offsite-opt-detox",
+            "seo-toolbox",
+            "seo-reporting",
+            "seo-staging"
+        ],
+        "disabled": []
+    },
+    {
+        "type": "account & username",
+        "values": [
+            "ige-xao",
+            "jba@ige-xao.com"
+        ],
+        "invisibled": [
+            "seo-overview",
+            "seo-info",
+            "seo-keywords",
+            "seo-onsite",
+            "seo-offsite",
+            "seo-toolbox",
+            "seo-benchmark",
+            "seo-reporting",
+            "seo-staging"
+        ],
+        "disabled": []
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-mobile-first"
+        ],
+        "invisibled": [
+            "seo-mobile-first"
+        ],
+        "disabled": [
+            "seo-mobile-first"
+        ]
+    },
+    {
+        "type": "is-mobile-and-is-https",
+        "values": [],
+        "invisibled": [],
+        "disabled": [
+            "seo-mobile-first-display-simulator"
+        ]
+    },
+    {
+        "type": "offsite-opt-blog-automations",
+        "values": [],
+        "invisibled": [],
+        "disabled": [
+            "offsite-opt-blog-automation"
+        ]
+    },
+    {
+        "type": "is-not-mobile",
+        "values": [],
+        "invisibled": [],
+        "disabled": [
+            "seo-is-not-mobile-"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-keywords-geolocal"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-keywords-geolocal"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-mobile-first-geolocal-rank"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-mobile-first-geolocal-rank"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-youtube"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-youtube"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-youtube"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-youtube"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-google-my-business"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-google-my-business"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-piracy"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-piracy"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "sea-keywords-seo-sea-synergy"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "sea-keywords-seo-sea-synergy"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-keywords-seo-sea-synergy"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-keywords-seo-sea-synergy"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-keywords-geo-rank-overview"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-keywords-geo-rank-overview"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "gsv"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "gsv"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-gmb-ranking"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-gmb-ranking"
+        ]
+    },
+    {
+        "type": "seo-onsite-hot-content-optimisation",
+        "values": [],
+        "invisibled": [],
+        "disabled": [
+            "seo-onsite-hot-content-optimisation"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "seo-gmb-sentiment-analysis"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo-gmb-sentiment-analysis"
+        ]
+    },
+    {
+        "type": "deactivated account for user",
+        "values": [
+            "retronews",
+            "bouygues",
+            "universducuir",
+            "babeau-seguin",
+            "nigloland"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "seo"
+        ]
+    },
+    {
+        "type": "deactivated",
+        "values": [
+            "sea-words-analysis"
+        ],
+        "invisibled": [],
+        "disabled": [
+            "sea-words-analysis"
+        ]
+    }
+]

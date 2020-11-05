@@ -1,0 +1,207 @@
+<app-download-popup #downloadPopup></app-download-popup>
+
+<!--start row conten3-->
+<!--start col content3-->
+<div class = "row">
+    <div class = "col-lg-12 col-sm-12 col-md-12">
+        <div appLoadingDelay></div>
+   
+    <div class="row">
+        <!--start row content-tabscontent-->
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content">
+            <div class="tab-content">
+                <div class="tab-pane fade in active">
+                    <ul class="menu-n-tabs">
+                        <!-- New interface - Modifications 5 slide 17 start 8/3/2017-->
+                        <li class="menu-h-exp">{{header}}</li>
+                        <!-- New interface - Modifications 5 slide 17 end 8/3/2017-->
+                    </ul>
+                    <i class="icon-remove red strong icon-head-right" style="float: right;"
+                        (click)="closeBoxOfflineComparison()"></i>
+                </div>
+            </div>
+            <!--end tab-content-->
+        </div>
+    </div>
+    <!--end row content-tabscontent-->
+    
+        
+        
+    <div class="row">
+        <!--start row table-content4-->
+        <div class="col-lg-8 col-sm-8 col-md-8 col-xs-10 width-content block-input-area"
+            style="margin: 0 auto;float: none; border-left: 1px solid #ddd;">
+           
+            <div class="head-input" style="border-top:1px solid #ddd">TEXT</div>
+            <textarea class="form-control" style="resize: vertical; min-height: 20%;"
+                [(ngModel)]="offlineComparisonTextDetail">
+      </textarea>
+        </div>
+    </div>
+    <div class="row">
+        <!--start row page-content4-->
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content download-menupage">
+            <div class="add-fitter add-fitter-dc form-btn-load" style="margin: 18px;">
+                <button type="button" class="btn btn-default" [disabled]="disabledBtn" (click)="reset()">Reset</button>
+                <button type="button" class="btn btn-default active" [disabled]="disabledBtn"
+                    (click)="onClickAnalyzeOfflineComparison()">Analyze</button>
+            </div>
+        </div>
+
+        <div id="OfflineComparison"></div>
+
+
+    </div>
+        </div>
+    <div [style.display]="disabledBtn ? 'inline-block':'none'" style="width : 100%;text-align: -webkit-center; text-align: -moz-center;">
+        <div style="width : 50%;">
+            <progress-bar [value]="progress" style = "height: 10px;" [color]="'#519FFB'"></progress-bar>
+            <i  [ngClass]="upperKeywordResultsChunks?.length != 0?'icon-remove red Nonormal':'icon-remove red normal'"style="float: right;position: relative;left: 10px;cursor: pointer;"
+                (click)="cancelRequest()"></i>
+        </div>
+
+    </div>
+</div>
+<div class="row" [hidden]="isHideOfflineComparisonDetails">
+
+    <div class="col-lg-8 col-sm-8 col-md-8 col-xs-10 width-content block-input-area" id="block-analyze-offline"
+        style=" margin: 0 auto;float: none;">
+
+    </div>
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content block-input-area" id="block-analyze-offline"
+        style=" margin: 10px">
+
+        <div style="width: 100%; display: inline-block; ">
+            <table width="60%">
+                <tr>
+                    <td width="20%">
+                        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                          <table>
+                              <tr>
+                                  <td>
+                                    <span style=" padding-bottom: 3px;">Semantic enrichment</span>
+                                  </td>
+                                  <td>
+                                    <div class="semantic-enrichment"
+                                style="margin-left: 4px; width: 180px; transform: translate(-4%, -100%); vertical-align: bottom;">
+                                <progress-bar [value]="semanticEnrichmentPercent | number : '1.2-2'" style = "height: 10px;"
+                                    [color]="(semanticEnrichmentPercent > 69 ? '#3ED774' : (semanticEnrichmentPercent > 29 ? '#FFBE64' : '#FF595D'))">
+                                </progress-bar>
+                            </div>
+                                      </td>
+                              </tr>
+                          </table>
+                           
+                        
+                            
+                            
+                        </div>
+                        <div style="padding-left: 15px;">
+                            <div class="box-border" style="display: inline-block;">
+                                <p><strong>Total missing words:</strong>
+                                    {{totalMissingWordsPercent | number : '1.2-2'}}%
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- <td width="20%" *ngIf="wpOptId != -1">
+                        <gauge-custom-chart [background-image]="backgroundImage" [plot-bands]="plotBands"
+                            [start-angle]="'-90'" [end-angle]="'88'"
+                            [value]="(contentGaugeValue > 0 ? contentGaugeValue : 0)" [width]="'250'" [height]="'250'"
+                            [max]="'10'" [dial-radius]="'45%'">
+                            <div class="block-title" style="position: relative">
+                                <p>CONTENT </p>
+                                <span gauge-color>
+                                    <ng-container *ngIf="contentGaugeValue != null">
+                                        {{(contentGaugeValue > 0) ? contentGaugeValue : (contentGaugeValue === -1) ? '--' : 0}}
+                                    </ng-container>
+                                </span>
+                            </div>
+                        </gauge-custom-chart>
+                    </td> -->
+                </tr>
+
+            </table>
+            <!-- <div id="OfflineComparisondetail"></div> -->
+
+        </div>
+
+        <div style = "padding-top: 9px;">
+            <div *ngIf="categoriesOne.length">
+                <p class="text-left"><u><strong>You have already enhanced the text by adding these
+                            keywords:</strong></u>
+                </p>
+                <ul class="list-4block content-center" style="display: flow-root;padding: 5px !important; border-left-style: solid;
+            border-color: green;">
+
+                    <li *ngFor="let item of categoriesOne; let i = index" [class.bold]="primaryBold">
+                        <div class="expandable" style=" max-width: 100%;" [class.notWhite]="colorBg(i)">- <font
+                                [class.text-green]="true">{{item.keyword}} (<font class="text-green"><span
+                                        [class.strikediag]="item.found != 0">{{item.oldFound}}</span><span
+                                        *ngIf="item.found != 0">,</span>
+
+                                </font><span *ngIf="item.found == 0"><label href="javascript:void(0);"
+                                        style="width: 13px;height: 13px;margin-right: 2px;"
+                                        class="icon-check green"></label></span><span
+                                    *ngIf="item.found != 0">{{item.found}}</span>)</font>
+                        </div>
+                    </li>
+                    <div *ngIf="!categoriesOne.length" style="text-align: center;">
+                        <span> No data </span>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+
+        <div *ngIf="categoriesTwo.length">
+            <p class="text-left"><u><strong>Important keywords which are missing in the text:</strong></u>
+            </p>
+            <ul class="list-4block content-center" style="display: flow-root;padding: 5px !important; border-left-style: solid;
+            border-color: red;">
+                <div appLoadingDelay></div>
+                <li *ngFor="let item of categoriesTwo; let i = index" [class.bold]="primaryBold">
+                    <div class="expandable" style=" max-width: 100%;" [class.notWhite]="colorBg(i)">- <font>
+                            {{item.keyword}} (<font *ngIf="item.oldFound!=item.found"><span
+                                    [class.strikediag]="item.found != 0">{{item.oldFound}}</span><span
+                                    *ngIf="item.found != 0">,</span>
+                            </font><span *ngIf="item.found == 0"><label href="javascript:void(0);"
+                                    class="icon-check green"></label></span><span
+                                *ngIf="item.found != 0">{{item.found}}</span>)</font>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div *ngIf="categoriesThree.length">
+            <p class="text-left"><u><strong>Remaining keywords to be added to the text for further
+                        improvement:</strong></u>
+            </p>
+            <ul class="list-4block content-center" style="display: flow-root;padding: 5px !important; border-left-style: solid;
+            border-color: orange;">
+                <div appLoadingDelay></div>
+                <li *ngFor="let item of categoriesThree; let i = index" [class.bold]="primaryBold">
+                    <div class="expandable" style=" max-width: 100%;" [class.notWhite]="colorBg(i)">- <font>
+                            {{item.keyword}} (<font *ngIf="item.oldFound!=item.found"><span
+                                    [class.strikediag]="item.found != 0">{{item.oldFound}}</span><span
+                                    *ngIf="item.found != 0">,</span>
+                            </font><span *ngIf="item.found == 0"><label href="javascript:void(0);"
+                                    class="icon-check green"></label></span><span
+                                *ngIf="item.found != 0">{{item.found}}</span>)</font>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        
+    </div>
+
+    <div style="padding-bottom: 20px; padding-right: 20px;" align='right'>
+        <button type="button" class="btn btn-default active" (click)="openpopup()">Show text</button>
+        &nbsp;
+        <button type="button" class="btn btn-default active"
+            (click)="onClickDownLoadOfflineComparison()">Download</button>
+    </div>

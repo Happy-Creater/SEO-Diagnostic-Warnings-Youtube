@@ -1,0 +1,14 @@
+{
+  "result": {
+    "scanDateList": [
+      "2019-09-17"
+    ],
+    "desktop": [
+      5
+    ],
+    "mobile": [
+      5.4
+    ]
+  },
+  "status": "ok"
+}

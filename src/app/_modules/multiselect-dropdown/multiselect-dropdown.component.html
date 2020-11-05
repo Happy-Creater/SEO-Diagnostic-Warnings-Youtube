@@ -1,0 +1,24 @@
+<dd-custom (title-click)="onTitleClick()" (click-outside)="onClickOutside()">
+    <a dd-title>{{getTitle()}}</a>
+    <ul dd-list class="dropdown-menu" style="max-height: 280px; overflow: auto;">
+        <li>
+            <input textbox-clearable (input)="search = $event.target.value" [max-width]="500" [block-clear-width]="'100%'" type="text" class="form-control"
+                [placeholder]="options.searchPlaceholder" style="min-width: 165px">
+        </li>
+        <li (click)="onClickOption('all')">
+            <label class="checkbox" [class.selected]="currItems.length == getCountSelected(currItems)"></label>
+            <a>{{options.textCheckboxAll}}</a>
+        </li>
+        <ng-container *ngFor="let item of currItems; let i = index">
+            <li (click)="onClickOption(i)" *ngIf="searchFilter(item)">
+                <label class="checkbox" [class.selected]="item.selected"></label>
+                <a> {{item.label}}</a>
+            </li>
+        </ng-container>
+    </ul>
+    <ul class="dropdown-menu" [ngStyle]="getOkBtnStyle()">
+        <li class="dd-ok">
+            <button type="button" class="btn btn-primary" (click)="onClickOk()">OK</button>
+        </li>
+    </ul>
+</dd-custom>

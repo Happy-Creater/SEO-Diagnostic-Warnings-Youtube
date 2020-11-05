@@ -1,0 +1,34 @@
+{
+	"results": {
+		"latestResultDate": 20190618,
+		"selectedAccount": {
+			"allViewId": [
+				"113893042",
+				"143002221"
+			],
+			"name": "PX | Pixalione 2017",
+			"selectedProperties": [
+				{
+					"numberOfPages": 10,
+					"name": "01 | PX | Production www.pixalione.fr",
+					"id": "UA-71720943-1",
+					"editableWebPropertyUrl": "https://www.pixalione.fr/",
+					"internalWebPropertyId": "109256151",
+					"selectedViews": [
+						{
+							"name": "01 | PX | www.pixalione.fr - Vue principale (filtrée)",
+							"id": "113893042"
+						},
+						{
+							"name": "02 | PX | www.pixalione.fr - Toutes les données (ne pas effacer)",
+							"id": "143002221"
+						}
+					]
+				}
+			],
+			"id": "71720943"
+		},
+		"isReAnalyzing": false
+	},
+	"status": "ok"
+}

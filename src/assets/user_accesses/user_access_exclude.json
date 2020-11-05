@@ -1,0 +1,19 @@
+[
+    {
+        "user": "sylvain@ilxelle.com",
+        "modules": [
+            {
+                "account": null,
+                "module": "seo"
+            },
+            {
+                "account": null,
+                "module": "data"
+            },
+            {
+                "account": null,
+                "module": "logs"
+            }
+        ]
+    }
+]

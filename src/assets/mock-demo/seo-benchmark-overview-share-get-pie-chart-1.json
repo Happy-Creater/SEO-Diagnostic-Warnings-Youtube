@@ -1,0 +1,92 @@
+{
+    "currentDateId": 44834705,
+    "result": [
+      {
+        "color": "#7CB5EC",
+        "name": "www.cdiscount.com",
+        "y": 80.97
+      },
+      {
+        "color": "#434348",
+        "name": "www.gammvert.fr",
+        "y": 41.12
+      },
+      {
+        "color": "#90ED7D",
+        "name": "www.castorama.fr",
+        "y": 170
+      },
+      {
+        "color": "#F7A35C",
+        "name": "www.truffaut.com",
+        "y": 99.35
+      },
+      {
+        "color": "#8085E9",
+        "name": "www.jardiland.com",
+        "y": 62.29
+      },
+      {
+        "color": "#F15C80",
+        "name": "www.amazon.com",
+        "y": 520
+      },
+      {
+        "color": "#E4D354",
+        "name": "www.leroymerlin.frr",
+        "y": 65
+      }
+    ],
+    "dateList": [
+      {
+        "label": "31-08-2018",
+        "value": 44836433
+      },
+      {
+        "label": "31-07-2018",
+        "value": 44834705
+      },
+      {
+        "label": "30-06-2018",
+        "value": 44834228
+      },
+      {
+        "label": "31-05-2018",
+        "value": 44833966
+      },
+      {
+        "label": "30-04-2018",
+        "value": 44832535
+      },
+      {
+        "label": "31-03-2018",
+        "value": 42389802
+      },
+      {
+        "label": "28-02-2018",
+        "value": 42389553
+      },
+      {
+        "label": "31-01-2018",
+        "value": 42389552
+      },
+      {
+        "label": "30-11-2017",
+        "value": 36988373
+      },
+      {
+        "label": "31-10-2017",
+        "value": 35133909
+      },
+      {
+        "label": "30-09-2017",
+        "value": 32988250
+      },
+      {
+        "label": "31-08-2017",
+        "value": 31270229
+      }
+    ],
+    "isRankcheckerInProgress": true,
+    "inprogressDateId": 44836433
+  }

@@ -1,0 +1,41 @@
+.progress-layout {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background: #0066cc none repeat scroll 0 0;
+    border-radius: 15px;
+    transition-duration: 0.5s;
+}
+
+.tooltip-progress {
+    display: block;
+    top: -39px;
+    position: relative;
+    float: right;
+    left: 27.5667px;
+    padding: 5px 0;
+    margin-top: -3px;
+}
+
+.tooltip-progress-arrow {
+    left:50%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #0066cc;
+    position: absolute;
+    bottom: 0;
+    margin-left: -5px;
+}
+
+.tooltip-progress-inner {
+    background: #0066cc none repeat scroll 0 0;
+    color: #fff;
+    font-family: "Proxima Nova Regular";
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 50px;
+}

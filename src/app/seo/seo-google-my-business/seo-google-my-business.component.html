@@ -1,0 +1,9 @@
+<select style="position: absolute; right: 25px; top: 25px; z-index: 1; display: none" id="gmbAccountSelect" class="select-straging"
+    [(ngModel)]="accountSelected" onchange="window['appSeoGoogleMyBusinessComponent'].component.selectAccount(this.options[this.selectedIndex].value)">
+    <option *ngFor="let acc of accounts" [ngValue]="acc">
+        {{ acc }}
+    </option>
+</select>
+<div appLoadingDelay>
+    <router-outlet *ngIf="showView"></router-outlet>
+</div>

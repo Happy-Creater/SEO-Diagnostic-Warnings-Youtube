@@ -1,0 +1,37 @@
+{
+  "result": [
+    {
+      "pirate_url": "https://www.legrand.fr/pro/catalogue/31736-ecocompteurs-ip/ecocompteur-modulaire-ip-pour-mesure-consommation-sur-6-postes-110v-a-230v-6-modules",
+      "nb_pirate_url": 36,
+      "max_duplication": 33.28152323026046,
+      "contact_website": true,
+      "contact_host": false,
+      "manual_pursuite": false
+    },
+    {
+      "pirate_url": "https://www.legrand.fr/noob/catalogue/31736-ecocompteurs-ip/ecocompteur-modulaire-ip-pour-mesure-consommation-sur-6-postes-110v-a-230v-6-modules",
+      "nb_pirate_url": 46,
+      "max_duplication": 44.28152323026046,
+      "contact_website": true,
+      "contact_host": false,
+      "manual_pursuite": false
+    },
+    {
+      "pirate_url": "https://www.legrand.fr/easy/catalogue/31736-ecocompteurs-ip/ecocompteur-modulaire-ip-pour-mesure-consommation-sur-6-postes-110v-a-230v-6-modules",
+      "nb_pirate_url": 55,
+      "max_duplication": 66.28152323026046,
+      "contact_website": true,
+      "contact_host": false,
+      "manual_pursuite": false
+    },
+    {
+      "pirate_url": "https://www.legrand.fr/hard/catalogue/31736-ecocompteurs-ip/ecocompteur-modulaire-ip-pour-mesure-consommation-sur-6-postes-110v-a-230v-6-modules",
+      "nb_pirate_url": 66,
+      "max_duplication": 88.28152323026046,
+      "contact_website": true,
+      "contact_host": false,
+      "manual_pursuite": false
+    }
+  ],
+  "total": 4
+}

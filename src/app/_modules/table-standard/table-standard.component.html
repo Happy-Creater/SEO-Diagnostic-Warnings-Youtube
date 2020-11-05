@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content">
+    <div class="table-responsive">
+      <div class="table-result-scroll">
+        <ng-content></ng-content>
+      </div>
+      <div class="table-overlay-hidden hidden-desktop"></div>
+    </div>
+  </div>
+</div>
+<paginator *ngIf="!disabledPaginator" [nb-of-data]="nbOfData" [first]="first" [row]="row" [total]="total" (paginator-change)="onPaginatorChange($event)">
+  <ng-content select="[footer]"></ng-content>
+</paginator>

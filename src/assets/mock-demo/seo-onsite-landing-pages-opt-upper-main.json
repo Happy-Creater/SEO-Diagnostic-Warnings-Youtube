@@ -1,0 +1,455 @@
+{
+	"status": "ok",
+	"chosenText": 0,
+	"idealText": 1000,
+	"upperKeywords": [
+		{
+			"keyword": "piscine hors sol",
+			"insideKeywords": [
+				{"keyword":"piscines en bois hors sol"},
+				{"keyword":"choisir piscine hors sol"},
+				{"keyword":"liner pour piscine hors sol"},
+				{"keyword":"piscine hors sol en bois en vente"},
+				{"keyword":"filtration de piscine hors sol"},
+				{"keyword":"enterrer piscine hors sol"},
+				{"keyword":"pompe pour piscine hors sol"},
+				{"keyword":"acheter piscine hors sol"}
+			],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "piscine tubulaire",
+			"insideKeywords": [
+				{"keyword":"piscine tubulaire ronde"},
+				{"keyword":"piscine tubulaire rectangulaire"},
+				{"keyword":"kit piscine tubulaire ronde"},
+				{"keyword":"kit piscine tubulaire"},
+				{"keyword":"piscine tubulaire ovale bestway"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "autoclave",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "bassin",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscine ovale",
+			"insideKeywords": [
+				{"keyword":"kit piscine ovale"},
+				{"keyword":"piscine bois ovale"},
+				{"keyword":"piscine autoportante ovale"},
+				{"keyword":"piscine en acier ovale"},
+				{"keyword":"piscine tubulaire ovale bestway"}
+			],
+			"final_freq": 3,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 3
+		},
+		{
+			"keyword": "filtres piscine",
+			"insideKeywords": [
+				{"keyword":"pompe et filtre de piscine et spa"},
+				{"keyword":"pompe et filtre de piscine"},
+				{"keyword":"filtre de piscine et spa"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscine autoportante",
+			"insideKeywords": [
+				{"keyword":"kit piscine autoportante ronde"},
+				{"keyword":"piscine autoportante ovale"}
+			],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "piscine en kit",
+			"insideKeywords": [
+				{"keyword":"kit piscine ovale"},
+				{"keyword":"kit piscine autoportante ronde"},
+				{"keyword":"kit de filtration pour piscine"},
+				{"keyword":"bestway kit piscine"},
+				{"keyword":"kit piscine tubulaire ronde"},
+				{"keyword":"choisir piscine en kit"},
+				{"keyword":"kit piscine tubulaire"},
+				{"keyword":"kit piscine bois"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "équipement",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "abris de piscine hauts",
+			"insideKeywords": [
+				{"keyword":"abri de piscine télescopique"},
+				{"keyword":"abris de piscine plats"}
+			],
+			"final_freq": 4,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 4
+		},
+		{
+			"keyword": "conforme à norme",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscine acier",
+			"insideKeywords": [
+				{"keyword":"piscine rond acier"},
+				{"keyword":"piscine en acier ovale"}
+			],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "robot",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "choisir piscine",
+			"insideKeywords": [
+				{"keyword":"choisir piscine hors sol"},
+				{"keyword":"choisir piscine en kit"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscines bois",
+			"insideKeywords": [
+				{"keyword":"piscine bois rectangulaire"},
+				{"keyword":"piscine bois ovale"},
+				{"keyword":"piscines en bois hors sol"},
+				{"keyword":"piscine hors sol en bois en vente"},
+				{"keyword":"liner piscine bois"},
+				{"keyword":"kit piscine bois"}
+			],
+			"final_freq": 3,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 3
+		},
+		{
+			"keyword": "solution",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "couvertures",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "fabricant",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "rails",
+			"insideKeywords": [],
+			"final_freq": 4,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 4
+		},
+		{
+			"keyword": "hydraulique",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "eau",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "accessoires de piscine",
+			"insideKeywords": [
+				{"keyword":"matériel de piscine accessoires"}
+			],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "gre",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscine rectangulaire",
+			"insideKeywords": [
+				{"keyword":"piscine bois rectangulaire"},
+				{"keyword":"piscine tubulaire rectangulaire"},
+				{"keyword":"piscine béton rectangulaire"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "entretien",
+			"insideKeywords": [],
+			"final_freq": 3,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 3
+		},
+		{
+			"keyword": "adaptés",
+			"insideKeywords": [],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "espace",
+			"insideKeywords": [],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "jardin",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "filtration piscine",
+			"insideKeywords": [
+				{"keyword":"kit de filtration pour piscine"},
+				{"keyword":"pompes filtration piscine"},
+				{"keyword":"filtration de piscine hors sol"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "gammes",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "modèles",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "baignade",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "formes",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "bâche",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscine bestway",
+			"insideKeywords": [
+				{"keyword":"piscine gonflable ronde bestway"},
+				{"keyword":"bestway kit piscine"},
+				{"keyword":"piscine tubulaire ovale bestway"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "piscines gonflables",
+			"insideKeywords": [
+				{"keyword":"piscine gonflable ronde bestway"}
+			],
+			"final_freq": 4,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 4
+		},
+		{
+			"keyword": "pompe piscine",
+			"insideKeywords": [
+				{"keyword":"pompe et filtre de piscine et spa"},
+				{"keyword":"pompe et filtre de piscine"},
+				{"keyword":"pompes filtration piscine"},
+				{"keyword":"pompe pour piscine hors sol"},
+				{"keyword":"sable avec pompe de piscine"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "profiter",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "discret",
+			"insideKeywords": [],
+			"final_freq": 3,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 3
+		},
+		{
+			"keyword": "extérieur",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "fonction",
+			"insideKeywords": [],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "télescopiques",
+			"insideKeywords": [
+				{"keyword":"abri de piscine télescopique"}
+			],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "piscine ronde",
+			"insideKeywords": [
+				{"keyword":"piscine tubulaire ronde"},
+				{"keyword":"piscine rond acier"},
+				{"keyword":"kit piscine autoportante ronde"},
+				{"keyword":"piscine gonflable ronde bestway"},
+				{"keyword":"liner piscine ronde"},
+				{"keyword":"kit piscine tubulaire ronde"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		},
+		{
+			"keyword": "sécurité",
+			"insideKeywords": [],
+			"final_freq": 2,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 2
+		},
+		{
+			"keyword": "liner piscine",
+			"insideKeywords": [
+				{"keyword":"liner piscine ronde"},
+				{"keyword":"liner pour piscine hors sol"},
+				{"keyword":"liner piscine bois"}
+			],
+			"final_freq": 1,
+			"freq_by_group": 4,
+			"freq_by_weight": 5,
+			"weight": 1
+		}
+	]
+}

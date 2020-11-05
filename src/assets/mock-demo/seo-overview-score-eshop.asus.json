@@ -1,0 +1,3 @@
+{
+    "result": "{\"lastTechnicalScore\":8.38,\"lastContentScore\":7.79,\"preNetlinkingScore\":0.00,\"compTechnicalScoreArr\":[{\"score\":7.62,\"page\":\"http:\\/\\/store.hp.com/FranceStore/Merch/Default.aspx\"},{\"score\":7.52,\"page\":\"https:\\/\\/www.apple.com/fr/\"},{\"score\":2.93,\"page\":\"https:\\/\\/shop.samsung.com/fr/\"}],\"compNetlinkingScoreArr\":[{\"score\":9.47,\"page\":\"https:\\/\\/www.apple.com/fr/\"},{\"score\":7.37,\"page\":\"http:\\/\\/store.hp.com/FranceStore/Merch/Default.aspx\"},{\"score\":5.07,\"page\":\"https:\\/\\/shop.samsung.com/fr/\"}],\"lastNetlinkingScore\":2.84,\"preTechnicalScore\":0.0,\"preContentScore\":0.0}"
+}

@@ -1,0 +1,10 @@
+<div class="progress-layout">
+  <div class="progress" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+    <div class="progress-bar" [ngStyle]="getStyleProgressBar()">
+      <div class="tooltip-progress" [ngStyle]="getStyleTooltipProgressBox()">
+        <div class="tooltip-progress-arrow" [ngStyle]="getStyleTooltipProgressArrow()"></div>
+        <div class="tooltip-progress-inner" [ngStyle]="getStyleTooltipProgressInner()">{{display}}</div>
+      </div>
+    </div>
+  </div>
+</div>

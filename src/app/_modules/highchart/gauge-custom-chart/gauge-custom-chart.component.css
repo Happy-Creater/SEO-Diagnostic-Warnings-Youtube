@@ -1,0 +1,12 @@
+#gauge-custom-layout {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.highcharts-tooltip > b {
+	/* padding: 5px;
+    background-color: rgba(255,255,255,0.95);
+	background-color: white\9; 
+    border: 1px solid #a8a7a5; */
+    z-index: 99999 !important;
+}

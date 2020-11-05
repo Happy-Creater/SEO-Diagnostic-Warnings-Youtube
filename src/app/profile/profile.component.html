@@ -1,0 +1,110 @@
+<div class=" col-lg-2 col-sm-2 col-md-2 col-xs-12 profil" id="menu-left">
+  <ul>
+    <li class="head-page">
+      <p class="title-link">PROFILE</p>
+    </li>
+  </ul>
+</div>
+<!--end menu-left-->
+<div class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 " id="content">
+  <div class="row">
+    <!--start row conten3-->
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 content3">
+      <!--start col content3-->
+      <div class="row">
+        <!--start row table-content4-->
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 " style="padding: 0 20px;">
+          <h4>MY PROFILE</h4>
+        </div>
+      </div>
+      <div #box1=boxLoading box-loading class="row" style="position: relative">
+        <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content">
+          <ul class="my-profil last-btn">
+            <li>Username / Email : <strong>{{email}}</strong></li>
+            <li>Tag name : <input #tagName type="text" class="form-control form-set" [value]="tag_name" (input)="tag_name = $event.target.value">
+              <div style="display: inline-block; position: relative">
+                <img src="/assets/images/icon-remove.png" style="position: absolute; top: -12px; left: -25px; cursor: pointer" [hidden]="false"
+                  (click)="tag_name = ''" (click)="tagName.focus()">
+              </div>
+            </li>
+            <li>
+              Logo / Image :
+              <button class="btn btn-default" (click)="logo.click()">Parcourir...</button>
+              <span>{{fileName}}</span>
+              <input #logo type="file" [class.hidden]="true" (change)="fileEvent($event)">
+            </li>
+            <li style="padding-left: 6px;">
+              <button class="btn btn-default" (click)="onResetTagNameAndLogo()">Cancel</button>
+              <button class="btn btn-default active" (click)="onSaveTagNameAndLogo()">Save</button>
+            </li>
+          </ul>
+          <div style="margin: 25px auto;"></div>
+        </div>
+        <!--end col -->
+      </div>
+      <!--end row -->
+      <div #box2=boxLoading box-loading class="row" style="position: relative">
+        <div class="row sub-row">
+          <!--start row table-content4-->
+          <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+            <h4>CHANGE PASSWORD</h4>
+          </div>
+        </div>
+        <div class="row sub-row">
+          <!--start row table-content4-->
+          <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12 ">
+            <input #oldPassword type="password" [value]="old_password" (input)="old_password=$event.target.value" class="form-control form-profil"
+              placeholder="Old password">
+          </div>
+          <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12 ">
+            <input type="password" [value]="new_password" (input)="new_password=$event.target.value" class="form-control form-profil"
+              placeholder="New password">
+          </div>
+          <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12 ">
+            <input type="password" [value]="confirm_password" (input)="confirm_password=$event.target.value" class="form-control form-profil"
+              placeholder="Comfirm password">
+          </div>
+        </div>
+        <div class="row sub-row">
+          <!--start row table-content4-->
+          <ul class="my-profil last-btn">
+            <li style="padding-left: 6px;">
+              <button class="btn btn-default" (click)="onResetPassword()">Cancel</button>
+              <button class="btn btn-default active" (click)="onChangePassword()">Save</button>
+            </li>
+          </ul>
+          <div style="margin: 25px auto;"></div>
+        </div>
+      </div>
+      <div class="row">
+        <!--start row table-content4-->
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 " style="padding: 10px 20px;">
+          <h4>WEBSITE(S) IN MY LIST</h4>
+        </div>
+      </div>
+      <div class="row">
+        <!--start row table-content4-->
+        <table class="table tb-profil-web tb-key">
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Account</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let websiteObj of allWebsite">
+              <td>{{websiteObj.url}}</td>
+              <td>{{websiteObj.account}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--end col content3-->
+  </div>
+  <!--end row content3-->
+
+  <div style="padding-top:20px;"></div>
+
+
+</div>
