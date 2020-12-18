@@ -1,0 +1,37 @@
+<a href="javascript:void(0)" class="btn-help" (click)="eventQuestionPopup = $event"><span>?</span> {{ 'GLOBAL_VIEW.Help' | translate}}</a>
+<div id="menu-left" class=" col-lg-2 col-sm-2 col-md-2 col-xs-12">
+	<ul>
+		<li class="head-page">
+			<p class="title-link-home">{{'GLOBAL_VIEW.GLOBAL_VIEW' | translate}}</p>
+		</li>
+		<li>
+			<a routerLinkActive="active" [routerLink]="getLinkSEO()" [category]="'seo'">{{ 'GLOBAL_VIEW.SEO' | translate}}</a>
+		</li>
+		<li>
+			<a #sea routerLinkActive="getActive(sea)" [routerLink]="getLink(sea, '/sea')" [category]="'sea'">{{ 'GLOBAL_VIEW.SEA' | translate}}</a>
+		</li>
+		<li>
+			<a #data routerLinkActive="getActive(data)" [routerLink]="getLink(data, '/data')" [category]="'data'">{{ 'GLOBAL_VIEW.DATA' | translate}}</a>
+		</li>
+		<li>
+			<a #logs routerLinkActive="getActive(logs)" [routerLink]="getLink(logs, '/logs')" [category]="'logs'">{{ 'GLOBAL_VIEW.LOGS' | translate}}</a>
+		</li>
+
+		<video-tutor [isMenu]="true" [module]="'setting'"></video-tutor>
+
+	</ul>
+</div>
+
+<div id="content" class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 ">
+	<div class="row">
+		<!--start row content1-->
+		<div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="line-menu-home"></div>
+		</div>
+	</div>
+	<router-outlet></router-outlet>
+	<div style="padding-top:20px;"></div>
+</div>
+
+<video-tutor [isModal]="true" [module]="'setting'"></video-tutor>
+<questions-comments [openEvent]="eventQuestionPopup" [moduleString]="'Global view'"></questions-comments>

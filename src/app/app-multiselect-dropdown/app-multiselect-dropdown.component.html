@@ -1,0 +1,24 @@
+<dd-custom [class-dropdown]="classDropdown" (title-click)="onToggle()" (click-outside)="onClickOutside()">
+  <a dd-title>{{fixedTitle}}</a>
+  <ul dd-list class="dropdown-menu" [ngStyle]="getUlStyle()">
+    <li class="li-search-custom">
+      <input textbox-clearable (input)="search=$event.target.value.trim()" [max-width]="500"
+        [block-clear-width]="'100%'" type="text" class="form-control" [placeholder]="placeholder?placeholder:''"
+        style="min-width: 165px">
+    </li>
+    <li *ngIf="isEnableClickOption" (click)="onClickOption('all')">
+      <label [ngClass]="selectedItemsTemp.length==ddOptions.length ? 'checkbox selected':'checkbox'"></label>
+      <a>{{type==1?'( All campaigns )':'( All ad-groups )'}}</a>
+    </li>
+    <ng-template ngFor let-item [ngForOf]="getSearchFilter(ddOptions)">
+      <li class="li-custom" (click)="onClickOption(item.value)">
+        <label [ngClass]="isSelected(item.value) ? 'checkbox selected':'checkbox'"></label>
+        <a>{{item.label}}</a>
+      </li>
+    </ng-template>
+    <!-- <li class="dd-ok"><button type="button" class="btn btn-default" (click)="onClickOk()">OK</button></li> -->
+  </ul>
+  <ul class="dropdown-menu" [ngStyle]="getOkBtnStyle()">
+    <li class="dd-ok"><button type="button" class="btn btn-primary active" (click)="onClickOk()">OK</button></li>
+  </ul>
+</dd-custom>

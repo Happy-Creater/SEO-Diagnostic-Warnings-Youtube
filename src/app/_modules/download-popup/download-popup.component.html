@@ -1,0 +1,26 @@
+
+<div [ngClass]="isDisplayDownloadPopup ? 'modal-open' : ''">
+
+  <!--10/3/2017 download model start-->
+  <div class="modal fade in" id="myModaldownload" [ngStyle]="{'display': getDownloadStyle()}">
+    <div class="modal-dialog" role="document">
+      <div *ngIf="isDisplayDownloadPopup" class="modal-content" (click-outside)="closeDownloadPopup($event)">
+        <div class="modal-body">
+
+          <div *ngIf="isAlreadyLoading" class="icon-loading downloadnow"> </div>
+          <div *ngIf="!isAlreadyLoading" class="icon-loading"> </div>
+
+          <div *ngIf="isAlreadyLoading" id="content-loading" style="position: relative;">THE FILE IS READY FOR DOWNLOAD, <a (click)=downloadFile(urlFileDownload) style="cursor: pointer"> DOWNLOAD NOW !</a></div>
+          <div *ngIf="!isAlreadyLoading" id="content-loading" style="position: relative;">GENERATING FILE, PLEASE WAIT {{valueDotDotDot}}</div>
+
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+  <!--10/3/2017 download model end -->
+  <!--OVERLAY OF POPUP-->
+  <div [ngClass]="isDisplayDownloadPopup ? 'modal-backdrop fade in' : ''"></div>
+</div>

@@ -1,0 +1,43 @@
+{
+  "excel_h1_tags": "h1_tags.xlsx",
+  "previous": {
+    "orphan_pages_val": 2,
+    "h1_tags_val": 33,
+    "meta_description_val": 17,
+    "page_size_val": 84188,
+    "scanned_pages_val": 48,
+    "videos_val": 1,
+    "detected_levels_val": 4,
+    "images_val": 28,
+    "title_tags_val": 11,
+    "poor_pages_val": 4,
+    "pdf_files_val": 1
+  },
+  "excel_meta_description": "meta_description.xlsx",
+  "excel_detected_levels": "detected_levels.xlsx",
+  "excel_page_html_code": "page_html_code.xlsx",
+  "excel_orphan_pages": "orphan_pages.xlsx",
+  "excel_scanned_pages": "scanned_pages.xlsx",
+  "excel_pdf_files": "pdf_files.xlsx",
+  "excel_title_tags": "title_tags.xlsx",
+  "excel_videos": "videos.xlsx",
+  "current": {
+    "orphan_pages_val": 1,
+    "meta_description_val": 17,
+    "page_content_val": 8,
+    "images_val": 38,
+    "page_html_code_val": 10,
+    "h1_tags_val": 22,
+    "page_size_val": 93542,
+    "scanned_pages_val": 18,
+    "videos_val": 0,
+    "detected_levels_val": 6,
+    "title_tags_val": 10,
+    "poor_pages_val": 4,
+    "pdf_files_val": 0
+  },
+  "excel_poor_pages": "poor_pages.xlsx",
+  "excel_page_content": "page_content.xlsx",
+  "excel_images": "images.xlsx",
+  "excel_page_size": "page_size.xlsx"
+}

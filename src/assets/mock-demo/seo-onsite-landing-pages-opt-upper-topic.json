@@ -1,0 +1,2612 @@
+{
+	"piscine en kit": {
+		"chosenText": 0,
+		"idealText": 700,
+		"upperKeywords": [
+			{
+				"keyword": "unité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "panneaux",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "maçonnée",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hors-sol",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "protection",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cartouche",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sable",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "construisez",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "couvertures",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "projet",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "enterrées",
+				"insideKeywords": [
+					{"keyword":"piscine enterrée"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscines sols",
+				"insideKeywords": [
+					{"keyword":"piscines en bois hors sol"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "installation",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "construction",
+				"insideKeywords": [
+					{"keyword":"construction de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "avantages",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "matériaux",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liner",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "entretien",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "solaire",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscines en bois",
+				"insideKeywords": [
+					{"keyword":"piscines en bois hors sol"},
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pompe",
+				"insideKeywords": [
+					{"keyword":"pompes piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "guide",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "abris",
+				"insideKeywords": [
+					{"keyword":"abri de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "barrière",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liste",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hiver",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "modèles",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bâche",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "formes",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "structure",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kits",
+				"insideKeywords": [
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "accessoires",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtration",
+				"insideKeywords": [
+					{"keyword":"filtration piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "coque",
+				"insideKeywords": [
+					{"keyword":"piscine en coque"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "proswell",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "béton",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "conseils",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "qualité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"abri de piscine": {
+		"chosenText": 0,
+		"idealText": 1200,
+		"upperKeywords": [
+			{
+				"keyword": "autoclave",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "nombreux",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "largeur",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "protection",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hors-sol",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "abris de piscine hauts",
+				"insideKeywords": [
+					{"keyword":"abri de piscine télescopique"},
+					{"keyword":"abris de piscine plats"},
+					{"keyword":"abris de piscines bas"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine bois",
+				"insideKeywords": [
+					{"keyword":"piscine bois rectangulaire"},
+					{"keyword":"piscine en bois octogonale"},
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "conforme à norme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sable",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol",
+				"insideKeywords": [
+					{"keyword":"rails au sol"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "solution",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "couvertures",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bas",
+				"insideKeywords": [
+					{"keyword":"abris de piscines bas"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "rails",
+				"insideKeywords": [
+					{"keyword":"rails au sol"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "rectangulaire",
+				"insideKeywords": [
+					{"keyword":"piscine bois rectangulaire"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurise",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "plat",
+				"insideKeywords": [
+					{"keyword":"abris de piscine plats"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "motorisé",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hauteur",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "adaptés",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "espace",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "jardin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "gammes",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "module",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "modèles",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "baignade",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "formes",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kits",
+				"insideKeywords": [
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "profiter",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "discret",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "extérieur",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "fonction",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "télescopiques",
+				"insideKeywords": [
+					{"keyword":"abri de piscine télescopique"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "dimensions",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "qualité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"sécurité piscine": {
+		"chosenText": 0,
+		"idealText": 800,
+		"upperKeywords": [
+			{
+				"keyword": "traitement",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "noyade",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "barrières",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hivernage",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cartouche",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sable",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "robot",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol",
+				"insideKeywords": [
+					{"keyword":"piscines sol"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pros",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "couvertures",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "installation",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kit",
+				"insideKeywords": [
+					{"keyword":"piscine en kit"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pvc",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pompe",
+				"insideKeywords": [
+					{"keyword":"pompe de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine",
+				"insideKeywords": [
+					{"keyword":"sécurité piscine"},
+					{"keyword":"pompe de piscine"},
+					{"keyword":"abris de piscines"},
+					{"keyword":"alarmes de piscine"},
+					{"keyword":"piscine en kit"},
+					{"keyword":"piscines sol"},
+					{"keyword":"filtre de piscine"},
+					{"keyword":"piscine enterrée"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "dispositifs",
+				"insideKeywords": [
+					{"keyword":"dispositif de sécurité"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "types",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "skimmer",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "système",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "norme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "alarmes",
+				"insideKeywords": [
+					{"keyword":"alarmes de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bâche",
+				"insideKeywords": [
+					{"keyword":"bâche à barres"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "accessoires",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtration",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liners",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "abri",
+				"insideKeywords": [
+					{"keyword":"abris de piscines"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtre",
+				"insideKeywords": [
+					{"keyword":"filtre de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "automatique",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "électrique",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [
+					{"keyword":"sécurité piscine"},
+					{"keyword":"dispositif de sécurité"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "qualité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "enterrés",
+				"insideKeywords": [
+					{"keyword":"piscine enterrée"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"piscines bois": {
+		"chosenText": 900,
+		"idealText": 1100,
+		"upperKeywords": [
+			{
+				"keyword": "télescopique",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "autoclave classe",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "largeur",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hors-sol",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine bois",
+				"insideKeywords": [
+					{"keyword":"piscine bois octogonale"},
+					{"keyword":"piscine bois rectangulaire"},
+					{"keyword":"piscine sol bois"},
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "robot",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol",
+				"insideKeywords": [
+					{"keyword":"piscine sol bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pin",
+				"insideKeywords": [
+					{"keyword":"pin sylvestre"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "enterrées",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kit",
+				"insideKeywords": [
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "rectangulaire",
+				"insideKeywords": [
+					{"keyword":"piscine bois rectangulaire"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "couverture",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liner",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "abris",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "vendu",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "octogonale",
+				"insideKeywords": [
+					{"keyword":"piscine bois octogonale"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "utilisation",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "jardin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "espace",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "structures",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "mesure",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "modèles",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "système",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "effet",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "grande",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "technologies",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "gamme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtration",
+				"insideKeywords": [
+					{"keyword":"filtration à sable"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "profiter",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "épaisseur",
+				"insideKeywords": [
+					{"keyword":"madriers épaisseur"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "béton",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "équipé",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "confort",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "qualité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "dimensions",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "option",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"accessoires piscine": {
+		"chosenText": 0,
+		"idealText": 500,
+		"upperKeywords": [
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "classique",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "hivernage",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "protection",
+				"insideKeywords": [
+					{"keyword":"bache de protection"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "détachées",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "gonflables",
+				"insideKeywords": [
+					{"keyword":"mobilier gonflable"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sable",
+				"insideKeywords": [
+					{"keyword":"filtre à sable"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "thermomètre",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "robot",
+				"insideKeywords": [
+					{"keyword":"robots de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kit",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "electrique",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "nettoyeur",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "entretien",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liner",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "réchauffeurs",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pompe",
+				"insideKeywords": [
+					{"keyword":"pompe à chaleur"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine",
+				"insideKeywords": [
+					{"keyword":"robots de piscine"},
+					{"keyword":"accessoires piscines"},
+					{"keyword":"aspirateur de piscine"},
+					{"keyword":"abris de piscine hauts"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bulles",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "airbeds éléctriques",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "jardin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "skimmer",
+				"insideKeywords": [
+					{"keyword":"détachées skimmer"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "nettoyage",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "tubulaire",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "chauffage",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "modèles",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bâche",
+				"insideKeywords": [
+					{"keyword":"bache de protection"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "jeux",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cartouches",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "accessoires",
+				"insideKeywords": [
+					{"keyword":"accessoires piscines"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtration",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "gamme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtre",
+				"insideKeywords": [
+					{"keyword":"filtre à sable"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "réparation",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "fonction",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "rondes",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "matelas de camping",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "systèmes",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "petite",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"filtre piscine": {
+		"chosenText": 400,
+		"idealText": 1400,
+		"upperKeywords": [
+			{
+				"keyword": "traitement",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "conseil",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "etape",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtrant",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "simple",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "équipement",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "petits",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cartouche",
+				"insideKeywords": [
+					{"keyword":"filtre à cartouche"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cuve",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sable",
+				"insideKeywords": [
+					{"keyword":"filtre à sable piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "robot",
+				"insideKeywords": [
+					{"keyword":"robots de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pros",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "installation",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kit",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "élément",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "entretien",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pompe",
+				"insideKeywords": [
+					{"keyword":"pompe piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "guide",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "types",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "adapter",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "skimmer",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cout",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "système",
+				"insideKeywords": [
+					{"keyword":"systèmes de filtration"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtre de piscine",
+				"insideKeywords": [
+					{"keyword":"filtre à sable piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "matériel",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "accessoires",
+				"insideKeywords": [
+					{"keyword":"accessoires de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "efficace",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "gamme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "professionnel",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtration",
+				"insideKeywords": [
+					{"keyword":"filtration piscine"},
+					{"keyword":"systèmes de filtration"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "abri",
+				"insideKeywords": [
+					{"keyword":"abri de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "électrique",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "achat",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [
+					{"keyword":"sécurité piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "qualité",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"piscine hors sol": {
+		"chosenText": 800,
+		"idealText": 1300,
+		"upperKeywords": [
+			{
+				"keyword": "piscine hors sol",
+				"insideKeywords": [
+					{"keyword":"piscines en bois hors sol"},
+					{"keyword":"choisir piscine hors sol"},
+					{"keyword":"liner pour piscine hors sol"},
+					{"keyword":"piscine hors sol en bois en vente"},
+					{"keyword":"filtration de piscine hors sol"},
+					{"keyword":"enterrer piscine hors sol"},
+					{"keyword":"pompe pour piscine hors sol"},
+					{"keyword":"acheter piscine hors sol"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine tubulaire",
+				"insideKeywords": [
+					{"keyword":"piscine tubulaire ronde"},
+					{"keyword":"bestway piscine tubulaire ronde"},
+					{"keyword":"piscine tubulaire rectangulaire"},
+					{"keyword":"kit piscine tubulaire ronde"},
+					{"keyword":"kit piscine tubulaire"},
+					{"keyword":"piscine tubulaire ovale bestway"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "nombreux",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine ovale",
+				"insideKeywords": [
+					{"keyword":"kit piscine ovale"},
+					{"keyword":"piscine bois ovale"},
+					{"keyword":"piscine autoportante ovale"},
+					{"keyword":"piscine en acier ovale"},
+					{"keyword":"piscine tubulaire ovale bestway"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol acier",
+				"insideKeywords": [
+					{"keyword":"sol acier ovale"},
+					{"keyword":"sol acier ronde"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bestway piscine",
+				"insideKeywords": [
+					{"keyword":"bestway piscine tubulaire ronde"},
+					{"keyword":"piscine gonflable ronde bestway"},
+					{"keyword":"bestway piscine acier"},
+					{"keyword":"bestway kit piscine"},
+					{"keyword":"piscine tubulaire ovale bestway"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine autoportante",
+				"insideKeywords": [
+					{"keyword":"kit piscine autoportante ronde"},
+					{"keyword":"piscine autoportante ovale"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "baignade",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kit piscine",
+				"insideKeywords": [
+					{"keyword":"kit piscine ovale"},
+					{"keyword":"kit piscine autoportante ronde"},
+					{"keyword":"bestway kit piscine"},
+					{"keyword":"kit piscine tubulaire ronde"},
+					{"keyword":"choisir piscine en kit"},
+					{"keyword":"kit piscine tubulaire"},
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "acier ovale",
+				"insideKeywords": [
+					{"keyword":"sol acier ovale"},
+					{"keyword":"piscine en acier ovale"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine acier",
+				"insideKeywords": [
+					{"keyword":"piscine rond acier"},
+					{"keyword":"piscine en acier ovale"},
+					{"keyword":"bestway piscine acier"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "choisir piscine",
+				"insideKeywords": [
+					{"keyword":"choisir piscine hors sol"},
+					{"keyword":"choisir piscine en kit"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscines bois",
+				"insideKeywords": [
+					{"keyword":"piscine bois ovale"},
+					{"keyword":"piscine bois rectangulaire"},
+					{"keyword":"piscines en bois hors sol"},
+					{"keyword":"piscine hors sol en bois en vente"},
+					{"keyword":"liner piscine bois"},
+					{"keyword":"kit piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "solution",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol ronde",
+				"insideKeywords": [
+					{"keyword":"sol gré ronde"},
+					{"keyword":"sol acier ronde"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "rails",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "rond acier",
+				"insideKeywords": [
+					{"keyword":"piscine rond acier"},
+					{"keyword":"sol acier ronde"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "télescopiques",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine ronde",
+				"insideKeywords": [
+					{"keyword":"piscine tubulaire ronde"},
+					{"keyword":"piscine rond acier"},
+					{"keyword":"kit piscine autoportante ronde"},
+					{"keyword":"bestway piscine tubulaire ronde"},
+					{"keyword":"piscine gonflable ronde bestway"},
+					{"keyword":"liner piscine ronde"},
+					{"keyword":"kit piscine tubulaire ronde"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscine rectangulaire",
+				"insideKeywords": [
+					{"keyword":"piscine bois rectangulaire"},
+					{"keyword":"piscine tubulaire rectangulaire"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "dimensions",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liner piscine",
+				"insideKeywords": [
+					{"keyword":"liner piscine ronde"},
+					{"keyword":"liner pour piscine hors sol"},
+					{"keyword":"liner piscine bois"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	},
+	"liner piscine": {
+		"chosenText": 500,
+		"idealText": 900,
+		"upperKeywords": [
+			{
+				"keyword": "traitement",
+				"insideKeywords": [
+					{"keyword":"traitement d'eau"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "etape",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "bassin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "nombreux",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "direct",
+				"insideKeywords": [
+					{"keyword":"hydro sud direct"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "couleur",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "protection",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "piscines",
+				"insideKeywords": [
+					{"keyword":"sécurité piscine"},
+					{"keyword":"pompe de piscine"},
+					{"keyword":"piscines enterrée"},
+					{"keyword":"construire piscine"},
+					{"keyword":"abri de piscine"},
+					{"keyword":"piscine en kit"},
+					{"keyword":"liner piscine sur mesure"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sol",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "modèle",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "couvertures",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "enterrées",
+				"insideKeywords": [
+					{"keyword":"piscines enterrée"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "kit",
+				"insideKeywords": [
+					{"keyword":"piscine en kit"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "eau",
+				"insideKeywords": [
+					{"keyword":"traitement d'eau"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "volets",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "pvc",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "entretien",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "liner",
+				"insideKeywords": [
+					{"keyword":"liner piscine sur mesure"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "guide",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "abris",
+				"insideKeywords": [
+					{"keyword":"abri de piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "frises",
+				"insideKeywords": [
+					{"keyword":"frise décorative"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtrations",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "clair",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "escaliers",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "filtres",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "mesure",
+				"insideKeywords": [
+					{"keyword":"liner piscine sur mesure"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "possible",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "cartouches",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "forme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "accessoires",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "coque",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "gamme",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "adapté",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "revêtements",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "j ardin",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "qualite",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "conseils",
+				"insideKeywords": [],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			},
+			{
+				"keyword": "sécurité",
+				"insideKeywords": [
+					{"keyword":"sécurité piscine"}
+				],
+				"final_freq": 1,
+				"freq_by_group": 4,
+				"freq_by_weight": 5,
+				"weight": 1
+			}
+		]
+	}
+}

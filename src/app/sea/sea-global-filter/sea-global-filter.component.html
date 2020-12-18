@@ -1,0 +1,26 @@
+<div class="row">
+    <!--start row conten3-->
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 content3">
+        <!--end row content-tab-->
+        <div class="row">
+            <!--start row content-tabscontent-->
+            <div #filterLoading=loadingDelay appLoadingDelay
+                class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content" style="background-color: #f0f1f1;">
+                <button *ngIf="getFocusOfGlobalFilter() == 0" type="button" class="btn btn-default blue"
+                    (click)="customGlobalFilterDialog()">All campaigns</button>
+                <button *ngIf="getFocusOfGlobalFilter() == 1" type="button" class="btn btn-default orange" (click)="customGlobalFilterDialog()">Branded
+                    campaigns <i (click)="resetFocusOfGlobalFilter()" class="icon-remove orange"></i></button>
+                <button *ngIf="getFocusOfGlobalFilter() == 2" type="button" class="btn btn-default orange" (click)="customGlobalFilterDialog()">Non-branded
+                    campaigns <i (click)="resetFocusOfGlobalFilter()" class="icon-remove orange"></i></button>
+                <ng-template ngFor let-filter [ngForOf]="getFilterTempOfGlobalFilter()" let-index="index">
+                    <button type="button" class="btn btn-default orange" (click)="customGlobalFilterDialog()">{{getFilterTextForBtn(index)}}<i
+                            (click)="removeFilterTempOfGlobalFilter(getFilterTempOfGlobalFilter()[index])"
+                            class="icon-remove orange"></i></button>
+                </ng-template>
+            </div>
+        </div>
+        <!--end row content-tabscontent-->
+    </div>
+    <!--start col content3-->
+</div>
+<!--end row content3-->

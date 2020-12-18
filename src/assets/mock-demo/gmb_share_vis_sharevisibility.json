@@ -1,0 +1,636 @@
+{
+  "result": {
+    "currentMultipleLineData": [
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#2B908F",
+        "name": "www.fiat.fr",
+        "lineColor": "#2B908F",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#3b2d68",
+        "name": "www.porsche.com",
+        "lineColor": "#3b2d68",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#434348",
+        "name": "www.actiglass.org",
+        "lineColor": "#434348",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#8085E9",
+        "name": "www.audi.fr",
+        "lineColor": "#8085E9",
+        "type": "line"
+      },
+      {
+        "data": [
+          14.045,
+          13.382501,
+          14.707501,
+          90.762505,
+          800.03485,
+          121255
+        ],
+        "color": "#91E8E1",
+        "name": "www.franceparebrise.fr",
+        "lineColor": "#91E8E1",
+        "type": "line"
+      },
+      {
+        "data": [
+          227.63501,
+          41.2075,
+          45.845,
+          936.5097,
+          2036.2594,
+          12187.184
+        ],
+        "color": "#223f34",
+        "name": "www.glastint.com",
+        "lineColor": "#223f34",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#e40b90",
+        "name": "www.toyota.fr",
+        "lineColor": "#e40b90",
+        "type": "line"
+      },
+      {
+        "data": [
+          8384.209,
+          8429.655,
+          6852.1084,
+          160575.97,
+          56707.664,
+          90463.3
+        ],
+        "color": "#7CB5EC",
+        "name": "www.website.com",
+        "lineColor": "#7CB5EC",
+        "type": "line"
+      },
+      {
+        "data": [
+          71.152504,
+          107.06001,
+          185.23502,
+          545.6351,
+          869.0674,
+          1271.3677
+        ],
+        "color": "#F15C80",
+        "name": "www.chrono-parebrise.fr",
+        "lineColor": "#F15C80",
+        "type": "line"
+      },
+      {
+        "data": [
+          12272.548,
+          11546.719,
+          10744.169,
+          54682.484,
+          113349.41,
+          225352.75
+        ],
+        "color": "#b5fa43",
+        "name": "www.mondialparebrise.fr",
+        "lineColor": "#b5fa43",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#6f4a3d",
+        "name": "www.skoda.fr",
+        "lineColor": "#6f4a3d",
+        "type": "line"
+      },
+      {
+        "data": [
+          37.63,
+          37.63,
+          42.665,
+          193.31752,
+          293.09,
+          519.86993
+        ],
+        "color": "#4766de",
+        "name": "www.pbnd.fr",
+        "lineColor": "#4766de",
+        "type": "line"
+      },
+      {
+        "data": [
+          981.8245,
+          925.90955,
+          1002.62726,
+          4686.1245,
+          9023.532,
+          17887.162
+        ],
+        "color": "#F7A35C",
+        "name": "www.aplusglass.com",
+        "lineColor": "#F7A35C",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4.29
+        ],
+        "color": "#5cc151",
+        "name": "www.norauto.fr",
+        "lineColor": "#5cc151",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          184.30751,
+          154.76003,
+          108.823
+        ],
+        "color": "#95ccbb",
+        "name": "www.renault.fr",
+        "lineColor": "#95ccbb",
+        "type": "line"
+      },
+      {
+        "data": [
+          826.00476,
+          807.05756,
+          799.6373,
+          6899.9546,
+          13848.361,
+          13843.349
+        ],
+        "color": "#39cbae",
+        "name": "www.sosparebriseplus.fr",
+        "lineColor": "#39cbae",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          45.1825,
+          41.2075,
+          9.295
+        ],
+        "color": "#F45B5B",
+        "name": "www.ford.fr",
+        "lineColor": "#F45B5B",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#f579b9",
+        "name": "www.groupauto.fr",
+        "lineColor": "#f579b9",
+        "type": "line"
+      },
+      {
+        "data": [
+          50.7475,
+          40.412502,
+          39.8825,
+          444.14008,
+          1013.3599,
+          1061.9232
+        ],
+        "color": "#d871e6",
+        "name": "www.glassautoservice.com",
+        "lineColor": "#d871e6",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#E4D354",
+        "name": "www.citroen.fr",
+        "lineColor": "#E4D354",
+        "type": "line"
+      },
+      {
+        "data": [
+          8.6125,
+          16.0325,
+          26.765,
+          1916.3478,
+          372.72256,
+          277.797
+        ],
+        "color": "#90ED7D",
+        "name": "www.ad.fr",
+        "lineColor": "#90ED7D",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#b0f9a0",
+        "name": "www.nissan.fr",
+        "lineColor": "#b0f9a0",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#9cbcbd",
+        "name": "www.peugeot.fr",
+        "lineColor": "#9cbcbd",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#91266d",
+        "name": "www.ouiglass.com",
+        "lineColor": "#91266d",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          4.6375003,
+          148.13503,
+          39.0875,
+          12.154999
+        ],
+        "color": "#58f0ad",
+        "name": "www.points.fr",
+        "lineColor": "#58f0ad",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#5ec058",
+        "name": "www.honda.fr",
+        "lineColor": "#5ec058",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#1c717f",
+        "name": "www.opel.fr",
+        "lineColor": "#1c717f",
+        "type": "line"
+      },
+      {
+        "data": [
+          28.7525,
+          28.752499,
+          24.645002,
+          612.28253,
+          1212.2417,
+          1346.6276
+        ],
+        "color": "#eec8dd",
+        "name": "www.rapidparebrise.fr",
+        "lineColor": "#eec8dd",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#bafa72",
+        "name": "www.seat.fr",
+        "lineColor": "#bafa72",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          17.3575,
+          34.0525,
+          2.145
+        ],
+        "color": "#dedbdd",
+        "name": "www.speedy.fr",
+        "lineColor": "#dedbdd",
+        "type": "line"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": "#1aa9f2",
+        "name": "www.volkswagen.fr",
+        "lineColor": "#1aa9f2",
+        "type": "line"
+      }
+    ],
+    "categories": [
+      1554854400000,
+      1556755200000,
+      1559347200000,
+      1561939200000,
+      1564617600000,
+      1567296000000
+    ],
+    "currentPieData": [
+      {
+        "sliced": true,
+        "color": "#7CB5EC",
+        "name": "www.website.com",
+        "y": 90463.3
+      },
+      {
+        "sliced": true,
+        "color": "#434348",
+        "name": "www.actiglass.org",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#90ED7D",
+        "name": "www.ad.fr",
+        "y": 277.797
+      },
+      {
+        "sliced": true,
+        "color": "#F7A35C",
+        "name": "www.aplusglass.com",
+        "y": 17887.162
+      },
+      {
+        "sliced": true,
+        "color": "#8085E9",
+        "name": "www.audi.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#F15C80",
+        "name": "www.chrono-parebrise.fr",
+        "y": 1271.3677
+      },
+      {
+        "sliced": true,
+        "color": "#E4D354",
+        "name": "www.citroen.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#2B908F",
+        "name": "www.fiat.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#F45B5B",
+        "name": "www.ford.fr",
+        "y": 9.295
+      },
+      {
+        "sliced": true,
+        "color": "#91E8E1",
+        "name": "www.franceparebrise.fr",
+        "y": 121255
+      },
+      {
+        "sliced": true,
+        "color": "#d871e6",
+        "name": "www.glassautoservice.com",
+        "y": 1061.9232
+      },
+      {
+        "sliced": true,
+        "color": "#223f34",
+        "name": "www.glastint.com",
+        "y": 12187.184
+      },
+      {
+        "sliced": true,
+        "color": "#f579b9",
+        "name": "www.groupauto.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#5ec058",
+        "name": "www.honda.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#b5fa43",
+        "name": "www.mondialparebrise.fr",
+        "y": 225352.75
+      },
+      {
+        "sliced": true,
+        "color": "#b0f9a0",
+        "name": "www.nissan.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#5cc151",
+        "name": "www.norauto.fr",
+        "y": 4.29
+      },
+      {
+        "sliced": true,
+        "color": "#1c717f",
+        "name": "www.opel.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#91266d",
+        "name": "www.ouiglass.com",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#4766de",
+        "name": "www.pbnd.fr",
+        "y": 519.86993
+      },
+      {
+        "sliced": true,
+        "color": "#9cbcbd",
+        "name": "www.peugeot.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#58f0ad",
+        "name": "www.points.fr",
+        "y": 12.154999
+      },
+      {
+        "sliced": true,
+        "color": "#3b2d68",
+        "name": "www.porsche.com",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#eec8dd",
+        "name": "www.rapidparebrise.fr",
+        "y": 1346.6276
+      },
+      {
+        "sliced": true,
+        "color": "#95ccbb",
+        "name": "www.renault.fr",
+        "y": 108.823
+      },
+      {
+        "sliced": true,
+        "color": "#bafa72",
+        "name": "www.seat.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#6f4a3d",
+        "name": "www.skoda.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#39cbae",
+        "name": "www.sosparebriseplus.fr",
+        "y": 13843.349
+      },
+      {
+        "sliced": true,
+        "color": "#dedbdd",
+        "name": "www.speedy.fr",
+        "y": 2.145
+      },
+      {
+        "sliced": true,
+        "color": "#e40b90",
+        "name": "www.toyota.fr",
+        "y": 0
+      },
+      {
+        "sliced": true,
+        "color": "#1aa9f2",
+        "name": "www.volkswagen.fr",
+        "y": 0
+      }
+    ]
+  }
+}

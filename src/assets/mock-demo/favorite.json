@@ -1,0 +1,15 @@
+{
+  "result": {
+    "favorites": [
+      {
+        "competitor": "https://www.aviva.fr"
+      },
+      {
+        "competitor": "https://www.generali.fr"
+      },
+      {
+        "competitor": "https://www.mma.fr"
+      }
+    ]
+  }
+}

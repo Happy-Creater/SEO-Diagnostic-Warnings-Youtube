@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+
+.manage-campaigns-dialog {
+    width: 100%;
+    max-width: 335px;
+}
+
+.detail-predictions-recommendations {
+    width: 100%;
+    max-width: 1000px;
+}
+
+table.duplicate-keyword-msg th{
+    text-align: center;
+}
+
+.modal-dialog-add-to-my-list, .modal-dialog-edit-to-my-list{
+    width: 800px !important;
+}
+
+.modal-dialog-rank-history{
+    width: 800px !important;
+}
+
+.my-profil .btn.dropdown-toggle.btn-default{
+    margin: 0px auto !important;
+}
+
+.highcharts-menu hr {
+    margin: 0;
+}
+
+.rank-mail-block-clear{
+    width: 100% !important;
+    display: block;
+}
+
+.new-line-table{
+    table-layout:fixed;
+}
+.new-line-table th,.new-line-table td{
+    word-wrap: break-word;
+    white-space:normal;
+}
+
+table.seo-keywords-rank-alert-tbl{
+    border: 1px solid #ddd;
+}
+table.seo-keywords-rank-alert-tbl .border-right {
+    border-right: 1px solid #ddd;
+}
+
+.ngui-auto-complete > ul li:hover,.ngui-auto-complete > ul li.selected{
+    background-color: rgba(221, 221, 221, 0.4) !important;
+}
+
+.highcharts-text-outline {
+    fill: white;
+    stroke-width: 0px;
+}
+
+.w-100{
+    width: 100%;
+}
+
+#row-1blockmap #pointmap .highcharts-container {
+    width: 100% !important;
+    text-align: center !important;
+}
+chart {
+    display: block;
+}
+
+#global-view-auto-complete b{
+    font-weight: 700;
+}
+
+/* 
+ * global view part
+ */
+
+#table-website-list .list-tooltip a {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 22px;
+    font-size: 11px;
+    cursor: pointer;
+}
+#table-website-list .list-tooltip .blue a,.global-view-tooltip.blue.tooltip > .tooltip-inner {
+    background: #407dd8;
+}
+#table-website-list .list-tooltip .purple a,.global-view-tooltip.purple.tooltip > .tooltip-inner {
+    background: #b95fd7;
+}
+
+#table-website-list .list-tooltip .green a,.global-view-tooltip.green.tooltip > .tooltip-inner {
+    background: #40d8b2;
+}
+
+#table-website-list .list-tooltip .red a,.global-view-tooltip.red.tooltip > .tooltip-inner {
+    background: #ff474c;
+}
+
+#table-website-list .list-tooltip .orange a,.global-view-tooltip.orange.tooltip > .tooltip-inner {
+    background: #fc8951;
+}
+
+#table-website-list .list-tooltip .yellow a,.global-view-tooltip.yellow.tooltip > .tooltip-inner {
+    background: #ffc800;
+}
+
+#table-website-list .list-tooltip .black a,.global-view-tooltip.black.tooltip > .tooltip-inner {
+    background: #575c7e;
+}
+
+.global-view-tooltip.blue.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #407dd8;
+}
+
+.global-view-tooltip.purple.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #b95fd7;
+}
+
+.global-view-tooltip.green.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #40d8b2;
+}
+
+.global-view-tooltip.red.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #ff474c;
+}
+
+.global-view-tooltip.orange.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #fc8951;
+}
+
+.global-view-tooltip.yellow.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #ffc800;
+}
+
+.global-view-tooltip.black.tooltip.top .tooltip-arrow {
+    border-top: 5px solid #575c7e;
+}
+
+#table-website-list .list-tooltip .tooltip.top .tooltip-arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.global-view-tooltip.tooltip>.tooltip-inner {
+    color: #fff;
+    opacity: 1;
+    padding: 5px 10px;
+    font-family: 'Proxima Nova Light';
+    font-size: 12px;
+    opacity: 1 !important;
+    box-shadow: 0px 0px 42px -16px rgba(0,0,0,0.75);
+    min-width: 100px;
+}
+.global-view-tooltip{
+    position: absolute !important;
+    opacity: 1 !important;
+}
+#table-website-list .list-tooltip {
+    display: block;
+    position: relative;
+}
+
+/**
+    lightbox lib
+*/
+
+.lightbox .lb-dataContainer{
+    position: relative;
+}
+div.lightbox.animation{
+    display: flex !important;
+    flex-direction: column-reverse;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.overflow-visible{
+    overflow: visible !important;
+}
+
+.modal-dialog.my-custom-dialog.keyword-filter-dialog{
+    margin:5% auto 2% auto;
+}
+
+/**
+    loading delay
+*/
+
+tr.loading>td{
+    padding: 0px !important;
+}
+
+tr.loading>td>div{
+    position: relative;
+    height: 50px;
+}
+
+
+.hot-content-rescan-dialog {
+    width: 100%;
+    max-width: 375px;
+}

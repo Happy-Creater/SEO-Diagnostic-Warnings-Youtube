@@ -1,0 +1,492 @@
+<div menu-left id="menu-left" class=" col-lg-2 col-sm-2 col-md-2 col-xs-12 seo">
+		<ul>
+			<li class="head-page">
+				<p class="title-link">SEO</p>
+			</li>
+			<li>
+				<a routerLink="./overview" id="Overview" [menu-item]="'overview'" [menu-item-link]="['/overview']" [category]="'seo-overview'">Overview</a>
+			</li>
+			<li class="submenu-left dropdown-Reporting" *ngIf="false">
+				<ul class="sub-menu">
+					<li>
+						<a href="Data-Reporting-Overview.html">Overview</a>
+					</li>
+					<li>
+						<a class="active" href="Reporting-Webpagemonitoring-Overview-Sans-Comparaison.html">Web Page Monetoring</a>
+					</li>
+					<li>
+						<a href="#">Channel Monetoring</a>
+					</li>
+					<li>
+						<a href="#">E-commerce / Obj.Monetoring</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a routerLink="./info" id="information" [menu-item]="'information'" [menu-item-link]="['/info']" [category]="'seo-info'">Crawler information</a>
+			</li>
+			<li class="submenu-left dropdown-Reporting" *ngIf="false">
+				<ul class="sub-menu">
+					<li>
+						<a href="Data-Reporting-Overview.html">Overview</a>
+					</li>
+					<li>
+						<a class="active" href="Reporting-Webpagemonitoring-Overview-Sans-Comparaison.html">Web Page Monetoring</a>
+					</li>
+					<li>
+						<a href="#">Channel Monetoring</a>
+					</li>
+					<li>
+						<a href="#">E-commerce / Obj.Monetoring</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="Diagnostic" [menu-item]="'diagnostic'" [category]="'seo-diagnostic'">Diagnostic</a>
+			</li>
+			<li class="submenu-left dropdown-Diagnostic" [sub-menu]="'diagnostic'">
+				<ul class="sub-menu">
+					<li>
+						<a [menu-item]="'diagnostic-warnings'" [menu-item-link]="['/diagnostic-warnings']" [category]="'seo-diagnostic-warnings'" routerLink="./diagnostic-warnings">Warnings</a>
+					</li>
+					<li>
+						<a [menu-item]="'diagnostic-loadingtime'" [menu-item-link]="['/diagnostic-loadingtime']" [category]="'seo-diagnostic-loadingtime'" routerLink="./diagnostic-loadingtime">Loading time</a>
+					</li>
+					<li>
+						<a [menu-item]="'diagnostic-no-regression'" [menu-item-link]="['/diagnostic-no-regression']" [category]="'diagnostic-no-regression'" routerLink="./diagnostic-no-regression">No regression</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="keywords" [menu-item]="'keywords'" [category]="'seo-keywords'">Keywords</a>
+			</li>
+			<li class="submenu-left dropdown-onsite" [sub-menu]="'keywords'">
+				<ul class="sub-menu">
+					<li>
+						<a [menu-item]="'seo-keywords-opportunities'" [menu-item-link]="['/seo-keywords-opportunities']" [category]="'seo-keywords-opportunities'" routerLink="./seo-keywords-opportunities">Opportunities</a>
+					</li>
+					<li>
+						<a routerLink="./seo-keywords-seo-sea-synergy" [menu-item]="'seo-keywords-seo-sea-synergy'" [menu-item-link]="['seo-keywords-seo-sea-synergy']" [category]="'seo-keywords-seo-sea-synergy'">SEO & SEA Synergy</a>
+					</li>
+					<li>
+						<a [menu-item]="'seo-keywords-rank-checker'" [menu-item-link]="['/seo-keywords-rank-checker']" [category]="'seo-keywords-rank-checker'" routerLink="./seo-keywords-rank-checker">Rank Checker</a>
+					</li>
+					<li [hidden]="!(account=='new1' || account=='demo1' || account=='demo12' || account=='demo13' || account=='demo14' )">
+						<a [menu-item]="'seo-keywords-geolocal'" [menu-item-link]="['/seo-keywords-geolocal']" [category]="'seo-keywords-geolocal'" routerLink="./seo-keywords-geolocal">Geoloc. SEO ranking</a>
+					</li>
+					<li>
+						<a [menu-item]="'seo-keywords-geo-rank-overview'" [menu-item-link]="['/seo-keywords-geo-rank-overview']" [category]="'seo-keywords-geo-rank-overview'" routerLink="./seo-keywords-geo-rank-overview">Geoloc. ranking overview</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="onsite" [menu-item]="'onsite'" [category]="'seo-onsite'">Onsite</a>
+			</li>
+			<li class="submenu-left dropdown-onsite" [sub-menu]="'onsite'">
+				<ul class="sub-menu">
+					<!-- <li><a href="Seo-Onsite-Overview.html">Overview</a></li>
+						<li><a href="#">Keywords</a></li> -->
+					<li>
+						<a [menu-item]="'onsite-validate-langing-pages'" [menu-item-link]="['/onsite-validate-langing-pages']" [category]="'seo-onsite-validate-langing-pages'" routerLink="./onsite-validate-langing-pages">Validate landing pages</a>
+					</li>
+					<li>
+						<a [menu-item]="'onsite-landing-page-opt'" [menu-item-link]="['/onsite-landing-page-opt']" [category]="'seo-onsite-landing-page-opt'" routerLink="./onsite-landing-page-opt">Landing pages optimization</a>
+					</li>
+					<li>
+						<a [menu-item]="'onsite-new-pages-opt'" [menu-item-link]="['/onsite-new-pages-opt']" [category]="'seo-onsite-new-pages-opt'" routerLink="./onsite-new-pages-opt">New pages optimization</a>
+					</li>
+					<li>
+						<a [menu-item]="'onsite-hot-content-optimisations'" [menu-item-link]="['/onsite-hot-content-optimisation']" [category]="'seo-onsite-hot-content-optimisation'" routerLink="./onsite-hot-content-optimisation">Hot content optimization</a>
+					</li>
+					<li>
+						<a [menu-item]="'onsite-innerlinks'" [menu-item-link]="['/onsite-inner']" [category]="'seo-onsite-innerlinks'" routerLink="./onsite-innerlinks"> Inner links</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a id="offsite" [menu-item]="'offsite'" [category]="'seo-offsite'">Offsite</a>
+			</li>
+			<li class="submenu-left dropdown-offsite" [sub-menu]="'offsite'">
+				<ul class="sub-menu">
+					<li>
+						<a [menu-item]="'offsite-overview'" [menu-item-link]="['/offsite-overview']" [category]="'seo-offsite-overview'" routerLink="./offsite-overview">Overview</a>
+					</li>
+					<li>
+						<a [menu-item]="'offsite-details'" [menu-item-link]="['/offsite-details']" [category]="'seo-offsite-details'" routerLink="./offsite-details">Details</a>
+					</li>
+					<li>
+						<a [menu-item]="'offsite-optimization'" [sign-visibled]="false" [category]="'seo-offsite-opt'">Optimization</a>
+					</li>
+					<li class="submenu-left dropdown-offsite-optimization" [sub-menu]="'offsite-optimization'">
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'offsite-opt-detox'" [menu-item-link]="['/offsite-opt-detox']" [category]="'seo-offsite-opt-detox'" routerLink="./offsite-opt-detox">{{ 'SEO.Detox' | translate }}</a>
+							</li>
+							<li>
+								<a [menu-item]="'offsite-opt-link'" [menu-item-link]="['/offsite-opt-link']" [category]="'seo-offsite-opt-link'" routerLink="./offsite-opt-linkbuilding">Link building</a>
+							</li>
+							<li >
+								<a [menu-item]="'offsite-opt-blog-automation'" [menu-item-link]="['/offsite-opt-blog-automation']" [category]="'offsite-opt-blog-automations'" routerLink="./offsite-opt-blog-automation" >Blogs automation</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+			<!-- <li>
+				<a routerLink="./project-management" [menu-item]="'project-management'" [menu-item-link]="['/project-management']">Project Management</a>
+			</li> -->
+	
+			<li>
+				<a routerLink="./toolbox" id="toolbox" [menu-item]="'toolbox'" [menu-item-link]="['/toolbox']" [category]="'seo-toolbox'">{{'SEO.Toolbox' | translate}}</a>
+			</li>
+			<!-- 02/06/2017 start -->
+			<li class="submenu-left dropdown-toolbox" [sub-menu]="'toolbox'" [force-expand-child]="true">
+				<ul class="sub-menu">
+					<li>
+						<a [menu-item]="'toolbox-text'" [sign-visibled]="false"  [category]="'seo-toolbox-content'">{{'SEO.Content' | translate}}</a>
+					</li>
+					<li class="submenu-left dropdown-toolbox-text" [sub-menu]="'toolbox-text'">
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'toolbox-comparison'" [menu-item-link]="['/toolbox-comparison']" [category]="'seo-toolbox-comparison'" routerLink="./toolbox-comparison">{{setNormalText(translateString('SEO.Content_comparison'))}}</a>
+							</li>
+							<li *ngIf="userRole == 'admin' || userRole == 'super' || userRole == 'consultant'">
+								<a [menu-item]="'toolbox-content-piracy'" [menu-item-link]="['/toolbox-content-piracy']" [category]="'seo-toolbox-content-piracy'" routerLink="./toolbox-content-piracy">Content Piracy tool</a>
+							</li>
+							<li>
+								<a [menu-item]="'toolbox-export'" [menu-item-link]="['/toolbox-export']" [category]="'seo-toolbox-export'" routerLink="./toolbox-export">{{setNormalText(translateString('SEO.Export_content'))}}</a>
+							</li>
+							<li>
+								<a [menu-item]="'toolbox-webpage'" [menu-item-link]="['/toolbox-webpage']" [category]="'seo-toolbox-webpage'" routerLink="./toolbox-webpage">{{setNormalText(translateString('SEO.WEBPAGE_STATUS'))}}</a>
+							</li>
+							<li *ngIf="monetoringType == 'test'" >
+								<a [menu-item]="'toolbox-search'" [menu-item-link]="['/toolbox-search']" [category]="'seo-toolbox-search'" routerLink="./toolbox-search">{{setNormalText(translateString('SEO.SEARCH_IN_CODE'))}}</a>
+							</li>
+						</ul>
+					</li>
+					<li *ngIf="global.getUserRole() != 'USER'">
+						<a [menu-item]="'toolbox-keyword'" [sign-visibled]="false" [category]="'seo-toolbox-keyword'">{{'SEO.Keyword' | translate}}</a>
+					</li>
+					<li class="submenu-left dropdown-toolbox-keyword" [sub-menu]="'toolbox-keyword'">
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'toolbox-keyword-power'" [menu-item-link]="['/toolbox-keyword-power']" [category]="'seo-toolbox-keyword-power'" routerLink="./toolbox-keyword-power">{{'SEO.Keyword_power' | translate}}</a>
+							</li>
+							<li>
+								<a [menu-item]="'toolbox-ranked'" [menu-item-link]="['/toolbox-ranked']" [category]="'seo-toolbox-ranked'" routerLink="./toolbox-ranked">{{'SEO.Get_ranked_pages' | translate}}</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a [menu-item]="'toolbox-sitemap'" [sign-visibled]="false" [category]="'seo-toolbox-sitemap'">{{'SEO.Sitemap' | translate}}</a>
+					</li>
+					<li class="submenu-left dropdown-toolbox-sitemap" [sub-menu]="'toolbox-sitemap'">
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'toolbox-generate-sitemap'" [menu-item-link]="['/toolbox-generate-sitemap']" [category]="'seo-toolbox-generate-sitemap'" routerLink="./toolbox-generate-sitemap">{{'SEO.Generation_of_Sitemap' | translate}}</a>
+							</li>
+							<li>
+								<a [menu-item]="'toolbox-sitemap-urls'" [menu-item-link]="['/toolbox-sitemap-urls']" [category]="'seo-toolbox-sitemap-urls'" routerLink="./toolbox-sitemap-urls">{{'SEO.Retrieve_URLs_from_Sitemap' | translate}}</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a [menu-item]="'toolbox-redirection'" [sign-visibled]="false" [category]="'seo-toolbox-redirection'">{{'SEO.Redirection' | translate}}</a>
+					</li>
+					<li class="submenu-left dropdown-toolbox-redirection" [sub-menu]="'toolbox-redirection'">
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'toolbox-redirection'" [menu-item-link]="['/toolbox-redirection']" [category]="'seo-toolbox-redirection'" routerLink="./toolbox-redirection">{{setNormalText(translateString('SEO.REDIRECTION_SIMULATOR'))}}</a>
+							</li>
+							<li>
+								<a [menu-item]="'toolbox-301'" [menu-item-link]="['/toolbox-301']" [category]="'seo-toolbox-301'" routerLink="./toolbox-301">{{setNormalText(translateString('SEO.301_REDIRECTION'))}}</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+	
+			<!--<li>
+					<a routerLink="./toolbox" id="toolbox">Toolbox</a>
+				</li>
+				<li class="submenu-left dropdown-toolbox" *ngIf="expandToolboxState">
+					<ul class="sub-menu">
+						<li><a routerLink="./toolbox-301">301 Redirection</a></li>
+						<li><a href="#">Webpage status</a></li>
+						<li>
+							<a href="javascript:void(0)">keyword power</a>
+							<ul class="sub-menu">
+								<li><a href="#">Opportunities</a></li>
+								<li><a href="#">Rank checker</a></li>
+								<li><a href="#">Optimized keywords</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Get ranked pages</a></li>
+					</ul>
+				</li>-->
+	
+	
+			<!--<li>
+					<a [menu-item]="'benchmark'" id="benchmark" href="Seo-Benchmark.html">Benchmark</a>
+				</li>-->
+			<li>
+				<a id="benchmark" [menu-item]="'benchmark'" [category]="'seo-benchmark'">Benchmark</a>
+			</li>
+			<li class="submenu-left dropdown-benchmark" [sub-menu]="'benchmark'">
+				<ul class="sub-menu">
+					<li>
+						<a [menu-item]="'benchmark-overview'" [menu-item-link]="['/benchmark-overview']" [category]="'seo-benchmark-overview'" routerLink="./benchmark-overview">Overview</a>
+					</li>
+					<li>
+						<a [menu-item]="'benchmark-chart'" [menu-item-link]="['/benchmark-chart']" [category]="'seo-benchmark-chart'" routerLink="./benchmark-chart">Netlinking</a>
+					</li>
+					<li>
+						<a [menu-item]="'benchmark-ranking-comparison'" [menu-item-link]="['/benchmark-ranking-comparison']" [category]="'seo-benchmark-ranking-comparison'" routerLink="./benchmark-ranking-comparison">Ranking comparison</a>
+					</li>
+					<li>
+						<a [menu-item]="'benchmark-instant-benchmark'" [menu-item-link]="['/benchmark-instant-benchmark']" [category]="'seo-benchmark-instant-benchmark'" routerLink="./benchmark-instant-benchmark">Instant benchmark</a>
+					</li>
+				</ul>
+			</li>
+
+			<!-- Mobile first //NOT ACTIVE NOW ON PRODUCTION -->
+			<div>
+			<li>
+					<a id="mobile-first" [menu-item]="'mobile-first'" [category]="'seo-mobile-first'">Mobile first</a>
+			</li>
+			<li class="submenu-left dropdown-mobile-first" [sub-menu]="'mobile-first'">
+					<div [category]="'seo-mobile-first'"></div>	
+					<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'mobile-first-overview'" [menu-item-link]="['/mobile-first-overview']" [category]="'is-not-mobile'" routerLink="./mobile-first-overview">Overview</a>
+							</li>
+							<li>
+								<a [menu-item]="'mobile-first-warnings'" [menu-item-link]="['/mobile-first-warnings']" [category]="'is-not-mobile'" routerLink="./mobile-first-warnings">Warnings</a>
+							</li>
+							<li>
+								<a [menu-item]="'mobile-first-loading-time'" [menu-item-link]="['/mobile-first-loading-time']" [category]="'is-not-mobile'" routerLink="./mobile-first-loading-time">Loading time</a>
+							</li>
+							<li>
+								<a [menu-item]="'seo-mobile-first-geolocal-rank'" [menu-item-link]="['/seo-mobile-first-geolocal-rank']" [category]="'seo-mobile-first-geolocal-rank'" routerLink="./seo-mobile-first-geolocal-rank">Geoloc. SEO mobile ranking</a>
+							</li>
+							<li>
+								<a [menu-item]="'mobile-first-display-simulator'" [menu-item-link]="['/mobile-first-display-simulator']" [category]="'is-mobile-and-is-https'" routerLink="./mobile-first-display-simulator">Display simulator</a>
+							</li>
+					</ul>
+			</li>
+			</div>
+			<!-- End Mobile first  -->
+
+			<div>
+					<li>
+						<a id="youtube" [menu-item]="'youtube'" [category]="'seo-youtube'">VideOptimizer</a>
+					</li>
+					<li class="submenu-left dropdown-youtube" [sub-menu]="'youtube'" [force-expand-child]="true">
+						<div [category]="'seo-youtube'"></div>	
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'youtube'" [menu-item-link]="['/youtube/youtube-overview']" [category]="'youtube'" routerLink="./youtube/youtube-overview">Overview</a>
+							</li>
+		
+							<li>
+								<a id="sub-youtube" [menu-item]="'youtube_diagnostic'" [sign-visibled]="false" [category]="'seo-youtube-diagnostic'">Diagnostic</a>
+							</li>
+							<li class="submenu-left dropdown-sub-youtube" [sub-menu]="'youtube_diagnostic'">
+								<ul class="sub-menu">
+									<li>
+										<a [menu-item]="'youtube-warnings'" [menu-item-link]="['/youtube/youtube-warnings']" [category]="'youtube-warnings'"
+										 routerLink="./youtube/youtube-warnings">Warnings</a>
+									</li>
+								</ul>
+							</li>
+		
+							<li>
+								<a id="sub-youtube" [menu-item]="'youtube_keywords'" [sign-visibled]="false" [category]="'seo-youtube-keywords'">Keywords</a>
+							</li>
+							<li class="submenu-left dropdown-sub-youtube" [sub-menu]="'youtube_keywords'">
+								<ul class="sub-menu">
+									<li>
+										<a [menu-item]="'youtube-keywords-rank-checker'" [menu-item-link]="['/youtube/youtube-keywords-rank-checker']" [category]="'seo-youtube-keywords-rank-checker'"
+										 routerLink="./youtube/youtube-keywords-rank-checker">Rank checker</a>
+									</li>
+								</ul>
+							</li>
+		
+							<li>
+								<a id="sub-youtube" [menu-item]="'youtube_optimization'" [sign-visibled]="false" [category]="'seo-youtube-optimization'">Optimization</a>
+							</li>
+							<li class="submenu-left dropdown-sub-youtube" [sub-menu]="'youtube_optimization'">
+								<ul class="sub-menu">
+									<li>
+										<a [menu-item]="'youtube-optimization-new-videos-opt'" [menu-item-link]="['/youtube/youtube-optimization-new-videos-opt']"
+										 [category]="'seo-youtube-optimization-new-videos-opt'" routerLink="./youtube/youtube-optimization-new-videos-opt">New videos optimization</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li>
+								<a [menu-item]="'youtube-benchmark'" [menu-item-link]="['/youtube/youtube-benchmark']" [category]="'youtube-benchmark'" routerLink="./youtube/youtube-benchmark">Benchmark</a>
+							</li>
+						</ul>
+					</li>
+				</div>
+				<div>
+					<li>
+						<a id="google-bus" [menu-item]="'seo-google-my-business'" [category]="'seo-google-my-business'" style="letter-spacing: -0.7px;">LocalUp</a>
+					</li>
+					<li class="submenu-left dropdown-google-bus" [sub-menu]="'seo-google-my-business'" [force-expand-child]="true">
+						<div [category]="'seo-google-my-business'"></div>
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'gmb-overview'" [menu-item-link]="['/gmb/gmb-overview']" [category]="'seo-gmb-overview'"
+								 routerLink="./gmb/gmb-overview">Overview</a>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-diagnostic'" [sign-visibled]="false" [category]="'seo-gmb-diagnostic'">Diagnostic</a>
+							</li>
+							<li class="submenu-left dropdown-gmb-diagnostic" [sub-menu]="'gmb-diagnostic'">
+								<ul class="sub-menu">
+									<li>
+										<a [menu-item]="'gmb-diagnostic-warnings'" [menu-item-link]="['/gmb/gmb-diagnostic-warnings']" [category]="'seo-gmb-diagnostic-warnings'"
+										 routerLink="./gmb/gmb-diagnostic-warnings">Warnings</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-loc-details'" [menu-item-link]="['/gmb/gmb-loc-details']" [category]="'seo-gmb-loc-details'"
+									routerLink="./gmb/gmb-loc-details">Locations details</a>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-cust-automation'" [menu-item-link]="['/gmb/gmb-cust-automation']" [category]="'seo-gmb-cust-automation'"
+									routerLink="./gmb/gmb-cust-automation">Customer automation</a>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-sentiment-analysis'" [menu-item-link]="['/gmb/gmb-sentiment-analysis']" [category]="'seo-gmb-sentiment-analysis'"
+									routerLink="./gmb/gmb-sentiment-analysis">Reviews sentiment analysis</a>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-ranking'" [menu-item-link]="['/gmb/gmb-ranking']" [category]="'seo-gmb-ranking'" routerLink="./gmb/gmb-ranking">Geoloc. GMB ranking</a>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-benchmark'" [sign-visibled]="false" [category]="'seo-gmb-benchmark'">Benchmark</a>
+							</li>
+							<li class="submenu-left dropdown-gmb-benchmark" [sub-menu]="'gmb-benchmark'">
+								<ul class="sub-menu">
+									<li>
+										<a [menu-item]="'gmb-share-visibility'" [menu-item-link]="['/gmb/gmb-share-visibility']" [category]="'seo-gmb-share-visibility'"
+										 routerLink="./gmb/gmb-share-visibility">Share of visibility</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a [menu-item]="'gmb-report'" [menu-item-link]="['/gmb/gmb-report']" [category]="'seo-gmb-report'" routerLink="./gmb/gmb-report">Smart Reporting</a>
+							</li>
+						</ul>
+					</li>
+				</div>
+			<div>	
+				<li> 
+					<a id="piracy" [menu-item]="'seo-piracy'" [category]="'seo-piracy'">Content piracy</a> 
+				</li>
+				<li class="submenu-left dropdown-piracy" [sub-menu]="'seo-piracy'">
+				<div [category]="'seo-piracy'"></div>
+					<ul class="sub-menu">
+					<li> 
+						<a [menu-item]="'piracyexternal-content-overview'"
+									[menu-item-link]="['/piracyexternal-content-overview']"
+									[category]="'seo-piracy'"
+									routerLink="./piracyexternal-content-overview">Overview</a> 
+					</li>
+					<li> 
+						<a [menu-item]="'piracyexternal-content-duplication'"
+							[menu-item-link]="['/piracyexternal-content-duplication']"
+							[category]="'seo-piracy'"
+							routerLink="./piracyexternal-content-duplication">Details & actions</a> 
+					</li>
+					</ul>
+				</li>
+			</div>
+			<li>
+				<a routerLink="./reporting" id="reporting" [menu-item]="'reporting'" [category]="'seo-reporting'" [menu-item-link]="['/reporting']">Reporting</a>
+			</li>
+			
+			<!-- <li>
+					<a [menu-item]="'staging'" id="staging" href="javascript:void(0)">Staging</a>
+				</li> -->
+	
+			<!-- FAKE DATA -->
+			<!-- <li>
+					<a id="staging" [menu-item]="'staging'" >Staging</a>
+				</li>
+				<li class="submenu-left dropdown-Diagnostic" [sub-menu]="'staging'">
+					<ul class="sub-menu">
+						<li><a [menu-item]="'staging-overview'" [menu-item-link]="['/staging-overview']" routerLink="./staging-overview" >Overview</a></li>
+						<li><a id="sub-staging" [menu-item]="'staging_diagnostic'" [sign-visibled]="false" >Diagnostic</a></li>
+						<li class="submenu-left dropdown-sub-staging" [sub-menu]="'staging_diagnostic'">
+							<ul class="sub-menu">
+								<li><a [menu-item]="'staging-diagnostic-warnings'" [menu-item-link]="['/staging-diagnostic-warnings']" routerLink="./staging-diagnostic-warnings">Warnings</a></li>
+								<li><a [menu-item]="'staging-diagnostic-loading-time'" [menu-item-link]="['/staging-diagnostic-loading-time']" routerLink="./staging-diagnostic-loading-time">Loading time</a></li>
+							</ul>
+						</li>
+						<li><a [menu-item]="'staging-301-redirection'" [menu-item-link]="['/staging-301-redirection']" routerLink="./staging-301-redirection">301 redirections</a></li>
+					</ul>
+				</li> -->
+			<!-- END FAKE DATA -->
+	
+			<!-- START CURRENTLY VERSION -->
+			<li>
+				<a id="staging" [menu-item]="'staging'" [category]="'seo-staging'">Staging</a>
+			</li>
+			<li class="submenu-left dropdown-Diagnostic" [sub-menu]="'staging'" [force-expand-child]="true">
+				<div [category]="'seo-staging'"></div>	
+				<ul class="sub-menu">
+					<li>
+						<a [menu-item]="'staging-overview'" [menu-item-link]="['/staging-overview']" [category]="'seo-staging-overview'" routerLink="./staging-overview">Overview</a>
+					</li>
+					<li>
+						<a id="sub-staging" [menu-item]="'staging_diagnostic'" [sign-visibled]="false" [category]="'seo-staging-diagnostic'">Diagnostic</a>
+					</li>
+					<li class="submenu-left dropdown-sub-staging" [sub-menu]="'staging_diagnostic'">
+						<ul class="sub-menu">
+							<li>
+								<a [menu-item]="'staging-diagnostic-warnings'" [menu-item-link]="['/staging-diagnostic-warnings']" [category]="'seo-staging-diagnostic-warnings'" routerLink="./staging-diagnostic-warnings">Warnings</a>
+							</li>
+							<li>
+								<a [menu-item]="'staging-diagnostic-loading-time'" [menu-item-link]="['/staging-diagnostic-loading-time']" [category]="'seo-staging-diagnostic-loading-time'" routerLink="./staging-diagnostic-loading-time">Loading time</a>
+							</li>
+							<li>
+								<a [menu-item]="'staging-diagnostic-no-regression'" [menu-item-link]="['/staging-diagnostic-no-regression']" [category]="'seo-staging-diagnostic-no-regression'" routerLink="./staging-diagnostic-no-regression">No regression</a>
+							</li>
+						</ul>
+					</li>
+					<li *ngIf="monetoringType == 'demo'">
+						<a [menu-item]="'staging-301-redirection'" [menu-item-link]="['/staging-301-redirection']" [category]="'seo-staging-301-redirection'" routerLink="./staging-301-redirection"
+						 >301 redirections</a>
+					</li>
+				</ul>
+			</li>
+			<!-- END CURRENTLY VERSION -->
+	
+			<div [hidden]="hideVideo">
+				<video-tutor [isMenu]="true" [module]="'setting'"></video-tutor>
+			</div>
+	
+		</ul>
+	</div>
+	
+	<div box-loading id="content" class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 content-set-warn">
+		<div class="row">
+			<!--start row content1-->
+			<div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+				<div class="bg-line"></div>
+				<div class="line-menu seo"></div>
+			</div>
+		</div>
+		<router-outlet></router-outlet>
+		<div style="padding-top:20px;"></div>
+	</div>
+	
+	<div [hidden]="hideVideo">
+		<video-tutor [isModal]="true" [module]="'setting'"></video-tutor>
+	</div>

@@ -1,0 +1,62 @@
+.dropdown-menu:nth-of-type(1) {
+    border-radius: 4px 4px 0 0;
+}
+
+.dropdown-menu:nth-of-type(2) {
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-menu li a {
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.dropdown-menu li a.selected {
+    text-decoration: none;
+    color: #fff;
+    background: #519ffc;
+}
+
+.dropdown-menu li a:hover {
+    color: #6c6c6b;
+    background: #fff;
+}
+
+:host>>>dd-custom>>>a {
+    cursor: pointer;
+}
+
+.checkbox {
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    background: #ededed;
+    margin: 4.5px 5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.checkbox.selected {
+    background: #519ffb;
+}
+
+.dd-ok .btn.btn-primary.active {
+    border: 1px solid #529ffb;
+    font-family: 'Proxima Nova Bold';
+    background: #529ffb;
+    float: right;
+    min-width: 70px;
+    margin: 5px 20px;
+}
+
+@media (max-width: 767px) {
+    .dd-ok .btn.btn-primary.active {
+        margin: 20px 6px 0 0;
+    }
+    li.li-custom {
+        float: left;
+    }
+    li.li-search-custom {
+        margin-top: 9px;
+    }
+}

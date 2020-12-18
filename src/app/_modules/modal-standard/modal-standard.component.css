@@ -1,0 +1,8 @@
+div.modal-standard div{
+    display: block;
+}
+
+div.modal-standard{
+    position: fixed;
+    z-index: 100;
+}

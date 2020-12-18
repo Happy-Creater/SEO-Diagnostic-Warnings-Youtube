@@ -1,0 +1,58 @@
+<div menu-left id="menu-left" class=" col-lg-2 col-sm-2 col-md-2 col-xs-12 profil">
+	<ul>
+		<li class="head-page">
+			<p class="title-link">SETTINGS</p>
+		</li>
+		<li *ngIf="USER_ROLE != 'USER'">
+			<a routerLink="./crawler" id="Crawler" [menu-item]="'crawler'" [menu-item-link]="['crawler']">Crawler</a>
+		</li>
+		<li *ngIf="USER_ROLE != 'USER'">
+			<a routerLink="./keywords" id="Keywords" [menu-item]="'keywords'" [menu-item-link]="['keywords']">Keywords identification</a>
+		</li>
+		<li *ngIf="USER_ROLE != 'USER' && USER_ROLE != 'PRESENTATION'">
+			<a routerLink="./settings" id="Settings" [menu-item]="'settings'" [menu-item-link]="['settings']" [menu-item-exclude-link]="'/settings/'">Settings</a>
+		</li>
+		<li>
+			<a routerLink="./warnings" id="Warnings" [menu-item]="'warnings'" [menu-item-link]="['warnings']">Warnings</a>
+		</li>
+		<li>
+			<a routerLink="./tutorials" id="Tutorials" [menu-item]="'tutorials'" [menu-item-link]="['tutorials']">Tutorials</a>
+		</li>
+		<li>
+			<a [category]="'configuration'" routerLink="./configurations" id="Configurations" [menu-item]="'configurations'" [menu-item-link]="['configurations']">Configurations</a>
+		</li>
+		<li class="submenu-left dropdown-configurations" [sub-menu]="'configurations'">
+			<ul class="sub-menu">
+				<li>
+					<a routerLink="./configurations-website" [menu-item]="'configurations-website'" [menu-item-link]="['configurations-website']">Website</a>
+				</li>
+				<li>
+					<a routerLink="./configurations-email" [menu-item]="'configurations-email'" [menu-item-link]="['configurations-email']">Email</a>
+				</li>
+				<li>
+					<a routerLink="./configurations-campaigns" [menu-item]="'configurations-campaigns'" [menu-item-link]="['configurations-campaigns']">Campaigns</a>
+				</li>
+				<li>
+					<a routerLink="./configurations-ip-address" [menu-item]="'configurations-ip-address'" [menu-item-link]="['configurations-ip-address']">IP Address</a>
+				</li>
+				<li>
+					<a routerLink="./configurations-users" [menu-item]="'configurations-users'" [menu-item-link]="['configurations-users']">Users</a>
+				</li>
+				<li>
+					<a routerLink="./configurations-server" [menu-item]="'configurations-server'" [menu-item-link]="['configurations-server']">Server</a>
+				</li>
+			</ul>
+		</li>
+
+		<video-tutor [isMenu]="true" [module]="'setting'"></video-tutor>
+
+	</ul>
+</div>
+<!--end menu-left-->
+
+<div class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 content-set-warn" id="content">
+	<router-outlet></router-outlet>
+	<div style="padding-top:20px;"></div>
+</div>
+
+<video-tutor [isModal]="true" [module]="'setting'"></video-tutor>

@@ -1,0 +1,22 @@
+<div class="row"> <!--start row head-content-over-->
+	<div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 head-content-over"><!--start col head-content-over-->
+		<ul class="nav-tabs nav menu-tabs menu-over">
+			<li [class.active]="isActiveTab('seo')">
+				<a (click)="updateActiveTab('seo')" class="tablink">SEO</a>
+			</li>
+			<li [class.active]="isActiveTab('sea')">
+				<a (click)="updateActiveTab('sea')" class="tablink">SEA</a>
+			</li>
+			<li [class.active]="isActiveTab('data')">
+				<a (click)="updateActiveTab('data')" class="tablink">DATA</a>
+			</li>
+		</ul>
+	</div><!--end head-content-over-->
+</div><!--end row head-content-over-->
+
+
+<app-overview-seo *ngIf="isActiveTab('seo')"></app-overview-seo>
+<app-overview-sea *ngIf="isActiveTab('sea')"></app-overview-sea>
+<app-overview-data *ngIf="isActiveTab('data')"></app-overview-data>
+
+<div style="padding-top:20px;"></div>

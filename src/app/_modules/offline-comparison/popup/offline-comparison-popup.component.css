@@ -1,0 +1,73 @@
+.head-input{
+    width: 94%;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-bottom-width: 0;
+}
+
+.question-inputing {
+    resize: none;
+    width: 94%;
+    border: 1px solid #ddd;
+}
+
+.msg-wrapper {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#content-loading {
+    position: relative;
+}
+.tb-opt-landpage > tbody > tr > td:first-child {
+    border-left: 1px solid #ddd !important;
+}
+.text-overflow{
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+}
+span.text-over{
+    width: 85%;
+    /*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    */
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block !important;
+    font-family: 'Proxima Nova Light';
+}
+.pointer {
+    cursor: pointer;
+}
+.tbnosc{
+    display: block;
+    max-height: 380px;
+    width: 566px;
+}
+.tbsc{
+    display: block;
+    max-height: 380px;
+    width: 566px;
+     overflow-y: scroll;
+}
+input[type=checkbox] + label.incar {
+    cursor: pointer;
+    border-radius: 3px ;
+    width: 15px;
+    height: 15px;
+    background: #c5c5c5;
+	margin: -1px 5px;
+}
+
+input[type=checkbox]:checked + label.incar { 
+    cursor: pointer;
+   border-radius: 3px;
+	width: 15px;
+	height: 15px;
+	background:#519ffc;
+	margin: -1px 5px;
+}

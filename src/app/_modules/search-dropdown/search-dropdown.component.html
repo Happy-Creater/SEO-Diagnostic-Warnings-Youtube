@@ -1,0 +1,24 @@
+<ul [class.disabled]="isDisabled" class="module-dropdown" [ngClass]="extraClasses" (click-outside)="closeItem()">
+  <li class="dropdown" [class.open]="showItem">
+    <a (click)="toggleDropdown()">
+      <span *ngIf="selectedItem">
+        <ng-container *ngIf="titleBold">
+          <strong [innerHTML]="replaceLabel(selectedItem.label)"></strong>
+        </ng-container>
+        <div *ngIf="!titleBold" [innerHTML]="replaceLabel(selectedItem.label)"></div>
+      </span>
+      <span *ngIf="isShowIcon" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+    </a>
+    <ul #dropdownMenu class="dropdown-menu" [ngStyle]="setStyleHeightDropdown()">
+      <li [ngStyle]="setDisplaySearchBlock()">
+        <input textbox-clearable (input)="search=$event.target.value.trim()" type="text" class="form-control"
+          [placeholder]="placeholder" style="min-width: 165px" [max-width]="500"
+          [block-clear-width]="'100%'">
+      </li>
+      <li *ngFor="let item of getSearchFilter(items); trackBy: trackByFn">
+        <a [class.active]="item == this.itemActive" [class.disabled]="item.disabled" (click)="selectItem(item)"
+          [innerHTML]="item.labelOption?item.labelOption:item.label" (mouseover)="onItemMouseOver(item)"></a>
+      </li>
+    </ul>
+  </li>
+</ul>

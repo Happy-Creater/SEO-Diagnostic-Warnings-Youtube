@@ -1,0 +1,255 @@
+{
+	"score":7.01,
+	"scanId":-1,
+	"densityList":[{"difficulty":0.53,"seoKwId":-1,"reqDensity":5,"technical":4.28,"kwId":-1,"interest":2.54,"campaignId":-1,"rank":2,"keyword":"piscine","content":2.02,"netlinking":1.75},{"difficulty":1.43,"seoKwId":-2,"reqDensity":3,"technical":3.42,"kwId":-2,"interest":1.62,"campaignId":-2,"rank":0,"keyword":"piscine extérieur","content":4.11,"netlinking":1.72}],
+	"topicProgressList":[{"isRunning":false,"kId":-1,"pofileId":-1,"progress":100,"keyword":"piscine","status":"SUCCESS"},{"isRunning":false,"kId":-2,"pofileId":-2,"progress":100,"keyword":"piscine extérieur","status":"SUCCESS"}],
+	"tagContentList":[{"recommendation":"Try to remove 17 characters from the title (including spaces), in order to be visible in search results.","tagName":"Title","content":"Mobilier de jardin et univers de la piscine - Habitat et jardin.com"},{"recommendation":"Piscine enfant","tagName":"Meta description","content":"leader de la maison et du plein air vous propose un large choix de mobilier de jardin, de piscine ou encore de sauna"},{"recommendation":"","tagName":"H1","content":"Piscine enfant"},{"recommendation":"Try to add 200 words in your text. Enrich the text of this page (see \"Content\"). Put your keywords by using synonyms and varied vocabulary without overloading the page. Do not include too many links in your pages (1 link per 100 words).","tagName":"Text","content":"Protégez votre famille avec une assurance contre les accidents de la vie. Cette garantie vous couvre en cas d ’accident entraînant une invalidité (voire un décès). Le plus APRIL ? Le versement d ’un capital pouvant aller jusqu ’à 300 000 € et ce pour un tarif vraiment attractif"}],
+	"topicResultList":{
+		"pageModifyList":[
+			{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.490323007106781,
+				"pixScore":3.760279893875122,
+				"level":3,
+				"proposedWords":{
+					"piscine en kit":[]
+				},
+				"hasLinkFromLp":true,
+				"hasLinkToLp":true,
+				"path":"assets/images/hex_row3_col1.png",
+				"usePath":true,
+				"h1":"Piscine en kit",
+				"pageId":-1,
+				"title":"Piscine en kit - Piscine -Website",
+				"wordNumber":130,
+				"meta":"Piscine en kit",
+				"page":"http://www.website.com/kit-piscine",
+				"keywords":[
+					{
+						"isNewHeadkeys":false,
+						"keyword":"piscine en kit",
+						"kwId":-1,
+						"principleId":-1
+					}
+				],
+				"sitemap":false,
+				"principleId":-1,
+				"numGreenKeyword":40
+			},{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":3.581660032272339,
+				"level":2,
+				"proposedWords":{
+					"abri de piscine":[]
+				},
+				"hasLinkFromLp":true,
+				"hasLinkToLp":true,
+				"path":"assets/images/hex_row1_col2.png",
+				"usePath":true,
+				"h1":"Abri de piscine",
+				"pageId":-1,
+				"title":"Abri de piscine - Piscine -Website",
+				"wordNumber":215,
+				"meta":"Abri de piscine",
+				"page":"http://www.website.com/abri-de-piscine",
+				"keywords":[
+					{
+						"isNewHeadkeys":false,
+						"keyword":"abri de piscine",
+						"kwId":-1,
+						"principleId":-1
+					}
+				],
+				"sitemap":true,
+				"principleId":-1,
+				"numGreenKeyword":7
+			},{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":1.943269968032837,
+				"level":2,
+				"proposedWords":{
+					"sécurité piscine":[]
+				},
+				"hasLinkFromLp":false,
+				"hasLinkToLp":false,
+				"path":"assets/images/hex_row1_col3.png",
+				"usePath":true,
+				"h1":"Sécurité piscine",
+				"pageId":-1,
+				"title":"Sécurité piscine - Piscine - Website",
+				"wordNumber":198,
+				"meta":"Sécurité piscine",
+				"page":"http://www.website.com/gre-piscine",
+				"keywords":[
+					{
+						"isNewHeadkeys":false,
+						"keyword":"sécurité piscine",
+						"kwId":-1,
+						"principleId":-1
+					}
+				],
+				"sitemap":true,
+				"principleId":-1,
+				"numGreenKeyword":0
+			},{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":1.943269968032837,
+				"level":2,
+				"proposedWords":{
+					"piscines bois":[]
+				},
+				"hasLinkFromLp":true,
+				"hasLinkToLp":true,
+				"path":"assets/images/hex_row2_col2.png",
+				"usePath":true,
+				"h1":"Piscine en bois",
+				"pageId":-1,
+				"title":"Piscine en bois - Piscine -Website",
+				"wordNumber":186,
+				"meta":"Piscine en bois",
+				"page":"http://www.website.com/piscine-bois",
+				"keywords":[
+					{
+						"isNewHeadkeys":false,
+						"keyword":"piscines bois",
+						"kwId":-1,
+						"principleId":-1
+					}
+				],
+				"sitemap":true,
+				"principleId":-1,
+				"numGreenKeyword":40
+			},{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":1.943269968032837,
+				"level":1,
+				"proposedWords":{
+					"accessoires piscine":[]
+				},
+				"hasLinkFromLp":false,
+				"hasLinkToLp":false,
+				"path":"assets/images/hex_row1_col1.png",
+				"usePath":true,
+				"h1":"Accessoires piscine",
+				"pageId":-1,
+				"title":"Accessoires piscines - Piscine - Website",
+				"wordNumber":159,
+				"meta":"Accessoires pour la piscine",
+				"page":"http://www.website.com/accessoires-piscine",
+				"keywords":[
+					{
+						"isNewHeadkeys":false,
+						"keyword":"accessoires piscine",
+						"kwId":-1,
+						"principleId":-1
+					}
+				],
+				"sitemap":true,
+				"principleId":-1,
+				"numGreenKeyword":0
+			},{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":1.943269968032837,
+				"level":3,
+				"proposedWords":{
+					"filtre piscine":[]
+				},
+				"hasLinkFromLp":true,
+				"hasLinkToLp":true,
+				"path":"assets/images/hex_row3_col3.png",
+				"usePath":true,
+				"h1":"Filtre pour la piscine",
+				"pageId":-1,
+				"title":"Filtre pour piscine - Piscine -Website",
+				"wordNumber":85,
+				"meta":"Filtre pour la piscine",
+				"page":"http://www.website.com/filtre-piscine",
+				"keywords":[
+					{
+						"isNewHeadkeys":false,
+						"keyword":"filtre piscine",
+						"kwId":-1,
+						"principleId":-1
+					}
+				],
+				"sitemap":true,
+				"principleId":-1,
+				"numGreenKeyword":7
+			}
+		],
+		"pageCreateList":[
+			{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":0,
+				"level":-1,
+				"proposedWords":[],
+				"hasLinkFromLp":false,
+				"hasLinkToLp":false,
+				"isNewHeadkeys":false,
+				"h1":"",
+				"pageId":-1,
+				"title":"",
+				"wordNumber":-1,
+				"kwId":-1,
+				"meta":"",
+				"page":"",
+				"keyword":"piscine hors sol",
+				"sitemap":false,
+				"principleId":-1,
+				"numGreenKeyword":0
+			},{
+				"anchorTextsFromLp":[],
+				"anchorTextsToLp":[],
+				"finalWeight":0.5,
+				"pixScore":0,
+				"level":-1,
+				"proposedWords":[],
+				"hasLinkFromLp":false,
+				"hasLinkToLp":false,
+				"isNewHeadkeys":false,
+				"h1":"",
+				"pageId":-1,
+				"title":"",
+				"wordNumber":-1,
+				"kwId":-1,
+				"meta":"",
+				"page":"",
+				"keyword":"liner piscine",
+				"sitemap":false,
+				"principleId":-1,
+				"numGreenKeyword":0
+			}
+		]
+	},
+	"semanticList":{
+		"SECONDARY":[],
+		"PRIMARY":[]
+	},
+	"landingPageContentInfo":{
+		"wordNumber":122,
+		"level":1,
+		"meta":"Tout pour la piscine",
+		"path":"assets/images/hex_row3_col2.png",
+		"usePath":true,
+		"h1":"Tout pour la piscine",
+		"page":"http://www.website.com/piscine",
+		"title":"Piscine – Website",
+		"keyword":"piscine, piscine extérieur",
+		"sitemap":true
+	},
+	"questionsTreeResult":{"piscine":{"query":"piscine","questions":[]},"piscine extérieur":{"query":"piscine+ext%C3%A9rieur","questions":[]}},
+	"greenList":["abris", "abris de piscine hauts", "abris de piscines bas", "piscine", "piscine bois rectangulaire", "profiter", "rails au sol", "sol", "solution", "télescopiques", "abri de piscine télescopique", "abris de piscine plats", "adaptés", "autoclave", "baignade", "bassin", "conforme à norme", "couvertures", "devis", "discret", "eau", "espace", "extérieur", "fonction", "formes", "gammes", "jardin"]
+}

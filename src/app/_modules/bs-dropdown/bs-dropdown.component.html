@@ -1,0 +1,17 @@
+<div [class.disabled]="disabled" class="btn-group bootstrap-select" [class.no-border]="noBorder" (click-outside)="closeItemList()">
+  <button type="button" class="btn dropdown-toggle btn-default" (click)="toggleDropdown()">
+    <span class="filter-option pull-left">{{findSelectedLabel()}}</span>&nbsp;
+    <span class="bs-caret">
+      <span class="caret"></span>
+    </span>
+  </button>
+  <div *ngIf="showItem" class="dropdown-menu open" style="display: block;">
+    <ul id="inner-ddlist" class="dropdown-menu inner" [style.maxHeight.px]="maxHeight" style="overflow-y: auto; min-height: 0px;">
+      <li *ngFor="let option of options" [class.selected]="option.value === selectedValue">
+        <a (click)="select(option.value)">
+          <span class="text">{{option.label}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

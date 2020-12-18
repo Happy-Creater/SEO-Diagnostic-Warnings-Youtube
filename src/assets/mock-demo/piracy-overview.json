@@ -1,0 +1,9 @@
+{
+  "result": {
+  	"number_analyzed_urls" : 1205,
+  	"number_detected_pirates" : 52,
+  	"number_duplicated_urls": 789,
+  	"number_kind_pirate_website_solved" : 0,
+  	"number_kind_pirate_urls_solved": 0
+  }
+}

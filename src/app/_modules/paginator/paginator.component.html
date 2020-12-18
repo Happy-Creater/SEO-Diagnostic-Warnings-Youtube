@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content">
+    <ng-content></ng-content>
+    <ul class="menu-n-tabs menu-pagev2">
+      <li [ngStyle]="{'display': diplayRowSelector?'inline-block':'none'}"><strong>{{ 'SEO.Show_row' | translate }}</strong></li>
+      <li [ngStyle]="{'display': diplayRowSelector?'inline-block':'none'}" style="padding-left: 0px;">
+        <dropdown [items]="items" [selectedValue]="row" (change)="onRowChange($event.value)"></dropdown>
+      </li>
+      <li> <strong>{{ 'SEO.Go_to' | translate }}</strong> <input #goto type="text" class="form-control" (keyup.enter)="goTo($event.target.value); goto.value=''"></li>
+      <li> {{first}} - {{last}} <strong>{{ 'SEO.0_0_of_0' | translate }}</strong> {{total}}</li>
+      <li>
+        <button type="button" class="btn btn-page" (click)="previousPage()" [disabled]="!hasPrevious()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-page" (click)="nextPage()" [disabled]="!hasNext()"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+      </li>
+    </ul>
+  </div>
+</div>

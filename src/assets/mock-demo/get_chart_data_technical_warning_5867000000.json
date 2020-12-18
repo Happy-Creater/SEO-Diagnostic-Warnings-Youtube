@@ -1,0 +1,17 @@
+{
+  "result": {
+    "values": [
+      2
+    ],
+    "warningList": [
+      [
+      	"Poor webpage(s)",
+        "Structure duplication"
+      ]
+    ],
+    "scanDate": [
+      "2019-09-17"
+    ]
+  },
+  "status": "ok"
+}

@@ -1,0 +1,129 @@
+#outerdiv table {
+    border-collapse:separate;
+    margin-bottom: 0;
+    text-align:center;
+    border-top: 1px solid #ddd; 
+    border-color:#ddd;
+}
+#outerdiv td {
+    margin:0;
+    border-top-width:0px;
+    white-space:nowrap;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    vertical-align:middle;
+    text-align: center;
+}
+#outerdiv td:last-child{
+    border-right: none;
+}
+#outerdiv th {
+    vertical-align:middle;
+    text-align: center;
+    padding: 22px 10px;
+    border-right: 1px solid #ddd;
+}
+#outerdiv tr:last-child td{
+    border-bottom: none;
+}
+#outerdiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 22em;
+}
+#innerdiv {
+    width: 100%;
+    overflow-x:scroll;
+    margin-left: 22em;
+    overflow-y:visible;
+    padding-bottom:1px;
+}
+.headcol {
+    position:absolute;
+    left:0;
+    top:auto;
+    /*only relevant for first row*/
+    margin-top:-1px;
+    /*compensate for top border*/
+    width: 11em;
+    height: 72px
+}
+.headcol.col2{
+    left: 11em;
+}
+.long {
+    letter-spacing: 0px;
+    height: 72px;
+}
+
+.outerdiv-first-fix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 20em;
+}
+.innerdiv-first-fix {
+    width: 100%;
+    overflow-x:scroll;
+    margin-left: 20em;
+    overflow-y:visible;
+    padding-bottom:1px;
+}
+.innerdiv-first-fix .headcol {
+    /*only relevant for first row*/
+    margin-top:0px;
+    /*compensate for top border*/
+    width: 20em;
+    height: 70px;
+}
+.innerdiv-first-fix .long {
+    height: 70px;
+}
+.innerdiv-first-fix .table{margin-bottom: 0 !important;}
+.innerdiv-first-fix .tb-dov-pageview tr:last-child td{ height: 98px; }
+.innerdiv-first-fix .tb-dov-pageview .t-red{ margin-bottom: 0 !important }
+
+.headcol {
+    position:absolute;
+    left:0;
+    top:auto;
+    /*only relevant for first row*/
+    margin-top:-1px;
+    /*compensate for top border*/
+    width: 11em;
+    height: 72px
+}
+.headcol.col2{
+    left: 11em;
+}
+.long {
+    letter-spacing: 0px;
+    height: 72px;
+}
+
+@media (max-width: 767px){
+ #outerdiv {
+    right: 10em;
+}
+#innerdiv{
+    margin-left: 10em;
+}
+.headcol {
+    position:absolute;
+    width:5em;
+    left:0;
+    top:auto;
+    /*only relevant for first row*/
+    margin-top:-1px;
+    /*compensate for top border*/
+    height: 72px
+}
+.headcol.col2{
+    left: 5em;
+}
+#outerdiv th{
+    padding: 0 6px;
+}
+
+}

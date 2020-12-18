@@ -1,0 +1,273 @@
+{
+	"body": {
+		"warningScoreByCategory": {
+			"configuration": {
+				"date": 20190618,
+				"trackingConfigId": {
+					"date": "Thu Jun 06 11:00:02 CEST 2019",
+					"machineIdentifier": 15143177,
+					"processIdentifier": 7378,
+					"counter": 3391474,
+					"time": 1559811602000,
+					"timeSecond": 1559811602,
+					"timestamp": 1559811602
+				},
+				"propertyScores": [
+					{
+						"accumulatedInfo": {
+							"score": 8,
+							"warnings": 3,
+							"problems": 3
+						},
+						"viewScores": {
+							"143002221": {
+								"score": 6,
+								"warnings": 2,
+								"problems": 2
+							}
+						},
+						"propertyId": "UA-71720943-1"
+					},
+					{
+						"accumulatedInfo": {
+							"score": 8,
+							"warnings": 3,
+							"problems": 3
+						},
+						"viewScores": {
+							"143002221": {
+								"score": 6,
+								"warnings": 2,
+								"problems": 2
+							}
+						},
+						"propertyId": "all"
+					}
+				],
+				"id": {
+					"date": "Tue Jun 18 00:29:43 CEST 2019",
+					"machineIdentifier": 6984472,
+					"processIdentifier": 18,
+					"counter": 15470360,
+					"time": 1560810583000,
+					"timeSecond": 1560810583,
+					"timestamp": 1560810583
+				},
+				"category": "configuration"
+			},
+			"data_integrity": {
+				"date": 20190618,
+				"trackingConfigId": {
+					"date": "Thu Jun 06 11:00:02 CEST 2019",
+					"machineIdentifier": 15143177,
+					"processIdentifier": 7378,
+					"counter": 3391474,
+					"time": 1559811602000,
+					"timeSecond": 1559811602,
+					"timestamp": 1559811602
+				},
+				"propertyScores": [
+					{
+						"accumulatedInfo": {
+							"score": 9,
+							"warnings": 2,
+							"problems": 57
+						},
+						"viewScores": {
+							"113893042": {
+								"score": 10,
+								"warnings": 1,
+								"problems": 1
+							},
+							"143002221": {
+								"score": 10,
+								"warnings": 1,
+								"problems": 1
+							}
+						},
+						"propertyId": "UA-71720943-1"
+					},
+					{
+						"accumulatedInfo": {
+							"score": 9,
+							"warnings": 2,
+							"problems": 57
+						},
+						"viewScores": {
+							"113893042": {
+								"score": 10,
+								"warnings": 1,
+								"problems": 1
+							},
+							"143002221": {
+								"score": 10,
+								"warnings": 1,
+								"problems": 1
+							}
+						},
+						"propertyId": "all"
+					}
+				],
+				"id": {
+					"date": "Tue Jun 18 00:29:43 CEST 2019",
+					"machineIdentifier": 6984472,
+					"processIdentifier": 18,
+					"counter": 15470361,
+					"time": 1560810583000,
+					"timeSecond": 1560810583,
+					"timestamp": 1560810583
+				},
+				"category": "data_integrity"
+			},
+			"legal": {
+				"date": 20190618,
+				"trackingConfigId": {
+					"date": "Thu Jun 06 11:00:02 CEST 2019",
+					"machineIdentifier": 15143177,
+					"processIdentifier": 7378,
+					"counter": 3391474,
+					"time": 1559811602000,
+					"timeSecond": 1559811602,
+					"timestamp": 1559811602
+				},
+				"propertyScores": [
+					{
+						"accumulatedInfo": {
+							"score": 5,
+							"warnings": 2,
+							"problems": 11
+						},
+						"viewScores": {},
+						"propertyId": "UA-71720943-1"
+					},
+					{
+						"accumulatedInfo": {
+							"score": 5,
+							"warnings": 2,
+							"problems": 11
+						},
+						"viewScores": {},
+						"propertyId": "all"
+					}
+				],
+				"id": {
+					"date": "Tue Jun 18 00:29:43 CEST 2019",
+					"machineIdentifier": 6984472,
+					"processIdentifier": 18,
+					"counter": 15470362,
+					"time": 1560810583000,
+					"timeSecond": 1560810583,
+					"timestamp": 1560810583
+				},
+				"category": "legal"
+			},
+			"global": {
+				"date": 20190618,
+				"trackingConfigId": {
+					"date": "Thu Jun 06 11:00:02 CEST 2019",
+					"machineIdentifier": 15143177,
+					"processIdentifier": 7378,
+					"counter": 3391474,
+					"time": 1559811602000,
+					"timeSecond": 1559811602,
+					"timestamp": 1559811602
+				},
+				"propertyScores": [
+					{
+						"accumulatedInfo": {
+							"score": 9,
+							"warnings": 8,
+							"problems": 81
+						},
+						"viewScores": {
+							"113893042": {
+								"score": 10,
+								"warnings": 1,
+								"problems": 1
+							},
+							"143002221": {
+								"score": 9,
+								"warnings": 3,
+								"problems": 3
+							}
+						},
+						"propertyId": "UA-71720943-1"
+					},
+					{
+						"accumulatedInfo": {
+							"score": 9,
+							"warnings": 8,
+							"problems": 81
+						},
+						"viewScores": {
+							"113893042": {
+								"score": 10,
+								"warnings": 1,
+								"problems": 1
+							},
+							"143002221": {
+								"score": 9,
+								"warnings": 3,
+								"problems": 3
+							}
+						},
+						"propertyId": "all"
+					}
+				],
+				"id": {
+					"date": "Tue Jun 18 00:29:43 CEST 2019",
+					"machineIdentifier": 6984472,
+					"processIdentifier": 18,
+					"counter": 15470359,
+					"time": 1560810583000,
+					"timeSecond": 1560810583,
+					"timestamp": 1560810583
+				},
+				"category": "global"
+			},
+			"tracking_code": {
+				"date": 20190618,
+				"trackingConfigId": {
+					"date": "Thu Jun 06 11:00:02 CEST 2019",
+					"machineIdentifier": 15143177,
+					"processIdentifier": 7378,
+					"counter": 3391474,
+					"time": 1559811602000,
+					"timeSecond": 1559811602,
+					"timestamp": 1559811602
+				},
+				"propertyScores": [
+					{
+						"accumulatedInfo": {
+							"score": 10,
+							"warnings": 1,
+							"problems": 10
+						},
+						"viewScores": {},
+						"propertyId": "UA-71720943-1"
+					},
+					{
+						"accumulatedInfo": {
+							"score": 10,
+							"warnings": 1,
+							"problems": 10
+						},
+						"viewScores": {},
+						"propertyId": "all"
+					}
+				],
+				"id": {
+					"date": "Tue Jun 18 00:29:43 CEST 2019",
+					"machineIdentifier": 6984472,
+					"processIdentifier": 18,
+					"counter": 15470363,
+					"time": 1560810583000,
+					"timeSecond": 1560810583,
+					"timestamp": 1560810583
+				},
+				"category": "tracking_code"
+			}
+		}
+	},
+	"status": "ok"
+}

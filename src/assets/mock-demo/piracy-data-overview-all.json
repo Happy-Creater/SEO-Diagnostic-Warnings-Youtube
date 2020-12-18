@@ -1,0 +1,85 @@
+{
+  "result": [
+    {
+      "urls": "https://www.website.com/pro/catalogue/38165-2pt/prise-de-courant-2pt-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc",
+      "avg_duplication": 71.04353484583031,
+      "isHasIntersectPhrases": true,
+      "id": "f6832ccca3f8329b672cef4bc967a059",
+      "external_urls": 3,
+      "max_duplication": 84.47825121630824
+    },
+    {
+      "urls": "https://www.website.com/pro/questions-frequentes/est-ce-que-je-peux-me-connecter-simultanement-a-mon-installation-via-lapplication-home-control-depuis-plusieurs-smartphones",
+      "avg_duplication": 34.34401750021558,
+      "isHasIntersectPhrases": true,
+      "id": "ceffe905f1b08a80eca52098c4d1a805",
+      "external_urls": 8,
+      "max_duplication": 76.76701056435306
+    },
+    {
+      "urls": "https://www.website.com/pro/questions-frequentes/combien-de-maisons-puis-je-controler-depuis-mon-compte-dans-lapplication-homecontrol",
+      "avg_duplication": 41.544238851462715,
+      "isHasIntersectPhrases": true,
+      "id": "140aa4944389a9114c19d6b576fed8f",
+      "external_urls": 7,
+      "max_duplication": 72.64719699832769
+    },
+    {
+      "urls": "https://www.website.com/pro/catalogue/38050-va-et-vient-2-modules/interrupteur-ou-va-et-vient-10ax-250v-mosaic-2-modules-blanc",
+      "avg_duplication": 61.144218529522895,
+      "isHasIntersectPhrases": true,
+      "id": "a9b8411906036d0b5b7661d0b09f1d90",
+      "external_urls": 3,
+      "max_duplication": 71.67650855908244
+    },
+    {
+      "urls": "https://www.website.com/pro/catalogue/31254-differentiels-500-ma-selectifs/disjoncteur-de-branchement-enedis-bipolaire-differentiel-500ma-selectif-45a",
+      "avg_duplication": 71.36114563994764,
+      "isHasIntersectPhrases": true,
+      "id": "a77e4eead95fb256bc7961ce2fec9da1",
+      "external_urls": 2,
+      "max_duplication": 71.36114563994764
+    },
+    {
+      "urls": "https://www.website.com/pro/catalogue/35275-programme-celiane-tm-plaques/plaque-celiane-memories-1-poste-finition-yesterday-blanc",
+      "avg_duplication": 45.632086580532565,
+      "isHasIntersectPhrases": true,
+      "id": "79f800d9ae778fac170a80cf1ae9c7c9",
+      "external_urls": 7,
+      "max_duplication": 70.74395123692955
+    },
+    {
+      "urls": "https://www.website.com/pro/catalogue/35463-voyant-230-v/voyant-temoin-230v-celiane-pour-cablage-phase-distribuee-3ma-pour-mecanismes-mosaic-et-celiane",
+      "avg_duplication": 54.06358704757946,
+      "isHasIntersectPhrases": true,
+      "id": "444fd67ce84fa0d129b273ec0fae869e",
+      "external_urls": 4,
+      "max_duplication": 65.57419392718941
+    },
+    {
+      "urls": "https://www.website.com/pro/catalogue/41699-compensateur-actif/compensateur-actif-pour-commandes-eclairage-2-fils-sans-neutre",
+      "avg_duplication": 31.132169007321444,
+      "isHasIntersectPhrases": true,
+      "id": "767a5c967fe729faf3527c6c9201f16d",
+      "external_urls": 13,
+      "max_duplication": 65.14474228374854
+    },
+    {
+      "urls": "https://www.website.com/catalogue/plaque-de-couleur-et-cadre-saillie/plaque-celiane-poudre-gres-1-poste",
+      "avg_duplication": 51.550945834262585,
+      "isHasIntersectPhrases": false,
+      "id": "a13a240186247e79c5ef5af6980afafd",
+      "external_urls": 3,
+      "max_duplication": 64.03582570795004
+    },
+    {
+      "urls": "https://www.website.com/catalogue/contacteur-minuterie-parafoudre/contacteur-pour-tarifs-heures-creuses-bipolaire-230-v-25-a-1-module",
+      "avg_duplication": 60.28718820721537,
+      "isHasIntersectPhrases": false,
+      "id": "31d01602185eac0b1535cb61ea248319",
+      "external_urls": 2,
+      "max_duplication": 61.300898093006026
+    }
+  ],
+  "total": 1413
+}

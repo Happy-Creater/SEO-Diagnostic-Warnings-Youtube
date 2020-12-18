@@ -1,0 +1,301 @@
+<div *ngIf="ipBlocking">
+	<app-authorized></app-authorized>
+</div>
+<div *ngIf="!ipBlocking">
+	<nav id="head" class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse"
+					class="navbar-toggle collapsed" type="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand logo"><img src="/assets/images/logo.png"></a>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar">
+				<ul class="nav navbar-nav main-menu">
+					<li>
+						<a routerLinkActive="active" [routerLink]="['/home',encodedAccount,webId]"
+							class="icon-home"></a>
+					</li>
+					<li><a routerLinkActive="active" (click)="getLinkSEO()" style="cursor: pointer;"
+							[category]="'seo'">{{ 'GLOBAL_VIEW.SEO' | translate}}</a></li>
+					<li><a #sea routerLinkActive="getActive(sea)" [routerLink]="getLink(sea, '/sea')"
+							[category]="'sea'">{{ 'GLOBAL_VIEW.SEA' | translate}}</a></li>
+					<li><a #data routerLinkActive="getActive(data)" [routerLink]="getLink(data, '/data')"
+							[category]="'data'">{{ 'GLOBAL_VIEW.DATA' | translate}}</a></li>
+					<li><a #logs routerLinkActive="getActive(logs)" [routerLink]="getLink(logs, '/logs')"
+							[category]="'logs'">{{ 'GLOBAL_VIEW.LOGS' | translate}}</a></li>
+					<li><a #gsv routerLinkActive="getActive(gsv)" [routerLink]="getLink(gsv, '/global-search-vision')"
+							[category]="'gsv'" class="icon-globalsearch"
+							[class.active]="getCurrentModule() === 'gsv'"></a></li>
+					<li style="float: right;">
+						<a id="globalfilter" *ngIf="isSea" [ngStyle]="globalFilterStyle()"
+							(click)="customGlobalFilterDialog()" (mouseover)="isHoverGlobalFilter=true"
+							(mouseout)="isHoverGlobalFilter=false">
+							<a [ngStyle]="globalFilterIconStyle()"></a>
+							<p [ngStyle]="globalFilterLabelStyle()">Global Filter
+								{{isGlobalFilter?'(active)':''}}</p>
+						</a>
+						<ul class="nav navbar-right head-user">
+							<li class="block-icon" [class.hide]="!showFilterMenu" *ngIf="false">
+								<a class="icon-search" href="javascript:void(0)"></a>
+							</li>
+							<li class="block-icon" [class.hide]="!showFilterMenu" *ngIf="false">
+								<a class="icon-filter" href="javascript:void(0)"></a>
+							</li>
+							<li class="col-date" [class.disabled]="disabledDate" [class.hide]="!showFilterMenu">
+								<div class="form-date">
+									<label>{{'GLOBAL_VIEW.From' | translate}}</label><input type="text"
+										placeholder="{{daterange.start | localizedDate:'dd MMM y'}}" name="date-form"
+										[ngClass]="isSea ? 'form-control disabled inactive-datelabel' : 'form-control'"><br>
+									<label>{{'GLOBAL_VIEW.To' | translate}}</label><input type="text"
+										placeholder="{{daterange.end | localizedDate:'dd MMM y'}}" name="date-to"
+										[ngClass]="isSea ? 'form-control disabled inactive-datelabel' : 'form-control'">
+								</div>
+								<div class="dd-date" *ngIf="optionsDatepicker"
+									[ngStyle]="{ 'margin-left': resizeCalrendarWidthBox() }">
+									<a class="pull-right" id="daterangepickerCalendar" daterangepicker
+										[options]="optionsDatepicker"> <span class="glyphicon glyphicon-menu-down"
+											style="margin-top: -10px;"></span></a>
+								</div>
+								<div class="dd-date" *ngIf="!optionsDatepicker"
+									[ngStyle]="{ 'margin-left': resizeCalrendarWidthBox() }">
+									<a class="pull-right"> <span class="glyphicon glyphicon-menu-down"
+											style="margin-top: -10px;"></span></a>
+								</div>
+								<app-modal-standard #periodDialog [options]="modalOptions" (onShow)="onModalShow()">
+
+									<div class="app-modal-body">
+										<div style="width:100%;">
+											<p>
+												Period:
+											</p>
+											<p>
+												<my-date-picker name="peroid_date1" [options]="myDatePickerOptions"
+													[(ngModel)]="pero1" required></my-date-picker>
+												<my-date-picker name="peroid_date2" [options]="myDatePickerOptions"
+													[(ngModel)]="pero2" required></my-date-picker>
+											</p>
+										</div>
+										<div style=" width: 70%; ">
+											<p>
+												<input type="radio" name="t" id="last_month" />
+												<label for="previous_period"></label>Last month
+											</p>
+											<p>
+												<input type="radio" name="t" id="last_year" />
+												<label for="last_year"></label>Last year
+											</p>
+											<p>
+												<input type="radio" name="t" id="last_year" />
+												<label for="last_year"></label>Last year
+											</p>
+											<p>
+												<input type="radio" name="t" id="last_year" />
+												<label for="last_year"></label>Last year
+											</p>
+											<p>
+												<input type="radio" name="t" id="last_year" />
+												<label for="last_year"></label>Last year
+											</p>
+										</div>
+										<div class="dd-ok" style=" width: 28%; text-align:right">
+											<a id="btn-ok" class="btn btn-default" (click)="modalPeriod.hide()"
+												style="margin-right: 35px;" type="button">OK</a>
+										</div>
+									</div>
+
+								</app-modal-standard>
+							</li>
+							<li class="dropdown  droplist-web" (click-outside)="modalWebsite.hide()">
+								<a data-toggle="dropdown" class="dropdown-toggle pointer"
+									(click)="showWebsiteDialog($event)">
+									<div>
+										<p title="{{url}}" class="">{{url | textElipsis : 30}}</p>
+									</div>
+									<div>
+										<span aria-hidden="true" class="glyphicon glyphicon-menu-down"></span>
+									</div>
+								</a>
+								<app-modal-standard #websiteDialog [options]="modalOptions"
+									(onShow)="onModalWebsiteShow()">
+									<div class="app-modal-body" id="table-dialog_website_wrapper">
+										<input #searchBox textbox-clearable
+											placeholder="{{'GLOBAL_VIEW.Search_an_account_or_a_website_' | translate}}"
+											class="form-control"
+											style="font-style: italic;border: 1px solid #ddd;margin-top: 10px;"
+											[value]="search" (input)="searchAccountWebsite($event.target.value)">
+										<table id='table-dialog_website' class="full-width">
+											<thead>
+												<tr>
+													<th id="account-header-dialog">
+														{{'GLOBAL_VIEW.Account'|translate}}
+													</th>
+													<th id="website-header-dialog">
+														{{'GLOBAL_VIEW.Website'|translate}}
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="width20">
+														<div class="full-width">
+															<table *ngIf="accountList" id="table-accounts-dialog"
+																class="full-width">
+																<tr *ngFor="let acc of accountList"
+																	class="tb-space pointer"
+																	[class.account-active]="acc===modalWebsiteAccount"
+																	title="{{acc}}"
+																	(click)="selectAccountModal(acc, true)">
+																	<td class="height20 width80">
+																		<span
+																			class="ellipsisText mTdSpan full-width">{{acc}}</span>
+																	</td>
+																	<td class="width20">
+																		<span *ngIf="acc===modalWebsiteAccount"
+																			class="glyphicon glyphicon-menu-right pointer"
+																			(click)="selectAccountModal(acc, true)"></span>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</td>
+													<td class="width80">
+														<div class="full-width">
+															<table *ngIf="modalWebsiteList" id="table-websiites-dialog"
+																class="full-width">
+																<tr *ngFor="let websiteObj of modalWebsiteList"
+																	class="tb-space pointer"
+																	[class.website-active]="modalWebsiteAccount===account && webId===websiteObj.webId"
+																	title="{{websiteObj.url}}"
+																	(click)="selectWebsiteModal(websiteObj)">
+																	<td class="height20">
+																		<span class="full-width ellipsisText mTdSpan">
+																			{{websiteObj.url}}
+																		</span>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</app-modal-standard>
+							</li>
+							<li (click-outside)="showSettingMenu = false">
+								<a data-toggle="dropdown" class="gear" (click)="showSettingMenu = !showSettingMenu"
+									style="cursor: pointer"></a>
+								<div *ngIf="showSettingMenu">
+									<ul class="dropdown-menu dropdown-blocklist" style="display: block;">
+										<li *ngIf="USER_ROLE != 'USER'">
+											<a class="icon-crawler" routerLinkActive="active"
+												[routerLink]="['/settings',encodedAccount,webId,'crawler']"
+												(click)="showSettingMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.Crawler'|translate}}
+											</a>
+										</li>
+										<li *ngIf="USER_ROLE != 'USER'">
+											<a class="icon-keyword" routerLinkActive="active"
+												[routerLink]="['/settings',encodedAccount,webId,'keywords']"
+												(click)="showSettingMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.Keywords'|translate}}
+											</a>
+										</li>
+										<li *ngIf="USER_ROLE != 'USER' && USER_ROLE != 'PRESENTATION'">
+											<a class="icon-settings" routerLinkActive="active"
+												[routerLink]="['/settings',encodedAccount,webId,'settings']"
+												(click)="showSettingMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.Settings'|translate}}
+											</a>
+										</li>
+										<li>
+											<a class="icon-warning" routerLinkActive="active"
+												[routerLink]="['/settings',encodedAccount,webId,'warnings']"
+												(click)="showSettingMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.Warnings'|translate}}
+											</a>
+										</li>
+										<li>
+											<a class="icon-tutor" routerLinkActive="active"
+												[routerLink]="['/settings',encodedAccount,webId,'tutorials']"
+												(click)="showSettingMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.Tutorials'|translate}}
+											</a>
+										</li>
+										<li>
+											<a [category]="'configuration'" class="icon-configuration"
+												routerLinkActive="active"
+												[routerLink]="['/settings',encodedAccount,webId,'configurations']"
+												(click)="showSettingMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.Configurations'|translate}}
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li (click-outside)="showProfileMenu = false">
+								<a data-toggle="dropdown" (click)="showProfileMenu = !showProfileMenu"
+									[attr.title]="username?username:null"><img [src]="PROFILE_LOGO"
+										[class]="profileClass" style="cursor: pointer; margin-top: 5px;"></a>
+								<div *ngIf="showProfileMenu">
+									<ul class="dropdown-menu dropdown-blocklist" style="display: block;">
+										<li>
+											<a class="icon-profile" routerLinkActive="active"
+												[routerLink]="['/profile',encodedAccount,webId,'profile']"
+												(click)="showProfileMenu = false">
+												<i></i>
+												{{'GLOBAL_VIEW.My_Profile'|translate}}
+											</a>
+										</li>
+										<li>
+											<a class="icon-logout pointer" (click)="logout()">
+												<i></i>
+												{{'GLOBAL_VIEW.Logout'|translate}}
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid container-web">
+		<div class="row">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+
+	<footer *ngIf="showFooter">
+		<div class="row">
+			<div class=" col-lg-2 col-sm-2 col-md-2 col-xs-12 footer-left">
+				<img src="/assets/images/logo.png">
+			</div>
+			<div class=" col-lg-10 col-sm-10 col-md-10 col-xs-12">
+				<ul class="navbar-right menu-footer">
+					<li><a href="javascript:void(0)">{{'GLOBAL_VIEW.TERMS_OF_SEVICE'|translate}}</a></li>
+					<li><a href="javascript:void(0)">{{'GLOBAL_VIEW.SUPPORT'|translate}}</a></li>
+					<li>&copy;2010-{{thisYear}}</li>
+				</ul>
+			</div>
+		</div>
+
+	</footer>
+	<div class="backtotop" (click)="backToTop()">&uarr;</div>
+
+	<app-dummy *ngIf="!isInit"></app-dummy>
+</div>

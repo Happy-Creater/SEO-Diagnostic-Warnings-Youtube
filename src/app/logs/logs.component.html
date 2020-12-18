@@ -1,0 +1,82 @@
+<div menu-left id="menu-left" class=" col-lg-2 col-sm-2 col-md-2 col-xs-12 logs">
+  <ul>
+    <li class="head-page">
+      <p class="title-link logs">LOGS</p>
+    </li>
+    <li>
+      <a routerLink="./logs-global-analysis" id="global-analysis" [menu-item]="'global-analysis'"
+        [menu-item-link]="['logs-global-analysis']">Global
+        logs analysis</a>
+    </li>
+    <li [class.disabled]="deactiveMenuCustomPeriod">
+      <a id="diagnostic" [menu-item]="'diagnostic'" [category]="'logs-diagnostic'">Diagnostic</a>
+    </li>
+    <li [class.disabled]="deactiveMenuCustomPeriod" class="submenu-left dropdown-diagnostic" [sub-menu]="'diagnostic'">
+      <ul class="sub-menu">
+        <li [class.disabled]="deactiveMenuCustomPeriod">
+          <a [menu-item]="'diagnostic-warnings'" [menu-item-link]="['/diagnostic-warnings']"
+            routerLink="./diagnostic-warnings" [category]="'logs-diagnostic-warnings'">Warnings</a>
+        </li>
+        <li [class.disabled]="deactiveMenuCustomPeriod || !isHasScanInPeriod">
+          <a [menu-item]="'diagnostic-low-crawled-pages'" [menu-item-link]="['/diagnostic-low-crawled-pages']"
+            routerLink="./diagnostic-low-crawled-pages" [category]="'logs-diagnostic-low-crawled-pages'">Low crawled
+            pages</a>
+        </li>
+      </ul>
+    </li>
+    <li [class.disabled]="deactiveMenuCustomPeriod">
+      <a routerLink="./logs-crawl-bot-behavior" id="logs-crawl-bot-behavior" [menu-item]="'logs-crawl-bot-behavior'"
+        [menu-item-link]="['/logs-crawl-bot-behavior']">Crawl
+        bot behavior</a>
+    </li>
+    <li [class.disabled]="deactiveMenuCustomPeriod || !isHasScanInPeriod">
+      <a routerLink="./logs-cross-analysis" id="logs-cross-analysis" [menu-item]="'logs-cross-analysis'"
+        [menu-item-link]="['logs-cross-analysis']">Cross
+        analysis</a>
+    </li>
+    <li>
+      <a id="instant-logs" [menu-item]="'instant-logs'" [category]="'logs-instant-logs'">Instant logs analysis</a>
+    </li>
+    <li class="submenu-left dropdown-instant-logs" [sub-menu]="'instant-logs'">
+      <ul class="sub-menu">
+        <li>
+          <a [menu-item]="'logs-instant-webpagesearch'" [menu-item-link]="['/logs-instant-webpagesearch']"
+            routerLink="./logs-instant-webpagesearch" [category]="'logs-instant-webpagesearch'">Webpage
+            search</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+<!--end menu-left-->
+
+<div class=" col-lg-10 col-sm-10 col-md-10 col-xs-12 " id="content">
+  <div class="row">
+    <!--start row content1-->
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12">
+      <div class="bg-line"></div>
+      <div class="line-menu logs"></div>
+    </div>
+  </div>
+  <!--end row content1-->
+
+  <div class="row" style="display: none">
+    <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 content3 content-teb-seo">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 width-content" style="margin-top: 0px; z-index: 1;">
+          <select id="logsPeriodSelect" class="select-straging" [(ngModel)]="logsPeriodSelected"
+            onchange="window['appLogsComponent'].component.onLogsSelectPeriodChange(this.options[this.selectedIndex].value)">
+            <option *ngFor="let id of idSelectPeriod" [ngValue]="id"> {{itemSelectPeriodOption[id].minDateShow}} -
+              {{itemSelectPeriodOption[id].maxDateShow}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet *ngIf="isReady"></router-outlet>
+  <div style="padding-top:20px;"></div>
+</div>
+
+<video-tutor [isModal]="true" [module]="'setting'"></video-tutor>

@@ -1,0 +1,13 @@
+
+
+#menu-left  a{
+	cursor: pointer;
+	width: 100%;
+	display: inline-block;
+}
+.isDisabled {
+    color: currentColor;
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    text-decoration: none;
+  }

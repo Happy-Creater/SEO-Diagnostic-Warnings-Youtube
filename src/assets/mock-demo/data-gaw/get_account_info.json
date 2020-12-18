@@ -1,0 +1,15 @@
+{
+	"body": {
+		"accountInfo": {
+			"accountId": "71720943",
+			"dataProcessingAmendmentAcceptedDate": "03 May 2018",
+			"benchmarking": true,
+			"accountName": "PX | Pixalione 2017",
+			"technicalSupport": true,
+			"googleProductsServices": true,
+			"accountSpecialists": true,
+			"accountCommercialExperts": false
+		}
+	},
+	"status": "ok"
+}

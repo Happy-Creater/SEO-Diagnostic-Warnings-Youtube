@@ -1,0 +1,39 @@
+{
+    "result": [
+        {
+            "color": "#7CB5EC",
+            "name": "www.cdiscount.com",
+            "y": 78
+          },
+          {
+            "color": "#434348",
+            "name": "www.gammvert.fr",
+            "y": 38
+          },
+          {
+            "color": "#90ED7D",
+            "name": "www.castorama.fr",
+            "y": 99
+          },
+          {
+            "color": "#F7A35C",
+            "name": "www.truffaut.com",
+            "y": 50.25
+          },
+          {
+            "color": "#8085E9",
+            "name": "www.jardiland.com",
+            "y": 62.29
+          },
+          {
+            "color": "#F15C80",
+            "name": "www.amazon.com",
+            "y": 450
+          },
+          {
+            "color": "#E4D354",
+            "name": "www.leroymerlin.frr",
+            "y": 65
+          }
+    ]
+  }

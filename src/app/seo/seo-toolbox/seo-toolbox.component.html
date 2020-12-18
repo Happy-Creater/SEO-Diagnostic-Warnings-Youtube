@@ -1,0 +1,16 @@
+<div class="row">
+  <!--start row conten3-->
+  <div class=" col-lg-12 col-sm-12 col-md-12 col-xs-12 content3" style="text-align: center;">
+    <!--start col content3-->
+    <div *ngFor="let obj of row" class="row">
+      <!--start row content-tabss-->
+      <a *ngFor="let item of obj" [routerLink]="item.routerLink" [id]="item.id">
+        <div [class]="item.class">
+          <img [src]="item.src">
+          <h1>{{setUpperCaseText(translateString(item.h1))}}</h1>
+          <p>{{item.p | translate}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

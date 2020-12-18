@@ -1,0 +1,22 @@
+img{
+    display: block;
+    margin: auto;
+}
+.toolbox-title{
+    text-align: center;
+    color: #519ffc;
+    font-weight: bold;
+}
+.toolbox-detail{
+    text-align: center;
+}
+a.active{
+    background-color: #519ffc;
+}
+
+.col-lg-4.col-sm-6.col-md-4.col-xs-12.width-content {
+    min-height: 220px;
+}
+/*div.col-lg-6.col-sm-6.col-md-6.col-xs-12{
+    cursor: pointer;
+}*/

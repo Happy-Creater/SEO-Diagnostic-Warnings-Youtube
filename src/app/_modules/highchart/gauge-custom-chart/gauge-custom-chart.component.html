@@ -1,0 +1,4 @@
+<div id="gauge-custom-layout" [style.width.px]="width">
+  <chart [options]="options" (load)="saveChartInstance($event.context)"></chart>
+  <ng-content></ng-content>
+</div>

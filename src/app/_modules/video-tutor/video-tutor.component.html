@@ -1,0 +1,34 @@
+<li #playVideoTutor *ngIf="isAvailable && isMenu && canLoad" class="block-tutor" style="display:none;">
+  <div class="block-img-tutor playVideoTutor" [category]="'video-tutor'" style="display:none;">
+    <a class="playVideoTutor" data-toggle="modal" data-target="#videoModal" (click)="playVideo(true)" style="cursor: pointer; display:none;">
+      <img class="playVideoTutor" [src]="'/share/videos/' + this.getCurrentModule() + '/' + this.getCurrentModule() + '.png'"
+        onload="javascript:window['appVideoTutorMenuComponentRef'].zone.run(() => {
+        window['appVideoTutorMenuComponentRef'].component.showCover();
+      })" onerror="javascript:window['appVideoTutorMenuComponentRef'].zone.run(() => {
+          window['appVideoTutorMenuComponentRef'].component.setCanLoad(false);
+        })" style="display:none;" width="100%">
+      <div class="mask playVideoTutor" style="display:none;">
+        <i class="icon-b-video playVideoTutor"></i>
+      </div>
+    </a>
+  </div>
+</li>
+
+<!-- Modal video -->
+<div *ngIf="isModal && canLoad" class="modal fade help" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width: 65%;" (click-outside)="playVideo(false,$event)">
+    <div class="modal-content modal-video">
+      <div class="modal-header">
+        <!-- 7/12/2017  -->
+        <button type="button" class="close" style="margin-top: 0px;" data-dismiss="modal" aria-label="Close" (click)="playVideo(false)">
+          <span aria-hidden="true">
+            <i class="icon-remove"></i>
+          </span>
+        </button>
+        <!-- 7/12/2017  -->
+      </div>
+      <div id="videoTutorBody" class="modal-body" style="height: 5px;">
+      </div>
+    </div>
+  </div>
+</div>

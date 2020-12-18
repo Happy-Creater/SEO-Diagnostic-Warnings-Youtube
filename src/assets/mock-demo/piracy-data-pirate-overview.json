@@ -1,0 +1,320 @@
+{
+  "result": [
+    {
+      "contact_host": true,
+      "nb_pirate_url": 1,
+      "contact_website": true,
+      "manual_pursuite": true,
+      "pirate_url": "moteurdevolet.com",
+      "max_duplication": 84.47825121630824,
+      "list_pirate_url": [
+        {
+          "score": 84.47825121630824,
+          "url_client": "https://www.website.com/pro/catalogue/38165-2pt/prise-de-courant-2pt-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc",
+          "url_piracy": "http://www.moteurdevolet.com/119280-.html"
+        }
+      ]
+    },
+    {
+      "contact_host": true,
+      "nb_pirate_url": 6,
+      "contact_website": true,
+      "manual_pursuite": true,
+      "pirate_url": "reielec.com",
+      "max_duplication": 78.7486019517399,
+      "list_pirate_url": [
+        {
+          "score": 78.7486019517399,
+          "url_client": "https://www.website.com/pro/catalogue/38165-2pt/prise-de-courant-2pt-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc",
+          "url_piracy": "https://reielec.com/appareillage-specifique/4701-legrand-complet-089649-boite-de-sol-cache-3-modules-pc-obturateur.html"
+        },
+        {
+          "score": 65.57419392718941,
+          "url_client": "https://www.website.com/pro/catalogue/35463-voyant-230-v/voyant-temoin-230v-celiane-pour-cablage-phase-distribuee-3ma-pour-mecanismes-mosaic-et-celiane",
+          "url_piracy": "https://reielec.com/mecanismes/3282-legrand-celiane-mecanismes-voyant-temoin-230-v-pour-cablage-phase-distribuee-067688.html"
+        },
+        {
+          "score": 41.22295531618155,
+          "url_client": "https://www.website.com/pro/catalogue/35379-standard/prise-de-courant-standard-francais-celiane-16a-250v-2pt-bornes-automatiques",
+          "url_piracy": "https://reielec.com/mecanismes/2821-legrand-celiane-mecanismes-prise-de-courant-2pt-16a.html"
+        },
+        {
+          "score": 40.36592695302094,
+          "url_client": "https://www.website.com/pro/catalogue/32101-coffrets-13-modules-par-rangee/coffret-drivia-13-modules-2-rangees-ip30-ik05-blanc-ral9003",
+          "url_piracy": "https://reielec.com/coffret-legrand/3334-legrand-401213-coffret-drivia-13-modules-3-rangees.html"
+        },
+        {
+          "score": 47.9982742248558,
+          "url_client": "https://www.website.com/pro/catalogue/32101-coffrets-13-modules-par-rangee/coffret-drivia-13-modules-3-rangees-ip30-ik05-blanc-ral9003",
+          "url_piracy": "https://reielec.com/coffret-legrand/3334-legrand-401213-coffret-drivia-13-modules-3-rangees.html"
+        },
+        {
+          "score": 47.90868388919661,
+          "url_client": "https://www.website.com/pro/catalogue/32101-coffrets-13-modules-par-rangee/coffret-drivia-13-modules-4-rangees-ip30-ik05-blanc-ral9003",
+          "url_piracy": "https://reielec.com/coffret-legrand/3334-legrand-401213-coffret-drivia-13-modules-3-rangees.html"
+        }
+      ]
+    },
+    {
+      "contact_host": true,
+      "nb_pirate_url": 5,
+      "contact_website": true,
+      "manual_pursuite": false,
+      "pirate_url": "bubendorff.com",
+      "max_duplication": 76.76701056435306,
+      "list_pirate_url": [
+        {
+          "score": 72.64719699832769,
+          "url_client": "https://www.website.com/pro/questions-frequentes/combien-de-maisons-puis-je-controler-depuis-mon-compte-dans-lapplication-homecontrol",
+          "url_piracy": "https://www.bubendorff.com/faq-categorie/idiamant/"
+        },
+        {
+          "score": 52.737605329851924,
+          "url_client": "https://www.website.com/questions-frequentes/combien-de-maisons-puis-je-controler-depuis-mon-compte-dans-lapplication-homecontrol",
+          "url_piracy": "https://www.bubendorff.com/faq-categorie/idiamant/"
+        },
+        {
+          "score": 76.76701056435306,
+          "url_client": "https://www.website.com/pro/questions-frequentes/est-ce-que-je-peux-me-connecter-simultanement-a-mon-installation-via-lapplication-home-control-depuis-plusieurs-smartphones",
+          "url_piracy": "https://www.bubendorff.com/faq-categorie/idiamant/page/2/"
+        },
+        {
+          "score": 44.795850851745044,
+          "url_client": "https://www.website.com/pro/questions-frequentes/quels-sont-les-prerequis-pour-utiliser-homekit",
+          "url_piracy": "https://www.bubendorff.com/faq-categorie/idiamant/page/3/"
+        },
+        {
+          "score": 43.54816417792768,
+          "url_client": "https://www.website.com/pro/questions-frequentes/comment-visualiser-la-liste-des-maisons-dans-mon-application",
+          "url_piracy": "https://www.bubendorff.com/faq-categorie/idiamant/"
+        }
+      ]
+    },
+    {
+      "contact_host": true,
+      "nb_pirate_url": 15,
+      "contact_website": true,
+      "manual_pursuite": false,
+      "pirate_url": "materielelectrique.com",
+      "max_duplication": 71.67650855908244,
+      "list_pirate_url": [
+        {
+          "score": 71.67650855908244,
+          "url_client": "https://www.website.com/pro/catalogue/38050-va-et-vient-2-modules/interrupteur-ou-va-et-vient-10ax-250v-mosaic-2-modules-blanc",
+          "url_piracy": "https://www.materielelectrique.com/prise-niloe-bornes-auto-fonte-p-220720.html"
+        },
+        {
+          "score": 52.93172478512322,
+          "url_client": "https://www.website.com/catalogue/contacteur-minuterie-parafoudre/telerupteur-unipolaire-230-v-16-a-1-module",
+          "url_piracy": "https://www.materielelectrique.com/minuterie-multifonction-lexic-5060-p-2007.html"
+        },
+        {
+          "score": 42.76456346817006,
+          "url_client": "https://www.website.com/catalogue/interrupteur-disjoncteur-differentiel/interrupteur-differentiel-bipolaire-type-a-30ma-arrivee-hautdepart-haut-40-a",
+          "url_piracy": "https://www.materielelectrique.com/contacteur-domestique-silencieux-p-32761.html"
+        },
+        {
+          "score": 58.21698128339723,
+          "url_client": "https://www.website.com/pro/catalogue/31907-bipolaires-250-v/contacteur-domestique-cx3-silencieux-bobine-230v-2p-250v-25a-contact-2f-1-module",
+          "url_piracy": "https://www.materielelectrique.com/contacteur-domestique-silencieux-p-32762.html"
+        },
+        {
+          "score": 51.526849914934616,
+          "url_client": "https://www.website.com/pro/catalogue/31907-bipolaires-250-v/contacteur-domestique-cx3-silencieux-bobine-230v-2p-250v-25a-contact-2f-1-module",
+          "url_piracy": "https://www.materielelectrique.com/contacteur-domestique-silencieux-p-32761.html"
+        },
+        {
+          "score": 52.61386031144332,
+          "url_client": "https://www.website.com/pro/catalogue/34535-prises-cat-6/prise-rj45-celiane-categorie6-ftp",
+          "url_piracy": "https://www.materielelectrique.com/prise-rj45-prog-celiane-lcs2-p-15325.html"
+        },
+        {
+          "score": 41.56415307318642,
+          "url_client": "https://www.website.com/catalogue/prise/prise-de-courant-avec-terre-celiane-surface-et-double-chargeur-usb-titane",
+          "url_piracy": "https://www.materielelectrique.com/prise-bornes-automatiques-complet-titane-titane-p-300075.html"
+        },
+        {
+          "score": 56.34300169000641,
+          "url_client": "https://www.website.com/catalogue/prise/prise-de-courant-avec-terre-celiane-surface-graphite",
+          "url_piracy": "https://www.materielelectrique.com/prise-bornes-automatiques-complet-titane-titane-p-300075.html"
+        },
+        {
+          "score": 42.26560535352405,
+          "url_client": "https://www.website.com/pro/catalogue/39732-blocs-saillie-ip-43-plastique-sati-autodiag/baes-devacuation-saillie-ip43-ik07-plastique-eco1-sati-autodiag-pour-erp-et-ert",
+          "url_piracy": "https://www.materielelectrique.com/baes-evacuation-leds-sati-adressable-p-17519.html"
+        },
+        {
+          "score": 45.63014536066684,
+          "url_client": "https://www.website.com/catalogue/prise/prise-de-courant-avec-terre-celiane-surface-blanc",
+          "url_piracy": "https://www.materielelectrique.com/prise-bornes-automatiques-complet-titane-titane-p-300075.html"
+        },
+        {
+          "score": 48.87017965603132,
+          "url_client": "https://www.website.com/pro/catalogue/35299-ecodetecteur-2-fils-sans-neutre/detecteur-de-mouvements-toutes-lampes-2-fils-celiane-sans-neutre",
+          "url_piracy": "https://www.materielelectrique.com/ecodetecteur-2-fils-celiane-sans-neutre-mecanisme-livre-seul-p-297554.html"
+        },
+        {
+          "score": 57.08137950429215,
+          "url_client": "https://www.website.com/pro/catalogue/39777-telecommande-standard-non-polarisee/telecommande-standard-non-polarisee-pour-blocs-autonomes-ou-sources-centralisees-declairage-de-securite",
+          "url_piracy": "https://www.materielelectrique.com/telecommande-modulaire-multifonctions-connectee-non-polarisee-radio-pour-bloc-declairage-et-alarme-incendie-p-406839.html"
+        },
+        {
+          "score": 46.34867895977058,
+          "url_client": "https://www.website.com/pro/catalogue/36812-classe-300-postes-video-v13e/poste-interieur-classe-300-poste-video-mains-libres-v13e-blanc",
+          "url_piracy": "https://www.materielelectrique.com/poste-interieur-classe-300-poste-video-mains-libres-x13e-connecte-blanc-p-318044.html"
+        },
+        {
+          "score": 42.331740455513845,
+          "url_client": "https://www.website.com/pro/catalogue/36812-classe-300-postes-video-v13e/poste-interieur-classe-300-poste-video-mains-libres-v13e-blanc",
+          "url_piracy": "https://www.materielelectrique.com/poste-interieur-classe-poste-video-mains-libres-v13m-blanc-p-311999.html"
+        },
+        {
+          "score": 57.08137950429215,
+          "url_client": "https://www.website.com/pro/catalogue/39776-telecommande-multifonctions-non-polarisee/telecommande-multifonction-non-polarisee-pour-blocs-autonomes-ou-sources-centralisees-declairage-de-securite",
+          "url_piracy": "https://www.materielelectrique.com/telecommande-modulaire-multifonctions-connectee-non-polarisee-radio-pour-bloc-declairage-et-alarme-incendie-p-406839.html"
+        }
+      ]
+    },
+    {
+      "contact_host": false,
+      "nb_pirate_url": 2,
+      "contact_website": true,
+      "manual_pursuite": false,
+      "pirate_url": "axdispro.com",
+      "max_duplication": 71.36114563994764,
+      "list_pirate_url": [
+        {
+          "score": 71.36114563994764,
+          "url_client": "https://www.website.com/pro/catalogue/31254-differentiels-500-ma-selectifs/disjoncteur-de-branchement-enedis-bipolaire-differentiel-500ma-selectif-45a",
+          "url_piracy": "https://www.axdispro.com/accueil/332-disj-de-branchement-2p-1545-500ma-s-3414970310941.html"
+        },
+        {
+          "score": 71.36114563994764,
+          "url_client": "https://www.website.com/pro/catalogue/31254-differentiels-500-ma-selectifs/disjoncteur-de-branchement-enedis-bipolaire-differentiel-500ma-selectif-45a",
+          "url_piracy": "https://www.axdispro.com/production-gestion-energetique/332-disj-de-branchement-2p-1545-500ma-s-3414970310941.html"
+        }
+      ]
+    },
+    {
+      "contact_host": false,
+      "nb_pirate_url": 1,
+      "contact_website": true,
+      "manual_pursuite": false,
+      "pirate_url": "pesmos.in",
+      "max_duplication": 70.74395123692955,
+      "list_pirate_url": [
+        {
+          "score": 70.74395123692955,
+          "url_client": "https://www.website.com/pro/catalogue/35275-programme-celiane-tm-plaques/plaque-celiane-memories-1-poste-finition-yesterday-blanc",
+          "url_piracy": "https://pesmos.in/6925/Broyeur_universel_complet_avec_support_1_phase.html"
+        }
+      ]
+    },
+    {
+      "contact_host": false,
+      "nb_pirate_url": 3,
+      "contact_website": false,
+      "manual_pursuite": false,
+      "pirate_url": "mastodonfrance.com",
+      "max_duplication": 68.2809583658406,
+      "list_pirate_url": [
+        {
+          "score": 68.2809583658406,
+          "url_client": "https://www.website.com/pro/catalogue/38050-va-et-vient-2-modules/interrupteur-ou-va-et-vient-10ax-250v-mosaic-2-modules-blanc",
+          "url_piracy": "https://mastodonfrance.com/choix/prise-electrique-legrand-classement/"
+        },
+        {
+          "score": 40.81895381997217,
+          "url_client": "https://www.website.com/catalogue/prise/prise-de-courant-avec-terre-celiane-surface-avec-plaque-blanc",
+          "url_piracy": "https://mastodonfrance.com/choix/prise-electrique-legrand-classement/"
+        },
+        {
+          "score": 40.129699334561394,
+          "url_client": "https://www.website.com/catalogue/prise/prise-de-courant-avec-terre-et-griffes-avec-plaque-mosaic-blanc",
+          "url_piracy": "https://mastodonfrance.com/choix/prise-electrique-legrand-classement/"
+        }
+      ]
+    },
+    {
+      "contact_host": false,
+      "nb_pirate_url": 5,
+      "contact_website": false,
+      "manual_pursuite": false,
+      "pirate_url": "entrepotelectrique.com",
+      "max_duplication": 65.14474228374854,
+      "list_pirate_url": [
+        {
+          "score": 50.37029504171298,
+          "url_client": "https://www.website.com/pro/catalogue/31736-ecocompteurs-ip/ecocompteur-modulaire-ip-pour-mesure-consommation-sur-6-postes-110v-a-230v-6-modules",
+          "url_piracy": "https://www.entrepotelectrique.com/tableau-electrique/ecocompteur-residentiel-ip-rt2012"
+        },
+        {
+          "score": 65.14474228374854,
+          "url_client": "https://www.website.com/pro/catalogue/41699-compensateur-actif/compensateur-actif-pour-commandes-eclairage-2-fils-sans-neutre",
+          "url_piracy": "https://www.entrepotelectrique.com/compensateur-actif-pour-commandes-eclairage-2-fils-sans-neutre"
+        },
+        {
+          "score": 47.3200553920812,
+          "url_client": "https://www.website.com/pro/catalogue/42566-version-celiane-with-netatmo/interrupteur-filaire-connecte-pour-volet-roulant-celiane-with-netatmo-blanc",
+          "url_piracy": "https://www.entrepotelectrique.com/prise-et-interrupteur/legrand-celiane/pret-a-poser-sans-fil-celiane/interrupteur-filaire-connecte-pour-volet-roulant-celiane-with-netatmo-titane"
+        },
+        {
+          "score": 46.8079318147711,
+          "url_client": "https://www.website.com/pro/catalogue/42566-version-celiane-with-netatmo/interrupteur-filaire-connecte-pour-volet-roulant-celiane-with-netatmo-blanc",
+          "url_piracy": "https://www.entrepotelectrique.com/interrupteur-filaire-connecte-pour-volet-roulant-dooxie-with-netatmo-alu"
+        },
+        {
+          "score": 51.5770738671885,
+          "url_client": "https://www.website.com/pro/catalogue/42545-version-celiane-with-netatmo/pack-de-demarrage-installation-connectee-celiane-with-netatmo-1-prise-control-1-commande-departarrivee-blanc",
+          "url_piracy": "https://www.entrepotelectrique.com/pack-de-demarrage-installation-connectee-celiane-with-netatmo-1-prise-control-1-commande-depart-arrivee-graphite"
+        }
+      ]
+    },
+    {
+      "contact_host": false,
+      "nb_pirate_url": 2,
+      "contact_website": false,
+      "manual_pursuite": false,
+      "pirate_url": "elec-pas-cher.com",
+      "max_duplication": 58.12176709464135,
+      "list_pirate_url": [
+        {
+          "score": 58.12176709464135,
+          "url_client": "https://www.website.com/pro/catalogue/31459-declencheurs-a-emission-de-tension-et/declencheur-a-emission-de-tension-et-dx3-110v-a-415v-et-110v-a-415v",
+          "url_piracy": "https://www.elec-pas-cher.com/Prix/Produit-reference-406278-19023.html"
+        },
+        {
+          "score": 48.303176376777,
+          "url_client": "https://www.website.com/pro/catalogue/36812-classe-300-postes-video-v13e/poste-interieur-classe-300-poste-video-mains-libres-v13e-blanc",
+          "url_piracy": "https://www.elec-pas-cher.com/Prix/Produit-reference-344622-19125.html"
+        }
+      ]
+    },
+    {
+      "contact_host": false,
+      "nb_pirate_url": 3,
+      "contact_website": true,
+      "manual_pursuite": false,
+      "pirate_url": "yesss-fr.com",
+      "max_duplication": 57.994720205023995,
+      "list_pirate_url": [
+        {
+          "score": 42.952131368974676,
+          "url_client": "https://www.website.com/pro/catalogue/39921-bipolaires/coffret-coupure-pour-enseigne-lumineuse-inter-pompier-bipolaire-26a-250v-equipe-dun-voyant",
+          "url_piracy": "https://www.yesss-fr.com/c1000848/securite-et-communication/coffrets.php?c=37558"
+        },
+        {
+          "score": 55.86779486038637,
+          "url_client": "https://www.website.com/pro/catalogue/42545-version-celiane-with-netatmo/pack-de-demarrage-installation-connectee-celiane-with-netatmo-1-prise-control-1-commande-departarrivee-titane",
+          "url_piracy": "https://www.yesss-fr.com/produit.php?c=3626995"
+        },
+        {
+          "score": 57.994720205023995,
+          "url_client": "https://www.website.com/pro/catalogue/42545-version-celiane-with-netatmo/pack-de-demarrage-installation-connectee-celiane-with-netatmo-1-prise-control-1-commande-departarrivee-blanc",
+          "url_piracy": "https://www.yesss-fr.com/produit.php?c=3626995"
+        }
+      ]
+    }
+  ],
+  "total": 67
+}
