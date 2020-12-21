@@ -83,7 +83,7 @@ docker rm angular
 ```
 **Step test on local** :
 
-1- Run the image (Use command Docker login of Deploy).
+1- Run the image (Use command Docker login and Deploy).
 
 2- Run Angular project.
 
