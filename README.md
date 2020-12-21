@@ -59,6 +59,42 @@ npm install --save  jspdf-autotable
 npm install --save  jwt-decode
 ```
 
+## Test on local
+**Prerequirement** : Install docker in you computer.
+
+**Important commands** :
+```
+# Access nexus for freelancer:
+Username: external_freelance
+Password: HSj2KH6PyEUTy8DW
+
+# Docker login
+docker login -u {user} -p {pasword} docker-repo.monetoring.com
+
+# Deploy
+docker run -d -p 4300:80 --name angular docker-repo.monetoring.com/pilotmonetoringresultlogin:local
+
+# Stop
+docker stop angular
+
+# Remove
+docker rm angular
+
+```
+**Step test on local** :
+
+1- Run the image (Use command Docker login of Deploy).
+
+2- Run Angular project.
+
+3- Access loing interface use this URL -> http://localhost:4300/
+
+4- Type this access to Angular interface :
+```
+       Username: freelancer.dev@monetoring.com
+       Password: 1qaz2wsx
+```
+
 ## Integrate project
 
 1- If freelancer work to finish on new branch. The freelancer need to create merge request to Qods for check code.
