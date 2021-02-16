@@ -36,6 +36,10 @@ export class SeoYoutubeComponent {
   /**============= */
 
   isSubscribe = false;
+  
+  channelYoutubeList: ChannelYoutubeObject[];
+
+  itemChannelYoutubeOption: DropdownItem[];
 
   constructor(
     private channelYoutube: ChannelYoutubeVariableService,
@@ -45,9 +49,6 @@ export class SeoYoutubeComponent {
   }
 
   ngAfterViewInit() {
-
-   
-
     this.unsubscribeGlobalVariable = this.globalVariable.websiteChange
       .subscribe((value) => {
         if (value !== null) {
@@ -98,9 +99,6 @@ export class SeoYoutubeComponent {
   }
 
 
-  channelYoutubeList: ChannelYoutubeObject[];
-
-  itemChannelYoutubeOption: DropdownItem[];
 
   onChannelYoutubeChange(channelYoutubeIdSelected) {
 
