@@ -5,7 +5,7 @@
 
 export const environment = {
     production: false,
-    loginUrl: "http://localhost:4300",
+    loginUrl: "https://dev.monetoring.com:11259",
     OAUTH2_URL: "https://dev.monetoring.com:444/WebServiceMonetoringAuthorization/oauth/token",
     OAUTH2_USERNAME: "clientapp",
     OAUTH2_PASSWORD: "adminpix92",
