@@ -26,7 +26,7 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
-        "angular-seo-youtube-monetoring": "environment/environment.angular-seo-youtube-monetoring.ts"
+        "angular-seo-youtube-monetoring": "environments/environment.angular-seo-youtube-monetoring.ts"
       }
     }
   ],
