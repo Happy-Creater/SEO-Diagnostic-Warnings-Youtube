@@ -25,7 +25,7 @@ import { GlobalFilterService } from './sea/sea-global-filter/services/global-fil
 import { UserhistoryService } from './_services/userhistory/userhistory.service';
 const moment: any = require('moment');
 const $ = require('jquery');
-const Highcharts = require('highcharts');
+// const Highcharts = require('highcharts');
 
 @Component({
 	selector: 'app-root',
@@ -169,13 +169,13 @@ export class AppComponent implements OnInit {
 		});
 
 		// set default highcharts options
-		Highcharts.setOptions({
-			plotOptions: {
-				series: {
-					animation: { duration: 500 }
-				}
-			}
-		});
+		// Highcharts.setOptions({
+		// 	plotOptions: {
+		// 		series: {
+		// 			animation: { duration: 500 }
+		// 		}
+		// 	}
+		// });
 	}
 
 	ngAfterViewInit() {

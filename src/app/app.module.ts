@@ -16,7 +16,7 @@ import { GlobalVariableService } from './_services/global_variable/global-variab
 import { GlobalDateService } from './_services/global_date/global-date.service';
 import { InitializeService } from './_services/initialize/initialize.service';
 import { DummyComponent } from './dummy/dummy.component';
-import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService'
+// import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService'
 import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { VirtualScrollModule } from 'angular2-virtual-scroll';
 import { DDCustomModule } from './_modules/dd-custom/dd-custom.module';
@@ -44,26 +44,27 @@ import { ModalModule } from 'ngx-modialog';
 import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import { GlobalFilterModalComponent } from './sea/sea-global-filter/global-filter-modal/global-filter-modal.component';
 import { UserhistoryService } from './_services/userhistory/userhistory.service';
-export function highchartsFactory() {
-  let hc = require('highcharts');
-  let modules = [
-    require('highcharts/highcharts-more'),
-    require('highcharts/modules/exporting'),
-    require('highcharts/modules/solid-gauge'),
-    require('highcharts/modules/map'),
-    require('highcharts/modules/networkgraph'),
-    require('highcharts/modules/offline-exporting'),
-    require('highcharts/modules/no-data-to-display'),
-    require('highcharts/modules/variable-pie'),
-    require('highcharts/modules/wordcloud')
-  ];
-  for (let module of modules) {
-    module(hc);
-  }
-  return hc;
-}
+import { ChartComponent } from './chart/chart.component';
+// export function highchartsFactory() {
+//   let hc = require('highcharts');
+//   let modules = [
+//     require('highcharts/highcharts-more'),
+//     require('highcharts/modules/exporting'),
+//     require('highcharts/modules/solid-gauge'),
+//     require('highcharts/modules/map'),
+//     require('highcharts/modules/networkgraph'),
+//     require('highcharts/modules/offline-exporting'),
+//     require('highcharts/modules/no-data-to-display'),
+//     require('highcharts/modules/variable-pie'),
+//     require('highcharts/modules/wordcloud')
+//   ];
+//   for (let module of modules) {
+//     module(hc);
+//   }
+//   return hc;
+// }
 
-export const Highcharts = require('highcharts');
+// export const Highcharts = require('highcharts');
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -77,7 +78,8 @@ export function createTranslateLoader(http: HttpClient) {
     AuthorizedComponent,
     UnavaiableComponent,
     AppMultiselectDropdownComponent,
-    GlobalFilterModalComponent
+    GlobalFilterModalComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -119,10 +121,10 @@ export function createTranslateLoader(http: HttpClient) {
     InitializeService,
     StagingWebsiteVariableService,
     MessageService,
-    {
-      provide: HighchartsStatic,
-      useFactory: highchartsFactory
-    },
+    // {
+    //   provide: HighchartsStatic,
+    //   useFactory: highchartsFactory
+    // },
     CategoryService,
     UserAccessService,
     SeaService,

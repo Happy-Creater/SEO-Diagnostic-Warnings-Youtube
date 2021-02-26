@@ -4,6 +4,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { BaseComponent } from './base/base.component';
 import { DummyComponent } from './dummy/dummy.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChartComponent } from './chart/chart.component';
 import { UnavaiableComponent } from './unavaiable/unavaiable.component';
 
 const routes = [
@@ -11,6 +12,8 @@ const routes = [
 	{ path: 'base', component: BaseComponent },
 	{ path: 'dummy', component: DummyComponent },
 	{ path: 'unavailable', component: UnavaiableComponent },
+	{ path: 'chart', component: ChartComponent },
+	
 	{
 		path: 'home/:account/:id',
 		loadChildren: './home/home.module#HomeModule',
