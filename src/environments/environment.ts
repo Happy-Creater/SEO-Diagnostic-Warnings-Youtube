@@ -4,13 +4,13 @@
 // The list of which env maps to which file can be found in `angular-cli.json`.
 
 export const environment = {
-  production: false,
-  loginUrl: "http://localhost:4300",
-  OAUTH2_URL: "https://dev.monetoring.com:444/WebServiceMonetoringAuthorization/oauth/token",
-  OAUTH2_USERNAME: "clientapp",
-  OAUTH2_PASSWORD: "adminpix92",
-  BASE_SERVICE_URL: "https://dev.monetoring.com:444",
-  SEA_VERSION: "test",
-  MONETORING_TYPE: "test",
-  profile: "test"
+production: false,
+loginUrl: "http://localhost:4300",
+OAUTH2_URL: "https://cluster-frontend-02.monetoring.com:443/WebServiceMonetoringAuthorization/oauth/token",
+OAUTH2_USERNAME: "clientapp",
+OAUTH2_PASSWORD: "adminpix92",
+BASE_SERVICE_URL: "https://cluster-frontend-02.monetoring.com:443",
+SEA_VERSION: "test",
+MONETORING_TYPE: "test",
+profile: "test"
 };
