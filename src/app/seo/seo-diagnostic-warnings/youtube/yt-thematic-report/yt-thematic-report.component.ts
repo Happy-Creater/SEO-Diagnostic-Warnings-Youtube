@@ -63,9 +63,25 @@ export class YtThematicReportComponent implements OnInit {
     this.channelPercent = this.round((channelWarning * 100) / sum, 2) + '%';
     this.videoPercent = this.round((videoWarning * 100) / sum, 2) + '%';
     this.playlistPercent = this.round((playlistWarning * 100) / sum, 2) + '%';
-    this.channelProgress = {width: this.channelPercent};
-    this.videoProgress = {width: this.videoPercent};
-    this.playlistProgress = {width: this.playlistPercent};
+    this.channelProgress = {width: this.channelPercent, background: this.getColor('channelTechnicalYoutubeScore')};
+    this.videoProgress = {width: this.videoPercent, background: this.getColor('videosTechnicalYoutubeScore')};
+    this.playlistProgress = {width: this.playlistPercent, background: this.getColor('playlistTechnicalYoutubeScore')};
+  }
+
+  getColor(category) {
+    const score = this.latestScore[category];
+    if (score >= 0 && score < 4) {
+      return '#ff0d12';
+    }
+    if (score >= 4 && score < 6) {
+      return 'orange';
+    }
+    if (score >= 6 && score < 8) {
+      return 'rgb(239,239,33)';
+    }
+    if (score >= 8 && score <= 10) {
+      return '#3dd674';
+    }
   }
 
   round(value: number, digit: number) {
