@@ -5,16 +5,20 @@
         <div class="row" style="">
           <div class="col-md-6">
             <h4>YOUTUBE PERFORMANCE
-              <a class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right" title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a>
+              <a class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right"
+                 title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a>
             </h4>
           </div>
 
           <div class="col-md-6 text-right">
             <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown" style="min-width: 155px;">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="min-width: 155px;">
                 <span class="ladb">{{chartSource.label}}</span>&nbsp;
 
-                <span class="btn btn-default btn-circle" style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;;position: absolute;     right: 6px;top: 6px;"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
               </button>
               <ul class="dropdown-menu  dpmenu psdo">
                 <li *ngFor="let item of chartSourceList; index as i" class="dropdown-item">
@@ -26,16 +30,20 @@
             </div>
             &nbsp;&nbsp;
             <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown" style="min-width: 110px;">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="min-width: 110px;">
                 <span class="b-title-g ladb">{{chartType.label}}</span>&nbsp;
 
-                <span class="btn btn-default btn-circle" style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
               </button>
               <ul class="dropdown-menu dpmenu psdo">
                 <li *ngFor="let item of chartTypeList; index as i" class="dropdown-item" (click)="setChartType(i)">
                   <a class="click-ajax-g" data-id="{{i}}" data-title="{{item.label}}" style="cursor: pointer;">
                     <span class="boxInput">
-                      <input type="checkbox" name="radio_g" id="comu-g_{{i}}" [checked]="item.isActive" [disabled]="item.label == 'Cumulative' && chartSource.value != 'warnings'">
+                      <input type="checkbox" name="radio_g" id="comu-g_{{i}}" [checked]="item.isActive"
+                             [disabled]="item.label == 'Cumulative' && chartSource.value != 'warnings'">
                       <label for="com9"></label>
                     </span>
                     {{item.label}}
@@ -45,10 +53,13 @@
             </div>
             &nbsp;&nbsp;
             <div class="dropdown" style="width: 200px;">
-              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown" style="width: 200px">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="width: 200px">
                 <span class="ladb">{{period.label}}</span>&nbsp;
                 <!--                                                -->
-                <span class="btn btn-default btn-circle" style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
               </button>
               <ul class="dropdown-menu  dpmenu psdo ">
                 <li *ngFor="let item of periodList; index as i" class="dropdown-item">
@@ -68,17 +79,25 @@
                       [latestWarningProblem]="latestWarningProblem"
                       [previousWarningProblem]="previousWarningProblem">
         </app-yt-score>
-        <app-yt-score-detail *ngIf = "periodWarningProblem && periodScore && chartSource"
-          [periodWarningProblem] = "periodWarningProblem"
-          [periodScore] = "periodScore"
-          [chartType] = "chartTypeList"
-          [chartSource] = "chartSource"
+        <app-yt-score-detail *ngIf="periodWarningProblem && periodScore && chartSource"
+                             [periodWarningProblem]="periodWarningProblem"
+                             [periodScore]="periodScore"
+                             [chartType]="chartTypeList"
+                             [chartSource]="chartSource"
         >
         </app-yt-score-detail>
       </div>
       <div>
-        <div class="row vertical-align" style="">
-
+        <div class="row" style="">
+          <app-yt-thematic-report *ngIf="latestScore && latestWarningProblem && periodWarningProblem"
+            [latestScore]="latestScore" [previousScore]="previousScore"
+            [latestWarningProblem]="latestWarningProblem"
+            [previousWarningProblem]="previousWarningProblem"
+            [warningProblem]="periodWarningProblem"
+            [period]="period"
+            (changePeriod)="selectPeriod($event)">
+          </app-yt-thematic-report>
+          <app-yt-top-warnings></app-yt-top-warnings>
         </div>
       </div>
     </div>

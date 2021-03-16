@@ -1,0 +1,64 @@
+<div class="col-md-6 out out-21" data-id="21" style="padding:6px 6px;">
+  <div style="border: 1px solid #E9ECF1;padding-right: 6px;border-radius: 8px;">
+    <div style="display: flex;font-size: 10px;font-weight: bold;">
+      <div style="width:65%;float: left;padding: 10px;padding-right: 0;font-family: 'Proxima Nova Bold';">
+        <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')" style="font-size: 13px;">
+          <img src="assets/images/icon-warning-4/{{categoryName.toLowerCase()}}.png" alt="" style="height: 25px;"> {{categoryName}}
+
+        </button>
+      </div>
+      <div style="width:35%;float: left;padding:8px 0px;text-align: right;">
+        <span style="padding-top: 3px;display: inline-block;">
+          <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')">SEE DETAILS
+
+            <span class="btn btn-default btn-circle" style="width: 23px;height: 24px;background: #fff">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="mmtop" style="display: flex;margin-top:0px;margin-bottom: 10px;">
+      <div style="width:37%;float: left;">
+        <chart id="container-themetic-youtube-1" *ngIf="option" [options]="option" class="csschart" style="display:block; width: 100% !important;"></chart>
+      </div>
+      <div style="width:63%;padding: 0px 0px 10px;float: left;position:relative">
+        <div class="box-warning-pro">
+          <table class="table table-borderless m-0 text-center">
+            <tr>
+              <td style="border-right: 2px solid #E9ECF1;padding: 0 5px !important;line-height: 15px;font-size: 11px;">
+                <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')">
+                  <span class="poin-small {{warningClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                  WARNINGS <br>
+                  {{warning | numberFormat}} <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
+                  <span class="{{warningClass}}">{{warningEvolution | numberFormat}} <i class="fa {{warningCaret}}" aria-hidden="true"></i></span>
+                </button>
+              </td>
+              <td style="padding: 0 5px !important;line-height: 15px;font-size: 11px;">
+                <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')">
+                  <span class="poin-small {{problemClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span> PROBLEMS <br>
+                  {{problem | numberFormat}} <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
+                  <span class="{{problemClass}}">{{problemEvolution | numberFormat}} <i class="fa {{problemCaret}}" aria-hidden="true"></i></span>
+                </button>
+              </td>
+            </tr>
+
+
+          </table>
+          <div style="padding: 10px;">
+            <div class="ter">
+                <span class="dhover">
+                  <chart id="smGraph-youtube-1" *ngIf="smallGraphOption" class="abso abso-table" [options]="smallGraphOption" style="display:block; width: 100% !important;"></chart>
+                </span>
+              <a (click)="emitGraphData()" class="click-modal" data-toggle="modal" data-target="#myModal" data-text="youtube" style="position: absolute;bottom: 5px;right: 5px;font-size: 16px;">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

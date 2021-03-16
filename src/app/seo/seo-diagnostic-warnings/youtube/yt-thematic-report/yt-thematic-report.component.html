@@ -1,3 +1,117 @@
-<p>
-  yt-thematic-report works!
-</p>
+<div class="col-md-6" style="padding: 0;">
+  <div class="row" style="padding: 5px 0 5px;">
+    <div class="col-md-6" style="">
+      <div>
+        <h4>THEMATIC REPORT
+          <a href="#" class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right"
+             title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">
+            ?</a>
+        </h4>
+      </div>
+    </div>
+    <div class="col-md-6" style="padding:0 7px 0 10px;">
+      <div style="padding: 10px;background:#F8F9FA;border-radius: 8px;margin-top: 7px;">
+        <div class="progress protab" style="margin: 0px 0;">
+          <div [class.seo-invisible]="progress2Hovered || progress3Hovered || videoHovered || playlistHovered"
+               (mouseenter)="progress1Hovered = true"
+               (mouseout)="progress1Hovered = false"
+               [ngStyle]="channelProgress"
+               data-toggle="tooltip"
+               data-title="{{channelPercent}}"
+               class="progress-bar bar21 bar-21" data-id="21" role="progressbar" ></div>
+          <div [class.seo-invisible]="progress1Hovered || progress3Hovered || channelHovered || playlistHovered"
+               (mouseenter)="progress2Hovered = true"
+               (mouseout)="progress2Hovered = false"
+               [ngStyle]="videoProgress"
+               data-toggle="tooltip"
+               data-title="{{videoPercent}}"
+            class="progress-bar bar22 bar-22" data-id="22" role="progressbar" ></div>
+          <div [class.seo-invisible]="progress2Hovered || progress1Hovered || videoHovered || channelHovered"
+               (mouseenter)="progress3Hovered = true"
+               (mouseout)="progress3Hovered = false"
+               [ngStyle]="playlistProgress"
+               data-toggle="tooltip"
+               data-title="{{playlistPercent}}"
+            class="progress-bar bar23 bar-23" data-id="23" role="progressbar" ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row center-center-b0" style="padding-left: 10px;">
+
+    <app-yt-thematic-report-item
+      [latestWarningProblem]="latestWarningProblem"
+      [previousWarningProblem]="previousWarningProblem"
+      [latestScore]="latestScore"
+      [previousScore]="previousScore"
+      [categoryName]="'CHANNEL'"
+      [warningProblem]="warningProblem"
+      (graphData)="changeGraphOption($event)"
+      (mouseenter)="channelHovered = true"
+      (mouseout)="channelHovered = false"
+    >
+    </app-yt-thematic-report-item>
+
+    <app-yt-thematic-report-item
+      [latestWarningProblem]="latestWarningProblem"
+      [previousWarningProblem]="previousWarningProblem"
+      [latestScore]="latestScore"
+      [previousScore]="previousScore"
+      [categoryName]="'VIDEOS'"
+      [warningProblem]="warningProblem"
+      (graphData)="changeGraphOption($event)"
+      (mouseenter)="videoHovered = true"
+      (mouseout)="videoHovered = false"
+    >
+    </app-yt-thematic-report-item>
+    <app-yt-thematic-report-item
+      [latestWarningProblem]="latestWarningProblem"
+      [previousWarningProblem]="previousWarningProblem"
+      [latestScore]="latestScore"
+      [previousScore]="previousScore"
+      [categoryName]="'PLAYLISTS'"
+      [warningProblem]="warningProblem"
+      (graphData)="changeGraphOption($event)"
+      (mouseenter)="playlistHovered = true"
+      (mouseout)="playlistHovered = false"
+    >
+    </app-yt-thematic-report-item>
+
+  </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="border:none;padding: 15px 25px;">
+        <h5>SCORE EVOLUTION - YOUTUBE > <span class="vvwarning">{{modalCategory}}</span></h5>
+        <div style="position: absolute;top: 15px;right: 54px;">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown" [ngStyle]="period.type==0 && {'min-width':'210px' }">
+              <span class="ladb">{{period.label}}</span>&nbsp;
+              <span class="btn btn-default btn-circle"
+                    style="background: unset;border:2px solid #ECEEF2;position: absolute;right: 6px;top: 6px;"><i
+                class="fa fa-angle-down" aria-hidden="true"></i></span>
+            </button>
+            <ul class="dropdown-menu dpmenu psdo">
+              <li class="dropdown-item" *ngFor="let item of periodList; index as i" (click)="setPeriod(i)"><a
+                style="padding-left: 10px !important">{{item.label}}</a></li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal"
+                style="font-size: 14px;color: #6b6b6b;opacity: 1;font-weight: 100;margin-top: -25px !important;">X</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <chart *ngIf="option" [options]="option" id="container-line-3" class="bg-watermark" style="display:block; width: 100% !important;"></chart>
+          <div class="box-bg-logo">
+            <img src="../images/watermark-2.png" alt="" style="width:150px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

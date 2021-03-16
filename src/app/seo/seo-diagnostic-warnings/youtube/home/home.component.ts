@@ -139,7 +139,8 @@ export class HomeComponent implements OnInit {
 
   selectPeriod(index: number) {
     this.period = this.periodList[index];
-    this.loadData();
+    this.getPeriodWarningProblem();
+    this.getPeriodScore();
   }
 
   getPeriodScore() {

@@ -39,7 +39,7 @@ export class YtScoreComponent implements OnInit {
     this.warning = this.latestWarningProblem.nbrWarnings;
     this.warningEvolution = this.warning - this.previousWarningProblem.nbrWarnings;
     this.problem = this.latestWarningProblem.nbrProblem;
-    this.problemEvolution = this.problem = this.problem - this.previousWarningProblem.nbrProblem;
+    this.problemEvolution = this.problem - this.previousWarningProblem.nbrProblem;
     if (this.warningEvolution < 0) {
       this.warningClass = 'c-green';
     } else if (this.warningEvolution === 0) {
@@ -76,15 +76,15 @@ export class YtScoreComponent implements OnInit {
 
     if (score >= 0 && score < 4) {
       score_color = '#ff0d12';
-      back_color = '#9e7172';
+      back_color = '#786c6c';
     } else if (score >= 4 && score < 6) {
       score_color = 'orange';
-      back_color = '#d29f7e';
+      back_color = 'rgb(255,72,0,0.1)';
     } else if (score >= 6 && score < 8) {
       score_color = 'rgb(239,239,33)';
       back_color = 'rgba(255,255,0,0.2)';
     } else if (score >= 8 && score <= 10) {
-      back_color = '#688772';
+      back_color = '#dcefec';
       score_color = '#3dd674';
     }
 

@@ -1,0 +1,33 @@
+<div class="col-md-6" style="padding-left: 60px;padding-top: 5px;">
+  <div style="padding: 0px 0 11px;">
+    <h4>TOP WARNINGS <a href="#" class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right" title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a></h4>
+  </div>
+  <div style="padding-right: 30px;">
+    <!-- Top warning custom -->
+    <div class="box-table-top-warning" *ngFor="let topwarning of topwarnings">
+      <table class="table table-borderless m-0 table-top-warning">
+        <tr>
+          <td>
+                            <span class="btn btn-default btn-circle span-bg-unset" style="background: unset;border:2px solid #ECEEF2;cursor: unset;">
+                              <img src="assets/images/icon-warning-4/chanel.png" alt="" style="height: 21px;">
+                            </span>
+          </td>
+          <td><span [ngClass]="topwarning.val >= 7 ? 'label label-danger' : 'label label-warning'">{{topwarning.val}}<span class="f10">/10</span></span></td>
+          <td class="text-left">
+            <div>
+
+              <span style="line-height: 30px;">{{topwarning.content}}</span>
+            </div>
+          </td>
+          <td>
+            <div [ngClass]="topwarning.val >= 7 ? 'label label-danger' : 'label label-warning'" style="display: block;padding: 8px;border-radius: 15px;">
+              {{topwarning.problem}}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- Top warning custom -->
+
+  </div>
+</div>

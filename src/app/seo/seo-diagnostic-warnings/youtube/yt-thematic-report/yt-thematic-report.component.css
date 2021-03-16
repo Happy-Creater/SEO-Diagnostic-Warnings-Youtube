@@ -1,0 +1,9 @@
+.seo-visible {
+  opacity: 1;
+  transition: visibility 0s;
+}
+
+.seo-invisible {
+  opacity: .3;
+  transition: visibility 0s;
+}
