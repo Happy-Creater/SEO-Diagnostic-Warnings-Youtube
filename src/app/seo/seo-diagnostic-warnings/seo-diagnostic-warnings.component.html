@@ -1,3 +1,26 @@
-<p>
-	app-seo-diagnostic-warnings works!
-</p>
+<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 warning content-set-warn" id="content" style="padding: 0; margin-left: 0;">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+      <div class="bg-line"></div>
+      <div class="line-menu seo"></div>
+    </div>
+  </div>
+
+
+  <div class="content-teb-seo" style="">
+    <ul class="nav-tabs nav menu-tabs" id="mNavbar" style="">
+      <li id="goWeb" class=""><a href="#Global" class="js-scroll-trigger tabDetail">Global</a></li>
+      <li id="fWeb" class=""><a href="#Website" class="tabDetail js-scroll-trigger">Website</a></li>
+      <li id="mWeb" class=""><a href="#Mobile" class="">Mobile</a></li>
+      <li id="lWeb" class=""><a href="#Load" class="">Load. time</a></li>
+      <li id="aWeb" class=""><a href="#GAna" class="">G.Analytics</a></li>
+      <li id="sWeb" class=""><a href="#Search" class="">Search Console</a></li>
+      <li id="yWeb" class="active"><a href="#Youtube" class="">Youtube</a></li>
+      <li id="gmWeb" class=""><a href="#GMB" class="">GMB</a></li>
+      <li id="loWeb" class=""><a href="#LOGS" class="">Logs</a></li>
+    </ul>
+  </div>
+  <!-- g.analytics -->
+  <app-home *ngIf="webId && account" [web_id]="webId" [account]="account"></app-home>
+
+</div>

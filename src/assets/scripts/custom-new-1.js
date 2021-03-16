@@ -397,7 +397,7 @@ $(document).ready(function (e) {
 
 	]
 	});
-	
+
 	Highcharts.chart('container-line-load-3', {
 		chart: {
 			type: 'column',
@@ -489,7 +489,7 @@ $(document).ready(function (e) {
 
 	]
 	});
-	
+
 	Highcharts.chart('container-line-g-3', {
 		chart: {
 			type: 'column',
@@ -597,7 +597,7 @@ $(document).ready(function (e) {
 
 	]
 	});
-	
+
 	Highcharts.chart('container-line-youtube-3', {
 		chart: {
 			type: 'column',
@@ -696,7 +696,7 @@ $(document).ready(function (e) {
 
 	]
 	});
-	
+
 });
 
 donut_graph($('#container'));
@@ -1060,7 +1060,7 @@ $(document).ready(function () {
 		//    			'opacity': '0.3',
 		//    			'transition': 'visibility 0s'
 		//    		});
-		//			
+		//
 		//			$(this).css({
 		//    			'opacity': '1'
 		//    		});
@@ -1094,7 +1094,7 @@ $(document).ready(function () {
 		//    			'opacity': '0.3',
 		//    			'transition': 'visibility 0s'
 		//    		});
-		//			
+		//
 		//			$(this).css({
 		//    			'opacity': '1'
 		//    		});
@@ -1730,3 +1730,7 @@ function global_graph(title, desc) {
 
 
 };
+
+function init_tooltip() {
+  $('[data-toggle="tooltip"]').tooltip();
+}

@@ -1,15 +1,15 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ChannelYoutubeObject } from 'app/_services/channel_youtube_variable/channel-youtube-object';
-import { DropdownItem } from 'app/_modules/dropdown/dropdown-item';
-import { ChannelYoutubeVariableService } from 'app/_services/channel_youtube_variable/channel-youtube-variable.service';
-import { GlobalVariableService } from 'app/_services/global_variable/global-variable.service';
-import { Subject } from 'rxjs/Subject';
-import { RequestService } from 'app/_services/request/request.service';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {ChannelYoutubeObject} from 'app/_services/channel_youtube_variable/channel-youtube-object';
+import {DropdownItem} from 'app/_modules/dropdown/dropdown-item';
+import {ChannelYoutubeVariableService} from 'app/_services/channel_youtube_variable/channel-youtube-variable.service';
+import {GlobalVariableService} from 'app/_services/global_variable/global-variable.service';
+import {Subject} from 'rxjs/Subject';
+import {RequestService} from 'app/_services/request/request.service';
 import * as config from 'app/config/config';
-import { GlobalDateItem } from 'app/_services/global_date/global-date-object';
-import { environment } from 'environments/environment';
-import { HttpClientRequestService } from 'app/_services/http_client_request/http-client-request.service';
-import { HttpParams } from '@angular/common/http';
+import {GlobalDateItem} from 'app/_services/global_date/global-date-object';
+import {environment} from 'environments/environment';
+import {HttpClientRequestService} from 'app/_services/http_client_request/http-client-request.service';
+import {HttpParams} from '@angular/common/http';
 
 const moment: any = require('moment');
 
@@ -21,7 +21,7 @@ const moment: any = require('moment');
 export class SeoYoutubeComponent {
 
   unsubscribe = new Subject<void>();
-  unsubscribeGlobalVariable
+  unsubscribeGlobalVariable;
   unsubscribeChannelYoutube;
 
   channelYoutubeSelected;
@@ -36,7 +36,7 @@ export class SeoYoutubeComponent {
   /**============= */
 
   isSubscribe = false;
-  
+
   channelYoutubeList: ChannelYoutubeObject[];
 
   itemChannelYoutubeOption: DropdownItem[];
@@ -48,6 +48,7 @@ export class SeoYoutubeComponent {
   ) {
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
     this.unsubscribeGlobalVariable = this.globalVariable.websiteChange
       .subscribe((value) => {
@@ -89,6 +90,7 @@ export class SeoYoutubeComponent {
       });
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy(): void {
     if (this.unsubscribeGlobalVariable != null) {
       this.unsubscribeGlobalVariable.unsubscribe();
@@ -97,7 +99,6 @@ export class SeoYoutubeComponent {
       this.unsubscribeChannelYoutube.unsubscribe();
     }
   }
-
 
 
   onChannelYoutubeChange(channelYoutubeIdSelected) {
@@ -116,7 +117,6 @@ export class SeoYoutubeComponent {
   }
 
   renderDropDownChannelYoutube(mList) {
-
 
 
     let dropDownTmp: TmpItem[] = new Array();
@@ -192,7 +192,7 @@ export class SeoYoutubeComponent {
 
   fixedLength(name, label) {
     let textInput = name;
-    return textInput.length > 90 ? textInput.substring(0, 90) + "..." : textInput;
+    return textInput.length > 90 ? textInput.substring(0, 90) + '...' : textInput;
   }
 
 }

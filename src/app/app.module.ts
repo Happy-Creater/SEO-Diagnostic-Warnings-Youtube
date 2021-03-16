@@ -45,24 +45,25 @@ import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import { GlobalFilterModalComponent } from './sea/sea-global-filter/global-filter-modal/global-filter-modal.component';
 import { UserhistoryService } from './_services/userhistory/userhistory.service';
 import { ChartComponent } from './chart/chart.component';
-// export function highchartsFactory() {
-//   let hc = require('highcharts');
-//   let modules = [
-//     require('highcharts/highcharts-more'),
-//     require('highcharts/modules/exporting'),
-//     require('highcharts/modules/solid-gauge'),
-//     require('highcharts/modules/map'),
-//     require('highcharts/modules/networkgraph'),
-//     require('highcharts/modules/offline-exporting'),
-//     require('highcharts/modules/no-data-to-display'),
-//     require('highcharts/modules/variable-pie'),
-//     require('highcharts/modules/wordcloud')
-//   ];
-//   for (let module of modules) {
-//     module(hc);
-//   }
-//   return hc;
-// }
+import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
+export function highchartsFactory() {
+  let hc = require('highcharts');
+  const modules = [
+    require('highcharts/highcharts-more'),
+    require('highcharts/modules/exporting'),
+    require('highcharts/modules/solid-gauge'),
+    require('highcharts/modules/map'),
+    require('highcharts/modules/networkgraph'),
+    require('highcharts/modules/offline-exporting'),
+    require('highcharts/modules/no-data-to-display'),
+    require('highcharts/modules/variable-pie'),
+    require('highcharts/modules/wordcloud')
+  ];
+  for (const module of modules) {
+    module(hc);
+  }
+  return hc;
+}
 
 // export const Highcharts = require('highcharts');
 
@@ -133,6 +134,10 @@ export function createTranslateLoader(http: HttpClient) {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
+    },
+    {
+      provide: HighchartsStatic,
+      useFactory: highchartsFactory
     },
     UserhistoryService,
     GlobalFilterService

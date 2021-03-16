@@ -14,4 +14,3 @@ export const environment = {
     MONETORING_TYPE: "test",
     profile: "test"
   };
-  
