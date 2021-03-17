@@ -39,47 +39,57 @@
   </div>
 
   <div class="row center-center-b0" style="padding-left: 10px;">
+    <div class="col-md-6">
+      <app-yt-thematic-report-item
+        [latestWarningProblem]="latestWarningProblem"
+        [previousWarningProblem]="previousWarningProblem"
+        [latestScore]="latestScore"
+        [previousScore]="previousScore"
+        [categoryName]="'CHANNEL'"
+        [warningProblem]="warningProblem"
+        (graphData)="changeGraphOption($event)"
+        (changeData)="changeGraphContent($event)"
+        (mouseenter)="channelHovered = true"
+        (mouseleave)="channelHovered = false"
+        [class.seo-invisible]="progress2Hovered || progress3Hovered"
+      >
+      </app-yt-thematic-report-item>
+    </div>
 
-    <app-yt-thematic-report-item
-      [latestWarningProblem]="latestWarningProblem"
-      [previousWarningProblem]="previousWarningProblem"
-      [latestScore]="latestScore"
-      [previousScore]="previousScore"
-      [categoryName]="'CHANNEL'"
-      [warningProblem]="warningProblem"
-      (graphData)="changeGraphOption($event)"
-      (changeData)="changeGraphContent($event)"
-      (mouseenter)="channelHovered = true"
-      (mouseout)="channelHovered = false"
-    >
-    </app-yt-thematic-report-item>
+    <div class = "col-md-6">
+      <app-yt-thematic-report-item
+        [latestWarningProblem]="latestWarningProblem"
+        [previousWarningProblem]="previousWarningProblem"
+        [latestScore]="latestScore"
+        [previousScore]="previousScore"
+        [categoryName]="'VIDEOS'"
+        [warningProblem]="warningProblem"
+        (graphData)="changeGraphOption($event)"
+        (changeData)="changeGraphContent($event)"
+        (mouseenter)="videoHovered = true"
+        (mouseleave)="videoHovered = false"
+        [class.seo-invisible]="progress1Hovered || progress3Hovered"
+      >
+      </app-yt-thematic-report-item>
+    </div>
 
-    <app-yt-thematic-report-item
-      [latestWarningProblem]="latestWarningProblem"
-      [previousWarningProblem]="previousWarningProblem"
-      [latestScore]="latestScore"
-      [previousScore]="previousScore"
-      [categoryName]="'VIDEOS'"
-      [warningProblem]="warningProblem"
-      (graphData)="changeGraphOption($event)"
-      (changeData)="changeGraphContent($event)"
-      (mouseenter)="videoHovered = true"
-      (mouseout)="videoHovered = false"
-    >
-    </app-yt-thematic-report-item>
-    <app-yt-thematic-report-item
-      [latestWarningProblem]="latestWarningProblem"
-      [previousWarningProblem]="previousWarningProblem"
-      [latestScore]="latestScore"
-      [previousScore]="previousScore"
-      [categoryName]="'PLAYLISTS'"
-      [warningProblem]="warningProblem"
-      (graphData)="changeGraphOption($event)"
-      (changeData)="changeGraphContent($event)"
-      (mouseenter)="playlistHovered = true"
-      (mouseout)="playlistHovered = false"
-    >
-    </app-yt-thematic-report-item>
+    <div class = "col-md-6">
+      <app-yt-thematic-report-item
+        [latestWarningProblem]="latestWarningProblem"
+        [previousWarningProblem]="previousWarningProblem"
+        [latestScore]="latestScore"
+        [previousScore]="previousScore"
+        [categoryName]="'PLAYLISTS'"
+        [warningProblem]="warningProblem"
+        (graphData)="changeGraphOption($event)"
+        (changeData)="changeGraphContent($event)"
+        (mouseenter)="playlistHovered = true"
+        (mouseleave)="playlistHovered = false"
+        [class.seo-invisible]="progress2Hovered || progress1Hovered"
+      >
+      </app-yt-thematic-report-item>
+    </div>
+
 
   </div>
 </div>

@@ -17,6 +17,7 @@ import { MonthStringPipe } from './youtube/month-string.pipe';
 import { YtThematicReportComponent } from './youtube/yt-thematic-report/yt-thematic-report.component';
 import { YtTopWarningsComponent } from './youtube/yt-top-warnings/yt-top-warnings.component';
 import { YtThematicReportItemComponent } from './youtube/yt-thematic-report-item/yt-thematic-report-item.component';
+import { YtDetailsComponent } from './youtube/yt-details/yt-details.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,7 @@ import { YtThematicReportItemComponent } from './youtube/yt-thematic-report-item
     ModalStandardModule,
     QuestionsCommentsModule
   ],
-  declarations: [HomeComponent, YtScoreComponent, YtScoreDetailComponent, NumberFormatPipe, CaretClassPipe, MonthStringPipe, YtThematicReportComponent, YtTopWarningsComponent, YtThematicReportItemComponent],
+  declarations: [HomeComponent, YtScoreComponent, YtScoreDetailComponent, NumberFormatPipe, CaretClassPipe, MonthStringPipe, YtThematicReportComponent, YtTopWarningsComponent, YtThematicReportItemComponent, YtDetailsComponent],
   entryComponents: [],
   providers: [],
   exports: [
