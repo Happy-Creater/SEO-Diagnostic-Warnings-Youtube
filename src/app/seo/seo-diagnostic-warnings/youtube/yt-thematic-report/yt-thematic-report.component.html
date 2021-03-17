@@ -48,6 +48,7 @@
       [categoryName]="'CHANNEL'"
       [warningProblem]="warningProblem"
       (graphData)="changeGraphOption($event)"
+      (changeData)="changeGraphContent($event)"
       (mouseenter)="channelHovered = true"
       (mouseout)="channelHovered = false"
     >
@@ -61,6 +62,7 @@
       [categoryName]="'VIDEOS'"
       [warningProblem]="warningProblem"
       (graphData)="changeGraphOption($event)"
+      (changeData)="changeGraphContent($event)"
       (mouseenter)="videoHovered = true"
       (mouseout)="videoHovered = false"
     >
@@ -73,6 +75,7 @@
       [categoryName]="'PLAYLISTS'"
       [warningProblem]="warningProblem"
       (graphData)="changeGraphOption($event)"
+      (changeData)="changeGraphContent($event)"
       (mouseenter)="playlistHovered = true"
       (mouseout)="playlistHovered = false"
     >

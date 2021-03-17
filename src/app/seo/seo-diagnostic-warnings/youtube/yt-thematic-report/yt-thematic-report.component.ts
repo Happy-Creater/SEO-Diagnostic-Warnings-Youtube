@@ -99,4 +99,10 @@ export class YtThematicReportComponent implements OnInit {
     this.option = childData.option;
     this.modalCategory = childData.name;
   }
+
+  changeGraphContent(childData) {
+    if ( this.modalCategory === childData.name) {
+      this.option = childData.option;
+    }
+  }
 }

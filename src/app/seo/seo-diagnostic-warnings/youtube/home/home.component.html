@@ -97,7 +97,7 @@
             [period]="period"
             (changePeriod)="selectPeriod($event)">
           </app-yt-thematic-report>
-          <app-yt-top-warnings></app-yt-top-warnings>
+          <app-yt-top-warnings *ngIf="warningTable" [warningData]="warningTable"></app-yt-top-warnings>
         </div>
       </div>
     </div>

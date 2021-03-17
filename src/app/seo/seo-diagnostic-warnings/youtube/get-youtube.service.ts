@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
-import {ytScore, ytWarningProblem} from './models/youtube_model';
+import {warningTable, ytScore, ytWarningProblem} from './models/youtube_model';
 
 @Injectable()
 export class GetYoutubeService {
@@ -42,5 +42,12 @@ export class GetYoutubeService {
       params = params.append('dateEnd', dateEnd);
     }
     return this.http.get<ytWarningProblem[]>(this.base_url + 'WarningsProblemSum', {params: params, headers: this.headers});
+  }
+
+  getWarningTable(websiteYoutubeId: number, account: string): Observable<warningTable> {
+    const params = new HttpParams()
+      .append('websiteYoutubeId', websiteYoutubeId + '')
+      .append('account', account);
+    return this.http.get<warningTable>(this.base_url + 'GetWarningsTable', {params: params, headers: this.headers});
   }
 }

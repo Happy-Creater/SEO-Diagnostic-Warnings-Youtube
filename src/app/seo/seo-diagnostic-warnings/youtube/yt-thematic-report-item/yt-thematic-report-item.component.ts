@@ -17,6 +17,7 @@ export class YtThematicReportItemComponent implements OnInit {
   @Input() previousScore: ytScoreItem;
   @Input() warningProblem: ytWarningProblem[];
   @Output() graphData = new EventEmitter();
+  @Output() changeData = new EventEmitter();
 
   option: Object;
   smallGraphOption: Object;
@@ -130,6 +131,10 @@ export class YtThematicReportItemComponent implements OnInit {
 
   emitGraphData() {
     this.graphData.emit({option: this.bigGraphOption, name: this.categoryName});
+  }
+
+  changeGraphData() {
+    this.changeData.emit({option: this.bigGraphOption, name: this.categoryName});
   }
 
   buildOption(score, evolution) {
@@ -446,7 +451,7 @@ export class YtThematicReportItemComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges) {
     if (changes['warningProblem']) {
       this.processGraph();
-      this.emitGraphData();
+      this.changeGraphData();
     }
   }
 

@@ -4,24 +4,27 @@
   </div>
   <div style="padding-right: 30px;">
     <!-- Top warning custom -->
-    <div class="box-table-top-warning" *ngFor="let topwarning of topwarnings">
+    <div class="box-table-top-warning" *ngFor="let topwarning of topWarnings">
       <table class="table table-borderless m-0 table-top-warning">
-        <tr>
-          <td>
-                            <span class="btn btn-default btn-circle span-bg-unset" style="background: unset;border:2px solid #ECEEF2;cursor: unset;">
-                              <img src="assets/images/icon-warning-4/chanel.png" alt="" style="height: 21px;">
-                            </span>
+        <tr (click)="scrollToItem(topwarning)">
+          <td style = "width: 14%">
+              <span class="btn btn-default btn-circle span-bg-unset" style="background: unset;border:2px solid #ECEEF2;cursor: unset;">
+                <img src="assets/images/icon-warning-4/{{topwarning.category.toLowerCase()}}.png" alt="" style="height: 21px;">
+              </span>
           </td>
-          <td><span [ngClass]="topwarning.val >= 7 ? 'label label-danger' : 'label label-warning'">{{topwarning.val}}<span class="f10">/10</span></span></td>
-          <td class="text-left">
+          <td style = "width: 14%">
+            <span [ngClass]="topwarning.severity >= 7 ? 'label label-danger' : 'label label-warning'">{{topwarning.severity}}
+              <span class="f10">/10</span>
+            </span>
+          </td >
+          <td class="text-left" style = "width: 44%">
             <div>
-
-              <span style="line-height: 30px;">{{topwarning.content}}</span>
+              <span style="line-height: 30px;">{{topwarning.warningName}}</span>
             </div>
           </td>
-          <td>
-            <div [ngClass]="topwarning.val >= 7 ? 'label label-danger' : 'label label-warning'" style="display: block;padding: 8px;border-radius: 15px;">
-              {{topwarning.problem}}
+          <td style = "width: 28%">
+            <div [ngClass]="topwarning.severity >= 7 ? 'label label-danger' : 'label label-warning'" style="display: block;padding: 8px;border-radius: 15px;">
+              {{topwarning.warningNumber}}problems
             </div>
           </td>
         </tr>

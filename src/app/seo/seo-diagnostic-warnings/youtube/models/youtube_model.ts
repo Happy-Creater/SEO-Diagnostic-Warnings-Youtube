@@ -28,3 +28,37 @@ export interface warningCategory {
   nbrProblem: number;
   percentProblem: number;
 }
+
+// tslint:disable-next-line:class-name
+export interface warningTable {
+  warningTableList: warningTableItem[];
+  hashCodeScanId: string;
+}
+
+// tslint:disable-next-line:class-name
+export interface warningTableItem {
+  tableName: string;
+  severity: number;
+  filename: string;
+  keyReturnDetail: string;
+  warningNumber: number;
+  max: number;
+  warningName: string;
+  warningHelpMsg: string;
+  recommendation: string;
+  typeCategorie: string;
+  status: number;
+  category: string;
+  evolution: number;
+  trend: warningTrendItem[];
+  details: string[];
+  filterSetting: boolean;
+  new: boolean;
+}
+
+// tslint:disable-next-line:class-name
+export interface warningTrendItem {
+  name: string;
+  scanDate: string;
+  value: number;
+}

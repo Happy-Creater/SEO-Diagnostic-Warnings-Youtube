@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {GetYoutubeService} from '../get-youtube.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
-import {warningCategory, ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {warningCategory, warningTable, ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   previousScore: ytScoreItem;
   latestWarningProblem: ytWarningProblem;
   previousWarningProblem: ytWarningProblem;
+  warningTable: warningTable;
   chartSource = {label: 'Number of warnings', value: 'warnings'};
   chartSourceList = [
     {label: 'Number of warnings', value: 'warnings'},
@@ -55,11 +56,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     init_tooltip();
+    this.webId = 71;
+    this.account = 'tollens';
     this.loadData();
   }
 
   loadData() {
-    this.getYtService.getScore(71, 'tollens')
+    this.getYtService.getScore(this.webId, this.account)
       .pipe(takeUntil(this.unsubscribeAll$))
       .subscribe((value => {
         this.ytScores = value;
@@ -68,7 +71,7 @@ export class HomeComponent implements OnInit {
         this.getPeriodScore();
       }));
 
-    this.getYtService.getWarning(71, 'tollens')
+    this.getYtService.getWarning(this.webId, this.account)
       .pipe(takeUntil(this.unsubscribeAll$))
       .subscribe((value => {
         this.ytWarningProblems = value;
@@ -76,6 +79,12 @@ export class HomeComponent implements OnInit {
         this.previousWarningProblem = this.getPreviousWarningProblem();
         this.getPeriodWarningProblem();
       }));
+
+    this.getYtService.getWarningTable(this.webId, this.account)
+      .pipe(takeUntil(this.unsubscribeAll$))
+      .subscribe(value => {
+        this.warningTable = value;
+      });
   }
 
   getLatestScore(): ytScoreItem {
