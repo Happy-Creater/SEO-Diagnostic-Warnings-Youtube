@@ -1,0 +1,19 @@
+.arrow-down{
+  height: 30px !important;
+  transition: all .5s ease-in-out;
+}
+.arrow-down > span >i {
+  transform: translate(-50%, -50%) rotate(0) !important;
+  transition: all .5s ease-in-out;
+}
+.arrow-up{
+  height: 85px !important;
+  transition: all .5s ease-in-out;
+}
+.arrow-up > span >i {
+  transform: translate(-50%, -50%) rotate(180deg) !important;
+  transition: all .5s ease-in-out;
+}
+.item-selected{
+  color: red;
+}

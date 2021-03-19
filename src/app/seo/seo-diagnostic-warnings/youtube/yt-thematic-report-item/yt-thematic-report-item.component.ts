@@ -1,12 +1,14 @@
 import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges} from '@angular/core';
 import {ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {DetailsFilterService} from '../details-filter-service.service';
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 @Component({
   selector: 'app-yt-thematic-report-item',
   templateUrl: './yt-thematic-report-item.component.html',
-  styleUrls: ['./yt-thematic-report-item.component.css']
+  styleUrls: ['./yt-thematic-report-item.component.css'],
+  providers: [DetailsFilterService]
 })
 export class YtThematicReportItemComponent implements OnInit {
 
@@ -38,7 +40,7 @@ export class YtThematicReportItemComponent implements OnInit {
     'PLAYLISTS': 'Playlist'
   };
 
-  constructor() {
+  constructor(private detailsFilter: DetailsFilterService) {
   }
 
   ngOnInit() {
@@ -455,4 +457,10 @@ export class YtThematicReportItemComponent implements OnInit {
     }
   }
 
+  scroll() {
+    // this.detailsFilter.setFilter({ category: this.namesValue[this.name], labels: [], problem: null, show: true });
+    setTimeout(() => {
+      window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
+    }, 500);
+  }
 }

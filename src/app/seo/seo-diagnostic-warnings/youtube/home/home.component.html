@@ -104,4 +104,7 @@
   </div>
 </div>
 
-<app-yt-details *ngIf="warningTable" [warningData]="warningTable"></app-yt-details>
+<app-yt-details *ngIf="warningTable && warningTable.warningTableList"
+                [warningData]="warningTable.warningTableList"
+                (updateMetric)="updateMetric($event)">
+</app-yt-details>

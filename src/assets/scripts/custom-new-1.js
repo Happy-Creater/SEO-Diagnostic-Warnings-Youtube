@@ -1,3 +1,4 @@
+var timeout = null;
 function renderIcons() {
 
 	// Move icon
@@ -1733,4 +1734,24 @@ function global_graph(title, desc) {
 
 function init_tooltip() {
   $('[data-toggle="tooltip"]').tooltip();
+  $('.table-title-tooltip').mouseenter(function (){
+    $('.table-title-tooltip').tooltip('hide');
+
+    let that = $(this);
+    if(timeout != null) {
+      clearTimeout(timeout);
+    }
+    that.tooltip('hide');
+    timeout = setTimeout(function (){
+      that.tooltip('show');
+    },1000);
+  });
+
+  $('.table-title-tooltip').mouseleave(function () {
+    if(timeout != null)
+      clearTimeout(timeout);
+    // $('.table-title-tooltip').tooltip('hide');
+    timeout = null;
+  })
 }
+

@@ -2,14 +2,14 @@
   <div style="border: 1px solid #E9ECF1;padding-right: 6px;border-radius: 8px;">
     <div style="display: flex;font-size: 10px;font-weight: bold;">
       <div style="width:65%;float: left;padding: 10px;padding-right: 0;font-family: 'Proxima Nova Bold';">
-        <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')" style="font-size: 13px;">
+        <button class="click-detail b-c-de" (click)="scroll()" style="font-size: 13px;">
           <img src="assets/images/icon-warning-4/{{categoryName.toLowerCase()}}.png" alt="" style="height: 25px;"> {{categoryName}}
 
         </button>
       </div>
       <div style="width:35%;float: left;padding:8px 0px;text-align: right;">
         <span style="padding-top: 3px;display: inline-block;">
-          <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')">SEE DETAILS
+          <button class="click-detail b-c-de" (click)="scroll()">SEE DETAILS
 
             <span class="btn btn-default btn-circle" style="width: 23px;height: 24px;background: #fff">
               <i class="fa fa-angle-right" aria-hidden="true"></i>

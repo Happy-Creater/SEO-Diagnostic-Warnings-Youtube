@@ -16,6 +16,7 @@ export class YtTopWarningsComponent implements OnInit {
   }
 
   ngOnInit() {
+    init_tooltip();
     this.processData();
   }
 

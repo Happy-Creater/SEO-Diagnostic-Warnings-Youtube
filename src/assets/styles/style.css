@@ -838,3 +838,10 @@ ul.psdo li a {
 	transform: translate(0%, -50%);
 	top: 50%;
 }
+tbody tr.thead-light td div.tooltip.fade.top{
+  top: -20px!important;
+  left: -300px!important;
+}
+.ac-text {
+  color: #4B8EAE;
+}

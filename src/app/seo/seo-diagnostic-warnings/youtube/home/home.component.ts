@@ -186,4 +186,8 @@ export class HomeComponent implements OnInit {
     this.unsubscribeAll$.next(null);
     this.unsubscribeAll$.complete();
   }
+
+  updateMetric(arg: any) {
+
+  }
 }

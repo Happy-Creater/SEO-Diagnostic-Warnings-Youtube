@@ -43,6 +43,7 @@ export class YtThematicReportComponent implements OnInit {
   }
 
   ngOnInit() {
+    init_tooltip();
     this.processData();
   }
 

@@ -62,3 +62,34 @@ export interface warningTrendItem {
   scanDate: string;
   value: number;
 }
+
+// tslint:disable-next-line:class-name
+export interface pagedItem {
+  severity: number;
+  warningNumber: number;
+  warningName: string;
+  warningHelpMsg: string;
+  recommendation: string;
+  typeCategorie: string;
+  status: number;
+  category: string;
+  evolution: number;
+  new: boolean;
+  trend: warningTrendItem[];
+  details: string[];
+  setBold: boolean;
+  smallGraphOption: object;
+  showRecomendation: boolean;
+  percentage: any;
+  filename: string;
+  showDetails: boolean;
+}
+
+// tslint:disable-next-line:class-name
+export interface labelItem {
+  prop: string;
+  label: string;
+  value: any;
+  toggled: boolean;
+}
+
