@@ -1,10 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {DetailsFilterService} from '../details-filter-service.service';
 
 @Component({
   selector: 'app-yt-score',
   templateUrl: './yt-score.component.html',
-  styleUrls: ['./yt-score.component.css']
+  styleUrls: ['./yt-score.component.css'],
 })
 export class YtScoreComponent implements OnInit {
 
@@ -25,7 +26,7 @@ export class YtScoreComponent implements OnInit {
   problemClass: string;
 
 
-  constructor() {
+  constructor(private detailsFilterService: DetailsFilterService) {
   }
 
   ngOnInit() {
@@ -174,6 +175,36 @@ export class YtScoreComponent implements OnInit {
       lang: {noData: 'No data to display.'},
       noData: {position: {align: 'center', verticalAlign: 'middle'}},
     };
+  }
+
+  scroll() {
+    this.detailsFilterService.setFilter({category: '', labels: ['New', 'Existing', 'Dev', 'Con'], problem: null, filterByNew: true, warningHelpMsg: null, show: true});
+    setTimeout(() => {
+      window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
+    }, 500);
+  }
+
+  scrollNew(evolution: number) {
+    let labels = ['New', 'Existing', 'Dev', 'Con'];
+    if (evolution > 0) {
+      labels = ['New'];
+    }
+    this.detailsFilterService.setFilter({category: '', labels: labels, problem: null, filterByNew: true, warningHelpMsg: null, show: true});
+    setTimeout(() => {
+      window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
+    }, 500);
+  }
+
+  scrollIncreasing(evolution: number) {
+    let problem = null;
+    if (evolution > 0) {
+      problem = 'up';
+    }
+    this.detailsFilterService.setFilter({category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: problem, filterByNew: true, warningHelpMsg: null, show: true});
+    setTimeout(() => {
+      window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
+    }, 500);
   }
 
 }

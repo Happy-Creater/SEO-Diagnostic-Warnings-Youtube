@@ -4,13 +4,11 @@
       <div style="width:65%;float: left;padding: 10px;padding-right: 0;font-family: 'Proxima Nova Bold';">
         <button class="click-detail b-c-de" (click)="scroll()" style="font-size: 13px;">
           <img src="assets/images/icon-warning-4/{{categoryName.toLowerCase()}}.png" alt="" style="height: 25px;"> {{categoryName}}
-
         </button>
       </div>
       <div style="width:35%;float: left;padding:8px 0px;text-align: right;">
         <span style="padding-top: 3px;display: inline-block;">
           <button class="click-detail b-c-de" (click)="scroll()">SEE DETAILS
-
             <span class="btn btn-default btn-circle" style="width: 23px;height: 24px;background: #fff">
               <i class="fa fa-angle-right" aria-hidden="true"></i>
             </span>
@@ -28,23 +26,26 @@
           <table class="table table-borderless m-0 text-center">
             <tr>
               <td style="border-right: 2px solid #E9ECF1;padding: 0 5px !important;line-height: 15px;font-size: 11px;">
-                <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')">
+                <button class="click-detail b-c-de">
                   <span class="poin-small {{warningClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                  <span style="cursor: pointer" (click)="scroll()">
                   WARNINGS <br>
-                  {{warning | numberFormat}} <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
-                  <span class="{{warningClass}}">{{warningEvolution | numberFormat}} <i class="fa {{warningCaret}}" aria-hidden="true"></i></span>
+                  {{warning | numberFormat}} </span><span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
+                  <span class="{{warningClass}}" style="cursor: pointer" (click)="scrollNew(warningEvolution)">
+                    {{warningEvolution | numberFormat}} <i class="fa {{warningCaret}}" aria-hidden="true"></i></span>
                 </button>
               </td>
               <td style="padding: 0 5px !important;line-height: 15px;font-size: 11px;">
-                <button class="click-detail b-c-de" onclick="scrollToElementDetail('Detail-youtube')">
-                  <span class="poin-small {{problemClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span> PROBLEMS <br>
-                  {{problem | numberFormat}} <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
-                  <span class="{{problemClass}}">{{problemEvolution | numberFormat}} <i class="fa {{problemCaret}}" aria-hidden="true"></i></span>
+                <button class="click-detail b-c-de">
+                  <span class="poin-small {{problemClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                  <span style="cursor: pointer" (click)="scroll()">
+                  PROBLEMS <br>
+                    {{problem | numberFormat}} </span><span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
+                  <span class="{{problemClass}}" style="cursor: pointer;" (click)="scrollIncreasing(problemEvolution)">
+                    {{problemEvolution | numberFormat}} <i class="fa {{problemCaret}}" aria-hidden="true"></i></span>
                 </button>
               </td>
             </tr>
-
-
           </table>
           <div style="padding: 10px;">
             <div class="ter">

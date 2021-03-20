@@ -46,6 +46,7 @@ import { GlobalFilterModalComponent } from './sea/sea-global-filter/global-filte
 import { UserhistoryService } from './_services/userhistory/userhistory.service';
 import { ChartComponent } from './chart/chart.component';
 import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
+import {DetailsFilterService} from './seo/seo-diagnostic-warnings/youtube/details-filter-service.service';
 export function highchartsFactory() {
   let hc = require('highcharts');
   const modules = [
@@ -140,7 +141,7 @@ export function createTranslateLoader(http: HttpClient) {
       useFactory: highchartsFactory
     },
     UserhistoryService,
-    GlobalFilterService
+    GlobalFilterService,
   ],
   bootstrap: [AppComponent]
 })

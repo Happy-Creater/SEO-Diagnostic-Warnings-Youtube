@@ -19,6 +19,7 @@ import { YtTopWarningsComponent } from './youtube/yt-top-warnings/yt-top-warning
 import { YtThematicReportItemComponent } from './youtube/yt-thematic-report-item/yt-thematic-report-item.component';
 import { YtDetailsComponent } from './youtube/yt-details/yt-details.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {DetailsFilterService} from './youtube/details-filter-service.service';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import {TranslateModule} from '@ngx-translate/core';
   ],
   declarations: [HomeComponent, YtScoreComponent, YtScoreDetailComponent, NumberFormatPipe, CaretClassPipe, MonthStringPipe, YtThematicReportComponent, YtTopWarningsComponent, YtThematicReportItemComponent, YtDetailsComponent],
   entryComponents: [],
-  providers: [],
+  providers: [
+    DetailsFilterService
+  ],
   exports: [
     HomeComponent
   ]

@@ -1,28 +1,33 @@
 <div class="col-md-3">
   <div class="box-li">
     <div style="padding:0 10px">
-      <div style="color: #6b6b6b;font-size: 16px;font-weight: bold;font-family: Proxima Nova Light;">
+      <div style="cursor:pointer; color: #6b6b6b;font-size: 16px;font-weight: bold;font-family: Proxima Nova Light;" (click)="scroll()">
         Youtube score
       </div>
       <figure class="highcharts-figure">
-        <chart *ngIf="option" class="csschart" [options]="option" style="display:block; width: 100% !important;"></chart>
+        <chart *ngIf="option" class="csschart" [options]="option" style="display:block; width: 100% !important; cursor: pointer;" (click)="scroll()"></chart>
       </figure>
     </div>
     <div style="padding: 0px 15px 10px;">
       <div style="background: #fff;border-radius: 15px;padding: 15px 0;font-size: 12px;font-weight: bold;">
         <table class="table table-borderless m-0 text-center">
           <tr>
-            <td style="border-right: 2px solid #F4F5F7;    padding: 0 12px;">
-              <span class="poin {{warningClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span> WARNINGS <br>
-              {{ warning | numberFormat }} <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
-              <span class="{{problemClass}}">{{warningEvolution}}
+            <td style="border-right: 2px solid #F4F5F7; padding: 0 12px;">
+              <span class="poin {{warningClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span>
+              <span (click)="scroll()" style="cursor: pointer;">
+                WARNINGS
+                <br>
+                {{ warning | numberFormat }}</span> <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
+              <span class="{{problemClass}}" (click)="scrollNew(warningEvolution)" style="cursor:pointer;">{{warningEvolution}}
                 <i class="fa {{warningEvolution | caretClass}}" aria-hidden="true"></i>
               </span>
             </td>
             <td style="padding: 0 12px;">
-              <span class="poin {{problemClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span> PROBLEMS <br>
-              {{ problem | numberFormat }} <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
-              <span class="{{problemClass}}">{{problemEvolution}} <i class="fa {{problemEvolution | caretClass}}" aria-hidden="true"></i></span>
+              <span class="poin {{problemClass}}"><i class="fa fa-circle" aria-hidden="true"></i></span>
+              <span (click)="scroll()" style="cursor: pointer;">
+                PROBLEMS <br>
+              {{ problem | numberFormat }}</span> <span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
+              <span class="{{problemClass}}" (click)="scrollIncreasing(problemEvolution)" style="cursor:pointer;">{{problemEvolution}} <i class="fa {{problemEvolution | caretClass}}" aria-hidden="true"></i></span>
             </td>
           </tr>
         </table>

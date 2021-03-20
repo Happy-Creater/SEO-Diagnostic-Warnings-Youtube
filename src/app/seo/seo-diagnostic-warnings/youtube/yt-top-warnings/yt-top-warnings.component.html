@@ -1,12 +1,12 @@
 <div class="col-md-6" style="padding-left: 60px;padding-top: 5px;">
   <div style="padding: 0px 0 11px;">
-    <h4>TOP WARNINGS <a href="#" class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right" title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a></h4>
+    <h4 style="cursor: pointer" (click)="scroll()">TOP WARNINGS <a href="#" class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right" title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a></h4>
   </div>
   <div style="padding-right: 30px;">
     <!-- Top warning custom -->
     <div class="box-table-top-warning" *ngFor="let topwarning of topWarnings">
       <table class="table table-borderless m-0 table-top-warning">
-        <tr (click)="scrollToItem(topwarning)">
+        <tr (click)="scrollToItem(topwarning)" style="cursor: pointer">
           <td style = "width: 14%">
               <span class="btn btn-default btn-circle span-bg-unset" style="background: unset;border:2px solid #ECEEF2;cursor: unset;">
                 <img src="assets/images/icon-warning-4/{{topwarning.category.toLowerCase()}}.png" alt="" style="height: 21px;">

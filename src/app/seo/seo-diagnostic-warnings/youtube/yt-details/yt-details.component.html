@@ -200,7 +200,7 @@
               </td>
               <td class="f-bold">
                 <div style="position: relative">
-                  {{ item.warningNumber}}&nbsp;&nbsp;
+                  <span title="{{item.warningNumber}}">{{ item.warningNumber | numberFormat}}&nbsp;&nbsp;</span>
                   <i class="fa"
                      [ngClass]="{'fa-caret-up c-red': item.evolution > 0, 'fa-caret-down c-green':item.evolution < 0,'fa-caret-right c-gray':item.evolution == 0}"
                      aria-hidden="true"></i> &nbsp;&nbsp;
@@ -247,14 +247,13 @@
                 </div>
 
               </td>
-              <td style="overflow: hidden;">
+              <td style="overflow: hidden; width:30%">
                 <div [ngClass]="{'arrow-up': item.showRecomendation,'arrow-down':!item.showRecomendation}"
                      (click)="toggleRecomendation(item)" class="bb-bx" id="topbar">
                     <span
                       style="border-left: 1px solid #E2E9EF;height: 15px;display: block;position:absolute;top:9px;left:0;"></span>
-                  <div class="content" style="max-width: 150px;">
-<!--                    {{item.recommendation}}-->
-                    sadffffffffffffffffffffffffffffffasdfasdfasdfasdfasdfasdfasdfasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                  <div class="content" style="max-width: 373px">
+                    {{item.recommendation}}
                     <span class="io"></span>
                   </div>
 
@@ -291,8 +290,10 @@
               </td>
             </tr>
           </ng-container>
+          <tr *ngIf="pagedItems.length == 0" style="width: 100%;text-align: center;">
+            <td  class="text-center" colspan="6">No data</td></tr>
           </tbody>
-          <p *ngIf="pagedItems.length == 0" style="width: 100%;text-align: center;"> No data</p>
+
         </table>
         <div>
           <div class="text-right">
@@ -359,7 +360,7 @@
       </div>
       <div class="modal-body">
         <div>
-          <chart *ngIf="modelOption" [options]="modelOption" id="container-line-3" class="bg-watermark" style="">
+          <chart *ngIf="modelOption" [options]="modelOption" id="container-line-3" class="bg-watermark" style="display:block; width: 100% !important;">
           </chart>
           <div class="box-bg-logo">
             <img src="../images/watermark-2.png" alt="" style="width:150px;">

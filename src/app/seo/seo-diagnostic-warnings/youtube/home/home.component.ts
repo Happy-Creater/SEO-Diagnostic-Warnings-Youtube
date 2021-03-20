@@ -2,13 +2,14 @@ import {Component, Input, OnInit} from '@angular/core';
 import {GetYoutubeService} from '../get-youtube.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
-import {warningCategory, warningTable, ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {pagedItem, warningCategory, warningTable, ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {YtUpdateNewService} from '../yt-update-new.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [GetYoutubeService]
+  providers: [GetYoutubeService, YtUpdateNewService]
 })
 export class HomeComponent implements OnInit {
 
@@ -50,7 +51,8 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor(
-    private getYtService: GetYoutubeService
+    private getYtService: GetYoutubeService,
+    private updateMetricService: YtUpdateNewService
   ) {
   }
 
@@ -171,7 +173,7 @@ export class HomeComponent implements OnInit {
     this.periodWarningProblem = [];
     this.ytWarningProblems.map((value => {
       const tmpDate = new Date(value.date);
-      if (date <= tmpDate) {
+      if (date <= tmpDate || this.period.type === 0) {
         this.periodWarningProblem[index++] = value;
       }
     }));
@@ -187,7 +189,9 @@ export class HomeComponent implements OnInit {
     this.unsubscribeAll$.complete();
   }
 
-  updateMetric(arg: any) {
-
+  updateMetric(arg: pagedItem) {
+    const scanDate = arg.trend[0].scanDate;
+    this.updateMetricService.updateMetric(this.webId, this.account, scanDate, arg.warningName).subscribe((value) => {
+    });
   }
 }

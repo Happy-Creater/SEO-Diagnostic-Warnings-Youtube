@@ -8,7 +8,6 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
   selector: 'app-yt-thematic-report-item',
   templateUrl: './yt-thematic-report-item.component.html',
   styleUrls: ['./yt-thematic-report-item.component.css'],
-  providers: [DetailsFilterService]
 })
 export class YtThematicReportItemComponent implements OnInit {
 
@@ -458,7 +457,50 @@ export class YtThematicReportItemComponent implements OnInit {
   }
 
   scroll() {
-    // this.detailsFilter.setFilter({ category: this.namesValue[this.name], labels: [], problem: null, show: true });
+    this.detailsFilter.setFilter({
+      category: this.nameValues[this.categoryName],
+      labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: null,
+      filterByNew: true,
+      warningHelpMsg: null,
+      show: true
+    });
+    setTimeout(() => {
+      window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
+    }, 500);
+  }
+
+  scrollNew(evolution: number) {
+    let labels = ['New', 'Existing', 'Dev', 'Con'];
+    if (evolution > 0) {
+      labels = ['New'];
+    }
+    this.detailsFilter.setFilter({
+      category: this.nameValues[this.categoryName],
+      labels: labels,
+      problem: null,
+      filterByNew: true,
+      warningHelpMsg: null,
+      show: true
+    });
+    setTimeout(() => {
+      window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
+    }, 500);
+  }
+
+  scrollIncreasing(evolution: number) {
+    let problem = null;
+    if (evolution > 0) {
+      problem = 'up';
+    }
+    this.detailsFilter.setFilter({
+      category: this.nameValues[this.categoryName],
+      labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: problem,
+      filterByNew: true,
+      warningHelpMsg: null,
+      show: true
+    });
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
