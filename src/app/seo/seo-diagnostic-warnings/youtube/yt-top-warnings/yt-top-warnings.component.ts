@@ -22,10 +22,10 @@ export class YtTopWarningsComponent implements OnInit {
   }
 
   processData() {
-    // this.topWarnings = this.warningData.warningTableList.filter(value => {
-    //   return value.new;
-    // });
-    this.topWarnings = this.warningData.warningTableList;
+    this.topWarnings = this.warningData.warningTableList.filter(value => {
+      return value.new;
+    });
+    // this.topWarnings = this.warningData.warningTableList;
     this.topWarnings.sort((a, b) => {
       if (a.severity < b.severity) {
         return 1;
