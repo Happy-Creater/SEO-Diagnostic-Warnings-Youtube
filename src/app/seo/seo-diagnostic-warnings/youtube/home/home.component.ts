@@ -135,7 +135,6 @@ export class HomeComponent implements OnInit {
   selectChartSource(index) {
     if (this.chartSourceList[index].value !== 'warnings') {
       this.chartTypeList[1].isActive = false;
-      console.log(this.chartTypeList);
     }
     this.chartSource = this.chartSourceList[index];
   }

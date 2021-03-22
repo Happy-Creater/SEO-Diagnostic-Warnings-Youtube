@@ -135,7 +135,7 @@ export class YtScoreComponent implements OnInit {
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:30px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<br><span style="color:${evl_color};font-size:15px;">{series.name}</span>`,
+              `<div style="margin-top: -2px;"><span style="color:${evl_color};font-size:18px;">{series.name}</span></div>`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,
@@ -161,7 +161,7 @@ export class YtScoreComponent implements OnInit {
       series: [{
         // tslint:disable-next-line:max-line-length
         name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i>
-                <span style="font-size:14px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
+                <span style="font-size:18px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
                 </span>`,
         data: [{
           color: score_color,
@@ -178,7 +178,10 @@ export class YtScoreComponent implements OnInit {
   }
 
   scroll() {
-    this.detailsFilterService.setFilter({category: '', labels: ['New', 'Existing', 'Dev', 'Con'], problem: null, filterByNew: true, warningHelpMsg: null, show: true});
+    this.detailsFilterService.setFilter({
+      category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: null, filterByNew: true, warningHelpMsg: null, show: true
+    });
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
@@ -200,8 +203,10 @@ export class YtScoreComponent implements OnInit {
     if (evolution > 0) {
       problem = 'up';
     }
-    this.detailsFilterService.setFilter({category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
-      problem: problem, filterByNew: true, warningHelpMsg: null, show: true});
+    this.detailsFilterService.setFilter({
+      category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: problem, filterByNew: true, warningHelpMsg: null, show: true
+    });
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
