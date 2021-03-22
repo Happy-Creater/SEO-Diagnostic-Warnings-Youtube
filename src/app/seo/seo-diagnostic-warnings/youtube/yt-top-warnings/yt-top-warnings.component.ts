@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {warningTable, warningTableItem} from '../models/youtube_model';
 import {DetailsFilterService} from '../details-filter-service.service';
 
@@ -25,7 +25,9 @@ export class YtTopWarningsComponent implements OnInit {
     this.topWarnings = this.warningData.warningTableList.filter(value => {
       return value.new;
     });
-    // this.topWarnings = this.warningData.warningTableList;
+    if (this.topWarnings.length < 5) {
+      this.topWarnings = this.warningData.warningTableList;
+    }
     this.topWarnings.sort((a, b) => {
       if (a.severity < b.severity) {
         return 1;
@@ -43,16 +45,20 @@ export class YtTopWarningsComponent implements OnInit {
 
   scrollToItem(item: warningTableItem) {
     const msg = item.warningHelpMsg;
-    this.detailsFilterService.setFilter({category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
-      problem: null, filterByNew: true, warningHelpMsg: msg, show: true});
+    this.detailsFilterService.setFilter({
+      category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: null, filterByNew: true, warningHelpMsg: msg, show: true
+    });
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
   }
 
   scroll() {
-    this.detailsFilterService.setFilter({category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
-      problem: null, filterByNew: true, warningHelpMsg: null, show: true});
+    this.detailsFilterService.setFilter({
+      category: '', labels: ['New', 'Existing', 'Dev', 'Con'],
+      problem: null, filterByNew: true, warningHelpMsg: null, show: true
+    });
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
