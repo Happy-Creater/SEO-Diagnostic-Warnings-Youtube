@@ -31,8 +31,8 @@
             &nbsp;&nbsp;
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
-                      style="min-width: 110px;">
-                <span class="b-title-g ladb">{{chartType.label}}</span>&nbsp;
+                      style="min-width: 130px;">
+                <span class="b-title-g ladb">{{chartTypeFormat(chartTypeList)}}</span>&nbsp;
 
                 <span class="btn btn-default btn-circle"
                       style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
@@ -84,6 +84,7 @@
                              [periodScore]="periodScore"
                              [chartType]="chartTypeList"
                              [chartSource]="chartSource"
+                             [selectedChart]="selectedChart"
         >
         </app-yt-score-detail>
       </div>

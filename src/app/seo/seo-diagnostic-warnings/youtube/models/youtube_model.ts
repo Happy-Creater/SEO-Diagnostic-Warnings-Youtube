@@ -93,3 +93,9 @@ export interface labelItem {
   toggled: boolean;
 }
 
+// tslint:disable-next-line:class-name
+export interface chartTypeItem {
+  label: string;
+  isActive: boolean;
+}
+

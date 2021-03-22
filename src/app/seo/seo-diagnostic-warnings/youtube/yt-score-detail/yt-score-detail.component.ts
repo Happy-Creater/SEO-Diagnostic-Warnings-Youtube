@@ -14,6 +14,7 @@ export class YtScoreDetailComponent implements OnInit {
   @Input() periodScore: ytScore[];
   @Input() chartType;
   @Input() chartSource;
+  @Input() selectedChart: string;
 
   evolution = {option: null, show: false};
   cumulative = {option: null, show: false};
@@ -44,9 +45,13 @@ export class YtScoreDetailComponent implements OnInit {
       distributionData.VIDEOS.push(this.periodScore[key].videosTechnicalYoutubeScore);
       distributionData.PLAYLISTS.push(this.periodScore[key].playlistTechnicalYoutubeScore);
     });
-    this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
-    this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
-    this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    if (this.selectedChart === 'Evolution') {
+      this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
+    } else if (this.selectedChart === 'Cumulative') {
+      this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
+    } else if (this.selectedChart === 'Distribution') {
+      this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    }
   }
 
   warningProblemData(chartSource) {
@@ -89,9 +94,13 @@ export class YtScoreDetailComponent implements OnInit {
       }));
     });
 
-    this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
-    this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
-    this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    if (this.selectedChart === 'Evolution') {
+      this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
+    } else if (this.selectedChart === 'Cumulative') {
+      this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
+    } else if (this.selectedChart === 'Distribution') {
+      this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    }
 
     // console.log('categories = ', categories);
     // console.log('evolutionData = ', this.evolution.option);
@@ -111,11 +120,13 @@ export class YtScoreDetailComponent implements OnInit {
           this.distribution.show = item.isActive;
         }
       });
+      this.warningProblemData(this.chartSource.value);
+      this.scoreData(this.chartSource.value);
     } else {
-      if (changes['periodWarningProblem'] || changes['chartSource'] ) {
+      if (changes['periodWarningProblem'] || changes['chartSource'] || changes['selectedChart'] ) {
         this.warningProblemData(this.chartSource.value);
       }
-      if (changes['periodScore'] || changes['chartSource']) {
+      if (changes['periodScore'] || changes['chartSource'] || changes['selectedChart'] ) {
         this.scoreData(this.chartSource.value);
       }
     }
@@ -244,6 +255,7 @@ export class YtScoreDetailComponent implements OnInit {
           text: null
         },
         gridLineWidth: 0.8,
+        opposite: true
       },
       tooltip: {
         zIndex: 99,

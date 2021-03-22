@@ -2,7 +2,14 @@ import {Component, Input, OnInit} from '@angular/core';
 import {GetYoutubeService} from '../get-youtube.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
-import {pagedItem, warningCategory, warningTable, ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {
+  chartTypeItem,
+  pagedItem,
+  warningTable,
+  ytScore,
+  ytScoreItem,
+  ytWarningProblem
+} from '../models/youtube_model';
 import {YtUpdateNewService} from '../yt-update-new.service';
 
 @Component({
@@ -37,6 +44,7 @@ export class HomeComponent implements OnInit {
     {label: 'Score', value: 'score'},
   ];
   chartType = {label: 'All labels', isActive: true};
+  selectedChart = 'Evolution';
   chartTypeList = [
     {label: 'Evolution', isActive: true},
     {label: 'Cumulative', isActive: false},
@@ -144,6 +152,16 @@ export class HomeComponent implements OnInit {
       return;
     }
     this.chartTypeList[index].isActive = !this.chartTypeList[index].isActive;
+    if (this.chartTypeList[index].isActive) {
+      this.selectedChart = this.chartTypeList[index].label;
+    } else {
+      this.chartTypeList.map((value, idx) => {
+        if (value.isActive) {
+          this.selectedChart = this.chartTypeList[idx].label;
+          return;
+        }
+      });
+    }
     this.chartTypeList = this.chartTypeList.slice();
   }
 
@@ -192,5 +210,26 @@ export class HomeComponent implements OnInit {
     const scanDate = arg.trend[0].scanDate;
     this.updateMetricService.updateMetric(this.webId, this.account, scanDate, arg.warningName).subscribe((value) => {
     });
+  }
+
+  chartTypeFormat(chartTypeList: chartTypeItem[]): string {
+    let count = 0;
+    let labelName: string;
+    chartTypeList.map(value => {
+      if (value.isActive === true) {
+        labelName = value.label;
+        count++;
+      }
+    });
+    if (count === 0) {
+      return 'Nothing selected';
+    }
+    if (count === chartTypeList.length) {
+      return 'All labels';
+    }
+    if (count === 1) {
+      return labelName;
+    }
+    return count + ' selected';
   }
 }
