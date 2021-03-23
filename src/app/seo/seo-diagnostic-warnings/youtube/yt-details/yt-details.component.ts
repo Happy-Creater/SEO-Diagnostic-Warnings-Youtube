@@ -109,6 +109,7 @@ export class YtDetailsComponent implements OnInit {
       this.totalItems[index].showDetails = false;
       this.totalItems[index].showRecomendation = false;
       this.totalItems[index].setBold = false;
+      this.totalItems[index].tableName = value.tableName;
       let bg = '';
       if (value.status >= 0 && value.status < 25) {
         bg = '#FF0D12'; // red
@@ -311,7 +312,8 @@ export class YtDetailsComponent implements OnInit {
       showRecomendation: false,
       percentage: '',
       filename: '',
-      showDetails: false
+      showDetails: false,
+      tableName: ''
     };
   }
 

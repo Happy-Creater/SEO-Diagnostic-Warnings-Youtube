@@ -208,7 +208,7 @@ export class HomeComponent implements OnInit {
 
   updateMetric(arg: pagedItem) {
     const scanDate = arg.trend[0].scanDate;
-    this.updateMetricService.updateMetric(this.webId, this.account, scanDate, arg.warningName).subscribe((value) => {
+    this.updateMetricService.updateMetric(this.webId, this.account, scanDate, arg.tableName).subscribe((value) => {
     });
   }
 

@@ -12,7 +12,7 @@ export class GetYoutubeService {
   constructor(private http: HttpClient) {
     this.base_url = 'https://api.monetoring.com/youtubeseowarning/1.0/new/';
     this.headers = new HttpHeaders();
-    this.headers = this.headers.set('Authorization', 'Bearer ' + '8e639670-0530-30f6-9f35-a21d0946be59');
+    this.headers = this.headers.set('Authorization', 'Bearer ' + '82e6be4a-9295-3896-88bb-75cedacbd957');
     this.headers = this.headers.set('Access-Control-Allow-Headers', 'Content-Type');
     this.headers = this.headers.set('Access-Control-Allow-Methods', 'GET');
     this.headers = this.headers.set('Access-Control-Allow-Origin', '*');

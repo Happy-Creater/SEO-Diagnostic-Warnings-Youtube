@@ -66,6 +66,7 @@ export interface warningTrendItem {
 // tslint:disable-next-line:class-name
 export interface pagedItem {
   severity: number;
+  tableName: string;
   warningNumber: number;
   warningName: string;
   warningHelpMsg: string;

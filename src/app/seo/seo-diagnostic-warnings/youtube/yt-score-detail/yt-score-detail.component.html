@@ -1,17 +1,13 @@
 <div class="col-md-9" style="">
   <div class="box-chart-line-b" style="height: 270px; padding-top: 5px;">
-    <chart id="container-line-g-2" *ngIf="evolution &&( evolution.show && evolution.option)" [options]="evolution.option" class="bg-watermark acv"
-           style="position: absolute;left: 0px;bottom: 0;width: 100%"></chart>
-    <chart id="container-line-g-1" *ngIf="cumulative &&( cumulative.show && cumulative.option)" [options]="cumulative.option" class="bg-watermark acv"
-           style="position: absolute;left: 0px;bottom: 0;width: 100%"></chart>
-    <chart id="container-line-g-3" *ngIf="distribution &&( distribution.show && distribution.option)"  [options]="distribution.option" class="bg-watermark acv"
-           style="position: absolute;left: 0px;bottom: 0;width: 100%;	background-position: 50% 50% !important;"></chart>
-    <div *ngIf="(!evolution && !cumulative && !distribution) ||
-      (!evolution.show && !cumulative.show && !distribution.show)
-      || (!evolution.option && !cumulative.option && !distribution.show)"
-         style="text-align: center; margin-top: 89px; font-size: 20px; font-weight: bold;">
-        No data to display
-    </div>
+<!--    <chart id="container-line-g-2" *ngIf="evolution &&( evolution.show && evolution.option)" [options]="evolution.option" class="bg-watermark acv"-->
+<!--           style="position: absolute;left: 0px;bottom: 0;width: 100%"></chart>-->
+<!--    <chart id="container-line-g-1" *ngIf="cumulative &&( cumulative.show && cumulative.option)" [options]="cumulative.option" class="bg-watermark acv"-->
+<!--           style="position: absolute;left: 0px;bottom: 0;width: 100%"></chart>-->
+<!--    <chart id="container-line-g-3" *ngIf="distribution &&( distribution.show && distribution.option)"  [options]="distribution.option" class="bg-watermark acv"-->
+<!--           style="position: absolute;left: 0px;bottom: 0;width: 100%;	background-position: 50% 50% !important;"></chart>-->
+      <chart class="bg-watermark acv" style="position:absolute; left:0px; bottom:0; width: 100%; height: 265px" [options]="testOption"></chart>
+
     <div class="box-bg-logo-g">
       <img src="assets/images/watermark.png" alt="" style="width:150px;">
     </div>

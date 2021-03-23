@@ -19,6 +19,11 @@ export class YtScoreDetailComponent implements OnInit {
   evolution = {option: null, show: false};
   cumulative = {option: null, show: false};
   distribution = {option: null, show: false};
+  categories = [];
+  evolutionData= [];
+  cumulativeData = [];
+  distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
+  testOption = null;
 
   constructor() {
   }
@@ -45,13 +50,27 @@ export class YtScoreDetailComponent implements OnInit {
       distributionData.VIDEOS.push(this.periodScore[key].videosTechnicalYoutubeScore);
       distributionData.PLAYLISTS.push(this.periodScore[key].playlistTechnicalYoutubeScore);
     });
-    if (this.selectedChart === 'Evolution') {
-      this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
-    } else if (this.selectedChart === 'Cumulative') {
-      this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
-    } else if (this.selectedChart === 'Distribution') {
-      this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    this.categories = categories;
+    this.evolutionData = evolutionData;
+    this.cumulativeData = [];
+    this.distributionData = distributionData;
+    if (!this.evolution.show) {
+      evolutionData = [];
     }
+    if (!this.cumulative.show) {
+      cumulativeData = [];
+    }
+    if (!this.distribution.show) {
+      distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
+    }
+    this.testOption = this.buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData);
+    // if (this.selectedChart === 'Evolution') {
+    //   this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
+    // } else if (this.selectedChart === 'Cumulative') {
+    //   this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
+    // } else if (this.selectedChart === 'Distribution') {
+    //   this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    // }
   }
 
   warningProblemData(chartSource) {
@@ -93,19 +112,20 @@ export class YtScoreDetailComponent implements OnInit {
         }
       }));
     });
-
-    if (this.selectedChart === 'Evolution') {
-      this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
-    } else if (this.selectedChart === 'Cumulative') {
-      this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
-    } else if (this.selectedChart === 'Distribution') {
-      this.distribution.option = this.buildDistributionOption(categories, distributionData);
+    this.categories = categories;
+    this.evolutionData = evolutionData;
+    this.cumulativeData = cumulativeData;
+    this.distributionData = distributionData;
+    if (!this.evolution.show) {
+      evolutionData = [];
     }
-
-    // console.log('categories = ', categories);
-    // console.log('evolutionData = ', this.evolution.option);
-    // console.log('cumulativeData = ', this.cumulative.option);
-    // console.log('distributionData = ', this.distribution.option);
+    if (!this.cumulative.show) {
+      cumulativeData = [];
+    }
+    if (!this.distribution.show) {
+      distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
+    }
+    this.testOption = this.buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData);
   }
 
   // tslint:disable-next-line:use-life-cycle-interface
@@ -217,7 +237,6 @@ export class YtScoreDetailComponent implements OnInit {
       },
       legend: {
         enabled: false,
-
       },
       series: [{
         name: this.chartSource.value.replace(/\b./g, function (a) {
@@ -312,6 +331,169 @@ export class YtScoreDetailComponent implements OnInit {
       }
 
       ],
+      lang: {noData: 'No data to display.'},
+      noData: {
+        position: {align: 'center', verticalAlign: 'middle', y: -27},
+        style: {
+          fontWeight: 'bold',
+          fontSize: '20px'
+        }
+      },
+    };
+  }
+
+  buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData) {
+    return {
+      chart: {
+        zoomType: 'xy',
+      },
+      title: {
+        text: null,
+      },
+      credits: {enabled: false},
+      exporting: {enabled: false},
+      legend: {
+        enabled: false,
+      },
+      tooltip: {
+        zIndex: 99,
+        backgroundColor: '#fff',
+        fillOpacity: 1,
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br>',
+        shared: true,
+        useHTML: true,
+        dataLabels: {
+          enabled: true,
+          useHTML: true,
+          backgroundColor: '#fff',
+          fillOpacity: 1,
+        },
+      },
+      xAxis: [{
+        categories: categories,
+        tickmarkPlacement: 'on',
+        title: {
+          enabled: false
+        },
+        // tslint:disable-next-line:max-line-length
+        tickPositions: [0, Math.ceil(categories.length / 5),
+          Math.ceil(categories.length / 5) * 2, Math.ceil(categories.length / 5) * 3,
+          Math.ceil(categories.length / 5) * 4, categories.length - 1],
+        gridLineWidth: 0.8,
+        plotBands: [
+
+          {
+            from: Math.ceil(categories.length / 5),
+            to: Math.ceil(categories.length / 5) * 2,
+            color: 'rgba(247, 247, 249, 0.8)'
+          },
+          {
+            from: Math.ceil(categories.length / 5) * 3,
+            to: Math.ceil(categories.length / 5) * 4,
+            color: 'rgba(247, 247, 249, 0.8)'
+          }
+        ],
+      }],
+      yAxis: [
+        { // Evolution / Cumulative Y axis
+          min: 0,
+          gridLineWidth: 0,
+          title: {
+            text: null,
+          },
+          labels: {
+            format: '{value}',
+          }
+
+        }, { // Distribution Y axis
+          title: {
+            text: null,
+          },
+          labels: {
+            enabled: true,
+          },
+          endOnTick: false,
+          opposite: true
+        }, ],
+      plotOptions: {
+        column: {
+          stacking: 'percent',
+        },
+      },
+      series: [{
+        name: '<span class="wh " style=""><span class="bb-span-b"></span>CHANNEL</span>',
+        data: distributionData.CHANNEL,
+        type: 'column',
+        yAxis: 1,
+        color: '#ED723D',
+        tooltip: {
+          valueSuffix: '({point.percentage:.0f}%)'
+        }
+      }, {
+        name: '<span class="mh " style=""><span class="bb-span-b"></span>VIDEOS</span>',
+        data: distributionData.VIDEOS,
+        type: 'column',
+        yAxis: 1,
+        color: '#5DBEFF',
+        tooltip: {
+          valueSuffix: '({point.percentage:.0f}%)'
+        }
+      }, {
+        type: 'column',
+        yAxis: 1,
+        name: '<span class="lh " style=""><span class="bb-span"></span>PLAYLISTS</span>',
+        data: distributionData.PLAYLISTS,
+        color: '#E88ED7',
+        tooltip: {
+          valueSuffix: '({point.percentage:.0f}%)'
+        }
+      }, {
+        type: 'spline',
+        yAxis: 0,
+        color: '#519ffb',
+        name: 'evolution',
+        data: evolutionData,
+        marker: {
+          enabled: false
+        },
+        tooltip: {
+          valueSuffix: ''
+        }
+
+      }, {
+        type: 'spline',
+        yAxis: 0,
+        name: 'cumulative',
+        color: '#519ffb',
+        data: cumulativeData,
+        tooltip: {
+          valueSuffix: ''
+        }
+      }],
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 500
+          },
+          chartOptions: {
+            yAxis: [{
+              labels: {
+                align: 'right',
+                x: 0,
+                y: -6
+              },
+              showLastLabel: false
+            }, {
+              labels: {
+                align: 'left',
+                x: 0,
+                y: -6
+              },
+              showLastLabel: false
+            }]
+          }
+        }]
+      },
       lang: {noData: 'No data to display.'},
       noData: {
         position: {align: 'center', verticalAlign: 'middle', y: -27},
