@@ -12,18 +12,24 @@ export class YtThematicReportComponent implements OnInit {
   @Input() previousScore: ytScoreItem;
   @Input() latestWarningProblem: ytWarningProblem;
   @Input() previousWarningProblem: ytWarningProblem;
-  @Input() period;
   @Input() warningProblem: ytWarningProblem[];
 
-  @Output() changePeriod = new EventEmitter<number>();
+  // @Output() changePeriod = new EventEmitter<number>();
 
+  detailWarningProblem: ytWarningProblem[][] = [];
   option: object;
   modalCategory: string;
+  period = {type: 6, label: 'Last 6 months'};
   periodList = [
     {type: 3, label: 'Last 3 months'},
     {type: 6, label: 'Last 6 months'},
     {type: 12, label: 'Last 12 months'},
     {type: 0, label: 'Since beginning of the project'},
+  ];
+  categoryList = [
+    {category: 'CHANNEL', period : 1},
+    {category: 'VIDEOS', period: 1},
+    {category: 'PLAYLISTS', period: 1}
   ];
   progress1Hovered = false;
   progress2Hovered = false;
@@ -50,6 +56,20 @@ export class YtThematicReportComponent implements OnInit {
   processData() {
     let channelWarning = 0, videoWarning = 0, playlistWarning = 0;
     let sum = 0;
+    this.warningProblem.map(value => {
+      const date = new Date(value.date);
+      this.categoryList.map((element, idx) => {
+        const period = this.categoryList[idx].period;
+        const today = new Date();
+        today.setMonth(today.getMonth() - this.periodList[period].type);
+        if (today <= date || this.periodList[period].type === 0) {
+          if (typeof this.detailWarningProblem[idx] === 'undefined' || !this.detailWarningProblem) {
+            this.detailWarningProblem[idx] = [];
+          }
+          this.detailWarningProblem[idx].push(value);
+        }
+      });
+    });
     const category = this.latestWarningProblem.categories;
     category.map(value => {
       if (value.categoryName === 'Channel') {
@@ -92,18 +112,43 @@ export class YtThematicReportComponent implements OnInit {
     return value;
   }
 
-  setPeriod(index: number) {
-    this.changePeriod.emit(index);
-  }
+  // setPeriod(index: number) {
+  //   this.changePeriod.emit(index);
+  // }
 
   changeGraphOption(childData) {
     this.option = childData.option;
     this.modalCategory = childData.name;
+    this.categoryList.map(category => {
+      if (category.category === this.modalCategory) {
+        this.period = this.periodList[category.period];
+      }
+    });
   }
 
   changeGraphContent(childData) {
     if ( this.modalCategory === childData.name) {
       this.option = childData.option;
     }
+  }
+
+  setPeriod(i: number) {
+    this.categoryList.map((category, idx) => {
+      if (category.category === this.modalCategory) {
+        category.period = i;
+        this.period = this.periodList[i];
+        this.detailWarningProblem[idx] = [];
+        this.warningProblem.map(value => {
+          const date = new Date(value.date);
+            const period = this.categoryList[idx].period;
+            const today = new Date();
+            today.setMonth(today.getMonth() - this.periodList[period].type);
+            if (today <= date || this.periodList[period].type === 0) {
+              this.detailWarningProblem[idx].push(value);
+            }
+        });
+        return;
+      }
+    });
   }
 }

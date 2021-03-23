@@ -94,9 +94,7 @@
             [latestScore]="latestScore" [previousScore]="previousScore"
             [latestWarningProblem]="latestWarningProblem"
             [previousWarningProblem]="previousWarningProblem"
-            [warningProblem]="periodWarningProblem"
-            [period]="period"
-            (changePeriod)="selectPeriod($event)">
+            [warningProblem]="ytWarningProblems">
           </app-yt-thematic-report>
           <app-yt-top-warnings *ngIf="warningTable" [warningData]="warningTable"></app-yt-top-warnings>
         </div>
