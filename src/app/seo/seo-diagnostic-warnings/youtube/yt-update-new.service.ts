@@ -18,7 +18,7 @@ export class YtUpdateNewService {
 
   updateMetric(websiteYoutubeId: number, account: string, scanDate: string, name: string) {
     const params = new HttpParams()
-      .append('websiteYoutbueId', websiteYoutubeId + '')
+      .append('websiteYoutubeId', websiteYoutubeId + '')
       .append('account', account)
       .append('scanDate', scanDate)
       .append('name', name);

@@ -18,21 +18,21 @@
                [ngStyle]="channelProgress"
                data-toggle="tooltip"
                data-title="{{channelPercent}}"
-               class="progress-bar bar21 bar-21" data-id="21" role="progressbar" ></div>
+               class="progress-bar bar21 bar-21" data-id="21" role="progressbar"></div>
           <div [class.seo-invisible]="progress1Hovered || progress3Hovered || channelHovered || playlistHovered"
                (mouseenter)="progress2Hovered = true"
                (mouseout)="progress2Hovered = false"
                [ngStyle]="videoProgress"
                data-toggle="tooltip"
                data-title="{{videoPercent}}"
-            class="progress-bar bar22 bar-22" data-id="22" role="progressbar" ></div>
+               class="progress-bar bar22 bar-22" data-id="22" role="progressbar"></div>
           <div [class.seo-invisible]="progress2Hovered || progress1Hovered || videoHovered || channelHovered"
                (mouseenter)="progress3Hovered = true"
                (mouseout)="progress3Hovered = false"
                [ngStyle]="playlistProgress"
                data-toggle="tooltip"
                data-title="{{playlistPercent}}"
-            class="progress-bar bar23 bar-23" data-id="23" role="progressbar" ></div>
+               class="progress-bar bar23 bar-23" data-id="23" role="progressbar"></div>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
       </app-yt-thematic-report-item>
     </div>
 
-    <div class = "col-md-6">
+    <div class="col-md-6">
       <app-yt-thematic-report-item
         [latestWarningProblem]="latestWarningProblem"
         [previousWarningProblem]="previousWarningProblem"
@@ -73,7 +73,7 @@
       </app-yt-thematic-report-item>
     </div>
 
-    <div class = "col-md-6">
+    <div class="col-md-6">
       <app-yt-thematic-report-item
         [latestWarningProblem]="latestWarningProblem"
         [previousWarningProblem]="previousWarningProblem"
@@ -100,7 +100,8 @@
         <h5>SCORE EVOLUTION - YOUTUBE > <span class="vvwarning">{{modalCategory}}</span></h5>
         <div style="position: absolute;top: 15px;right: 54px;">
           <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown" [ngStyle]="period.type==0 && {'min-width':'210px' }">
+            <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                    [ngStyle]="period.type==0 && {'min-width':'210px' }">
               <span class="ladb">{{period.label}}</span>&nbsp;
               <span class="btn btn-default btn-circle"
                     style="background: unset;border:2px solid #ECEEF2;position: absolute;right: 6px;top: 6px;"><i
@@ -113,14 +114,16 @@
           </div>
         </div>
         <button type="button" class="close" data-dismiss="modal"
-                style="font-size: 14px;color: #6b6b6b;opacity: 1;font-weight: 100;margin-top: -25px !important;">X</button>
+                style="font-size: 14px;color: #6b6b6b;opacity: 1;font-weight: 100;margin-top: -25px !important;">X
+        </button>
         <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
         <div>
-          <chart *ngIf="option" [options]="option" id="container-line-3" class="bg-watermark" style="display:block; width: 100% !important;"></chart>
+          <chart *ngIf="option" [options]="option" id="container-line-3" class="bg-watermark"
+                 style="display:block; width: 100% !important;"></chart>
           <div class="box-bg-logo">
-            <img src="../images/watermark-2.png" alt="" style="width:150px;">
+            <img src="assets/images/watermark.png" alt="" style="width:150px;">
           </div>
         </div>
       </div>
