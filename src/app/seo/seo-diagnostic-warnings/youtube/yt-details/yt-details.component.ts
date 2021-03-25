@@ -33,7 +33,7 @@ export class YtDetailsComponent implements OnInit {
     {prop: 'typeCategorie', label: 'Dev', value: 'dev', toggled: false},
     {prop: 'typeCategorie', label: 'Con', value: 'con', toggled: false}
   ];
-  period = {type: 0, label: 'Since beginning of the project'};
+  period = {type: 6, label: 'Last 6 months'};
 
   periodList = [
     {type: 3, label: 'Last 3 months'},

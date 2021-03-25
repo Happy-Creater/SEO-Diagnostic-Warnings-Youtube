@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
     {label: 'Cumulative', isActive: false},
     {label: 'Distribution', isActive: false}
   ];
-  period = {type: 3, label: 'Last 3 months'};
+  period = {type: 6, label: 'Last 6 months'};
   periodList = [
     {type: 3, label: 'Last 3 months'},
     {type: 6, label: 'Last 6 months'},
