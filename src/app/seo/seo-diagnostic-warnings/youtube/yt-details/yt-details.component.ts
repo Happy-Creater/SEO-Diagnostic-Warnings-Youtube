@@ -120,7 +120,7 @@ export class YtDetailsComponent implements OnInit {
       } else if (value.status >= 75 && value.status <= 100) {
         bg = '#3DD674'; // green
       }
-      this.totalItems[index].percentage = {width: this.round(value.status, 2) + '%', background: bg};
+      this.totalItems[index].percentage = {width: this.round(value.status, 0) + '%', background: bg};
       this.totalItems[index].smallGraphOption = this.buildSmallGraph(this.makeGraphData(value.trend, 'small'));
     });
     this.filterData();
@@ -503,7 +503,7 @@ export class YtDetailsComponent implements OnInit {
 
   round(value: number, digit: number) {
     value *= Math.pow(10, digit);
-    value = Math.ceil(value);
+    value = Math.round(value);
     value /= Math.pow(10, digit);
     return value;
   }
