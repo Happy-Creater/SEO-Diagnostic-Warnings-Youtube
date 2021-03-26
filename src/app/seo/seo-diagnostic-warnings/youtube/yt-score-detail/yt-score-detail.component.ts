@@ -421,6 +421,24 @@ export class YtScoreDetailComponent implements OnInit {
         column: {
           stacking: 'percent',
         },
+        title: false,
+        series: {
+
+          lineWidth: 2,
+          fillOpacity: 0.2,
+
+          marker: {
+            symbol: 'circle',
+            radius: 4,
+            states: {
+              hover: {
+                enabled: true,
+                radius: 3
+              }
+            }
+          },
+
+        }
       },
       series: [{
         name: '<span class="wh " style=""><span class="bb-span-b"></span>CHANNEL</span>',
@@ -456,20 +474,21 @@ export class YtScoreDetailComponent implements OnInit {
         name: 'evolution',
         data: evolutionData,
         marker: {
-          enabled: false
+          enabled: true
         },
         tooltip: {
           valueSuffix: ''
         }
 
       }, {
-        type: 'spline',
+        type: 'areaspline',
         yAxis: 0,
         name: 'cumulative',
         color: '#519ffb',
         data: cumulativeData,
         marker: {
-          enabled: false
+          enabled: true,
+          symbol: 'circle'
         },
         tooltip: {
           valueSuffix: ''
