@@ -34,10 +34,11 @@ export class YtScoreDetailComponent implements OnInit {
   }
 
   scoreData(chartSource) {
-    let categories = [];
+    let categories;
     let evolutionData = [];
     let cumulativeData = [];
     let distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
+    categories = [];
     if (chartSource !== 'score') {
       return;
     }
@@ -74,10 +75,11 @@ export class YtScoreDetailComponent implements OnInit {
   }
 
   warningProblemData(chartSource) {
-    let categories = [];
+    let categories;
     let evolutionData = [];
     let cumulativeData = [];
     let distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
+    categories = [];
     if (chartSource === 'score') {
       this.cumulative.show = false;
       return;
@@ -466,6 +468,9 @@ export class YtScoreDetailComponent implements OnInit {
         name: 'cumulative',
         color: '#519ffb',
         data: cumulativeData,
+        marker: {
+          enabled: false
+        },
         tooltip: {
           valueSuffix: ''
         }
