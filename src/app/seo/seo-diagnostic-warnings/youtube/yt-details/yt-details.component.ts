@@ -320,17 +320,20 @@ export class YtDetailsComponent implements OnInit {
   makeGraphData(trend: warningTrendItem[], type: string) {
 
     if (type === 'small') {
-      let data = [];
+      let data;
+      data = [];
       trend.map((value, index) => {
         data[index] = value.value;
       });
       return data;
     } else if (type === 'modal') {
-      let data = {categories: [], data: []};
+      let data;
+      data = {categories: [], data: []};
       let index = 0;
       trend.map((value) => {
         const date = new Date(value.scanDate);
-        let today = new Date();
+        let today;
+        today = new Date();
         today.setMonth(today.getMonth() - this.period.type);
         if (date >= today || this.period.type === 0) {
           data.categories[index] = date.getDate() + ' ' + months[date.getMonth()];
