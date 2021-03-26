@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
-import {ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {ytScore, ytWarningProblem} from '../models/youtube_model';
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
