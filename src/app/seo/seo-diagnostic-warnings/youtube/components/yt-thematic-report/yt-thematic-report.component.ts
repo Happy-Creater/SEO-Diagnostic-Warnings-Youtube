@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ytScoreItem, ytWarningProblem} from '../models/youtube_model';
+import {ytScoreItem, ytWarningProblem} from '../../models/youtube_model';
 
 @Component({
   selector: 'app-yt-thematic-report',

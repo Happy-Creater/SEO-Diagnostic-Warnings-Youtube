@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges} from '@angular/core';
-import {ytScoreItem, ytWarningProblem} from '../models/youtube_model';
-import {DetailsFilterService} from '../details-filter-service.service';
+import {ytScoreItem, ytWarningProblem} from '../../models/youtube_model';
+import {DetailsFilterService} from '../../services/details-filter-service.service';
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 

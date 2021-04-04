@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,ElementRef } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { Daterangepicker } from 'ng2-daterangepicker';
@@ -17,20 +16,19 @@ import { GlobalDateService } from './_services/global_date/global-date.service';
 import { InitializeService } from './_services/initialize/initialize.service';
 import { DummyComponent } from './dummy/dummy.component';
 // import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService'
-import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { VirtualScrollModule } from 'angular2-virtual-scroll';
 import { DDCustomModule } from './_modules/dd-custom/dd-custom.module';
 import { ClickOutsideModule } from './_modules/click-outside/click-outside.module';
 import { AuthorizedComponent } from './authorized/authorized.component';
-import { StagingWebsiteVariableService } from "app/_services/staging_website_variable/staging-website-variable.service";
+import { StagingWebsiteVariableService } from 'app/_services/staging_website_variable/staging-website-variable.service';
 import { CategoryModule } from './_modules/category/category.module';
 import { CategoryService } from './_modules/category/service/category.service';
 import { TextboxClearableModule } from 'app/_modules/textbox-clearable/textbox-clearable.module';
 import { UnavaiableComponent } from './unavaiable/unavaiable.component';
 import { TextElipsisModule } from 'app/_modules/elipsis/text-elipsis.module';
 import { MessageService } from './_services/messages/message-service.service';
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { UserAccessService } from './_services/user_access/user-access.service';
 import { LocalizedDateModule } from 'app/_modules/localized-date/localized-date.module';
@@ -44,9 +42,8 @@ import { ModalModule } from 'ngx-modialog';
 import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import { GlobalFilterModalComponent } from './sea/sea-global-filter/global-filter-modal/global-filter-modal.component';
 import { UserhistoryService } from './_services/userhistory/userhistory.service';
-import { ChartComponent } from './chart/chart.component';
-import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
-import {DetailsFilterService} from './seo/seo-diagnostic-warnings/youtube/details-filter-service.service';
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+
 export function highchartsFactory() {
   let hc = require('highcharts');
   const modules = [
@@ -80,8 +77,7 @@ export function createTranslateLoader(http: HttpClient) {
     AuthorizedComponent,
     UnavaiableComponent,
     AppMultiselectDropdownComponent,
-    GlobalFilterModalComponent,
-    ChartComponent
+    GlobalFilterModalComponent
   ],
   imports: [
     BrowserModule,

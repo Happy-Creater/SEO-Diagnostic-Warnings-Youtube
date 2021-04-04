@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {warningTable, warningTableItem} from '../models/youtube_model';
-import {DetailsFilterService} from '../details-filter-service.service';
+import {warningTable, warningTableItem} from '../../models/youtube_model';
+import {DetailsFilterService} from '../../services/details-filter-service.service';
 
 @Component({
   selector: 'app-yt-top-warnings',

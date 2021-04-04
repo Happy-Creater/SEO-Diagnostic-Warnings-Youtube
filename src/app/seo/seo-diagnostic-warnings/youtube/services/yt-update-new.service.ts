@@ -22,6 +22,6 @@ export class YtUpdateNewService {
       .append('account', account)
       .append('scanDate', scanDate)
       .append('name', name);
-    return this.http.get(this.base_url + 'updateWarningMetric',{params: params, headers: this.headers});
+    return this.http.get(this.base_url + 'updateWarningMetric', {params: params, headers: this.headers});
   }
 }

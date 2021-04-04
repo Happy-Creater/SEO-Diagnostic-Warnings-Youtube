@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ytScore, ytScoreItem, ytWarningProblem} from '../models/youtube_model';
-import {DetailsFilterService} from '../details-filter-service.service';
+import {ytScore, ytScoreItem, ytWarningProblem} from '../../models/youtube_model';
+import {DetailsFilterService} from '../../services/details-filter-service.service';
 
 @Component({
   selector: 'app-yt-score',

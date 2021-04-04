@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {labelItem, pagedItem, warningTable, warningTableItem, warningTrendItem} from '../models/youtube_model';
+import {labelItem, pagedItem, warningTable, warningTableItem, warningTrendItem} from '../../models/youtube_model';
 import {TranslateService} from '@ngx-translate/core';
-import {YtUpdateNewService} from '../yt-update-new.service';
-import {DetailsFilterService} from '../details-filter-service.service';
+import {YtUpdateNewService} from '../../services/yt-update-new.service';
+import {DetailsFilterService} from '../../services/details-filter-service.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
 

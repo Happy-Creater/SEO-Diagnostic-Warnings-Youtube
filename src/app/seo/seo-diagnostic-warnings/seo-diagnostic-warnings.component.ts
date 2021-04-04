@@ -22,13 +22,7 @@ export class SeoDiagnosticWarningsComponent implements OnInit {
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
-    this.globalListener = Observable.combineLatest(
-      this.global.getWebsiteChange()
-    ).subscribe(([websiteItem]) => {
-      this.webId = websiteItem.webId;
-      this.account = websiteItem.account;
-      this.websiteUrl = websiteItem.url;
-    });
+
   }
 
   // tslint:disable-next-line:use-life-cycle-interface

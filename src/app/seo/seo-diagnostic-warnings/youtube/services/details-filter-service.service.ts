@@ -4,7 +4,6 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class DetailsFilterService {
-
   private filterSource$ = new BehaviorSubject({
     category: null,
     labels: [],

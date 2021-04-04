@@ -1,0 +1,109 @@
+<ng-container *ngIf="webId && account">
+  <div class="row boxID" id="Youtube">
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="padding: 0">
+      <div class="div" style="background: #fff;padding: 15px 0px;">
+        <div style="padding: 00px 0 2px;" class="">
+          <div class="row" style="">
+            <div class="col-md-6">
+              <h4>YOUTUBE PERFORMANCE
+                <a class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right"
+                   title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a>
+              </h4>
+            </div>
+            <div class="col-md-6 text-right">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                        style="min-width: 155px;">
+                  <span class="ladb">{{chartSource.label}}</span>&nbsp;
+
+                  <span class="btn btn-default btn-circle"
+                        style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;;position: absolute;     right: 6px;top: 6px;"><i
+                    class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </button>
+                <ul class="dropdown-menu  dpmenu psdo">
+                  <li *ngFor="let item of chartSourceList; index as i" class="dropdown-item">
+                    <a style="padding-left: 10px !important" (click)="selectChartSource(i)">
+                      {{item.label}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              &nbsp;&nbsp;
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                        style="min-width: 130px;">
+                  <span class="b-title-g ladb">{{chartTypeFormat(chartTypeList)}}</span>&nbsp;
+                  <span class="btn btn-default btn-circle"
+                        style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                    class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </button>
+                <ul class="dropdown-menu dpmenu psdo">
+                  <li *ngFor="let item of chartTypeList; index as i" class="dropdown-item" (click)="setChartType(i)">
+                    <a class="click-ajax-g" data-id="{{i}}" data-title="{{item.label}}" style="cursor: pointer;">
+                      <span class="boxInput">
+                        <input type="checkbox" name="radio_g" id="comu-g_{{i}}" [checked]="item.isActive"
+                               [disabled]="item.label == 'Cumulative' && chartSource.value != 'warnings'">
+                        <label for="com9"></label>
+                      </span>
+                      {{item.label}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              &nbsp;&nbsp;
+              <div class="dropdown" style="width: 200px;">
+                <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                        style="width: 200px">
+                  <span class="ladb">{{period.label}}</span>&nbsp;
+                  <span class="btn btn-default btn-circle"
+                        style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                    class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </button>
+                <ul class="dropdown-menu  dpmenu psdo ">
+                  <li *ngFor="let item of periodList; index as i" class="dropdown-item">
+                    <a (click)="selectPeriod(i)" style="padding-left: 10px !important">
+                      {{item.label}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="">
+          <app-yt-score *ngIf="latestScore && latestWarningProblem"
+                        [latestScore]="latestScore"
+                        [previousScore]="previousScore"
+                        [latestWarningProblem]="latestWarningProblem"
+                        [previousWarningProblem]="previousWarningProblem">
+          </app-yt-score>
+          <app-yt-score-detail *ngIf="periodWarningProblem && periodScore && chartSource"
+                               [periodWarningProblem]="periodWarningProblem"
+                               [periodScore]="periodScore"
+                               [chartType]="chartTypeList"
+                               [chartSource]="chartSource"
+                               [selectedChart]="selectedChart"
+          >
+          </app-yt-score-detail>
+        </div>
+        <div>
+          <div class="row" style="">
+            <app-yt-thematic-report *ngIf="latestScore && latestWarningProblem && periodWarningProblem"
+                                    [latestScore]="latestScore" [previousScore]="previousScore"
+                                    [latestWarningProblem]="latestWarningProblem"
+                                    [previousWarningProblem]="previousWarningProblem"
+                                    [warningProblem]="ytWarningProblems">
+            </app-yt-thematic-report>
+            <app-yt-top-warnings *ngIf="warningTable" [warningData]="warningTable"></app-yt-top-warnings>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-yt-details *ngIf="warningTable && warningTable.warningTableList"
+                  [warningData]="warningTable.warningTableList"
+                  (updateMetric)="updateMetric($event)">
+  </app-yt-details>
+</ng-container>
+

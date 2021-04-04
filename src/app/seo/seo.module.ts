@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, DecimalPipe } from '@angular/common';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 import { SeoRoutingModule } from './seo-routing.module';
 import { SeoComponent } from './seo.component';
 import { SeoOverviewComponent } from './seo-overview/seo-overview.component';
@@ -11,7 +11,7 @@ import { SeoOffsiteDetailsRefdomainsComponent } from './seo-offsite/seo-offsite-
 import { SeoOffsiteDetailsBacklinksComponent } from './seo-offsite/seo-offsite-details/seo-offsite-details-backlinks/seo-offsite-details-backlinks.component';
 import { SeoOffsiteDetailsAnchorsComponent } from './seo-offsite/seo-offsite-details/seo-offsite-details-anchors/seo-offsite-details-anchors.component';
 import { SeoToolboxComponent } from './seo-toolbox/seo-toolbox.component';
-import { ChartModule } from "angular2-highcharts";
+import { ChartModule } from 'angular2-highcharts';
 import { SeoToolbox301Component } from './seo-toolbox/seo-toolbox-301/seo-toolbox-301.component';
 import { SeoToolboxWebpageComponent } from './seo-toolbox/seo-toolbox-webpage/seo-toolbox-webpage.component';
 import { SeoToolbokKeywordComponent } from './seo-toolbox/seo-toolbox-keyword/seo-toolbox-keyword.component';
@@ -20,20 +20,20 @@ import { SeoToolboxExportComponent } from './seo-toolbox/seo-toolbox-export/seo-
 import { SeoToolboxRedirectionComponent } from './seo-toolbox/seo-toolbox-redirection/seo-toolbox-redirection.component';
 import { MenuModule } from '../_modules/menu/menu.module';
 import { SeoDiagnosticWarningsComponent } from './seo-diagnostic-warnings/seo-diagnostic-warnings.component';
-import { DownloadPopupModule } from "app/_modules/download-popup/download-popup.module";
-import { ModalStandardModule } from "app/_modules/modal-standard/modal-standard.module";
+import { DownloadPopupModule } from 'app/_modules/download-popup/download-popup.module';
+import { ModalStandardModule } from 'app/_modules/modal-standard/modal-standard.module';
 import { ModalModule } from 'ngx-modialog';
 import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
 import { TableStandardModule } from 'app/_modules/table-standard/table-standard.module';
 import { TextboxClearableModule } from '../_modules/textbox-clearable/textbox-clearable.module';
-import { PaginatorModule } from "app/_modules/paginator/paginator.module";
-import { DropdownModule } from "app/_modules/dropdown/dropdown.module";
-import { ProgressBarModule } from "app/_modules/progress-bar/progress-bar.module";
-import { ProgressbarLoadingModule } from "../_modules/progressbar-loading/progressbar-loading.module";
-import { ToolTipModule } from "app/_modules/tooltip/tool-tip.module";
-import { BoxLoadingModule } from "app/_modules/box-loading/box-loading.module";
-import { SeoOffsiteOptDetoxComponent } from "app/seo/seo-offsite/seo-offsite-optimization/seo-offsite-opt-detox/seo-offsite-opt-detox.component";
-import { ClickOutsideModule } from "app/_modules/click-outside/click-outside.module";
+import { PaginatorModule } from 'app/_modules/paginator/paginator.module';
+import { DropdownModule } from 'app/_modules/dropdown/dropdown.module';
+import { ProgressBarModule } from 'app/_modules/progress-bar/progress-bar.module';
+import { ProgressbarLoadingModule } from '../_modules/progressbar-loading/progressbar-loading.module';
+import { ToolTipModule } from 'app/_modules/tooltip/tool-tip.module';
+import { BoxLoadingModule } from 'app/_modules/box-loading/box-loading.module';
+import { SeoOffsiteOptDetoxComponent } from 'app/seo/seo-offsite/seo-offsite-optimization/seo-offsite-opt-detox/seo-offsite-opt-detox.component';
+import { ClickOutsideModule } from 'app/_modules/click-outside/click-outside.module';
 import { SeoDiagnosticLoadingTimeComponent } from './seo-diagnostic-loading-time/seo-diagnostic-loading-time.component';
 import { GaugeCustomChartModule } from '../_modules/highchart/gauge-custom-chart/gauge-custom-chart.module';
 
@@ -41,26 +41,26 @@ import { SeoBenchmarkOverviewComponent } from './seo-benchmark/seo-benchmark-ove
 import { SeoBenchmarkChartComponent } from './seo-benchmark/seo-benchmark-chart/seo-benchmark-chart.component';
 import { SeoBenchmarkRankingComparisonComponent } from './seo-benchmark/seo-benchmark-ranking-comparison/seo-benchmark-ranking-comparison.component';
 import { SeoBenchmarkInstantBenchmarkComponent } from './seo-benchmark/seo-benchmark-instant-benchmark/seo-benchmark-instant-benchmark.component';
-import { CheckboxControllerModule } from "app/_modules/checkbox-controller/checkbox-controller.module";
+import { CheckboxControllerModule } from 'app/_modules/checkbox-controller/checkbox-controller.module';
 import { SeoOnsiteComponent } from './seo-onsite/seo-onsite.component';
 import { SeoOnsiteNewPagesOptComponent } from './seo-onsite/seo-onsite-new-pages-opt/seo-onsite-new-pages-opt.component';
 import { SeoOffsiteOptLinkRecoverComponent } from './seo-offsite/seo-offsite-optimization/seo-offsite-opt-link/seo-offsite-opt-link-recover/seo-offsite-opt-link-recover.component';
 import { SeoOffsiteOptLinkCompetitorsComponent } from './seo-offsite/seo-offsite-optimization/seo-offsite-opt-link/seo-offsite-opt-link-competitors/seo-offsite-opt-link-competitors.component';
 import { SeoOffsiteOptLinkIntopicComponent } from './seo-offsite/seo-offsite-optimization/seo-offsite-opt-link/seo-offsite-opt-link-intopic/seo-offsite-opt-link-intopic.component';
 import { SeoKeywordsOpportunitiesComponent } from './seo-keywords/seo-keywords-opportunities/seo-keywords-opportunities.component';
-import { SeoOnsiteLandingPagesOptComponent } from "app/seo/seo-onsite/seo-onsite-landing-pages-opt/seo-onsite-landing-pages-opt.component";
-import { AbbreviateNumberModule } from "app/_modules/abbreviate-number/abbreviate-number.module";
+import { SeoOnsiteLandingPagesOptComponent } from 'app/seo/seo-onsite/seo-onsite-landing-pages-opt/seo-onsite-landing-pages-opt.component';
+import { AbbreviateNumberModule } from 'app/_modules/abbreviate-number/abbreviate-number.module';
 import { SeoStagingWarningsComponent } from './seo-staging/seo-staging-warnings/seo-staging-warnings.component';
 import { SeoStagingRedirectionsComponent } from './seo-staging/seo-staging-redirections/seo-staging-redirections.component';
-import { NguiAutoCompleteModule } from "@ngui/auto-complete/dist";
+import { NguiAutoCompleteModule } from '@ngui/auto-complete/dist';
 import { SeoStagingWebsiteSelectorComponent } from './seo-staging/seo-staging-website-selector/seo-staging-website-selector.component';
-import { SeoKeywordsRankCheckerComponent } from "app/seo/seo-keywords/seo-keywords-rank-checker/seo-keywords-rank-checker.component";
+import { SeoKeywordsRankCheckerComponent } from 'app/seo/seo-keywords/seo-keywords-rank-checker/seo-keywords-rank-checker.component';
 import { SeoOnsiteInnerlinksComponent } from './seo-onsite/seo-onsite-innerlinks/seo-onsite-innerlinks.component';
-import { MyDatePickerModule } from "mydatepicker";
+import { MyDatePickerModule } from 'mydatepicker';
 import { SeoToolboxComparisonComponent } from './seo-toolbox/seo-toolbox-comparison/seo-toolbox-comparison.component';
 import { SeoToolboxGenerateSitemapComponent } from './seo-toolbox/seo-toolbox-generate-sitemap/seo-toolbox-generate-sitemap.component';
 import { SeoToolboxSitemapUrlsComponent } from './seo-toolbox/seo-toolbox-sitemap-urls/seo-toolbox-sitemap-urls.component';
-import { SeoStagingOverviewComponent } from "app/seo/seo-staging/seo-staging-overview/seo-staging-overview.component";
+import { SeoStagingOverviewComponent } from 'app/seo/seo-staging/seo-staging-overview/seo-staging-overview.component';
 import { SeoStagingLoadingTimeComponent } from './seo-staging/seo-staging-loading-time/seo-staging-loading-time.component';
 import { SeoOnsiteValidateLandingPagesComponent } from './seo-onsite/seo-onsite-validate-landing-pages/seo-onsite-validate-landing-pages.component';
 import { CategoryModule } from 'app/_modules/category/category.module';
@@ -92,13 +92,12 @@ import { SeoPiracyContentOverviewComponent } from './seo-piracy/seo-piracy-conte
 import { TextElipsisModule } from 'app/_modules/elipsis/text-elipsis.module';
 import { ChannelYoutubeVariableService } from 'app/_services/channel_youtube_variable/channel-youtube-variable.service';
 import { SeoToolboxContentPiracyComponent } from './seo-toolbox/seo-toolbox-content-piracy/seo-toolbox-content-piracy.component';
-import { SeoSeaSynergyModule } from '.././sea/sea-keywords/seo-sea-synergy/seo-sea-synergy.module';
+import { SeoSeaSynergyModule } from '../sea/sea-keywords/seo-sea-synergy/seo-sea-synergy.module';
 import { SeoKeywordsGeoRankOverviewComponent } from './seo-keywords/seo-keywords-geo-rank-overview/seo-keywords-geo-rank-overview.component';
 import { LoadingDelayModule } from 'app/_modules/loading-delay/loading-delay.module';
 
 import { SeoOffsiteOptBlogAutomationModule } from './seo-offsite/seo-offsite-optimization/seo-offsite-opt-blog-automation/seo-offsite-opt-blog-automation.module';
 import { SeoOnsiteHotContentOptimisationComponent } from './seo-onsite/seo-onsite-hot-content-optimisation/seo-onsite-hot-content-optimisation.component';
-import { SeoDiagnosticWarningsSharedModule } from './seo-diagnostic-warnings/seo-diagnostic-warnings-shared.module';
 import { OfflineComparisonModule } from 'app/_modules/offline-comparison/offline-comparison.module';
 import { SeoOffsiteOptLinkTabsComponent } from './seo-offsite/seo-offsite-optimization/seo-offsite-opt-link/seo-offsite-opt-link-tabs/seo-offsite-opt-link-tabs.component';
 
@@ -141,7 +140,6 @@ import { SeoOffsiteOptLinkTabsComponent } from './seo-offsite/seo-offsite-optimi
     SeoSeaSynergyModule,
     LoadingDelayModule,
     SeoOffsiteOptBlogAutomationModule,
-    SeoDiagnosticWarningsSharedModule,
     OfflineComparisonModule
 
   ],
@@ -161,7 +159,6 @@ import { SeoOffsiteOptLinkTabsComponent } from './seo-offsite/seo-offsite-optimi
     SeoToolboxRankedComponent,
     SeoToolboxExportComponent,
     SeoToolboxRedirectionComponent,
-    SeoDiagnosticWarningsComponent,
     // offsite-optimization-detox components
     SeoOffsiteOptDetoxComponent,
     // end offsite-optimization-detox components
@@ -209,6 +206,7 @@ import { SeoOffsiteOptLinkTabsComponent } from './seo-offsite/seo-offsite-optimi
     SeoOffsiteOptLinkTabsComponent
   ],
   entryComponents: [
+    SeoComponent,
   ],
   providers: [
     CategoryService,
@@ -217,10 +215,9 @@ import { SeoOffsiteOptLinkTabsComponent } from './seo-offsite/seo-offsite-optimi
     ChannelYoutubeVariableService,
     SeoKeywordsRankCheckerComponent,
     OfflineComparisonModule
-
   ],
   bootstrap: [
     SeoOnsiteLandingPagesOptComponent
   ]
 })
-export class SeoModule { }
+export class SeoModule {}

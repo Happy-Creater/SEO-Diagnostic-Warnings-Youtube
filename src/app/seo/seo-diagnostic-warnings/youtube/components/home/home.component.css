@@ -1,0 +1,14 @@
+.period-menu .dropdown:last-child {
+  width: 200px;
+}
+
+.boxID {
+  min-height: unset;
+  width: 100%;
+  margin-top: 0px;
+}
+.boxID {
+  margin-bottom: 15px;
+  height: 100%;
+  background: #fff;
+}

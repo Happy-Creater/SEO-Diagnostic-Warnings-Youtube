@@ -4,9 +4,9 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import { WebsiteItem } from './website-item';
 
-const USER_ID_KEY: string = "userId";
-const USERNAME_KEY: string = "username";
-const USER_ROLE_KEY: string = "user_role";
+const USER_ID_KEY = 'userId';
+const USERNAME_KEY = 'username';
+const USER_ROLE_KEY = 'user_role';
 
 @Injectable()
 export class GlobalVariableService {
@@ -15,14 +15,15 @@ export class GlobalVariableService {
   account: string;
   url: string;
   lastAccessUrl: string;
-  isCompletedRoute: boolean = false;
+  isCompletedRoute = false;
 
   websiteChange: BehaviorSubject<WebsiteItem> = new BehaviorSubject(null);
   accountList: BehaviorSubject<Array<string>> = new BehaviorSubject(null);
   lastAccessUrlChange: Subject<string> = new Subject();
   usernameChange: Subject<string> = new Subject();
 
-  constructor() { }
+  constructor() {
+  }
 
   setUserId(userId: number): void {
     window.localStorage.setItem(USER_ID_KEY, userId == null ? null : userId.toString());
@@ -41,6 +42,7 @@ export class GlobalVariableService {
   getUsername(): string {
     return window.localStorage.getItem(USERNAME_KEY);
   }
+
   setUserRole(role: string): void {
     window.localStorage.setItem(USER_ROLE_KEY, role);
   }
@@ -68,6 +70,7 @@ export class GlobalVariableService {
   getLastAccessUrl(): string {
     return this.lastAccessUrl;
   }
+
   setLastAccessUrl(lastAccessUrl: string): void {
     this.lastAccessUrl = lastAccessUrl;
     this.lastAccessUrlChange.next(lastAccessUrl);

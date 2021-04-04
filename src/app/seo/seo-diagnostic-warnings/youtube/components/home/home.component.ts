@@ -1,37 +1,30 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {GetYoutubeService} from '../get-youtube.service';
-import {takeUntil} from 'rxjs/operators';
-import {Subject} from 'rxjs/Subject';
-import {
-  chartTypeItem,
-  pagedItem,
-  warningTable,
-  ytScore,
-  ytScoreItem,
-  ytWarningProblem
-} from '../models/youtube_model';
-import {YtUpdateNewService} from '../yt-update-new.service';
+import { Component, OnInit } from '@angular/core';
+import { GetYoutubeService } from '../../services/get-youtube.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs/Subject';
+import { chartTypeItem, pagedItem, warningTable, ytScore, ytScoreItem, ytWarningProblem } from '../../models/youtube_model';
+import { YtUpdateNewService } from '../../services/yt-update-new.service';
+import { GlobalVariableService } from '../../../../../_services/global_variable/global-variable.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-youtube-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   providers: [GetYoutubeService, YtUpdateNewService]
 })
-export class HomeComponent implements OnInit {
+export class YoutubeHomeComponent implements OnInit {
 
-  @Input('web_id') webId;
-  @Input('account') account;
+  webId;
+  account;
+  websiteUrl;
+  globalListener;
 
   unsubscribeAll$ = new Subject();
   ytScores: ytScore[];
   periodScore: ytScore[];
   ytWarningProblems: ytWarningProblem[];
   periodWarningProblem: ytWarningProblem[];
-  // periodHistory: {
-  //   type: number;
-  //   data: ytWarningProblem[];
-  // }[];
   latestScore: ytScoreItem;
   previousScore: ytScoreItem;
   latestWarningProblem: ytWarningProblem;
@@ -60,15 +53,23 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private getYtService: GetYoutubeService,
-    private updateMetricService: YtUpdateNewService
+    private updateMetricService: YtUpdateNewService,
+    private global: GlobalVariableService
   ) {
   }
 
   ngOnInit() {
-    init_tooltip();
-    this.webId = 71;
-    this.account = 'tollens';
-    this.loadData();
+    this.globalListener = Observable.combineLatest(
+      this.global.getWebsiteChange()
+    ).subscribe(([websiteItem]) => {
+      this.webId = websiteItem.webId;
+      this.account = websiteItem.account;
+      this.websiteUrl = websiteItem.url;
+      init_tooltip();
+      this.webId = 71;
+      this.account = 'tollens';
+      this.loadData();
+    });
   }
 
   loadData() {
@@ -194,10 +195,6 @@ export class HomeComponent implements OnInit {
         this.periodWarningProblem[index++] = value;
       }
     }));
-    // this.periodHistory.push({
-    //   type: this.period.type,
-    //   data: this.periodWarningProblem
-    // });
   }
 
   // tslint:disable-next-line:use-life-cycle-interface
