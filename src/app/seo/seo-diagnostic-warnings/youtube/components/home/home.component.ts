@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { GetYoutubeService } from '../../services/get-youtube.service';
-import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs/Subject';
-import { chartTypeItem, pagedItem, warningTable, ytScore, ytScoreItem, ytWarningProblem } from '../../models/youtube_model';
-import { YtUpdateNewService } from '../../services/yt-update-new.service';
-import { GlobalVariableService } from '../../../../../_services/global_variable/global-variable.service';
-import { Observable } from 'rxjs/Observable';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {GetYoutubeService} from '../../services/get-youtube.service';
+import {takeUntil} from 'rxjs/operators';
+import {Subject} from 'rxjs/Subject';
+import {chartTypeItem, pagedItem, warningTable, ytScore, ytScoreItem, ytWarningProblem} from '../../models/youtube_model';
+import {YtUpdateNewService} from '../../services/yt-update-new.service';
+import {GlobalVariableService} from '../../../../../_services/global_variable/global-variable.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-youtube-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: [
+    './home.component.css',
+    '../../css-new-seo-diagnostic-warning/style.css',
+    '../../css-new-seo-diagnostic-warning/custom_warning.css',
+  ],
+  encapsulation: ViewEncapsulation.None,
   providers: [GetYoutubeService, YtUpdateNewService]
 })
 export class YoutubeHomeComponent implements OnInit {

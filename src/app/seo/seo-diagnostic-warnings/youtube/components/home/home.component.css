@@ -12,3 +12,92 @@
   height: 100%;
   background: #fff;
 }
+
+.dropdown {
+  display: inline-block;
+}
+
+.btn {
+  color: #6b6b6b;
+}
+
+.but-drop {
+  background: #F8F9FA;
+  font-size: 12px;
+  font-weight: bold;
+  border: unset;
+  font-family: 'Proxima Nova Light' !important;
+  padding: 10px 5px;
+}
+
+.ladb {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.btn-circle {
+  width: 25px;
+  height: 25px;
+  padding: 2px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  background: #ECEEF2;
+  font-weight: bold
+}
+
+.dpmenu {
+  width: 115px;
+  right: 0px;
+  left: unset;
+}
+
+ul.psdo {
+  width: auto !important;
+  min-width: auto !important;
+}
+
+ul.psdo li a {
+  padding: 3px 10px 3px 5px !important;
+}
+
+.dropdown-menu>li>a {
+  font-family: 'Proxima Nova Light';
+}
+
+button.btn.btn-default:hover,
+button.btn.btn-default.active {
+  background: #F8F9FA;
+  border: unset
+}
+
+.tooltip.right{
+  margin-left: -10px !important;
+}
+
+.tooltip-arrow {
+  display: none;
+}
+
+.tooltip-inner {
+  width: max-content;
+  max-width: 250px;
+  white-space: normal;
+  text-align: left;
+  background: #fff;
+  color: #6c6c6b;
+  opacity: 1;
+  padding: 10px;
+  font-family: 'Proxima Nova Light';
+  font-size: 14px;
+  opacity: 1 !important;
+  -webkit-box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  position: absolute;
+  top: -20px;
+  margin: 0 15px;
+}
