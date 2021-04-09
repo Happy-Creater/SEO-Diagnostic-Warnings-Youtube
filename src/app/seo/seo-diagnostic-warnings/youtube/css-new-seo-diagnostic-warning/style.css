@@ -845,3 +845,15 @@ tbody tr.thead-light td div.tooltip.fade.top{
 .ac-text {
   color: #4B8EAE;
 }
+
+.warning button.btn.btn-default:hover,
+.warning button.btn.btn-default.active {
+  background: #d4d4d4;
+  border: unset;
+  color: #6b6b6b;
+  box-shadow: none;
+}
+
+.but-drop:hover {
+  background: #d4d4d4;
+}

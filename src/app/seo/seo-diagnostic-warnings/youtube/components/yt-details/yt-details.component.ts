@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {labelItem, pagedItem, warningTable, warningTableItem, warningTrendItem} from '../../models/youtube_model';
 import {TranslateService} from '@ngx-translate/core';
 import {YtUpdateNewService} from '../../services/yt-update-new.service';
@@ -6,14 +6,17 @@ import {DetailsFilterService} from '../../services/details-filter-service.servic
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
 
+declare var $: any;
+
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+let timeout;
 
 @Component({
   selector: 'app-yt-details',
   templateUrl: './yt-details.component.html',
   styleUrls: ['./yt-details.component.css'],
 })
-export class YtDetailsComponent implements OnInit {
+export class YtDetailsComponent implements OnInit, AfterViewInit {
 
   @Input() warningData: warningTableItem[];
   @Output() updateMetric = new EventEmitter();
@@ -63,7 +66,7 @@ export class YtDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    init_tooltip();
+    // init_tooltip();
     this.processData();
     this.detailsFilterService.getFilter()
       .pipe(takeUntil(this.unsubscribeAll$))
@@ -713,5 +716,29 @@ export class YtDetailsComponent implements OnInit {
   ngOnDestroy() {
     this.unsubscribeAll$.next(null);
     this.unsubscribeAll$.complete();
+  }
+
+  ngAfterViewInit(): void {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.table-title-tooltip').mouseenter(function () {
+      $('.table-title-tooltip').tooltip('hide');
+
+      const that = $(this);
+      if (timeout != null) {
+        clearTimeout(timeout);
+      }
+      that.tooltip('hide');
+      timeout = setTimeout(function () {
+        that.tooltip('show');
+      }, 1000);
+    });
+
+    $('.table-title-tooltip').mouseleave(function () {
+      if (timeout != null) {
+        clearTimeout(timeout);
+      }
+      // $('.table-title-tooltip').tooltip('hide');
+      timeout = null;
+    })
   }
 }

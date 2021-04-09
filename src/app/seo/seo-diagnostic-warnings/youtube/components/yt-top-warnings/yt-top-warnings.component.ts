@@ -1,13 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import {warningTable, warningTableItem} from '../../models/youtube_model';
 import {DetailsFilterService} from '../../services/details-filter-service.service';
+declare var $: any;
 
 @Component({
   selector: 'app-yt-top-warnings',
   templateUrl: './yt-top-warnings.component.html',
   styleUrls: ['./yt-top-warnings.component.css']
 })
-export class YtTopWarningsComponent implements OnInit {
+export class YtTopWarningsComponent implements OnInit, AfterViewInit {
 
   @Input() warningData: warningTable;
 
@@ -17,7 +18,7 @@ export class YtTopWarningsComponent implements OnInit {
   }
 
   ngOnInit() {
-    init_tooltip();
+    // init_tooltip();
     this.processData();
   }
 
@@ -62,6 +63,10 @@ export class YtTopWarningsComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
+  }
+
+  ngAfterViewInit(): void {
+    $('[data-toggle="tooltip"]').tooltip();
   }
 
 }

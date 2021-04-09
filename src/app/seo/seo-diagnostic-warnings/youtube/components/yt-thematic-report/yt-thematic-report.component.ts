@@ -1,12 +1,13 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ytScoreItem, ytWarningProblem} from '../../models/youtube_model';
+declare var $: any;
 
 @Component({
   selector: 'app-yt-thematic-report',
   templateUrl: './yt-thematic-report.component.html',
   styleUrls: ['./yt-thematic-report.component.css']
 })
-export class YtThematicReportComponent implements OnInit {
+export class YtThematicReportComponent implements OnInit, AfterViewInit {
 
   @Input() latestScore: ytScoreItem;
   @Input() previousScore: ytScoreItem;
@@ -49,7 +50,7 @@ export class YtThematicReportComponent implements OnInit {
   }
 
   ngOnInit() {
-    init_tooltip();
+    // init_tooltip();
     this.processData();
   }
 
@@ -150,5 +151,9 @@ export class YtThematicReportComponent implements OnInit {
         return;
       }
     });
+  }
+
+  ngAfterViewInit(): void {
+    $('[data-toggle="tooltip"]').tooltip();
   }
 }

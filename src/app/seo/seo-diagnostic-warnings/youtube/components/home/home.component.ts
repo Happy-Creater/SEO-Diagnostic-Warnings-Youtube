@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {GetYoutubeService} from '../../services/get-youtube.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
@@ -6,6 +6,7 @@ import {chartTypeItem, pagedItem, warningTable, ytScore, ytScoreItem, ytWarningP
 import {YtUpdateNewService} from '../../services/yt-update-new.service';
 import {GlobalVariableService} from '../../../../../_services/global_variable/global-variable.service';
 import {Observable} from 'rxjs/Observable';
+declare var $: any;
 
 @Component({
   selector: 'app-youtube-home',
@@ -18,7 +19,7 @@ import {Observable} from 'rxjs/Observable';
   encapsulation: ViewEncapsulation.None,
   providers: [GetYoutubeService, YtUpdateNewService]
 })
-export class YoutubeHomeComponent implements OnInit {
+export class YoutubeHomeComponent implements OnInit, AfterViewInit {
 
   webId;
   account;
@@ -70,11 +71,15 @@ export class YoutubeHomeComponent implements OnInit {
       this.webId = websiteItem.webId;
       this.account = websiteItem.account;
       this.websiteUrl = websiteItem.url;
-      init_tooltip();
+      // init_tooltip();
       this.webId = 71;
       this.account = 'tollens';
       this.loadData();
     });
+  }
+
+  ngAfterViewInit() {
+    $('[data-toggle="tooltip"]').tooltip();
   }
 
   loadData() {
