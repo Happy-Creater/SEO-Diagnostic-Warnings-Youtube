@@ -135,7 +135,7 @@ export class YtScoreComponent implements OnInit {
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:30px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<div style="margin-top: -2px;"><span style="color:${evl_color};font-size:18px;">{series.name}</span></div>`,
+              `<div style="margin-top: -2px;"><span style="color:${evl_color};font-size:18px;">&nbsp;&nbsp;{series.name}</span></div>`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,

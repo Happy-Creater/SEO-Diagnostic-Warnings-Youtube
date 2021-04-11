@@ -214,7 +214,7 @@ export class YtThematicReportItemComponent implements OnInit {
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:20px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<div style="margin-top: -15px;"><span style="color:${evl_color};font-size:15px;">{series.name}</span></div>`,
+              `<div style="margin-top: -4px;"><span style="color:${evl_color};font-size:15px;">&nbsp;{series.name}</span></div>`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,

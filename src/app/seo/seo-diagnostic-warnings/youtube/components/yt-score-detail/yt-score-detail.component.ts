@@ -176,7 +176,6 @@ export class YtScoreDetailComponent implements OnInit {
         title: {
           enabled: false
         },
-        // tslint:disable-next-line:max-line-length
         tickPositions: [0, Math.ceil(categories.length / 5),
           Math.ceil(categories.length / 5) * 2, Math.ceil(categories.length / 5) * 3,
           Math.ceil(categories.length / 5) * 4, categories.length - 1],
@@ -444,6 +443,7 @@ export class YtScoreDetailComponent implements OnInit {
         name: '<span class="wh " style=""><span class="bb-span-b"></span>CHANNEL</span>',
         data: distributionData.CHANNEL,
         type: 'column',
+        borderRadius: 4,
         yAxis: 1,
         color: '#ED723D',
         tooltip: {
@@ -453,6 +453,7 @@ export class YtScoreDetailComponent implements OnInit {
         name: '<span class="mh " style=""><span class="bb-span-b"></span>VIDEOS</span>',
         data: distributionData.VIDEOS,
         type: 'column',
+        borderRadius: 4,
         yAxis: 1,
         color: '#5DBEFF',
         tooltip: {
@@ -460,6 +461,7 @@ export class YtScoreDetailComponent implements OnInit {
         }
       }, {
         type: 'column',
+        borderRadius: 4,
         yAxis: 1,
         name: '<span class="lh " style=""><span class="bb-span"></span>PLAYLISTS</span>',
         data: distributionData.PLAYLISTS,

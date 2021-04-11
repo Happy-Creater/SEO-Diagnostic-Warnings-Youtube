@@ -216,20 +216,15 @@
               </td>
               <td>
                 <div class="ter" style="width: 150px;margin: 0 auto;">
-                    <span
-                      style="border-left: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: 10px;left: 0;"></span>
-                  <span class="dhover">
-                      <chart id="smGraph59" class="abso abso-table " *ngIf="item.smallGraphOption"
+                    <span style="border-left: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: 10px;left: 0;"></span>
+                    <chart id="smGraph59" class="smallTrendGraph"  *ngIf="item.smallGraphOption"
                              [options]="item.smallGraphOption"></chart>
-
-                    </span>
-                  <a href="" class="c-gray click-modal" data-toggle="modal" (click)="selectModelData(item)"
+                  <a class="c-gray click-modal" data-toggle="modal" (click)="selectModelData(item)"
                      data-target="#myModal1" data-text="g.analytics"
                      style="position: absolute;bottom: 0px;right: 20px;">
                     <i class="fa fa-search-plus" aria-hidden="true"></i>
                   </a>
-                  <span
-                    style="border-right: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: 10px;right: 0;"></span>
+                  <span style="border-right: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: 10px;right: 0;"></span>
                 </div>
               </td>
               <td>

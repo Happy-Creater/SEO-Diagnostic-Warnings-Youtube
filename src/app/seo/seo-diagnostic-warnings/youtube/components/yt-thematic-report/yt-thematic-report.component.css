@@ -7,3 +7,156 @@
   opacity: .3;
   transition: visibility 0s;
 }
+.seo-visible {
+  opacity: 1;
+  transition: visibility 0s;
+}
+
+.seo-invisible {
+  opacity: .3;
+  transition: visibility 0s;
+}
+
+.progress-bar {
+  cursor: pointer;
+  border-radius: 3px;
+  height: 12px;
+  margin-top: -2px;
+  border: 1px solid;
+}
+
+.progress-bar.bar11 {
+  background: #3DD674;
+  border-radius: 3px;
+;
+  height: 12px;
+}
+
+.progress-bar.bar12 {
+  background: #FF0D12;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar13 {
+  background: #FEB654;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar14 {
+
+  background: #FFE052;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar15 {
+  background: #FEB654;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar16 {
+  background: #3DD674;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar17 {
+  background: #E6E7EA;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar18,.progress-bar.bar23 {
+  background: #FEB654;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar19,.progress-bar.bar21 {
+  background: #3DD674;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.progress-bar.bar20,.progress-bar.bar22 {
+  background: #FF0D12;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.protab {
+  height: 10px;
+}
+
+.progress {
+  height: 3px;
+  margin: 15px 0;
+  border-radius: 3px;
+}
+
+
+.progress-bar.chanel{
+
+  background-color: #5E5D73;
+}
+
+.progress-bar.vedio{
+  background-color: #0099FF;
+}
+
+.progress-bar.playlist{
+  background-color: #3612BA;
+}
+
+.progress-bar.config{
+  background-color: #0099FF;
+}
+
+
+.progress-bar.datain{
+  background-color: #5E5D73;
+}
+
+.progress-bar.conada{
+  background-color:  #5E5D73;
+}
+
+.progress-bar.speed{
+  background-color: #0099FF;
+}
+
+.progress-bar.webstruc{
+  background-color: #3612BA;
+}
+
+.progress-bar.mobi{
+  background-color: #0099FF;
+}
+
+.progress-bar.desktop{
+  background-color: #5E5D73;
+}
+
+.progress-bar.code{
+  background-color: #3612BA;
+}
+
+.progress-bar.legal{
+  background-color: #A85400;
+}
+
+.progress-bar.nob{
+  border-radius:  0 !important;
+}
+.progress-bar.g{
+  background: #3DD674;
+  border-radius:  3px 0  0 3px;
+}
+.progress-bar.o{
+  background:#FFB652;
+  border-radius: 0 3px 3px 0;
+}
+

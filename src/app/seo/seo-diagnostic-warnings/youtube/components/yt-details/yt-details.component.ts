@@ -622,13 +622,13 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
         type: 'area',
         zoomType: 'x',
         height: 50,
-        width: 110,
+        width: 150,
         maxPadding: 0,
         panning: false,
         gridLineWidth: 0,
         panKey: false,
         scrollablePlotArea: {
-          maxWidth: 70
+          maxWidth: 100
         }
       },
       exporting: {enabled: false},

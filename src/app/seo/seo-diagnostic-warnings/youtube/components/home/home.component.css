@@ -1,13 +1,7 @@
-.period-menu .dropdown:last-child {
-  width: 200px;
-}
-
 .boxID {
   min-height: unset;
   width: 100%;
   margin-top: 0px;
-}
-.boxID {
   margin-bottom: 15px;
   height: 100%;
   background: #fff;
@@ -63,7 +57,7 @@ ul.psdo li a {
   padding: 3px 10px 3px 5px !important;
 }
 
-.dropdown-menu>li>a {
+.dropdown-menu > li > a {
   font-family: 'Proxima Nova Light';
 }
 
@@ -73,12 +67,312 @@ button.btn.btn-default.active {
   border: unset
 }
 
-.tooltip.right{
+.tooltip.right {
   margin-left: -10px !important;
 }
 
 .tooltip-arrow {
   display: none;
+}
+
+.tooltip-inner {
+  width: max-content;
+  max-width: 250px;
+  white-space: normal;
+  text-align: left;
+  background: #fff;
+  color: #6c6c6b;
+  opacity: 1;
+  padding: 10px;
+  font-family: 'Proxima Nova Light';
+  font-size: 14px;
+  opacity: 1 !important;
+  -webkit-box-shadow: 0px 0px 42px -16px rgb(0 0 0 / 75%);
+  -moz-box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -16px rgb(0 0 0 / 75%);
+  font-weight: 500;
+  position: absolute;
+  top: -20px;
+  margin: 0 15px;
+}
+
+/* #519ffc */
+.warning .menu-tabs li a {
+  padding: 10px 20px !important;
+}
+
+.warning .dropdown-menu > .active > a,
+.warning .dropdown-menu > li.active,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+  color: #fff !important;
+  background-color: #519ffc !important;
+
+}
+
+.boxID {
+  min-height: 300px;
+  width: 98.6%;
+  margin-top: 10px;
+  position: relative;
+}
+
+
+button.reset {
+  background: transparent;
+  border-color: transparent;
+}
+
+.zoom {
+  position: relative;
+  top: -2px;
+  /* bottom: 0; */
+  text-align: right;
+  width: 100%;
+  padding-right: 17px;
+}
+
+td .zoom {
+  padding-right: 7px;
+}
+
+.boxID {
+  margin-bottom: 15px;
+  height: 100%;
+  background: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.abso {
+  margin-left: -10px;
+}
+
+a.btn.btn-default.sm, button.btn.btn-default.sm {
+  min-width: 45px !important;
+  font-size: 11px !important;
+  max-width: 50px;
+  padding: 3px 5px;
+  /* margin-top: 13px; */
+}
+
+.greenC {
+  color: #3DD674;
+}
+
+.watermark.g-small {
+  background-position: 50% 30% !important;
+}
+
+
+.warning input[type=checkbox] {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+
+.warning input[type=checkbox] + label {
+  margin: 0;
+}
+
+.warning .boxInput {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-left: 5px;
+  top: 3px;
+  /* display: inline-flex; */
+  /* z-index: 2; */
+  position: relative;
+
+}
+
+.gray.nohover {
+  cursor: text;
+}
+
+.redDark {
+  color: #704100;
+}
+
+.red {
+  color: #ff0d12 !important;
+}
+
+.orange {
+  color: #FFB652;
+}
+
+.loadtime {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Proxima Nova Bold;
+  position: absolute;
+  top: 56px;
+  left: 49px;
+  right: auto;
+  color: #ffb652;
+}
+
+.gIocn .hoverM {
+  cursor: pointer;
+}
+
+.dropdown-menu span {
+  cursor: pointer;
+}
+
+.ac-text {
+  color: #4B8EAE;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.js-arrow {
+  transform: translate(-50%, -50%) rotate(180deg) !important;
+}
+
+body {
+  font-family: 'Proxima Nova Light';
+  color: #6b6b6b;
+  font-size: 14px
+}
+
+.h4,
+h4 {
+  font-size: 18px;
+}
+
+.highcharts-container svg g text {
+  font-family: 'Proxima Nova Light';
+}
+
+.btn {
+  color: #6b6b6b;
+}
+
+.table {
+  color: #6b6b6b;
+}
+
+.tooltip-question {
+  display: inline-block;
+}
+
+
+.but-drop {
+  background: #F8F9FA;
+  font-size: 12px;
+  font-weight: bold;
+  border: unset;
+  font-family: 'Proxima Nova Light' !important;
+  padding: 10px 5px;
+}
+
+.but-drop:hover {
+  background: #d4d4d4;
+}
+
+.dropdown-menu {
+  right: 0;
+  left: 0;
+}
+
+.box-bg-logo {
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /*	transition: 1s;*/
+}
+
+.ladb {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.btn-question {
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 1px 8px !important;
+  margin: 0 0 0 5px;
+  color: #519ffb !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Proxima Nova Light' !important;
+  text-decoration: none !important;
+  display: inline-block;
+  font-style: normal;
+  background: unset !important
+}
+
+.table > tbody > tr > td {
+  border-top: unset;
+}
+
+.bg-success {
+  background: #3DD674;
+}
+
+.bg-danger {
+  background: #FF0D12
+}
+
+a {
+  color: #6b6b6b
+}
+
+a:hover {
+  text-decoration: none;
+  color: #333333
+}
+
+.ter > .tooltip-inner {
+  width: 150px;
+  max-width: 150px;
+  white-space: normal;
+  text-align: left;
+  background: #fff;
+  color: #6c6c6b;
+  opacity: 1;
+  padding: 15px;
+  font-family: 'Proxima Nova Light';
+  font-size: 14px;
+  opacity: 1 !important;
+  -webkit-box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -16px rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  position: absolute;
+  top: -20px;
+}
+
+.tooltip.right {
+  margin-left: -10px !important;
 }
 
 .tooltip-inner {
@@ -100,4 +394,213 @@ button.btn.btn-default.active {
   position: absolute;
   top: -20px;
   margin: 0 15px;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.tooltip.bs-tooltip-right.arrow::before {
+  margin-top: -3px;
+  content: "";
+  border-width: 5px 5px 5px 0;
+  border-right-color: #fff;
+}
+
+.tooltip-arrow {
+  display: none;
+}
+
+.modal-header .close {
+  margin-top: -30px !important;
+}
+
+.label {
+  display: inline;
+  padding: 1px 5px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0;
+}
+
+.label-warning {
+  background-color: #E28300;
+}
+
+.label-danger {
+  background-color: #FF0D12;
+}
+
+.f10 {
+  font-size: 9px
+}
+
+a.click-detail:hover,
+a:hover,
+a:focus,
+a.active {
+  cursor: pointer;
+  color: #6B6B6B !important
+}
+
+.f-bold {
+  font-weight: bold;
+}
+
+.warning button.btn.btn-default:hover,
+.warning button.btn.btn-default.active {
+  background: #d4d4d4;
+  border: unset;
+  color: #6b6b6b;
+  box-shadow: none;
+}
+
+.c-red {
+  color: #FF0D12;
+}
+
+.c-green {
+  color: #3DD674;
+}
+
+.c-gray {
+  color: #6D6D6C;
+}
+
+.c-gray-g {
+  color: #6b6b6b;
+  font-weight: bold;
+  font-family: 'Proxima Nova Light';
+}
+
+.c-blue {
+  color: #4B8EAE;
+}
+
+button.btn.btn-default:hover,
+button.btn.btn-default.active {
+  background: #F8F9FA;
+  border: unset
+}
+
+.btn-circle {
+  width: 25px;
+  height: 25px;
+  padding: 2px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  background: #ECEEF2;
+  font-weight: bold
+}
+
+.bg-warning {
+  background-color: #FEB654 !important;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-item {
+  font-size: 13px
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn:focus {
+  box-shadow: unset
+}
+
+.dropdown-item:active {
+  background-color: #f8f9fa;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+  background: #D6D8DC;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202E43;
+  border: 0px none #D6D8DC;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #202E43;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #202E43;
+
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #D6D8DC;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.boxID {
+  min-height: unset;
+  width: 100%;
+  margin-top: 0px;
+}
+
+button.b-c-de {
+  background: unset;
+  border: unset;
+  padding: 0;
+}
+
+.dpmenu {
+  width: 115px;
+  right: 0px;
+  left: unset;
+}
+
+.dpmenu > li {
+  padding-left: 5px;
+}
+
+.dpmenu > li > a {
+  padding: 3px 0px;
+}
+
+ul.psdo {
+  width: auto !important;
+  min-width: auto !important;
+}
+
+ul.psdo li {
+  padding-left: 0;
+}
+
+ul.psdo li a {
+  padding: 3px 10px 3px 5px !important;
 }

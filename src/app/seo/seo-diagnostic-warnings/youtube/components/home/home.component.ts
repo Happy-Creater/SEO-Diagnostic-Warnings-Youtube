@@ -13,8 +13,6 @@ declare var $: any;
   templateUrl: './home.component.html',
   styleUrls: [
     './home.component.css',
-    '../../css-new-seo-diagnostic-warning/style.css',
-    '../../css-new-seo-diagnostic-warning/custom_warning.css',
   ],
   encapsulation: ViewEncapsulation.None,
   providers: [GetYoutubeService, YtUpdateNewService]
@@ -71,7 +69,6 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
       this.webId = websiteItem.webId;
       this.account = websiteItem.account;
       this.websiteUrl = websiteItem.url;
-      // init_tooltip();
       this.webId = 71;
       this.account = 'tollens';
       this.loadData();

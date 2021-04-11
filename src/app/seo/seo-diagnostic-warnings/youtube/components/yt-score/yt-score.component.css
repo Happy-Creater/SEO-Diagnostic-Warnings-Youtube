@@ -1,0 +1,36 @@
+/* todo delete this when theme is imported into the app */
+.c-red {
+  color: #FF0D12;
+}
+
+.c-green {
+  color: #3DD674;
+}
+
+.c-gray {
+  color: #8c8c8a;
+}
+
+.c-gray-g {
+  color: #6b6b6b;
+  font-weight: bold;
+  font-family: 'Proxima Nova Light';
+}
+
+.poin {
+  font-size: 8px;
+  vertical-align: middle;
+  margin-right: 2px;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+
+.box-li {
+  background: rgb(245, 245, 245);
+  background: linear-gradient(0deg, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 0.006039915966386533) 100%);
+  border-radius: 15px;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
