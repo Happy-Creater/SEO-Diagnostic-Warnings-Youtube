@@ -67,14 +67,19 @@ export class YtScoreComponent implements OnInit {
     evolution = Math.ceil(evolution);
     evolution = evolution / 100;
     let evl_color, back_color, score_color;
+    let evol_text;
     if (evolution > 0) {
       evl_color = '#FF0D12';
     } else if (evolution < 0) {
       evl_color = '#3dd674';
     } else if (evolution === 0) {
       evl_color = '#6D6D6C';
+      // evol_text = '-';
     }
-
+    evol_text = `<span style="color:${evl_color};font-size:18px;">&nbsp;&nbsp;{series.name}</span></div>`;
+    if (isNaN(evolution)) {
+      evol_text = `&nbsp;&nbsp;&nbsp;<span style="font-size: 18px; color: #6D6D6C;">-</span>`;
+    }
     if (score >= 0 && score < 4) {
       score_color = '#ff0d12';
       back_color = '#786c6c';
@@ -88,7 +93,6 @@ export class YtScoreComponent implements OnInit {
       back_color = '#dcefec';
       score_color = '#3dd674';
     }
-
     return {
       chart: {
         type: 'solidgauge',
@@ -98,7 +102,6 @@ export class YtScoreComponent implements OnInit {
           }
         }
       },
-
       title: {
         text: '',
         //                text: 'Overall score',
@@ -135,7 +138,7 @@ export class YtScoreComponent implements OnInit {
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:30px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<div style="margin-top: -2px;"><span style="color:${evl_color};font-size:18px;">&nbsp;&nbsp;{series.name}</span></div>`,
+              `<div style="margin-top: -2px;">${evol_text}`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,
@@ -210,6 +213,10 @@ export class YtScoreComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
+  }
+
+  isNan(number) {
+    return isNaN(number);
   }
 
 }

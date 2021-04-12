@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ytScore, ytWarningProblem} from '../../models/youtube_model';
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -8,7 +8,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
   templateUrl: './yt-score-detail.component.html',
   styleUrls: ['./yt-score-detail.component.css']
 })
-export class YtScoreDetailComponent implements OnInit {
+export class YtScoreDetailComponent implements OnInit, OnChanges {
 
   @Input() periodWarningProblem: ytWarningProblem[];
   @Input() periodScore: ytScore[];
@@ -130,7 +130,7 @@ export class YtScoreDetailComponent implements OnInit {
     this.testOption = this.buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData);
   }
 
-  // tslint:disable-next-line:use-life-cycle-interface
+
   ngOnChanges (changes: SimpleChanges) {
     if (changes['chartType']) {
       this.chartType.map(item => {
@@ -154,195 +154,6 @@ export class YtScoreDetailComponent implements OnInit {
     }
   }
 
-  buildBigGraph(fill, categories, data) {
-    return {
-      chart: {
-        type: 'areaspline',
-        height: '265px',
-        marginLeft: 20
-      },
-      credits: {
-        enabled: false
-      },
-      title: {
-        text: ''
-      },
-      subtitle: {
-        enabled: false
-      },
-      xAxis: {
-        categories: categories,
-        tickmarkPlacement: 'on',
-        title: {
-          enabled: false
-        },
-        tickPositions: [0, Math.ceil(categories.length / 5),
-          Math.ceil(categories.length / 5) * 2, Math.ceil(categories.length / 5) * 3,
-          Math.ceil(categories.length / 5) * 4, categories.length - 1],
-        gridLineWidth: 0.8,
-        plotBands: [
-
-          {
-            from: Math.ceil(categories.length / 5),
-            to: Math.ceil(categories.length / 5) * 2,
-            color: 'rgba(247, 247, 249, 0.8)'
-          },
-          {
-            from: Math.ceil(categories.length / 5) * 3,
-            to: Math.ceil(categories.length / 5) * 4,
-            color: 'rgba(247, 247, 249, 0.8)'
-          }
-        ],
-
-      },
-      yAxis: {
-        title: {
-          enabled: false
-        },
-        visible: true,
-        min: 0,
-        gridLineDashStyle: 'longdash',
-        gridLineWidth: 0,
-        labels: {
-          align: 'left',
-          x: -20,
-          y: 0
-        }
-
-      },
-      tooltip: {
-        crosshairs: [false, false],
-        shared: true,
-        animation: true,
-
-      },
-      plotOptions: {
-        title: false,
-        series: {
-
-          lineWidth: 2,
-          fillOpacity: fill,
-
-          marker: {
-            symbol: 'circle',
-            radius: 4,
-            states: {
-              hover: {
-                enabled: true,
-                radius: 3
-              }
-            }
-          },
-
-        }
-      },
-      legend: {
-        enabled: false,
-      },
-      series: [{
-        name: this.chartSource.value.replace(/\b./g, function (a) {
-          return a.toUpperCase();
-        }),
-        color: '#519ffb',
-        data: data
-      }],
-      lang: {noData: 'No data to display.'},
-      noData: {
-        position: {align: 'center', verticalAlign: 'middle', y: -27},
-        style: {
-          fontWeight: 'bold',
-          fontSize: '20px'
-        }
-      },
-      exporting: {enabled: false},
-    };
-  }
-
-  buildDistributionOption(categories, data) {
-    return {
-      chart: {
-        type: 'column',
-        height: '265px',
-        zoomType: 'x'
-      },
-      title: {text: null},
-      credits: {enabled: false},
-      exporting: {enabled: false},
-      xAxis: {categories: categories},
-      yAxis: {
-        min: 0,
-        title: {
-          text: null
-        },
-        gridLineWidth: 0.8,
-        opposite: true
-      },
-      tooltip: {
-        zIndex: 99,
-        backgroundColor: '#fff',
-        fillOpacity: 1,
-        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-        shared: true,
-        useHTML: true,
-        dataLabels: {
-          enabled: true,
-          useHTML: true,
-          backgroundColor: '#fff',
-          fillOpacity: 1,
-        },
-
-      },
-      legend: {
-        enabled: true,
-        align: 'center',
-        shadow: false,
-        useHTML: true,
-        y: 0,
-        itemMarginBottom: 0,
-        verticalAlign: 'bottom',
-      },
-      plotOptions: {
-        column: {
-          stacking: 'percent',
-        },
-
-      },
-      series: [{
-        name: '<span class="wh " style=""><span class="bb-span-b"></span>CHANNEL</span>',
-        data: data.CHANNEL,
-        color: '#ED723D',
-        dataLabels: {
-          width: 50,
-        }
-
-      }, {
-        name: '<span class="mh " style=""><span class="bb-span-b"></span>VIDEOS</span>',
-        data: data.VIDEOS,
-        color: '#5DBEFF',
-        dataLabels: {
-          width: 50,
-        }
-      }, {
-        name: '<span class="lh " style=""><span class="bb-span"></span>PLAYLISTS</span>',
-        data: data.PLAYLISTS,
-        color: '#E88ED7',
-        dataLabels: {
-          width: 50,
-        }
-      }
-
-      ],
-      lang: {noData: 'No data to display.'},
-      noData: {
-        position: {align: 'center', verticalAlign: 'middle', y: -27},
-        style: {
-          fontWeight: 'bold',
-          fontSize: '20px'
-        }
-      },
-    };
-  }
-
   buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData) {
     return {
       chart: {
@@ -354,7 +165,8 @@ export class YtScoreDetailComponent implements OnInit {
       credits: {enabled: false},
       exporting: {enabled: false},
       legend: {
-        enabled: false,
+        enabled: (distributionData.CHANNEL.length > 0 || distributionData.VIDEOS.length > 0 || distributionData.PLAYLISTS.length > 0),
+        symbolRadius: 0,
       },
       tooltip: {
         zIndex: 99,
@@ -475,6 +287,7 @@ export class YtScoreDetailComponent implements OnInit {
         color: '#519ffb',
         name: 'evolution',
         data: evolutionData,
+        showInLegend: false,
         marker: {
           enabled: true
         },
@@ -488,6 +301,7 @@ export class YtScoreDetailComponent implements OnInit {
         name: 'cumulative',
         color: '#519ffb',
         data: cumulativeData,
+        showInLegend: false,
         marker: {
           enabled: true,
           symbol: 'circle'
@@ -530,6 +344,4 @@ export class YtScoreDetailComponent implements OnInit {
       },
     };
   }
-
-
 }

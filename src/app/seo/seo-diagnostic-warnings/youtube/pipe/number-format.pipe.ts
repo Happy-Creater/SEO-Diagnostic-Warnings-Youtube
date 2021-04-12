@@ -17,14 +17,14 @@ export class NumberFormatPipe implements PipeTransform {
       }
       return dived + 'M' + rest;
     }
-    if (value > 9999) {
-      const rest = value % 1000;
-      const dived = Math.floor(value / 1000);
-      if (rest === 0) {
-        return dived + 'k';
-      }
-      return dived + 'k' + rest;
-    }
+    // if (value > 9999) {
+    //   const rest = value % 1000;
+    //   const dived = Math.floor(value / 1000);
+    //   if (rest === 0) {
+    //     return dived + 'k';
+    //   }
+    //   return dived + 'k' + rest;
+    // }
     return value;
   }
 

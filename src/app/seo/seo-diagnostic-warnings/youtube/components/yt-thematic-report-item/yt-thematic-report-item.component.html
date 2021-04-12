@@ -31,8 +31,11 @@
                   <span style="cursor: pointer" (click)="scroll()">
                   WARNINGS <br>
                   {{warning | numberFormat}} </span><span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
-                  <span class="{{warningClass}}" style="cursor: pointer" (click)="scrollNew(warningEvolution)">
+                  <span *ngIf="!isNan(warningEvolution)" class="{{warningClass}}" style="cursor: pointer" (click)="scrollNew(warningEvolution)">
                     {{warningEvolution | numberFormat}} <i class="fa {{warningCaret}}" aria-hidden="true"></i></span>
+                  <span *ngIf="isNan(warningEvolution)"  style="color: #6D6D6C">
+                    &nbsp;-
+                  </span>
                 </button>
               </td>
               <td style="padding: 0 5px !important;line-height: 15px;font-size: 11px;">
@@ -41,8 +44,11 @@
                   <span style="cursor: pointer" (click)="scroll()">
                   PROBLEMS <br>
                     {{problem | numberFormat}} </span><span style="color: #E2E9EF">&nbsp;|&nbsp;</span>
-                  <span class="{{problemClass}}" style="cursor: pointer;" (click)="scrollIncreasing(problemEvolution)">
+                  <span *ngIf="!isNan(problemEvolution)" class="{{problemClass}}" style="cursor: pointer;" (click)="scrollIncreasing(problemEvolution)">
                     {{problemEvolution | numberFormat}} <i class="fa {{problemCaret}}" aria-hidden="true"></i></span>
+                  <span *ngIf="isNan(problemEvolution)"  style="color: #6D6D6C">
+                    &nbsp;-
+                  </span>
                 </button>
               </td>
             </tr>

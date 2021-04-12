@@ -146,12 +146,18 @@ export class YtThematicReportItemComponent implements OnInit {
     evolution = Math.ceil(evolution);
     evolution = evolution / 100;
     let evl_color, back_color, score_color;
+    let evl_text;
     if (evolution > 0) {
       evl_color = '#FF0D12';
     } else if (evolution < 0) {
       evl_color = '#3dd674';
     } else if (evolution === 0) {
       evl_color = '#6D6D6C';
+    }
+    evl_text = `<span style="color:${evl_color};font-size:15px;">&nbsp;{series.name}</span></div>`;
+
+    if (isNaN(evolution)) {
+      evl_text = `<span style="color: #6D6D6C;font-size: 15px;">&nbsp;&nbsp;-</span>`;
     }
 
     if (score >= 0 && score < 4) {
@@ -214,7 +220,7 @@ export class YtThematicReportItemComponent implements OnInit {
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:20px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<div style="margin-top: -4px;"><span style="color:${evl_color};font-size:15px;">&nbsp;{series.name}</span></div>`,
+              `<div style="margin-top: -4px;">${evl_text}`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,
@@ -504,5 +510,9 @@ export class YtThematicReportItemComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo({top: document.getElementById('Detail-yt').offsetTop - 100, behavior: 'smooth'});
     }, 500);
+  }
+
+  isNan(number) {
+    return isNaN(number);
   }
 }
