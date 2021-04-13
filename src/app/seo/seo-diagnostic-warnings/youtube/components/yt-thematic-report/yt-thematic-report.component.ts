@@ -82,12 +82,15 @@ export class YtThematicReportComponent implements OnInit, AfterViewInit {
       }
       sum += value.nbrWarning;
     });
-    this.channelPercent = this.round((channelWarning * 100) / sum, 2) + '%';
-    this.videoPercent = this.round((videoWarning * 100) / sum, 2) + '%';
-    this.playlistPercent = this.round((playlistWarning * 100) / sum, 2) + '%';
-    this.channelProgress = {width: this.channelPercent, background: this.getColor('channelTechnicalYoutubeScore')};
-    this.videoProgress = {width: this.videoPercent, background: this.getColor('videosTechnicalYoutubeScore')};
-    this.playlistProgress = {width: this.playlistPercent, background: this.getColor('playlistTechnicalYoutubeScore')};
+    const channelWidth = (channelWarning * 100) / sum;
+    const videoWidth = (videoWarning * 100) / sum;
+    const playlistWidth = (playlistWarning * 100) / sum;
+    this.channelPercent = this.round(channelWidth, 2) + '%';
+    this.videoPercent = this.round(videoWidth, 2) + '%';
+    this.playlistPercent = this.round(playlistWidth, 2) + '%';
+    this.channelProgress = {width: channelWidth + '%', background: this.getColor('channelTechnicalYoutubeScore')};
+    this.videoProgress = {width: videoWidth + '%', background: this.getColor('videosTechnicalYoutubeScore')};
+    this.playlistProgress = {width: playlistWidth + '%', background: this.getColor('playlistTechnicalYoutubeScore')};
   }
 
   getColor(category) {

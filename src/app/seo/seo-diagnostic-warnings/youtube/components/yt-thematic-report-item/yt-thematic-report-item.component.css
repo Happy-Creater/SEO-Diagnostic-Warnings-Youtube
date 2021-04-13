@@ -36,15 +36,6 @@
   top: 50%;
 }
 
-.abso-table {
-  margin: -8px auto 0;
-}
-
-.abso {
-  margin-top: -8px;
-  margin-left: -5px;
-}
-
 .poin-small {
   font-size: 5px;
   vertical-align: middle;
@@ -53,19 +44,12 @@
   display: inline-block;
 }
 
-.dhover {
-  /*cursor: pointer;*/
-}
-
-.dhover:hover .bhover {
-  display: block;
-}
-
 .ter {
   background: #fff;
   padding: 5px 25px;
   border-radius: 5px;
   position: relative;
+  cursor: pointer;
 }
 
 .fa-search-plus {

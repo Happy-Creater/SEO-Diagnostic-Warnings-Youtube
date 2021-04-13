@@ -267,8 +267,9 @@ export class YtThematicReportItemComponent implements OnInit {
       chart: {
         type: 'area',
         zoomType: 'x',
-        height: 70,
-        width: 110,
+        height: 65,
+        width: 158,
+        verticalAlign: 'middle',
         maxPadding: 0,
         panning: false,
         gridLineWidth: 0,
@@ -282,12 +283,9 @@ export class YtThematicReportItemComponent implements OnInit {
       title: {
         text: null
       },
-
       credits: {
         enabled: false
       },
-
-
       xAxis: {
         gridLineWidth: 0,
         labels: {
@@ -296,9 +294,7 @@ export class YtThematicReportItemComponent implements OnInit {
         title: {
           text: null
         },
-
       },
-
       yAxis: {
         gridLineWidth: 0,
         endOnTick: false,
@@ -310,7 +306,6 @@ export class YtThematicReportItemComponent implements OnInit {
           enabled: false
         },
       },
-
       plotOptions: {
         series: {
           states: {
@@ -321,20 +316,15 @@ export class YtThematicReportItemComponent implements OnInit {
           }
         }
       },
-
-
       tooltip: false,
-
       legend: {
         enabled: false
       },
-
       series: [{
         accessibility: {
           keyboardNavigation: {
             enabled: false
           },
-
         },
         lineWidth: 1,
         title: null,
