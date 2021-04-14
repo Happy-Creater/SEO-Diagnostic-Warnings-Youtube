@@ -226,7 +226,8 @@
                   <i class="fa"
                      [ngClass]="{'fa-caret-up c-red': item.evolution > 0, 'fa-caret-down c-green':item.evolution < 0,'fa-caret-right c-gray':item.evolution == 0}"
                      aria-hidden="true"></i> &nbsp;&nbsp;
-                  <span class="click-eye" (click)="showItemDetails(item)" [ngClass]="{'ac-text': item.showDetails && !item.hideDetails, 'gray-eye': item.hideDetails}"  id="click-eye-51" data-id="51" style="vertical-align: bottom;font-size: 18px"
+                  <span class="click-eye" (click)="showItemDetails(item)" [ngClass]="{'ac-text': item.showDetails && !item.hideDetails, 'gray-eye': item.hideDetails}"  id="click-eye-51" data-id="51"
+                        style="vertical-align: bottom;font-size: 18px;cursor: pointer;"
                         data-toggle="tooltip" data-placement="right" title="{{item.problemTooltip}}">
                             <i class="fa fa-eye" aria-hidden="true"></i></span>&nbsp;&nbsp;
                   <a href="{{item.filename}}" class="c-gray">

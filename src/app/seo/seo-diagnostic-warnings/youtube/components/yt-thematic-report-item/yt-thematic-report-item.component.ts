@@ -156,10 +156,10 @@ export class YtThematicReportItemComponent implements OnInit {
     } else if (evolution === 0) {
       evl_color = '#6D6D6C';
     }
-    evl_text = `<span style="color:${evl_color};font-size:15px;">{series.name}</span></div>`;
+    evl_text = `<span style="color:${evl_color};font-size:10px;">{series.name}</span>`;
 
     if (isNaN(evolution)) {
-      evl_text = `<span style="color: #6D6D6C;font-size: 15px;">-</span>`;
+      evl_text = `<span style="color: #6D6D6C;font-size: 10px;">-</span>`;
     }
 
     if (score >= 0 && score < 4) {
@@ -211,19 +211,19 @@ export class YtThematicReportItemComponent implements OnInit {
           borderWidth: '12px',
           dataLabels: {
             enabled: true,
-            y: -30,
+            y: -20,
             borderWidth: 0,
             backgroundColor: 'none',
             useHTML: true,
             shadow: false,
             style: {
               fontSize: '20px',
-              lineHeight: '30px',
+              lineHeight: '15px',
               textAlign: 'center'
             },
             // tslint:disable-next-line:max-line-length
-            pointFormat: `<span style="font-size:20px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<div style="margin-top: -4px;">${evl_text}`,
+            pointFormat: `<span style="font-size:16px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
+              `<br>${evl_text}`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,
