@@ -592,3 +592,7 @@ ul.psdo li {
 ul.psdo li a {
   padding: 3px 10px 3px 5px !important;
 }
+
+.tooltip.in{
+  opacity: 1!important;
+}

@@ -149,7 +149,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
       this.totalItems[index].tableName = value.tableName;
       this.totalItems[index].hideRecommendation = (value.recommendation.length < 150);
       this.totalItems[index].hideDetails = (value.details === null) || !(value.details.length > 0);
-      this.totalItems[index].problemTooltip = (this.totalItems[index].hideDetails) ? "Not available" : "Sample of problems";
+      this.totalItems[index].problemTooltip = (this.totalItems[index].hideDetails) ? "Not available" : "";
       let bg = '';
       if (value.status >= 0 && value.status < 25) {
         bg = '#FF0D12'; // red
