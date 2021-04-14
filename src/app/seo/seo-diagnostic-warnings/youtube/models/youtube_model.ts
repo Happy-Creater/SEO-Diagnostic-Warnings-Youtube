@@ -84,6 +84,9 @@ export interface pagedItem {
   percentage: any;
   filename: string;
   showDetails: boolean;
+  hideRecommendation: boolean;
+  hideDetails: boolean;
+  problemTooltip: string;
 }
 
 // tslint:disable-next-line:class-name

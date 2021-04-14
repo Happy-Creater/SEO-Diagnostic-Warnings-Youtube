@@ -30,18 +30,6 @@
   top: 10px;
 }
 
-.btn-circle {
-  width: 25px;
-  height: 25px;
-  padding: 2px 0px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 22px;
-  background: #ECEEF2;
-  font-weight: bold
-}
-
 .dpmenu {
   width: 115px;
   right: 0px;
@@ -492,7 +480,7 @@ button.btn.btn-default.active {
   border-radius: 15px;
   text-align: center;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 18px;
   background: #ECEEF2;
   font-weight: bold
 }

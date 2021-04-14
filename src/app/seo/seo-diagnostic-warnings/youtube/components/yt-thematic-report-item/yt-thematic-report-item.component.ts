@@ -112,8 +112,10 @@ export class YtThematicReportItemComponent implements OnInit {
   }
 
   processGraph() {
-    let smallGraphData = [];
-    let categories = [];
+    let smallGraphData;
+    let categories;
+    smallGraphData = [];
+    categories = [];
     let index = 0;
     this.warningProblem.map((value) => {
       const date = new Date(value.date);
@@ -154,15 +156,15 @@ export class YtThematicReportItemComponent implements OnInit {
     } else if (evolution === 0) {
       evl_color = '#6D6D6C';
     }
-    evl_text = `<span style="color:${evl_color};font-size:15px;">&nbsp;{series.name}</span></div>`;
+    evl_text = `<span style="color:${evl_color};font-size:15px;">{series.name}</span></div>`;
 
     if (isNaN(evolution)) {
-      evl_text = `<span style="color: #6D6D6C;font-size: 15px;">&nbsp;&nbsp;-</span>`;
+      evl_text = `<span style="color: #6D6D6C;font-size: 15px;">-</span>`;
     }
 
     if (score >= 0 && score < 4) {
       score_color = '#ff0d12';
-      back_color = '#786c6c';
+      back_color = '#ff0d121f';
     } else if (score >= 4 && score < 6) {
       score_color = 'orange';
       back_color = 'rgb(255,72,0,0.1)';
@@ -216,7 +218,8 @@ export class YtThematicReportItemComponent implements OnInit {
             shadow: false,
             style: {
               fontSize: '20px',
-              lineHeight: '30px'
+              lineHeight: '30px',
+              textAlign: 'center'
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:20px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
@@ -245,8 +248,7 @@ export class YtThematicReportItemComponent implements OnInit {
 
       series: [{
         // tslint:disable-next-line:max-line-length
-        name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i>
-                <span style="font-size:14px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
+        name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i><span style="font-size:14px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
                 </span>`,
         data: [{
           color: score_color,
@@ -349,6 +351,18 @@ export class YtThematicReportItemComponent implements OnInit {
   }
 
   buildBigGraph(fill, categories, data) {
+    let plotColor;
+    plotColor = [];
+    let index = 0;
+    for (let i = 0; i < categories.length; i++) {
+      if (i % 2 === 0 && i < categories.length - 1) {
+        plotColor[index++] = {
+          from: i,
+          to: i + 1,
+          color: 'rgba(247, 247, 249, 0.5)'
+        };
+      }
+    }
     return {
       chart: {
         type: 'areaspline',
@@ -370,22 +384,8 @@ export class YtThematicReportItemComponent implements OnInit {
         title: {
           enabled: false
         },
-        tickPositions: [0, Math.ceil(categories.length / 5), Math.ceil(categories.length / 5) * 2,
-          Math.ceil(categories.length / 5) * 3, Math.ceil(categories.length / 5) * 4, categories.length - 1],
         gridLineWidth: 0.8,
-        plotBands: [
-
-          {
-            from: Math.ceil(categories.length / 5),
-            to: Math.ceil(categories.length / 5) * 2,
-            color: 'rgba(247, 247, 249, 0.8)'
-          },
-          {
-            from: Math.ceil(categories.length / 5) * 3,
-            to: Math.ceil(categories.length / 5) * 4,
-            color: 'rgba(247, 247, 249, 0.8)'
-          }
-        ],
+        plotBands: plotColor,
 
       },
       yAxis: {
@@ -401,21 +401,17 @@ export class YtThematicReportItemComponent implements OnInit {
           x: -20,
           y: 0
         }
-
       },
       tooltip: {
         crosshairs: [false, false],
         shared: true,
         animation: true,
-
       },
       plotOptions: {
         title: false,
         series: {
-
           lineWidth: 2,
           fillOpacity: fill,
-
           marker: {
             symbol: 'circle',
             radius: 4,
@@ -426,7 +422,6 @@ export class YtThematicReportItemComponent implements OnInit {
               }
             }
           },
-
         }
       },
       legend: {

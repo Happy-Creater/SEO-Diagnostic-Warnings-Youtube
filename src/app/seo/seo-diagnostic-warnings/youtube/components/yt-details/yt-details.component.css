@@ -1,20 +1,24 @@
-.arrow-down{
+.arrow-down {
   height: 30px !important;
   transition: all .5s ease-in-out;
 }
-.arrow-down > span >i {
+
+.arrow-down > span > i {
   transform: translate(-50%, -50%) rotate(0) !important;
   transition: all .5s ease-in-out;
 }
-.arrow-up{
-  height: 85px !important;
+
+.arrow-up {
+  height: 85px;
   transition: all .5s ease-in-out;
 }
-.arrow-up > span >i {
+
+.arrow-up > span > i {
   transform: translate(-50%, -50%) rotate(180deg) !important;
   transition: all .5s ease-in-out;
 }
-.item-selected{
+
+.item-selected {
   /*color: red;*/
   font-weight: bold;
   /*font-size: 18px;*/
@@ -95,9 +99,11 @@
   position: absolute;
   top: -20px;
 }
-.tooltip.right{
+
+.tooltip.right {
   margin-left: -10px !important;
 }
+
 .tooltip-inner {
   width: max-content;
   max-width: 250px;
@@ -153,6 +159,7 @@
   width: 100%;
   margin-top: 0px;
 }
+
 .page-link {
   border-radius: 50%;
   width: 35px;
@@ -225,7 +232,7 @@ table#example tr td:first-child {
   border-left-style: solid;
 }
 
-.box-bg-logo-b,.box-bg-logo-c,.box-bg-logo-d,.box-bg-logo-e,.box-bg-logo-f,.box-bg-logo-g,.box-bg-logo-h,.box-bg-logo-i {
+.box-bg-logo-b, .box-bg-logo-c, .box-bg-logo-d, .box-bg-logo-e, .box-bg-logo-f, .box-bg-logo-g, .box-bg-logo-h, .box-bg-logo-i {
   position: absolute;
   width: 150px;
   z-index: 1;
@@ -298,8 +305,7 @@ table#example tbody tr {
 
 .progress-bar.bar11 {
   background: #3DD674;
-  border-radius: 3px;
-;
+  border-radius: 3px;;
   height: 12px;
 }
 
@@ -340,19 +346,19 @@ table#example tbody tr {
   border-radius: 3px;
 }
 
-.progress-bar.bar18,.progress-bar.bar23 {
+.progress-bar.bar18, .progress-bar.bar23 {
   background: #FEB654;
   height: 12px;
   border-radius: 3px;
 }
 
-.progress-bar.bar19,.progress-bar.bar21 {
+.progress-bar.bar19, .progress-bar.bar21 {
   background: #3DD674;
   height: 12px;
   border-radius: 3px;
 }
 
-.progress-bar.bar20,.progress-bar.bar22 {
+.progress-bar.bar20, .progress-bar.bar22 {
   background: #FF0D12;
   height: 12px;
   border-radius: 3px;
@@ -394,7 +400,8 @@ table#example tbody tr {
   /*		padding-right: 15px !important;*/
 }
 
-.bb-bx .header {}
+.bb-bx .header {
+}
 
 .bb-bx .content {
   display: block !important;
@@ -409,7 +416,7 @@ span.name-tooltip {
   cursor: pointer;
 }
 
-.warning .boxInput{
+.warning .boxInput {
   width: 20px;
   height: 20px;
   margin-right: 4px;
@@ -423,8 +430,8 @@ span.name-tooltip {
 
 .smallTrendGraph {
   display: block;
-  width:150px;
-  margin-left:-25px;
+  width: 150px;
+  margin-left: -25px;
 }
 
 .btn-circle {
@@ -437,4 +444,82 @@ span.name-tooltip {
   line-height: 18px;
   background: #ECEEF2;
   font-weight: bold
+}
+
+.warning-item-name {
+  width: 75%;
+  float: left;
+  position: relative;
+  padding-left: 10px;
+}
+
+.warning-item-msg {
+  cursor: pointer;
+}
+
+.warning-title {
+  width: 25%;
+  background-color: #d4d4d4;
+  border-color: #d4d4d4;
+  cursor: pointer;
+}
+
+.tooltip-star:hover .tooltiptexts {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s 0.5s ease;
+}
+
+.tooltip-star .tooltiptexts::after {
+  display: none;
+  content: "";
+  position: absolute;
+  /* top: 44%; */
+  /* top: 0px; */
+  left: 50%;
+  margin-left: -13px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  bottom: -14px;
+}
+
+.tooltip-star .tooltiptexts {
+  visibility: hidden;
+  width: 290px;
+  background-color: #fff;
+  color: #6b6b6b;
+  padding: 7px;
+  text-align: left;
+  -webkit-box-shadow: 0px 0px 30px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 30px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 30px -11px rgba(0, 0, 0, 0.75);
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 35px;
+  left: 11px;
+  /* margin-top: -74px; */
+  margin-top: -10px;
+  opacity: 1;
+  /*transition: visibility 10s, opacity 0.5s linear; */
+  transition: opacity 0.2s 0 ease;
+  border-radius: 4px;
+}
+
+.table-detail {
+  background-color: #E6E6E6;
+  border-color: #E6E6E6;
+  text-align: center;
+  z-index: 0;
+}
+
+.table-detail:hover {
+  background-color: #d4d4d4;
+  border-color: #E6E6E6;
+  text-align: center;
+}
+
+.gray-eye {
+  color: #80808052;
 }

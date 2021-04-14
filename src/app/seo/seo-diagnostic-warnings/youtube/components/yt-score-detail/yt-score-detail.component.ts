@@ -65,13 +65,6 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
     }
     this.testOption = this.buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData);
-    // if (this.selectedChart === 'Evolution') {
-    //   this.evolution.option = this.buildBigGraph(0, categories, evolutionData);
-    // } else if (this.selectedChart === 'Cumulative') {
-    //   this.cumulative.option = this.buildBigGraph(0, categories, cumulativeData);
-    // } else if (this.selectedChart === 'Distribution') {
-    //   this.distribution.option = this.buildDistributionOption(categories, distributionData);
-    // }
   }
 
   warningProblemData(chartSource) {
@@ -155,6 +148,18 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
   }
 
   buildMultiGraphOption(categories, evolutionData, cumulativeData, distributionData) {
+    let plotColor;
+    plotColor = [];
+    let index = 0;
+    for (let i = 0; i < categories.length; i++) {
+      if (i % 2 === 0 && i < categories.length - 1) {
+        plotColor[index++] = {
+          from: i,
+          to: i + 1,
+          color: 'rgba(247, 247, 249, 0.5)'
+        };
+      }
+    }
     return {
       chart: {
         zoomType: 'xy',
@@ -188,24 +193,8 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         title: {
           enabled: false
         },
-        // tslint:disable-next-line:max-line-length
-        tickPositions: [0, Math.ceil(categories.length / 5),
-          Math.ceil(categories.length / 5) * 2, Math.ceil(categories.length / 5) * 3,
-          Math.ceil(categories.length / 5) * 4, categories.length - 1],
         gridLineWidth: 0.8,
-        plotBands: [
-
-          {
-            from: Math.ceil(categories.length / 5),
-            to: Math.ceil(categories.length / 5) * 2,
-            color: 'rgba(247, 247, 249, 0.8)'
-          },
-          {
-            from: Math.ceil(categories.length / 5) * 3,
-            to: Math.ceil(categories.length / 5) * 4,
-            color: 'rgba(247, 247, 249, 0.8)'
-          }
-        ],
+        plotBands: plotColor,
       }],
       yAxis: [
         { // Evolution / Cumulative Y axis

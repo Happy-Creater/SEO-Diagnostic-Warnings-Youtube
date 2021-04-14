@@ -1,10 +1,12 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {labelItem, pagedItem, warningTable, warningTableItem, warningTrendItem} from '../../models/youtube_model';
 import {TranslateService} from '@ngx-translate/core';
 import {YtUpdateNewService} from '../../services/yt-update-new.service';
 import {DetailsFilterService} from '../../services/details-filter-service.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
+import {OnDestroy} from "@angular/core/src/metadata/lifecycle_hooks";
+import {document} from "ngx-bootstrap/utils/facade/browser";
 
 declare var $: any;
 
@@ -16,7 +18,7 @@ let timeout;
   templateUrl: './yt-details.component.html',
   styleUrls: ['./yt-details.component.css'],
 })
-export class YtDetailsComponent implements OnInit, AfterViewInit {
+export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, AfterViewChecked {
 
   @Input() warningData: warningTableItem[];
   @Output() updateMetric = new EventEmitter();
@@ -66,7 +68,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    // init_tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
     this.processData();
     this.detailsFilterService.getFilter()
       .pipe(takeUntil(this.unsubscribeAll$))
@@ -93,6 +95,38 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
       });
   }
 
+  ngOnDestroy() {
+    this.unsubscribeAll$.next(null);
+    this.unsubscribeAll$.complete();
+  }
+
+  ngAfterViewInit(): void {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.table-title-tooltip').mouseenter(function () {
+      $('.table-title-tooltip').tooltip('hide');
+
+      const that = $(this);
+      if (timeout != null) {
+        clearTimeout(timeout);
+      }
+      that.tooltip('hide');
+      timeout = setTimeout(function () {
+        that.tooltip('show');
+      }, 1000);
+    });
+
+    $('.table-title-tooltip').mouseleave(function () {
+      if (timeout != null) {
+        clearTimeout(timeout);
+      }
+      timeout = null;
+    });
+  }
+
+  ngAfterViewChecked(): void {
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+
   processData() {
     this.warningData.map((value, index) => {
       this.totalItems[index] = this.init_Item();
@@ -113,6 +147,9 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
       this.totalItems[index].showRecomendation = false;
       this.totalItems[index].setBold = false;
       this.totalItems[index].tableName = value.tableName;
+      this.totalItems[index].hideRecommendation = (value.recommendation.length < 150);
+      this.totalItems[index].hideDetails = (value.details === null) || !(value.details.length > 0);
+      this.totalItems[index].problemTooltip = (this.totalItems[index].hideDetails) ? "Not available" : "Sample of problems";
       let bg = '';
       if (value.status >= 0 && value.status < 25) {
         bg = '#FF0D12'; // red
@@ -316,7 +353,10 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
       percentage: '',
       filename: '',
       showDetails: false,
-      tableName: ''
+      hideDetails: false,
+      tableName: '',
+      hideRecommendation: false,
+      problemTooltip: ''
     };
   }
 
@@ -496,8 +536,13 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
     this.updateMetric.emit(item);
   }
 
-  toggleRecomendation(item: pagedItem) {
+  toggleRecomendation(item: pagedItem, index: number) {
     item.showRecomendation = !item.showRecomendation;
+    if (item.showRecomendation) {
+      const height = document.getElementById("content" + index).offsetHeight;
+      document.getElementById("topbar" + index).style.height = height + "px";
+    }
+
   }
 
   selectModelData(item: pagedItem) {
@@ -515,12 +560,26 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
   }
 
   showItemDetails(item: pagedItem) {
+    if (item.hideDetails) {
+      return;
+    }
     item.showDetails = !item.showDetails;
-    // const index = this.totalItems.indexOf(item);
-    // this.totalItems[index].showDetails = item.showDetails;
   }
 
   buildBigGraph(fill, categories, data) {
+    categories = categories.reverse();
+    let plotColor;
+    plotColor = [];
+    let index = 0;
+    for (let i = 0; i < categories.length; i++) {
+      if (i % 2 === 0 && i < categories.length - 1) {
+        plotColor[index++] = {
+          from: i,
+          to: i + 1,
+          color: 'rgba(247, 247, 249, 0.5)'
+        };
+      }
+    }
     return {
       chart: {
         type: 'areaspline',
@@ -542,22 +601,8 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
         title: {
           enabled: false
         },
-        tickPositions: [Math.ceil(categories.length / 5), Math.ceil(categories.length / 5) * 2,
-          Math.ceil(categories.length / 5) * 3, Math.ceil(categories.length / 5) * 4, categories.length - 1],
         gridLineWidth: 0.8,
-        plotBands: [
-
-          {
-            from: Math.ceil(categories.length / 5),
-            to: Math.ceil(categories.length / 5) * 2,
-            color: 'rgba(247, 247, 249, 0.8)'
-          },
-          {
-            from: Math.ceil(categories.length / 5) * 3,
-            to: Math.ceil(categories.length / 5) * 4,
-            color: 'rgba(247, 247, 249, 0.8)'
-          }
-        ],
+        plotBands: plotColor,
 
       },
       yAxis: {
@@ -712,33 +757,5 @@ export class YtDetailsComponent implements OnInit, AfterViewInit {
     };
   }
 
-  // tslint:disable-next-line:use-life-cycle-interface
-  ngOnDestroy() {
-    this.unsubscribeAll$.next(null);
-    this.unsubscribeAll$.complete();
-  }
 
-  ngAfterViewInit(): void {
-    $('[data-toggle="tooltip"]').tooltip();
-    $('.table-title-tooltip').mouseenter(function () {
-      $('.table-title-tooltip').tooltip('hide');
-
-      const that = $(this);
-      if (timeout != null) {
-        clearTimeout(timeout);
-      }
-      that.tooltip('hide');
-      timeout = setTimeout(function () {
-        that.tooltip('show');
-      }, 1000);
-    });
-
-    $('.table-title-tooltip').mouseleave(function () {
-      if (timeout != null) {
-        clearTimeout(timeout);
-      }
-      // $('.table-title-tooltip').tooltip('hide');
-      timeout = null;
-    })
-  }
 }
