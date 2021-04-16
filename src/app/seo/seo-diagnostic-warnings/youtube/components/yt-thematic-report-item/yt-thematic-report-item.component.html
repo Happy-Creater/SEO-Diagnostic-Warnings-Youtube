@@ -17,11 +17,11 @@
       </div>
     </div>
 
-    <div class="mmtop" style="display: flex;margin-top:0px;margin-bottom: 10px;">
+    <div class="mmtop" style="display: flex;margin-top:0px;">
       <div style="width:37%;float: left;">
-        <chart id="container-themetic-youtube-1" *ngIf="option" [options]="option" class="csschart" style="display:block; width: 100% !important;"></chart>
+        <chart id="container-themetic-youtube-1" *ngIf="option" [options]="option" class="csschart" style="display:block; width: 100% !important;margin-top: -18px;"></chart>
       </div>
-      <div style="width:63%;padding: 0px 0px 10px;float: left;position:relative">
+      <div style="width:63%;padding: 0px 0px 10px;float: left;position:relative; margin-top: -18px;">
         <div class="box-warning-pro">
           <table class="table table-borderless m-0 text-center">
             <tr>
@@ -55,7 +55,7 @@
           </table>
           <div style="padding: 10px;">
             <div class="ter" (click)="emitGraphData()" data-toggle="modal" data-target="#myModal">
-                <chart id="smGraph-youtube-1" *ngIf="smallGraphOption" [options]="smallGraphOption" style="display:block; width: 100% !important;"></chart>
+                <chart id="smGraph-youtube-1" *ngIf="smallGraphOption" [options]="smallGraphOption" style="display:block; width: 100% !important; margin-top: -10px;height: 35px;"></chart>
             </div>
 
           </div>

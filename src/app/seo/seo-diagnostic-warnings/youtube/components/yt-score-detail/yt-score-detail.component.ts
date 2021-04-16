@@ -1,5 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ytScore, ytWarningProblem} from '../../models/youtube_model';
+import {TranslateService} from "@ngx-translate/core";
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -20,15 +21,17 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
   cumulative = {option: null, show: false};
   distribution = {option: null, show: false};
   categories = [];
-  evolutionData= [];
+  evolutionData = [];
   cumulativeData = [];
   distributionData = {CHANNEL: [], VIDEOS: [], PLAYLISTS: []};
   testOption = null;
+  language;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
   }
 
   ngOnInit() {
+    this.language = this.translate.getBrowserLang();
     this.warningProblemData(this.chartSource.value);
     this.scoreData(this.chartSource.value);
   }
@@ -44,7 +47,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
     }
     Object.keys(this.periodScore).map((key, index) => {
       const date = new Date(key);
-      categories[index] = date.getDate() + ' ' + months[date.getMonth()];
+      categories.push(date.toLocaleDateString(this.language, {day: 'numeric', month: 'short', year: 'numeric'}));
       evolutionData[index] = this.periodScore[key].globalTechnicalYouTubeScore;
       // tslint:disable-next-line:no-shadowed-variable
       distributionData.CHANNEL.push(this.periodScore[key].channelTechnicalYoutubeScore);
@@ -124,7 +127,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
   }
 
 
-  ngOnChanges (changes: SimpleChanges) {
+  ngOnChanges(changes: SimpleChanges) {
     if (changes['chartType']) {
       this.chartType.map(item => {
         if (item.label === 'Evolution') {
@@ -138,10 +141,10 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       this.warningProblemData(this.chartSource.value);
       this.scoreData(this.chartSource.value);
     } else {
-      if (changes['periodWarningProblem'] || changes['chartSource'] || changes['selectedChart'] ) {
+      if (changes['periodWarningProblem'] || changes['chartSource'] || changes['selectedChart']) {
         this.warningProblemData(this.chartSource.value);
       }
-      if (changes['periodScore'] || changes['chartSource'] || changes['selectedChart'] ) {
+      if (changes['periodScore'] || changes['chartSource'] || changes['selectedChart']) {
         this.scoreData(this.chartSource.value);
       }
     }
@@ -160,6 +163,16 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         };
       }
     }
+    let len = 0;
+    if (evolutionData.length > 0) {
+      len++;
+    }
+    if (cumulativeData.length > 0) {
+      len++;
+    }
+    if (distributionData.CHANNEL.length > 0 || distributionData.VIDEOS.length > 0 || distributionData.PLAYLISTS.length > 0) {
+      len += 3;
+    }
     return {
       chart: {
         zoomType: 'xy',
@@ -176,8 +189,25 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       tooltip: {
         zIndex: 99,
         backgroundColor: '#fff',
+        borderColor: '#CfCfCf',
         fillOpacity: 1,
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br>',
+        formatter: function () {
+          if (len === 1) {
+            const points = this.points,
+              tooltipArray = ['<b>' + this.x + ': </b>'];
+            points.forEach(function (point) {
+              tooltipArray.push(' <b>' + point.y + '</b>');
+            });
+            return tooltipArray;
+          }
+
+          return this.points.reduce(function (s, point) {
+            return s + '<br/><span style="color:' + point.series.color + '">' + point.series.name + '</span>: <b>' +
+              point.y + '</b>';
+          }, '<b>' + this.x + '</b>');
+
+        },
         shared: true,
         useHTML: true,
         dataLabels: {
@@ -216,7 +246,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
           },
           endOnTick: false,
           opposite: true
-        }, ],
+        }],
       plotOptions: {
         column: {
           stacking: 'percent',
@@ -244,8 +274,9 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         name: '<span class="wh " style=""><span class="bb-span-b"></span>CHANNEL</span>',
         data: distributionData.CHANNEL,
         type: 'column',
-        borderRadius: 4,
+        borderRadius: 3,
         yAxis: 1,
+        pointWidth: 15,
         color: '#ED723D',
         tooltip: {
           valueSuffix: '({point.percentage:.0f}%)'
@@ -254,16 +285,18 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         name: '<span class="mh " style=""><span class="bb-span-b"></span>VIDEOS</span>',
         data: distributionData.VIDEOS,
         type: 'column',
-        borderRadius: 4,
+        borderRadius: 3,
         yAxis: 1,
+        pointWidth: 15,
         color: '#5DBEFF',
         tooltip: {
           valueSuffix: '({point.percentage:.0f}%)'
         }
       }, {
         type: 'column',
-        borderRadius: 4,
+        borderRadius: 3,
         yAxis: 1,
+        pointWidth: 15,
         name: '<span class="lh " style=""><span class="bb-span"></span>PLAYLISTS</span>',
         data: distributionData.PLAYLISTS,
         color: '#E88ED7',

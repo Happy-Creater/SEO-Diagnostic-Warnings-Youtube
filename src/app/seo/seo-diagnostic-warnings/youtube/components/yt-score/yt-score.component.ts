@@ -76,9 +76,9 @@ export class YtScoreComponent implements OnInit {
       evl_color = '#6D6D6C';
       // evol_text = '-';
     }
-    evol_text = `<span style="color:${evl_color};font-size:18px;">&nbsp;&nbsp;{series.name}</span></div>`;
+    evol_text = `<span style="color:${evl_color};font-size:15px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;">{series.name}</span></div>`;
     if (isNaN(evolution)) {
-      evol_text = `&nbsp;&nbsp;&nbsp;<span style="font-size: 18px; color: #6D6D6C;">-</span>`;
+      evol_text = `<span style="font-size: 14px; color: #6D6D6C; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;">-</span>`;
     }
     if (score >= 0 && score < 4) {
       score_color = '#ff0d12';
@@ -134,11 +134,12 @@ export class YtScoreComponent implements OnInit {
             shadow: false,
             style: {
               fontSize: '20px',
-              lineHeight: '30px'
+              lineHeight: '30px',
+              textAlign: 'center'
             },
             // tslint:disable-next-line:max-line-length
             pointFormat: `<span style="font-size:30px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
-              `<div style="margin-top: -2px;">${evol_text}`,
+              `<br>${evol_text}`,
             positioner: function (labelWidth) {
               return {
                 x: (this.chart.chartWidth - labelWidth) / 2,
@@ -164,7 +165,7 @@ export class YtScoreComponent implements OnInit {
       series: [{
         // tslint:disable-next-line:max-line-length
         name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i>
-                <span style="font-size:18px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
+                <span style="font-size:14px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
                 </span>`,
         data: [{
           color: score_color,

@@ -26,7 +26,7 @@ export class YtTopWarningsComponent implements OnInit, AfterViewInit {
     this.topWarnings = this.warningData.warningTableList.filter(value => {
       return value.new;
     });
-    if (this.topWarnings.length < 5) {
+    if (this.topWarnings.length < 6) {
       this.topWarnings = this.warningData.warningTableList;
     }
     this.topWarnings.sort((a, b) => {
@@ -41,7 +41,7 @@ export class YtTopWarningsComponent implements OnInit, AfterViewInit {
       }
       return 0;
     });
-    this.topWarnings = this.topWarnings.slice(0, 5);
+    this.topWarnings = this.topWarnings.slice(0, 6);
   }
 
   scrollToItem(item: warningTableItem) {

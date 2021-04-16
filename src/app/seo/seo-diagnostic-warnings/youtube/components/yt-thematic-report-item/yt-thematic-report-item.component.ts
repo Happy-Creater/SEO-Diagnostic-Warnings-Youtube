@@ -156,10 +156,10 @@ export class YtThematicReportItemComponent implements OnInit {
     } else if (evolution === 0) {
       evl_color = '#6D6D6C';
     }
-    evl_text = `<span style="color:${evl_color};font-size:10px;">{series.name}</span>`;
+    evl_text = `<span style="color:${evl_color};font-size:10px;line-height: 20px;">{series.name}</span>`;
 
     if (isNaN(evolution)) {
-      evl_text = `<span style="color: #6D6D6C;font-size: 10px;">-</span>`;
+      evl_text = `<span style="color: #6D6D6C;font-size: 10px;line-height: 20px;">-</span>`;
     }
 
     if (score >= 0 && score < 4) {
@@ -179,7 +179,7 @@ export class YtThematicReportItemComponent implements OnInit {
     return {
       chart: {
         type: 'solidgauge',
-        height: '160px',
+        height: '150px',
         events: {
           render: function () {
           }
@@ -211,14 +211,14 @@ export class YtThematicReportItemComponent implements OnInit {
           borderWidth: '12px',
           dataLabels: {
             enabled: true,
-            y: -20,
+            y: -15,
             borderWidth: 0,
             backgroundColor: 'none',
             useHTML: true,
             shadow: false,
             style: {
-              fontSize: '20px',
-              lineHeight: '15px',
+              fontSize: '12px',
+              lineHeight: '10px',
               textAlign: 'center'
             },
             // tslint:disable-next-line:max-line-length
@@ -248,7 +248,7 @@ export class YtThematicReportItemComponent implements OnInit {
 
       series: [{
         // tslint:disable-next-line:max-line-length
-        name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i><span style="font-size:14px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
+        name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i><span style="font-size:10px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
                 </span>`,
         data: [{
           color: score_color,
@@ -301,6 +301,7 @@ export class YtThematicReportItemComponent implements OnInit {
         gridLineWidth: 0,
         endOnTick: false,
         maxPadding: 0.1,
+        height: 30,
         title: {
           text: null
         },
