@@ -46,9 +46,9 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
     {type: 12, label: 'Last 12 months'},
     {type: 0, label: 'Since beginning of the project'},
   ];
-  pageSize = 5;
+  pageSize = 10;
   start = 0;
-  end = 5;
+  end = 10;
   totalLength: number;
   warningName: string;
   modelOption: Object;
