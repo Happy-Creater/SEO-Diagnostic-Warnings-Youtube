@@ -48,11 +48,11 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
     Object.keys(this.periodScore).map((key, index) => {
       const date = new Date(key);
       categories.push(date.toLocaleDateString('en', {day: 'numeric', month: 'short', year: 'numeric'}));
-      evolutionData[index] = this.periodScore[key].globalTechnicalYouTubeScore;
+      evolutionData[index] = this.round(this.periodScore[key].globalTechnicalYouTubeScore, 2);
       // tslint:disable-next-line:no-shadowed-variable
-      distributionData.CHANNEL.push(this.periodScore[key].channelTechnicalYoutubeScore);
-      distributionData.VIDEOS.push(this.periodScore[key].videosTechnicalYoutubeScore);
-      distributionData.PLAYLISTS.push(this.periodScore[key].playlistTechnicalYoutubeScore);
+      distributionData.CHANNEL.push(this.round(this.periodScore[key].channelTechnicalYoutubeScore, 2));
+      distributionData.VIDEOS.push(this.round(this.periodScore[key].videosTechnicalYoutubeScore, 2));
+      distributionData.PLAYLISTS.push(this.round(this.periodScore[key].playlistTechnicalYoutubeScore, 2));
     });
     this.categories = categories;
     this.evolutionData = evolutionData;
@@ -84,28 +84,28 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       const date = new Date(value.date);
       categories.push(date.toLocaleDateString('en', {day: 'numeric', month: 'short', year: 'numeric'}));
       if (chartSource === 'warnings') {
-        evolutionData[index] = value.nbrWarnings;
-        cumulativeData[index] = value.nbrWarningsCumulated;
+        evolutionData[index] = this.round(value.nbrWarnings, 2);
+        cumulativeData[index] = this.round(value.nbrWarningsCumulated, 2);
       } else if (chartSource === 'problems') {
-        evolutionData[index] = value.nbrProblem;
+        evolutionData[index] = this.round(value.nbrProblem, 2);
       }
       // tslint:disable-next-line:no-shadowed-variable
       value.categories.map((value => {
         if (chartSource === 'warnings') {
           if (value.categoryName === 'Channel') {
-            distributionData.CHANNEL.push(value.nbrWarning);
+            distributionData.CHANNEL.push(this.round(value.nbrWarning, 2));
           } else if (value.categoryName === 'Video') {
-            distributionData.VIDEOS.push(value.nbrWarning);
+            distributionData.VIDEOS.push(this.round(value.nbrWarning, 2));
           } else if (value.categoryName === 'Playlist') {
-            distributionData.PLAYLISTS.push(value.nbrWarning);
+            distributionData.PLAYLISTS.push(this.round(value.nbrWarning, 2));
           }
         } else if (chartSource === 'problems') {
           if (value.categoryName === 'Channel') {
-            distributionData.CHANNEL.push(value.nbrProblem);
+            distributionData.CHANNEL.push(this.round(value.nbrProblem, 2));
           } else if (value.categoryName === 'Video') {
-            distributionData.VIDEOS.push(value.nbrProblem);
+            distributionData.VIDEOS.push(this.round(value.nbrProblem, 2));
           } else if (value.categoryName === 'Playlist') {
-            distributionData.PLAYLISTS.push(value.nbrProblem);
+            distributionData.PLAYLISTS.push(this.round(value.nbrProblem, 2));
           }
         }
       }));
@@ -224,8 +224,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         labels: {
           formatter: function () {
             const date = new Date(this.value);
-            const value = months[date.getMonth()] + ' ' + date.getDate();
-            return value;
+            return months[date.getMonth()] + ' ' + date.getDate();
           }
         },
         tickmarkPlacement: 'on',
@@ -374,5 +373,12 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         }
       },
     };
+  }
+
+  round(value: number, digit: number) {
+    value *= Math.pow(10, digit);
+    value = Math.round(value);
+    value /= Math.pow(10, digit);
+    return value;
   }
 }
