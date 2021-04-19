@@ -47,7 +47,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
     }
     Object.keys(this.periodScore).map((key, index) => {
       const date = new Date(key);
-      categories.push(date.toLocaleDateString(this.language, {day: 'numeric', month: 'short', year: 'numeric'}));
+      categories.push(date.toLocaleDateString('en', {day: 'numeric', month: 'short', year: 'numeric'}));
       evolutionData[index] = this.periodScore[key].globalTechnicalYouTubeScore;
       // tslint:disable-next-line:no-shadowed-variable
       distributionData.CHANNEL.push(this.periodScore[key].channelTechnicalYoutubeScore);
@@ -82,7 +82,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
     }
     this.periodWarningProblem.map((value, index) => {
       const date = new Date(value.date);
-      categories.push(date.toLocaleDateString(this.language, {day: 'numeric', month: 'short', year: 'numeric'}));
+      categories.push(date.toLocaleDateString('en', {day: 'numeric', month: 'short', year: 'numeric'}));
       if (chartSource === 'warnings') {
         evolutionData[index] = value.nbrWarnings;
         cumulativeData[index] = value.nbrWarningsCumulated;
