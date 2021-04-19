@@ -265,14 +265,15 @@
                 <div [ngClass]="{'arrow-up': item.showRecomendation && !item.hideRecommendation,'arrow-down':!item.showRecomendation && !item.hideRecommendation}"
                      (click)="toggleRecomendation(item, i)" class="bb-bx" id="topbar{{i}}">
                     <span
-                      style="border-left: 1px solid #E2E9EF;height: 15px;display: block;position:absolute;top:9px;left:0;"></span>
-                  <div class="content" id="content{{i}}" style="max-width: 90%; ">
+                      [ngStyle]="{'top': !item.hideRecommendation ? '9px': '0px','border-left': '1px solid #E2E9EF','height': '15px', 'display': 'block',
+                      'position': 'absolute', 'left': '0'}" id="border{{i}}"></span>
+                  <div class="content" id="content{{i}}">
                     {{item.recommendation}}
                     <span class="io"></span>
                   </div>
                   <span class="click-recomment" *ngIf="!item.hideRecommendation"
-                        style="position: absolute;right:-5px;top:50%;transform: translate(-50%, -50%);cursor: pointer;font-size: 12px;"
-                        data-id="1">
+                        style="position: absolute;right:-5px;top:24px;transform: translate(-50%, -50%);cursor: pointer;font-size: 12px;"
+                        id="arrow{{i}}">
                       <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 16px;"></i>
                   </span>
                 </div>

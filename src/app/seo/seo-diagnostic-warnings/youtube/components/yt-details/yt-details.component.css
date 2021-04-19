@@ -372,7 +372,7 @@ table#example tbody tr {
   position: relative !important;
   font-size: 12px !important;
   text-align: left !important;
-  height: 30px;
+  height: 17px;
   overflow: hidden;
 }
 
@@ -382,6 +382,8 @@ table#example tbody tr {
 .bb-bx .content {
   display: block !important;
   overflow: hidden;
+  max-width: 90%;
+  padding-left: 4%;
 }
 
 .texttoggle {

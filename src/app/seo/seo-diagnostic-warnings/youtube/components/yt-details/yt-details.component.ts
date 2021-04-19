@@ -541,6 +541,11 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
     if (item.showRecomendation) {
       const height = document.getElementById("content" + index).offsetHeight;
       document.getElementById("topbar" + index).style.height = height + "px";
+      document.getElementById("border" + index).style.top = height / 2 + "px";
+      document.getElementById("arrow" + index).style.top = height / 2 + "px";
+    } else {
+      document.getElementById("border" + index).style.top = "9px";
+      document.getElementById("arrow" + index).style.top = "24px";
     }
 
   }
