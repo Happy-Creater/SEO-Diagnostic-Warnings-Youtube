@@ -372,6 +372,8 @@ table#example tbody tr {
   position: relative !important;
   font-size: 12px !important;
   text-align: left !important;
+  height: 30px;
+  overflow: hidden;
   /*		width: 200px !important;*/
   /*		padding-right: 15px !important;*/
 }
