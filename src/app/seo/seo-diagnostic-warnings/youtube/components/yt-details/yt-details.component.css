@@ -374,8 +374,6 @@ table#example tbody tr {
   text-align: left !important;
   height: 30px;
   overflow: hidden;
-  /*		width: 200px !important;*/
-  /*		padding-right: 15px !important;*/
 }
 
 .bb-bx .header {

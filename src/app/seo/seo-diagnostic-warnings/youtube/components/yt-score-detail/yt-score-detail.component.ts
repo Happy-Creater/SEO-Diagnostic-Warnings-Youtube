@@ -193,9 +193,11 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         fillOpacity: 1,
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br>',
         formatter: function () {
+          const date = new Date(this.x);
+          const header = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
           if (len === 1) {
             const points = this.points,
-              tooltipArray = ['<b>' + this.x + ': </b>'];
+              tooltipArray = ['<b>' + header + ': </b>'];
             points.forEach(function (point) {
               tooltipArray.push(' <b>' + point.y + '</b>');
             });
@@ -205,7 +207,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
           return this.points.reduce(function (s, point) {
             return s + '<br/><span style="color:' + point.series.color + '">' + point.series.name + '</span>: <b>' +
               point.y + '</b>';
-          }, '<b>' + this.x + '</b>');
+          }, '<b>' + header + '</b>');
 
         },
         shared: true,
@@ -221,8 +223,9 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         categories: categories,
         labels: {
           formatter: function () {
-            const idx = this.value.indexOf(',');
-            return this.value.substr(0, idx);
+            const date = new Date(this.value);
+            const value = months[date.getMonth()] + ' ' + date.getDate();
+            return value;
           }
         },
         tickmarkPlacement: 'on',
