@@ -313,7 +313,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         type: 'spline',
         yAxis: 0,
         color: '#519ffb',
-        name: 'evolution',
+        name: 'Evolution',
         data: evolutionData,
         showInLegend: false,
         marker: {
@@ -326,7 +326,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       }, {
         type: 'areaspline',
         yAxis: 0,
-        name: 'cumulative',
+        name: 'Cumulative',
         color: '#519ffb',
         data: cumulativeData,
         showInLegend: false,
