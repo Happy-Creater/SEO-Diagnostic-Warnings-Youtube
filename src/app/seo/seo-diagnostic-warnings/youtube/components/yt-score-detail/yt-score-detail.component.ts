@@ -82,7 +82,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
     }
     this.periodWarningProblem.map((value, index) => {
       const date = new Date(value.date);
-      categories[index] = date.getDate() + ' ' + months[date.getMonth()];
+      categories.push(date.toLocaleDateString(this.language, {day: 'numeric', month: 'short', year: 'numeric'}));
       if (chartSource === 'warnings') {
         evolutionData[index] = value.nbrWarnings;
         cumulativeData[index] = value.nbrWarningsCumulated;
@@ -219,6 +219,12 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       },
       xAxis: [{
         categories: categories,
+        labels: {
+          formatter: function () {
+            const idx = this.value.indexOf(',');
+            return this.value.substr(0, idx);
+          }
+        },
         tickmarkPlacement: 'on',
         title: {
           enabled: false
@@ -276,7 +282,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         type: 'column',
         borderRadius: 3,
         yAxis: 1,
-        pointWidth: 15,
+        maxPointWidth: 15,
         color: '#ED723D',
         tooltip: {
           valueSuffix: '({point.percentage:.0f}%)'
@@ -287,7 +293,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         type: 'column',
         borderRadius: 3,
         yAxis: 1,
-        pointWidth: 15,
+        maxPointWidth: 15,
         color: '#5DBEFF',
         tooltip: {
           valueSuffix: '({point.percentage:.0f}%)'
@@ -296,7 +302,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         type: 'column',
         borderRadius: 3,
         yAxis: 1,
-        pointWidth: 15,
+        maxPointWidth: 15,
         name: '<span class="lh " style=""><span class="bb-span"></span>PLAYLISTS</span>',
         data: distributionData.PLAYLISTS,
         color: '#E88ED7',
