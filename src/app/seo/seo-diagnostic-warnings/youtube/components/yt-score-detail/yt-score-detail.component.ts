@@ -205,8 +205,9 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
           }
 
           return this.points.reduce(function (s, point) {
+            const percent = point.percentage === undefined ? '' : ' (' + Math.round(point.percentage * 100) / 100 + '%)';
             return s + '<br/><span style="color:' + point.series.color + '">' + point.series.name + '</span>: <b>' +
-              point.y + '</b>';
+              point.y + percent + '</b>';
           }, '<b>' + header + '</b>');
 
         },
