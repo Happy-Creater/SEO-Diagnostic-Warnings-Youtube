@@ -188,8 +188,8 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       },
       tooltip: {
         zIndex: 99,
+        borderColor: (distributionData.CHANNEL.length > 0 || distributionData.VIDEOS.length > 0 || distributionData.PLAYLISTS.length > 0 ) ? '#CfCfCf' : '',
         backgroundColor: '#fff',
-        borderColor: '#CfCfCf',
         fillOpacity: 1,
         pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br>',
         formatter: function () {
@@ -365,12 +365,12 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
           }
         }]
       },
-      lang: {noData: 'No data to display.'},
+      lang: {noData: 'No data to display'},
       noData: {
         position: {align: 'center', verticalAlign: 'middle', y: -27},
         style: {
-          fontWeight: 'bold',
-          fontSize: '20px'
+          fontSize: '16px',
+          fontWeight: 'normal'
         }
       },
     };

@@ -176,7 +176,7 @@ export class YtScoreComponent implements OnInit {
       }],
       exporting: {enabled: false},
       credits: {enabled: false},
-      lang: {noData: 'No data to display.'},
+      lang: {noData: 'No data to display'},
       noData: {position: {align: 'center', verticalAlign: 'middle'}},
     };
   }

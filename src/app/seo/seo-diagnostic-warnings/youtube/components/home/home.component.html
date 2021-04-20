@@ -21,7 +21,8 @@
                     class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </button>
                 <ul class="dropdown-menu  dpmenu psdo">
-                  <li *ngFor="let item of chartSourceList; index as i" class="dropdown-item">
+                  <li *ngFor="let item of chartSourceList; index as i" class="dropdown-item"
+                      [class.disabled]="chartTypeFormat(chartTypeList) === 'Cumulative' && item.value !== 'warnings'">
                     <a style="padding-left: 10px !important" (click)="selectChartSource(i)">
                       {{item.label}}
                     </a>

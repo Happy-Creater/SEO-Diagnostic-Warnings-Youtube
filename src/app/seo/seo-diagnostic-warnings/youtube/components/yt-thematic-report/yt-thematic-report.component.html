@@ -17,21 +17,21 @@
                (mouseout)="progress1Hovered = false"
                [ngStyle]="channelProgress"
                data-toggle="tooltip"
-               data-title="{{channelPercent}}"
+               title="{{channelPercent}}"
                class="progress-bar bar21 bar-21" data-id="21" role="progressbar"></div>
           <div [class.seo-invisible]="progress1Hovered || progress3Hovered || channelHovered || playlistHovered"
                (mouseenter)="progress2Hovered = true"
                (mouseout)="progress2Hovered = false"
                [ngStyle]="videoProgress"
                data-toggle="tooltip"
-               data-title="{{videoPercent}}"
+               title="{{videoPercent}}"
                class="progress-bar bar22 bar-22" data-id="22" role="progressbar"></div>
           <div [class.seo-invisible]="progress2Hovered || progress1Hovered || videoHovered || channelHovered"
                (mouseenter)="progress3Hovered = true"
                (mouseout)="progress3Hovered = false"
                [ngStyle]="playlistProgress"
                data-toggle="tooltip"
-               data-title="{{playlistPercent}}"
+               title="{{playlistPercent}}"
                class="progress-bar bar23 bar-23" data-id="23" role="progressbar"></div>
         </div>
       </div>

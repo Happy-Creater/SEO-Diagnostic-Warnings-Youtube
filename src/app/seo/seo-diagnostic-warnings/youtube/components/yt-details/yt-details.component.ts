@@ -602,6 +602,12 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
       },
       xAxis: {
         categories: categories,
+        labels: {
+          formatter: function () {
+            const date = new Date(this.value);
+            return date.getDate() + ' ' + months[date.getMonth()];
+          }
+        },
         tickmarkPlacement: 'on',
         title: {
           enabled: false
@@ -627,6 +633,17 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
       },
       tooltip: {
         crosshairs: [false, false],
+        formatter: function () {
+          const date = new Date(this.x);
+          const header = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+          const points = this.points,
+            tooltipArray = ['<b>' + header + ': </b>'];
+          points.forEach(function (point) {
+            tooltipArray.push(' <b>' + point.y + '</b>');
+          });
+          return tooltipArray;
+
+        },
         shared: true,
         animation: true,
 
@@ -660,7 +677,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
         color: '#519ffb',
         data: data
       }],
-      lang: {noData: 'No data to display.'},
+      lang: {noData: 'No data to display'},
       noData: {position: {align: 'center', verticalAlign: 'middle'}},
       exporting: {enabled: false},
     };
@@ -746,18 +763,18 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
         showgrid: false,
         data: data,
         lineColor: '#004a97',
-        color: 'transparent',
+        color: data.length > 1 ? 'transparent' : 'rgba(0,74,151,0.4)',
         fillOpacity: 0.5,
         name: null,
         hover: {
           lineWidth: 1
         },
         marker: {
-          enabled: false
+          enabled: true
         },
         threshold: null
       }],
-      lang: {noData: 'No data to display.'},
+      lang: {noData: 'No data to display'},
       noData: {position: {align: 'center', verticalAlign: 'middle'}}
     };
   }

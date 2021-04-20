@@ -122,7 +122,7 @@ export class YtThematicReportItemComponent implements OnInit {
 
       value.categories.map(category => {
         if (category.categoryName === this.nameValues[this.categoryName]) {
-          categories[index] = date.getDate() + ' ' + months[date.getMonth()];
+          categories.push(date.toLocaleDateString('en', {day: 'numeric', month: 'short', year: 'numeric'}));
           smallGraphData[index++] = category.nbrWarning;
           return;
         }
@@ -179,7 +179,7 @@ export class YtThematicReportItemComponent implements OnInit {
     return {
       chart: {
         type: 'solidgauge',
-        height: '150px',
+        height: '125px',
         events: {
           render: function () {
           }
@@ -335,19 +335,19 @@ export class YtThematicReportItemComponent implements OnInit {
         showgrid: false,
         data: data,
         lineColor: '#004a97',
-        color: 'transparent',
+        color: data.length > 1 ? 'transparent' : 'rgba(0,74,151,0.4)',
         fillOpacity: 0.5,
         name: null,
         hover: {
           lineWidth: 1
         },
         marker: {
-          enabled: false
+          enabled: true
         },
         threshold: null
       }],
       lang: {noData: 'No data to display.'},
-      noData: {position: {align: 'center', verticalAlign: 'top'}},
+      noData: {position: {align: 'left', verticalAlign: 'top'}},
     };
   }
 
@@ -381,6 +381,12 @@ export class YtThematicReportItemComponent implements OnInit {
       },
       xAxis: {
         categories: categories,
+        labels: {
+          formatter: function () {
+            const date = new Date(this.value);
+            return date.getDate() + ' ' + months[date.getMonth()];
+          }
+        },
         tickmarkPlacement: 'on',
         title: {
           enabled: false
@@ -405,6 +411,17 @@ export class YtThematicReportItemComponent implements OnInit {
       },
       tooltip: {
         crosshairs: [false, false],
+        formatter: function () {
+          const date = new Date(this.x);
+          const header = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+          const points = this.points,
+            tooltipArray = ['<b>' + header + ': </b>'];
+          points.forEach(function (point) {
+            tooltipArray.push(' <b>' + point.y + '</b>');
+          });
+          return tooltipArray;
+
+        },
         shared: true,
         animation: true,
       },

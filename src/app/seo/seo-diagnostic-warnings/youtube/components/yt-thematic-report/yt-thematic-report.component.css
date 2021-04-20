@@ -73,18 +73,24 @@
   background: #FEB654;
   height: 12px;
   border-radius: 3px;
+  transition-duration: 1s;
+  transition: width 0.5s ease-in-out;
 }
 
 .progress-bar.bar19,.progress-bar.bar21 {
   background: #3DD674;
   height: 12px;
   border-radius: 3px;
+  transition-duration: 3s;
+  transition: width 1.5s ease-in-out;
 }
 
 .progress-bar.bar20,.progress-bar.bar22 {
   background: #FF0D12;
   height: 12px;
   border-radius: 3px;
+  transition-duration: 2s;
+  transition: width 1s ease-in-out;
 }
 
 .protab {
@@ -159,4 +165,3 @@
   background:#FFB652;
   border-radius: 0 3px 3px 0;
 }
-

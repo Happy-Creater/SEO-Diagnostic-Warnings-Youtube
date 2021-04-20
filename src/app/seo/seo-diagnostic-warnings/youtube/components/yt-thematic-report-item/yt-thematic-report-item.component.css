@@ -36,6 +36,10 @@
   top: 50%;
 }
 
+.box-warning-pro:hover {
+  background: #E6E6E6;
+}
+
 .poin-small {
   font-size: 5px;
   vertical-align: middle;
