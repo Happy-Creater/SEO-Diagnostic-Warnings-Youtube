@@ -224,7 +224,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
         labels: {
           formatter: function () {
             const date = new Date(this.value);
-            return months[date.getMonth()] + ' ' + date.getDate();
+            return date.getDate() + ' ' + months[date.getMonth()];
           }
         },
         tickmarkPlacement: 'on',
