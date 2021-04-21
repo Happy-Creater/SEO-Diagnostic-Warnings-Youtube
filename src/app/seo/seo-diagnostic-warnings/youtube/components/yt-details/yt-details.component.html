@@ -120,34 +120,34 @@
           </thead>
           <tbody>
           <tr class="thead-light">
-            <td style="width:25%; cursor:pointer;" class="table-detail" (click)="sortWarning('warning')">
+            <td style="width:20%; cursor:pointer;" class="table-detail" (click)="sortWarning('warning')">
               <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
                 WARNING
-                <i class="fa" [ngClass]="{'fa-caret-up': warningUp,'fa-caret-down': warningUp == false}"></i>
-                <div class="tooltiptexts" style="width: 252px;height: auto;">
+                <i class="fa" [ngClass]="{'fa-angle-down': warningUp,'fa-angle-up': warningUp == false}"></i>
+                <div class="tooltiptexts" style="width: 300px;height: auto;left: 7px;">
                   <div class="scroll" style="word-break: normal">
                     Name of the warning (with mouse over there is a description for each warning)
                   </div>
                 </div>
               </div>
             </td>
-            <td style="width:8%;cursor: pointer;" class="table-detail" (click)="sortWarning('severity')">
+            <td style="width:9%;cursor: pointer;" class="table-detail" (click)="sortWarning('severity')">
               <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
                 SEVERITY
-                <i class="fa" [ngClass]="{'fa-caret-up': severityUp,'fa-caret-down': severityUp == false}"></i>
-                <div class="tooltiptexts" style="width: 252px;height: auto;">
+                <i class="fa" [ngClass]="{'fa-angle-down': severityUp,'fa-angle-up': severityUp == false}"></i>
+                <div class="tooltiptexts" style="width: 252px;height: auto;left: -55px;">
                   <div class="scroll" style="word-break: normal">
                     Importance of the warning,  in a scale of 1 to 10
                   </div>
                 </div>
               </div>
             </td>
-            <td style="width:10%;cursor: pointer;" class="table-detail"
+            <td style="width:13%;cursor: pointer;" class="table-detail"
                 (click)="sortWarning('problem')">
               <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
                 PROBLEM
-                <i class="fa" [ngClass]="{'fa-caret-up': problemUp,'fa-caret-down': problemUp == false}"></i>
-                <div class="tooltiptexts" style="width: 252px;height: auto;">
+                <i class="fa" [ngClass]="{'fa-angle-down': problemUp,'fa-angle-up': problemUp == false}"></i>
+                <div class="tooltiptexts" style="width: 266px; height: auto; left: -23px;">
                   <div class="scroll" style="word-break: normal">
                     Number of problems (URLs) concerned by this warning
                   </div>
@@ -157,7 +157,7 @@
             <td style="width:14%;" class="table-detail">
               <div class="tooltip-star f-bold name-tooltip" style="cursor: default;">
                 TREND
-                <div class="tooltiptexts" style="width: 252px;height: auto;">
+                <div class="tooltiptexts" style="width: 221px;height: auto;left: 2px;">
                   <div class="scroll" style="word-break: normal">
                     Evolution of problems since the beginning of the project
                   </div>
@@ -168,8 +168,8 @@
                 (click)="sortWarning('status')">
               <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
                 STATUS
-                <i class="fa" [ngClass]="{'fa-caret-up': statusUp,'fa-caret-down': statusUp == false}"></i>
-                <div class="tooltiptexts" style="width: 252px;height: auto;">
+                <i class="fa" [ngClass]="{'fa-angle-down': statusUp,'fa-angle-up': statusUp == false}"></i>
+                <div class="tooltiptexts" style="width: 225px;height: auto;left: -3px;">
                   <div class="scroll" style="word-break: normal">
                     Progress of the resolution of the warning
                   </div>
@@ -179,7 +179,7 @@
             <td style="width:29%;" class="table-detail">
               <div class="tooltip-star f-bold name-tooltip" style="cursor: default;">
                 RECOMMENDATION
-                <div class="tooltiptexts" style="width: 252px;height: auto;">
+                <div class="tooltiptexts" style="width: 252px;height: auto;left: 108px;">
                   <div class="scroll" style="word-break: normal">
                     Actions to do to resolve the warning
                   </div>
@@ -190,7 +190,7 @@
           <ng-container *ngFor="let item of pagedItems;index as i">
             <tr [ngClass]="{'item-selected': item.setBold}">
               <td class="text-left">
-                <div style="width: 25%;float: left;">
+                <div style="width: 20%;float: left;">
                     <span class="btn btn-default btn-circle span-bg-unset"
                           style="background: unset;border:2px solid #ECEEF2;cursor: unset;margin-left: 0 !important;">
                       <img src="assets/images/icon-warning-4/{{categories[item.category].image}}"
@@ -200,6 +200,8 @@
                 <div class="warning-item-name" >
                   <span class="f-bold texttoggle"
                         style="font-size: 10px;text-transform: uppercase;"
+                        data-toggle="modal"
+                        data-target="#confirmModal"
                         (click)="toggleConLabel(item,i)">{{item.typeCategorie}}</span>&nbsp;&nbsp;
                   <span *ngIf="item.new" class="c-blue f-bold" style="font-size: 10px;">NEW!</span>
                   <br>
@@ -229,7 +231,7 @@
                   <span class="click-eye" (click)="showItemDetails(item)" [ngClass]="{'ac-text': item.showDetails && !item.hideDetails, 'gray-eye': item.hideDetails}"  id="click-eye-51" data-id="51"
                         style="vertical-align: bottom;font-size: 18px;cursor: pointer;"
                         data-toggle="tooltip" data-placement="right" title="{{item.problemTooltip}}">
-                            <i class="fa fa-eye" aria-hidden="true"></i></span>&nbsp;&nbsp;
+                            <i class="fa fa-eye" aria-hidden="true" style="vertical-align: bottom;"></i></span>&nbsp;&nbsp;
                   <a href="{{item.filename}}" class="c-gray">
                     <img src="../../../../../../assets/images/icon_download.png" alt=""
                          style="width: 15px;margin-top: -2px;">
@@ -380,6 +382,26 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 
+<div id="confirmModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content confirm-content">
+      <div class="modal-header" style="border:none;padding: 15px 25px;">
+        <h3 class="confirm-title">Confirmation</h3>
+        <button type="button" class="close" data-dismiss="modal"
+                style="font-size: 14px;color: #6b6b6b;opacity: 1;font-weight: 100;margin-top: -36px !important;">X
+        </button>
+
+        <div style="margin-top: 70px;">
+          <span>Are you sure you want to change label type?</span>
+        </div>
+      </div>
+      <div class="confirm-body">
+        <button class="confirm-ok" (click)="changeLabel(toggleLabelItem)" data-dismiss="modal">OK</button>
+        <button class="confirm-cancel" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
   </div>
 </div>

@@ -614,6 +614,8 @@ ul.psdo li a {
   box-shadow: 0px 0px 42px -16px rgb(0 0 0 / 75%);
   font-weight: 500;
   position: absolute;
-  top: -20px;
   margin: 0 15px;
+  top: -26px;
+  left: -33px;
+  height: 35px;
 }

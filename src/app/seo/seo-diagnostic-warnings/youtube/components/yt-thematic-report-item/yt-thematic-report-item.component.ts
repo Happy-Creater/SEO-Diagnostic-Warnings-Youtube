@@ -452,7 +452,7 @@ export class YtThematicReportItemComponent implements OnInit {
         data: data
       }],
       lang: {noData: 'No data to display.'},
-      noData: {position: {align: 'center', verticalAlign: 'middle'}},
+      noData: { position: { align: 'center', verticalAlign: 'middle' , y: -27  } },
       exporting: {enabled: false},
     };
   }

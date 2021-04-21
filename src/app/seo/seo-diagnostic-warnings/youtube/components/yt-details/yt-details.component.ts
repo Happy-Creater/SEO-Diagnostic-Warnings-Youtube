@@ -61,6 +61,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
   filterItems: pagedItem[] = [];
   unsubscribeAll$ = new Subject();
   modalItem: pagedItem;
+  toggleLabelItem: pagedItem;
 
 
   constructor(private translate: TranslateService,
@@ -149,7 +150,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
       this.totalItems[index].tableName = value.tableName;
       this.totalItems[index].hideRecommendation = (value.recommendation.length < 150);
       this.totalItems[index].hideDetails = (value.details === null) || !(value.details.length > 0);
-      this.totalItems[index].problemTooltip = (this.totalItems[index].hideDetails) ? "Not available" : "";
+      this.totalItems[index].problemTooltip = (this.totalItems[index].hideDetails) ? "Not available" : "Sample of problems";
       let bg = '';
       if (value.status >= 0 && value.status < 25) {
         bg = '#FF0D12'; // red
@@ -532,6 +533,10 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
   }
 
   toggleConLabel(item, index) {
+    this.toggleLabelItem = item;
+  }
+
+  changeLabel(item) {
     item.typeCategorie = item.typeCategorie === 'dev' ? 'con' : 'dev';
     this.updateMetric.emit(item);
   }
@@ -678,7 +683,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
         data: data
       }],
       lang: {noData: 'No data to display'},
-      noData: {position: {align: 'center', verticalAlign: 'middle'}},
+      noData: { position: { align: 'center', verticalAlign: 'middle' , y: -27  } },
       exporting: {enabled: false},
     };
   }
@@ -688,7 +693,7 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
       chart: {
         type: 'area',
         zoomType: 'x',
-        height: 50,
+        height: 40,
         width: 150,
         maxPadding: 0,
         panning: false,

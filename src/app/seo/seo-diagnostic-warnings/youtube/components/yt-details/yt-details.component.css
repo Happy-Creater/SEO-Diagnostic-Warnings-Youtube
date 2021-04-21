@@ -19,9 +19,7 @@
 }
 
 .item-selected {
-  /*color: red;*/
-  font-weight: bold;
-  /*font-size: 18px;*/
+  font-family: "Proxima Nova Bold";
 }
 
 .table-detail {
@@ -265,7 +263,7 @@ table#example tbody tr {
 
 .ter {
   background: #fff;
-  padding: 5px 25px;
+  padding: 0px 25px;
   border-radius: 5px;
   position: relative;
 }
@@ -499,4 +497,39 @@ span.name-tooltip {
 
 .gray-eye {
   color: #80808052;
+}
+
+.confirm-title{
+  font-family: "Proxima Nova Bold";
+}
+
+.confirm-body{
+  background: rgb(82, 159, 251);
+  padding: 50px;
+}
+
+.confirm-content{
+  border: none;
+}
+
+.confirm-ok{
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 11px 36px;
+  font-size: 20px;
+  font-family: 'Proxima Nova Light';
+  color: white;
+  margin-left: 60%;
+}
+
+.confirm-cancel{
+  font-size: 20px;
+  background: white;
+  border: 1px solid white;
+  padding: 11px 35px;
+  border-radius: 6px;
+  color: #6b6b6b;
+  font-family: 'Proxima Nova Light';
+  margin-left: 5%;
 }
