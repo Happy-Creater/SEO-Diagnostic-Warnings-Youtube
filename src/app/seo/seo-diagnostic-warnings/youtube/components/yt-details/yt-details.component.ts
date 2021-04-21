@@ -744,6 +744,9 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
               enabled: true,
               lineWidth: 1
             }
+          },
+          marker: {
+            radius: 1
           }
         }
       },

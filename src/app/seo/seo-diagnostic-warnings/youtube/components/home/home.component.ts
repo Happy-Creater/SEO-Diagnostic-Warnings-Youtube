@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {GetYoutubeService} from '../../services/get-youtube.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs/Subject';
@@ -6,6 +6,7 @@ import {chartTypeItem, pagedItem, warningTable, ytScore, ytScoreItem, ytWarningP
 import {YtUpdateNewService} from '../../services/yt-update-new.service';
 import {GlobalVariableService} from '../../../../../_services/global_variable/global-variable.service';
 import {Observable} from 'rxjs/Observable';
+import {LoadingDelayDirective} from "../../../../../_modules/loading-delay/loading-delay.directive";
 declare var $: any;
 
 @Component({
@@ -56,6 +57,9 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
   ];
   isLoading: boolean;
 
+  @ViewChild('loading')
+  loading: LoadingDelayDirective;
+
   constructor(
     private getYtService: GetYoutubeService,
     private updateMetricService: YtUpdateNewService,
@@ -76,7 +80,7 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
       this.account = 'new1';
       // this.webId = 96;
       // this.account = 'peugeotscooters';
-      this.isLoading = false;
+
       this.loadData();
     });
   }
@@ -85,30 +89,38 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
     $('[data-toggle="tooltip"]').tooltip();
   }
 
-  loadData() {
-    this.getYtService.getScore(this.webId, this.account)
-      .pipe(takeUntil(this.unsubscribeAll$))
-      .toPromise().then(value => {
-        this.ytScores = value;
-        this.latestScore = this.getLatestScore();
-        this.previousScore = this.getPreviousScore();
-        this.getPeriodScore();
-      });
+  async loadData() {
+    this.isLoading = false;
+    this.loading.show();
+    try {
+      await this.getYtService.getScore(this.webId, this.account)
+        .pipe(takeUntil(this.unsubscribeAll$))
+        .toPromise().then(value => {
+          this.ytScores = value;
+          this.latestScore = this.getLatestScore();
+          this.previousScore = this.getPreviousScore();
+          this.getPeriodScore();
+        });
 
-    this.getYtService.getWarning(this.webId, this.account)
-      .pipe(takeUntil(this.unsubscribeAll$))
-      .subscribe((value => {
-        this.ytWarningProblems = value;
-        this.latestWarningProblem = this.getLatestWarningProblem();
-        this.previousWarningProblem = this.getPreviousWarningProblem();
-        this.getPeriodWarningProblem();
-      }));
+      await this.getYtService.getWarning(this.webId, this.account)
+        .pipe(takeUntil(this.unsubscribeAll$))
+        .toPromise().then(value => {
+          this.ytWarningProblems = value;
+          this.latestWarningProblem = this.getLatestWarningProblem();
+          this.previousWarningProblem = this.getPreviousWarningProblem();
+          this.getPeriodWarningProblem();
+        });
 
-    this.getYtService.getWarningTable(this.webId, this.account)
-      .pipe(takeUntil(this.unsubscribeAll$))
-      .subscribe(value => {
-        this.warningTable = value;
-      });
+      await this.getYtService.getWarningTable(this.webId, this.account)
+        .pipe(takeUntil(this.unsubscribeAll$))
+        .toPromise().then(value => {
+          this.warningTable = value;
+        });
+    } catch (e) {
+    } finally {
+      this.isLoading = false;
+      this.loading.hide();
+    }
   }
 
   getLatestScore(): ytScoreItem {

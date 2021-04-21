@@ -14,13 +14,15 @@ import { NumberFormatPipe } from './pipe/number-format.pipe';
 import { CaretClassPipe } from './pipe/caret-class.pipe';
 import { MonthStringPipe } from './pipe/month-string.pipe';
 import { DetailsFilterService } from './services/details-filter-service.service';
+import {LoadingDelayModule} from "../../../_modules/loading-delay/loading-delay.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ChartModule,
-    TranslateModule,
-  ],
+    imports: [
+        CommonModule,
+        ChartModule,
+        TranslateModule,
+        LoadingDelayModule,
+    ],
   declarations: [
     YoutubeHomeComponent,
     YtScoreComponent,
