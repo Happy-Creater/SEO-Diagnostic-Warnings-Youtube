@@ -316,6 +316,9 @@ export class YtThematicReportItemComponent implements OnInit {
               enabled: true,
               lineWidth: 1
             }
+          },
+          marker: {
+            radius: 1
           }
         }
       },
@@ -347,7 +350,7 @@ export class YtThematicReportItemComponent implements OnInit {
         threshold: null
       }],
       lang: {noData: 'No data to display.'},
-      noData: {position: {align: 'left', verticalAlign: 'top'}},
+      noData: {position: {align: 'left', verticalAlign: 'top', fontSize: '10px', x: -10, width: '100px'}},
     };
   }
 

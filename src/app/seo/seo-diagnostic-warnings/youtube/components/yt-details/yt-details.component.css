@@ -505,7 +505,7 @@ span.name-tooltip {
 
 .confirm-body{
   background: rgb(82, 159, 251);
-  padding: 50px;
+  padding: 35px;
 }
 
 .confirm-content{
@@ -516,7 +516,7 @@ span.name-tooltip {
   background: transparent;
   border: 1px solid white;
   border-radius: 6px;
-  padding: 11px 36px;
+  padding: 8px 30px;
   font-size: 20px;
   font-family: 'Proxima Nova Light';
   color: white;
@@ -527,7 +527,7 @@ span.name-tooltip {
   font-size: 20px;
   background: white;
   border: 1px solid white;
-  padding: 11px 35px;
+  padding: 8px 30px;
   border-radius: 6px;
   color: #6b6b6b;
   font-family: 'Proxima Nova Light';

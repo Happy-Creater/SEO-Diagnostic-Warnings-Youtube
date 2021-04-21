@@ -54,6 +54,7 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
     {type: 12, label: 'Last 12 months'},
     {type: 0, label: 'Since beginning of the project'}
   ];
+  isLoading: boolean;
 
   constructor(
     private getYtService: GetYoutubeService,
@@ -71,10 +72,11 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
       this.websiteUrl = websiteItem.url;
       // this.webId = 71;
       // this.account = 'tollens';
-      // this.webId = 1269;
-      // this.account = 'new1';
-      this.webId = 96;
-      this.account = 'peugeotscooters';
+      this.webId = 1269;
+      this.account = 'new1';
+      // this.webId = 96;
+      // this.account = 'peugeotscooters';
+      this.isLoading = false;
       this.loadData();
     });
   }
@@ -86,12 +88,12 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
   loadData() {
     this.getYtService.getScore(this.webId, this.account)
       .pipe(takeUntil(this.unsubscribeAll$))
-      .subscribe((value => {
+      .toPromise().then(value => {
         this.ytScores = value;
         this.latestScore = this.getLatestScore();
         this.previousScore = this.getPreviousScore();
         this.getPeriodScore();
-      }));
+      });
 
     this.getYtService.getWarning(this.webId, this.account)
       .pipe(takeUntil(this.unsubscribeAll$))
