@@ -647,7 +647,6 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
             tooltipArray.push(' <b>' + point.y + '</b>');
           });
           return tooltipArray;
-
         },
         shared: true,
         animation: true,

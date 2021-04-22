@@ -73,7 +73,8 @@
           </div>
         </div>
         <div class="row" style="">
-          <app-yt-score [latestScore]="latestScore"
+          <app-yt-score *ngIf="latestScore && previousScore"
+                        [latestScore]="latestScore"
                         [previousScore]="previousScore"
                         [latestWarningProblem]="latestWarningProblem"
                         [previousWarningProblem]="previousWarningProblem">
