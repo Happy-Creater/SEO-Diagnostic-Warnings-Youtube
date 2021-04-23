@@ -5,13 +5,13 @@
       <div class="div" style="background: #fff;padding: 15px 0px;">
         <div style="padding: 00px 0 2px;" class="">
           <div class="row" style="">
-            <div class="col-md-6">
+            <div class="col-md-4">
               <h4>YOUTUBE PERFORMANCE
                 <a class="btn btn-circle btn-question" data-toggle="tooltip" data-placement="right"
                    title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a>
               </h4>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="col-md-8 text-right">
               <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
                         style="min-width: 155px;">
@@ -45,7 +45,7 @@
                       <span class="boxInput">
                         <input type="checkbox" name="radio_g" id="comu-g_{{i}}" [checked]="item.isActive"
                                [disabled]="item.label == 'Cumulative' && chartSource.value != 'warnings'">
-                        <label for="com9"></label>
+                        <label ></label>
                       </span>
                       {{item.label}}
                     </a>
@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="row" style="">
-          <app-yt-score *ngIf="latestScore && latestWarningProblem"
+          <app-yt-score *ngIf="!isLoading"
                         [latestScore]="latestScore"
                         [previousScore]="previousScore"
                         [latestWarningProblem]="latestWarningProblem"
@@ -90,20 +90,20 @@
         </div>
         <div>
           <div class="row" style="">
-            <app-yt-thematic-report *ngIf="latestScore && latestWarningProblem && periodWarningProblem"
+            <app-yt-thematic-report *ngIf="!isLoading "
                                     [latestScore]="latestScore" [previousScore]="previousScore"
                                     [latestWarningProblem]="latestWarningProblem"
                                     [previousWarningProblem]="previousWarningProblem"
                                     [warningProblem]="ytWarningProblems">
             </app-yt-thematic-report>
-            <app-yt-top-warnings *ngIf="warningTable" [warningData]="warningTable"></app-yt-top-warnings>
+            <app-yt-top-warnings *ngIf="!isLoading" [warningData]="warningTable"></app-yt-top-warnings>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <app-yt-details *ngIf="warningTable && warningTable.warningTableList"
+  <app-yt-details *ngIf="!isLoading"
                   [warningData]="warningTable.warningTableList"
                   (updateMetric)="updateMetric($event)"
                   >

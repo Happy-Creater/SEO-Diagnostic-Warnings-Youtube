@@ -129,6 +129,9 @@ export class YtDetailsComponent implements OnInit, AfterViewInit, OnDestroy, Aft
   }
 
   processData() {
+    if (this.warningData === null || this.warningData === undefined) {
+      return;
+    }
     this.warningData.map((value, index) => {
       this.totalItems[index] = this.init_Item();
       this.totalItems[index].evolution = value.evolution;

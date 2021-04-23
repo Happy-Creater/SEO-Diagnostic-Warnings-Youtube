@@ -23,6 +23,9 @@ export class YtTopWarningsComponent implements OnInit, AfterViewInit {
   }
 
   processData() {
+    if (this.warningData === undefined || this.warningData.warningTableList === null || this.warningData.warningTableList === undefined) {
+      return;
+    }
     this.topWarnings = this.warningData.warningTableList.filter(value => {
       return value.new;
     });

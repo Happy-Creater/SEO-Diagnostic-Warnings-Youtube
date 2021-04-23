@@ -94,7 +94,7 @@
 }
 
 .protab {
-  height: 10px;
+  min-height: 8px;
 }
 
 .progress {

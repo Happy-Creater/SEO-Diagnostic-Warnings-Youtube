@@ -76,8 +76,8 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
       this.websiteUrl = websiteItem.url;
       // this.webId = 71;
       // this.account = 'tollens';
-      this.webId = 1269;
-      this.account = 'new1';
+      // this.webId = 1269;
+      // this.account = 'new1';
       // this.webId = 96;
       // this.account = 'peugeotscooters';
 
@@ -90,7 +90,7 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
   }
 
   async loadData() {
-    this.isLoading = false;
+    this.isLoading = true;
     this.loading.show();
     try {
       await this.getYtService.getScore(this.webId, this.account)
@@ -228,7 +228,7 @@ export class YoutubeHomeComponent implements OnInit, AfterViewInit {
     this.unsubscribeAll$.complete();
   }
 
-  updateMetric(arg: pagedItem) {
+  updateMetric(arg) {
     const scanDate = arg.trend[0].scanDate;
     this.updateMetricService.updateMetric(this.webId, this.account, scanDate, arg.tableName).subscribe((value) => {
     });

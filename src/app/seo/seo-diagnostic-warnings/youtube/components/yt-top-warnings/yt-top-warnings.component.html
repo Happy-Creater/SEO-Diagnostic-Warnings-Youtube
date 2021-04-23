@@ -30,5 +30,8 @@
         </tr>
       </table>
     </div>
+    <div *ngIf="topWarnings === undefined || topWarnings.length === 0">
+      No data.
+    </div>
   </div>
 </div>

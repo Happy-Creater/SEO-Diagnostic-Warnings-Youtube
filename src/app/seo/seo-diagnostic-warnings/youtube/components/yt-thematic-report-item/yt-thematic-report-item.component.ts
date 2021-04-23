@@ -23,12 +23,12 @@ export class YtThematicReportItemComponent implements OnInit {
   option: Object;
   smallGraphOption: Object;
   bigGraphOption: Object;
-  warning = 0;
-  problem = 0;
-  score = 0;
-  warningEvolution = 0;
-  problemEvolution = 0;
-  scoreEvolution = 0;
+  warning: any;
+  problem: any;
+  score: any;
+  warningEvolution: any;
+  problemEvolution: any;
+  scoreEvolution: any;
   warningClass;
   problemClass;
   warningCaret;
@@ -47,6 +47,18 @@ export class YtThematicReportItemComponent implements OnInit {
   }
 
   processData() {
+    if  (this.latestWarningProblem === undefined) {
+      this.warning = '-';
+      this.warningEvolution = '-';
+      this.warningClass = 'c-gray';
+      this.problem = '-';
+      this.problemEvolution = '-';
+      this.problemClass = 'gray';
+      this.option = this.buildOption('NA', 'NA');
+      this.smallGraphOption = this.buildSmallGraph([]);
+      this.bigGraphOption = this.buildBigGraph(0, [], []);
+      return;
+    }
     this.processScore();
     this.processGraph();
     this.latestWarningProblem.categories.map(value => {
@@ -117,6 +129,11 @@ export class YtThematicReportItemComponent implements OnInit {
     smallGraphData = [];
     categories = [];
     let index = 0;
+    if ( this.warningProblem === undefined || this.warningProblem.length === 0) {
+      this.smallGraphOption = this.buildSmallGraph([]);
+      this.bigGraphOption = this.buildBigGraph(0, [], []);
+      return;
+    }
     this.warningProblem.map((value) => {
       const date = new Date(value.date);
 
@@ -141,25 +158,32 @@ export class YtThematicReportItemComponent implements OnInit {
   }
 
   buildOption(score, evolution) {
-    score = score * 100;
-    score = Math.ceil(score);
-    score = score / 100;
-    evolution = evolution * 100;
-    evolution = Math.ceil(evolution);
-    evolution = evolution / 100;
     let evl_color, back_color, score_color;
     let evl_text;
-    if (evolution > 0) {
-      evl_color = '#FF0D12';
-    } else if (evolution < 0) {
-      evl_color = '#3dd674';
-    } else if (evolution === 0) {
-      evl_color = '#6D6D6C';
-    }
-    evl_text = `<span style="color:${evl_color};font-size:10px;line-height: 20px;">{series.name}</span>`;
-
-    if (isNaN(evolution)) {
-      evl_text = `<span style="color: #6D6D6C;font-size: 10px;line-height: 20px;">-</span>`;
+    let evol_value;
+    let caret_class = evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down');
+    if ( !isNaN(score) && !isNaN(evolution)) {
+      score = score * 100;
+      score = Math.ceil(score);
+      score = score / 100;
+      evolution = evolution * 100;
+      evolution = Math.ceil(evolution);
+      evolution = evolution / 100;
+      if (evolution > 0) {
+        evl_color = '#FF0D12';
+      } else if (evolution < 0) {
+        evl_color = '#3dd674';
+      } else if (evolution === 0) {
+        evl_color = '#6D6D6C';
+      }
+      evol_value = evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1;
+      evl_text = `<span style="color:${evl_color};font-size:10px;line-height: 20px;">{series.name}</span>`;
+    } else {
+      evl_text = ``;
+      caret_class = '';
+      evol_value = '';
+      back_color = '#F2F2F2';
+      score_color = '#6D6D6C';
     }
 
     if (score >= 0 && score < 4) {
@@ -222,7 +246,7 @@ export class YtThematicReportItemComponent implements OnInit {
               textAlign: 'center'
             },
             // tslint:disable-next-line:max-line-length
-            pointFormat: `<span style="font-size:16px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
+            pointFormat: `<span style="font-size:16px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">${score}</span>` +
               `<br>${evl_text}`,
             positioner: function (labelWidth) {
               return {
@@ -248,13 +272,14 @@ export class YtThematicReportItemComponent implements OnInit {
 
       series: [{
         // tslint:disable-next-line:max-line-length
-        name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i><span style="font-size:10px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
+        name: `<i class="fa ${caret_class}" aria-hidden="false"></i><span style="font-size:10px;">
+                  ${evol_value}
                 </span>`,
         data: [{
           color: score_color,
           radius: '112%',
           innerRadius: '80%',
-          y: score
+          y: isNaN(score) ? 0 : score
         }]
       }],
       exporting: {enabled: false},

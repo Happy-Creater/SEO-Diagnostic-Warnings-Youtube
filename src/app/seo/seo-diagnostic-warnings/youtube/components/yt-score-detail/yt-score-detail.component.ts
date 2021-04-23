@@ -367,7 +367,7 @@ export class YtScoreDetailComponent implements OnInit, OnChanges {
       },
       lang: {noData: 'No data to display'},
       noData: {
-        position: {align: 'center', verticalAlign: 'middle', y: -27},
+        position: {align: 'center', verticalAlign: 'middle', y: -15, fontSize: '14px'},
         style: {
           fontSize: '16px',
           fontWeight: 'normal'

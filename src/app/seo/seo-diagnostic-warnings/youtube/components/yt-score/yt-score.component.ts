@@ -16,12 +16,12 @@ export class YtScoreComponent implements OnInit {
   @Input() previousWarningProblem: ytWarningProblem;
 
   option: Object;
-  score: number;
-  evolution: number;
-  warning: number;
-  warningEvolution: number;
-  problem: number;
-  problemEvolution: number;
+  score: any;
+  evolution: any;
+  warning: any;
+  warningEvolution: any;
+  problem: any;
+  problemEvolution: any;
   warningClass: string;
   problemClass: string;
 
@@ -34,13 +34,17 @@ export class YtScoreComponent implements OnInit {
   }
 
   processData() {
+    if (this.latestScore === undefined || this.latestWarningProblem === undefined) {
+      this.option = this.buildOption('NA', 'NA');
+      return;
+    }
     this.score = this.latestScore.globalTechnicalYouTubeScore;
     this.evolution = this.latestScore.globalTechnicalYouTubeScore - this.previousScore.globalTechnicalYouTubeScore;
-    this.option = this.buildOption(this.score, this.evolution);
     this.warning = this.latestWarningProblem.nbrWarnings;
     this.warningEvolution = this.warning - this.previousWarningProblem.nbrWarnings;
     this.problem = this.latestWarningProblem.nbrProblem;
     this.problemEvolution = this.problem - this.previousWarningProblem.nbrProblem;
+    this.option = this.buildOption(this.score, this.evolution);
     if (this.warningEvolution < 0) {
       this.warningClass = 'c-green';
     } else if (this.warningEvolution === 0) {
@@ -60,39 +64,50 @@ export class YtScoreComponent implements OnInit {
 
 
   buildOption(score, evolution) {
-    score = score * 100;
-    score = Math.ceil(score);
-    score = score / 100;
-    evolution = evolution * 100;
-    evolution = Math.ceil(evolution);
-    evolution = evolution / 100;
-    let evl_color, back_color, score_color;
+
+    let evl_color = '', back_color, score_color;
     let evol_text;
-    if (evolution > 0) {
-      evl_color = '#FF0D12';
-    } else if (evolution < 0) {
-      evl_color = '#3dd674';
-    } else if (evolution === 0) {
-      evl_color = '#6D6D6C';
-      // evol_text = '-';
+    let evol_value;
+    let caret_class = evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down');
+    if ( !isNaN(score) && !isNaN(evolution)) {
+      score = score * 100;
+      score = Math.ceil(score);
+      score = score / 100;
+      evolution = evolution * 100;
+      evolution = Math.ceil(evolution);
+      evolution = evolution / 100;
+      if (evolution > 0) {
+        evl_color = '#FF0D12';
+      } else if (evolution < 0) {
+        evl_color = '#3dd674';
+      } else if (evolution === 0) {
+        evl_color = '#6D6D6C';
+        // evol_text = '-';
+      }
+      if (score >= 0 && score < 4) {
+        score_color = '#ff0d12';
+        back_color = '#786c6c';
+      } else if (score >= 4 && score < 6) {
+        score_color = 'orange';
+        back_color = 'rgb(255,72,0,0.1)';
+      } else if (score >= 6 && score < 8) {
+        score_color = 'rgb(239,239,33)';
+        back_color = 'rgba(255,255,0,0.2)';
+      } else if (score >= 8 && score <= 10) {
+        back_color = '#dcefec';
+        score_color = '#3dd674';
+      }
+      evol_value = evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1;
+      evol_text = `<span style="color:${evl_color};font-size:15px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;">{series.name}</span></div>`;
+    } else {
+      evol_text = `<span style="font-size: 14px; color: #6D6D6C; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;"></span>`;
+      caret_class = '';
+      evol_value = '';
+      back_color = '#F2F2F2';
+      score_color = '#6D6D6C';
     }
-    evol_text = `<span style="color:${evl_color};font-size:15px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;">{series.name}</span></div>`;
-    if (isNaN(evolution)) {
-      evol_text = `<span style="font-size: 14px; color: #6D6D6C; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;">-</span>`;
-    }
-    if (score >= 0 && score < 4) {
-      score_color = '#ff0d12';
-      back_color = '#786c6c';
-    } else if (score >= 4 && score < 6) {
-      score_color = 'orange';
-      back_color = 'rgb(255,72,0,0.1)';
-    } else if (score >= 6 && score < 8) {
-      score_color = 'rgb(239,239,33)';
-      back_color = 'rgba(255,255,0,0.2)';
-    } else if (score >= 8 && score <= 10) {
-      back_color = '#dcefec';
-      score_color = '#3dd674';
-    }
+
+
     return {
       chart: {
         type: 'solidgauge',
@@ -138,7 +153,7 @@ export class YtScoreComponent implements OnInit {
               textAlign: 'center'
             },
             // tslint:disable-next-line:max-line-length
-            pointFormat: `<span style="font-size:30px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">{point.y}</span>` +
+            pointFormat: `<span style="font-size:30px; color: ${score_color}; font-weight: bold;font-family: Proxima Nova Light;">${score}</span>` +
               `<br>${evol_text}`,
             positioner: function (labelWidth) {
               return {
@@ -164,14 +179,14 @@ export class YtScoreComponent implements OnInit {
 
       series: [{
         // tslint:disable-next-line:max-line-length
-        name: `<i class="fa ${evolution > 0 ? 'fa-caret-up' : (evolution === 0 ? 'fa-caret-right' : 'fa-caret-down')}" aria-hidden="false"></i>
-                <span style="font-size:14px;">${evolution.toFixed(1) > 0 ? evolution.toFixed(1) : evolution.toFixed(1) * -1}
+        name: `<i class="fa ${caret_class}" aria-hidden="false"></i>
+                <span style="font-size:14px;">${evol_value}
                 </span>`,
         data: [{
           color: score_color,
           radius: '112%',
           innerRadius: '80%',
-          y: score
+          y: isNaN(score) ? 0 : score
         }]
       }],
       exporting: {enabled: false},

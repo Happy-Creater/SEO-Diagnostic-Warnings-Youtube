@@ -6,6 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class NumberFormatPipe implements PipeTransform {
 
   transform(value: number): any {
+    if (isNaN(value)) {
+      return '-';
+    }
+
     if (value < 0) {
       value =  value * (-1);
     }

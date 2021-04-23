@@ -57,6 +57,9 @@ export class YtThematicReportComponent implements OnInit, AfterViewInit {
   processData() {
     let channelWarning = 0, videoWarning = 0, playlistWarning = 0;
     let sum = 0;
+    if (this.warningProblem.length === 0 || this.warningProblem === undefined) {
+      return;
+    }
     this.warningProblem.map(value => {
       const date = new Date(value.date);
       this.categoryList.map((element, idx) => {
