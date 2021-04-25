@@ -1,6 +1,5 @@
 {
   "project": {
-    "version": "1.0.0-beta.30",
     "name": "pilot-monetoring-result-angular"
   },
   "apps": [
@@ -19,13 +18,17 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
         "../node_modules/angular2-lightbox/lightbox.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/highcharts/highcharts.js",
+        "../node_modules/highcharts/highcharts-more.js",
+        "../node_modules/highcharts/modules/solid-gauge.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
-        "dev": "environments/environment.ts"
+        "dev": "environments/environment.ts",
+        "angular-seo-youtube-monetoring": "environments/environment.angular-seo-youtube-monetoring.ts"
       }
     }
   ],
@@ -51,18 +54,16 @@
   },
   "defaults": {
     "styleExt": "css",
-    "prefixInterfaces": false,
-    "inline": {
-      "style": false,
-      "template": false
+    "class": {
+      "spec": false
     },
-    "spec": {
-      "class": false,
-      "component": true,
-      "directive": true,
-      "module": false,
-      "pipe": true,
-      "service": true
+    "component": {
+      "spec": true,
+      "inlineStyle": false,
+      "inlineTemplate": false
     }
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }

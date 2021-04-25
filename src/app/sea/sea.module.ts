@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 import { SeaComponent } from './sea.component';
 import { GaugeCustomChartModule } from '../_modules/highchart/gauge-custom-chart/gauge-custom-chart.module';
 import { SeaRoutingModule } from './sea-routing.module';
 import { ChartModule } from 'angular2-highcharts';
 import { ModalModule } from 'ngx-modialog';
 import { BootstrapModalModule } from 'ngx-modialog/plugins/bootstrap';
-import { MenuModule } from "../_modules/menu/menu.module";
+import { MenuModule } from '../_modules/menu/menu.module';
 import { DDCustomModule } from '../_modules/dd-custom/dd-custom.module';
 import { ClickOutsideModule } from '../_modules/click-outside/click-outside.module';
 import { DropdownModule } from '../_modules/dropdown/dropdown.module';
@@ -48,12 +48,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { FirstTextModule } from 'app/_modules/first-text/first-text.module';
 import { SeaKeywordsSearchtermsComponent } from './sea-keywords/sea-keywords-searchterms/sea-keywords-searchterms.component';
 import { LoadingDelayModule } from 'app/_modules/loading-delay/loading-delay.module';
-import { SeoDiagnosticWarningsSharedModule } from 'app/seo/seo-diagnostic-warnings/seo-diagnostic-warnings-shared.module';
 import { SeaGlobalFilterComponent } from './sea-global-filter/sea-global-filter.component';
 import { MultiselectDropdownModule } from 'app/_modules/multiselect-dropdown/multiselect-dropdown.module';
 import { MyDatePickerModule } from 'mydatepicker';
 import { SeaSearchTermsAnalysisModule } from './sea-keywords/sea-keywords-searchterms-analysis/sea-keywords-searchterms-analysis.module';
 import { SearchVirtualDropdownModule } from 'app/_modules/search-virtual-dropdown/search-virtual-dropdown.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -87,7 +87,6 @@ import { SearchVirtualDropdownModule } from 'app/_modules/search-virtual-dropdow
     TooltipModule.forRoot(),
     FirstTextModule,
     LoadingDelayModule,
-    SeoDiagnosticWarningsSharedModule,
     MultiselectDropdownModule,
     MyDatePickerModule,
     SeaSearchTermsAnalysisModule,
@@ -111,11 +110,11 @@ import { SearchVirtualDropdownModule } from 'app/_modules/search-virtual-dropdow
     SeaKeywordsSearchtermsComponent,
     SeaGlobalFilterComponent
   ],
-  entryComponents: [
-  ],
+  entryComponents: [],
   providers: [
     SeaCalendarService,
     ModalUtilService
   ]
 })
-export class SeaModule { }
+export class SeaModule {
+}

@@ -22,7 +22,7 @@
     "label-position": true,
     "max-line-length": [
       true,
-      140
+      340
     ],
     "member-access": false,
     "member-ordering": [
@@ -65,7 +65,7 @@
     ],
     "prefer-const": true,
     "quotemark": [
-      true,
+      false,
       "single"
     ],
     "radix": true,
@@ -102,8 +102,8 @@
     "component-selector": [true, "element", "app", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
+    "use-host-property-decorator": false,
+    "no-input-rename": false,
     "no-output-rename": true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,

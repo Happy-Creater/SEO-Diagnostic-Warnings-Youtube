@@ -27,7 +27,10 @@ const routes = [
       { path: 'overview', component: SeaOverviewComponent },
       { path: 'information', component: SeaInformationComponent },
       { path: 'structure', component: SeaStructureComponent },
-      { path: 'warnings', component: SeaDiagnosticWarningsComponent },
+      {
+        path: 'warnings',
+        loadChildren: '../seo/seo-diagnostic-warnings/seo-diagnostic-warnings.module#SeoDiagnosticWarningsModule',
+      },
       { path: 'searchterms', component: SeaKeywordsSearchtermsComponent },
       { path: 'opportunities', component: SeaKeywordsOpportunitiesComponent },
       { path: 'sea-keywords-seo-sea-synergy', component: SeoSeaSynergyComponent },

@@ -1,0 +1,28 @@
+table.table-top-warning tr {}
+
+table.table-top-warning tr td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  font-weight: bold
+}
+
+.box-table-top-warning {
+  border: 1px solid #ECEEF2;
+  border-radius: 7px;
+  margin-bottom: 5px;
+  padding-right: 15px;
+}
+
+.span-bg-unset {
+  background: unset !important;
+  border: 2px solid #ECEEF2 !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  padding: 8px 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}

@@ -1,0 +1,407 @@
+<div [hidden]="!showDetail">
+  <div class="row boxID" id="Detail-yt">
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+      <div style="padding: 15px 0px 0px;">
+        <div class="row" style="">
+          <div class="col-md-4" style="padding: 0">
+            <h4>YOUTUBE DETAILS <a class="btn btn-circle btn-question" data-toggle="tooltip"
+                                   data-placement="right"
+                                   title="This chart shows the performance of your competitors in three dimensions (TrustFlow, Referring domains and Indexed webpages).">?</a>
+            </h4>
+          </div>
+          <div class="col-md-8 text-right" style="padding: 0">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="font-family: 'Proxima Nova Light';min-width: 145px;">
+                <span
+                  class="ladb">{{ selectedCategory ? categories[selectedCategory].label : 'All subcategories'}}</span>&nbsp;
+
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
+              </button>
+              <ul class="dropdown-menu dpmenu psdo">
+                <li class="dropdown-item"><a style="font-family: 'Proxima Nova Light';padding-left: 10px !important"
+                                             (click)="selectCategory()">All subcategories</a></li>
+                <li class="dropdown-item"><a style="font-family: 'Proxima Nova Light';padding-left: 10px !important"
+                                             (click)="selectCategory('Channel')">Channel</a></li>
+                <li class="dropdown-item"><a style="font-family: 'Proxima Nova Light';padding-left: 10px !important"
+                                             (click)="selectCategory('Video')">Videos</a></li>
+                <li class="dropdown-item"><a style="font-family: 'Proxima Nova Light';padding-left: 10px !important"
+                                             (click)="selectCategory('Playlist')">Playlists</a></li>
+              </ul>
+            </div>
+            &nbsp;&nbsp;
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="font-family: 'Proxima Nova Light';width: 130px;">
+                <span class="ladb">{{ labelFormat(labels)}}</span>&nbsp;
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
+              </button>
+              <ul class="dropdown-menu dpmenu psdo" style="width: auto;">
+                <li class="dropdown-item" *ngFor="let item of labels;index as i" (click)="toggleLabel(i)">
+                  <a class="click" style="cursor: pointer;">
+                    <span class="boxInput">
+                      <input type="checkbox" id="com9" [checked]="item.toggled" name="table">
+                      <label for="com9"></label>
+                    </span>
+                    {{item.label}}
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            &nbsp;&nbsp;
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="font-family: 'Proxima Nova Light';min-width: 120px;">
+                <span class="ladb">{{problemFilterName ? problemFilterName : 'All problems'}}</span>&nbsp;
+
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
+              </button>
+              <ul class="dropdown-menu  dpmenu psdo">
+                <li (click)="selectProblemState(null)" class="dropdown-item">
+                  <a class="click"
+                     style="cursor: pointer;font-family: 'Proxima Nova Light';padding-left: 10px !important">
+                    &nbsp;&nbsp;{{'All problems' | translate}}
+                  </a>
+                </li>
+                <li (click)="selectProblemState('up')" class="dropdown-item">
+                  <a class="click"
+                     style="cursor: pointer;font-family: 'Proxima Nova Light';padding-left: 10px !important">
+                    <i class="fa fa-caret-up c-red" aria-hidden="true"></i>&nbsp;&nbsp;{{'Increasing' | translate}}
+                  </a>
+                </li>
+                <li (click)="selectProblemState('down')" class="dropdown-item">
+                  <a class="click"
+                     style="cursor: pointer;font-family: 'Proxima Nova Light';padding-left: 10px !important">
+                    <i class="fa fa-caret-down c-green" aria-hidden="true"></i>&nbsp;&nbsp;{{'Decreasing' | translate}}
+                  </a>
+                </li>
+                <li (click)="selectProblemState('stable')" class="dropdown-item">
+                  <a class="click"
+                     style="cursor: pointer;font-family: 'Proxima Nova Light';padding-left: 10px !important">
+                    <i class="fa fa-caret-right c-gray" aria-hidden="true"></i>&nbsp;&nbsp;{{'Stable' | translate}}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            &nbsp;&nbsp;
+            <div style="display: inline-block">
+              <a href="" class="btn dropdown-toggle but-drop" style="background: none">
+                <span class="" style="background: #fff;padding: 1px 5px;">
+                  <img src="../../../../../../assets/images/excel.png" alt="" style="width: 25px;">
+                </span>
+              </a>
+            </div>
+            &nbsp;&nbsp;
+            <div style="display: inline-block">
+              <button class="click-detail deshow b-c-de" (click)="hide()" data-id="Detail-g">X</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="" style="margin-bottom: 0px;padding: 0px 0px 15px;">
+        <table id="example" class="table" style="width:100%">
+          <thead style="opacity: 0;position: absolute;">
+          <tr class="thead-light">
+            <th style=""></th>
+            <th style=""></th>
+            <th style=""></th>
+            <th style=""></th>
+            <th style=""></th>
+            <th style=""></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="thead-light">
+            <td style="width:20%; cursor:pointer;" class="table-detail" (click)="sortWarning('warning')">
+              <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
+                WARNING
+                <i class="fa" [ngClass]="{'fa-angle-down': warningUp,'fa-angle-up': warningUp == false}"></i>
+                <div class="tooltiptexts" style="width: 300px;height: auto;left: 7px;">
+                  <div class="scroll" style="word-break: normal">
+                    Name of the warning (with mouse over there is a description for each warning)
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td style="width:9%;cursor: pointer;" class="table-detail" (click)="sortWarning('severity')">
+              <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
+                SEVERITY
+                <i class="fa" [ngClass]="{'fa-angle-down': severityUp,'fa-angle-up': severityUp == false}"></i>
+                <div class="tooltiptexts" style="width: 252px;height: auto;left: -55px;">
+                  <div class="scroll" style="word-break: normal">
+                    Importance of the warning,  in a scale of 1 to 10
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td style="width:13%;cursor: pointer;" class="table-detail"
+                (click)="sortWarning('problem')">
+              <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
+                PROBLEM
+                <i class="fa" [ngClass]="{'fa-angle-down': problemUp,'fa-angle-up': problemUp == false}"></i>
+                <div class="tooltiptexts" style="width: 266px; height: auto; left: -23px;">
+                  <div class="scroll" style="word-break: normal">
+                    Number of problems (URLs) concerned by this warning
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td style="width:14%;" class="table-detail">
+              <div class="tooltip-star f-bold name-tooltip" style="cursor: default;">
+                TREND
+                <div class="tooltiptexts" style="width: 221px;height: auto;left: 2px;">
+                  <div class="scroll" style="word-break: normal">
+                    Evolution of problems since the beginning of the project
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td style="width:14%;" class="table-detail"
+                (click)="sortWarning('status')">
+              <div class="tooltip-star f-bold name-tooltip" style="cursor: pointer;">
+                STATUS
+                <i class="fa" [ngClass]="{'fa-angle-down': statusUp,'fa-angle-up': statusUp == false}"></i>
+                <div class="tooltiptexts" style="width: 225px;height: auto;left: -3px;">
+                  <div class="scroll" style="word-break: normal">
+                    Progress of the resolution of the warning
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td style="width:29%;" class="table-detail">
+              <div class="tooltip-star f-bold name-tooltip" style="cursor: default;">
+                RECOMMENDATION
+                <div class="tooltiptexts" style="width: 252px;height: auto;left: 108px;">
+                  <div class="scroll" style="word-break: normal">
+                    Actions to do to resolve the warning
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <ng-container *ngFor="let item of pagedItems;index as i">
+            <tr [ngClass]="{'item-selected': item.setBold}">
+              <td class="text-left">
+                <div style="width: 20%;float: left;">
+                    <span class="btn btn-default btn-circle span-bg-unset"
+                          style="background: unset;border:2px solid #ECEEF2;cursor: unset;margin-left: 0 !important;">
+                      <img src="assets/images/icon-warning-4/{{categories[item.category].image}}"
+                           alt="" style="height: 21px;">
+                    </span>
+                </div>
+                <div class="warning-item-name" >
+                  <span class="f-bold texttoggle"
+                        style="font-size: 10px;text-transform: uppercase;"
+                        data-toggle="modal"
+                        data-target="#confirmModal"
+                        (click)="toggleConLabel(item,i)">{{item.typeCategorie}}</span>&nbsp;&nbsp;
+                  <span *ngIf="item.new" class="c-blue f-bold" style="font-size: 10px;">NEW!</span>
+                  <br>
+                  <span class="f-bold" class="warning-item-msg" data-toggle="tooltip" data-placement="right" title="{{item.warningHelpMsg}}">{{item.warningName}}</span>
+                </div>
+
+              </td>
+              <td>
+                <div style="position: relative">
+                    <span
+                      style="border-left: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: -2px;left: 0;"></span>
+                  <span class="label"
+                        [ngClass]="{'label-danger': item.severity>6,'label-warning':item.severity<7}">{{item.severity}}
+                    <span
+                      class="f10">/10</span></span>
+                  <span
+                    style="border-right: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: -2px;right: 0;"></span>
+                </div>
+
+              </td>
+              <td class="f-bold">
+                <div style="position: relative">
+                  <span title="{{item.warningNumber}}">{{ item.warningNumber | numberFormat}}&nbsp;&nbsp;</span>
+                  <i class="fa"
+                     [ngClass]="{'fa-caret-up c-red': item.evolution > 0, 'fa-caret-down c-green':item.evolution < 0,'fa-caret-right c-gray':item.evolution == 0}"
+                     aria-hidden="true"></i> &nbsp;&nbsp;
+                  <span class="click-eye" (click)="showItemDetails(item)" [ngClass]="{'ac-text': item.showDetails && !item.hideDetails, 'gray-eye': item.hideDetails}"  id="click-eye-51" data-id="51"
+                        style="vertical-align: bottom;font-size: 18px;cursor: pointer;"
+                        data-toggle="tooltip" data-placement="right" title="{{item.problemTooltip}}">
+                            <i class="fa fa-eye" aria-hidden="true" style="vertical-align: bottom;"></i></span>&nbsp;&nbsp;
+                  <a href="{{item.filename}}" class="c-gray">
+                    <img src="../../../../../../assets/images/icon_download.png" alt=""
+                         style="width: 15px;margin-top: -2px;">
+                  </a>
+
+                </div>
+              </td>
+              <td>
+                <div class="ter" style="width: 150px;margin: 0 auto;">
+                    <span style="border-left: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: 10px;left: 0;"></span>
+                    <chart id="smGraph59" class="smallTrendGraph"  *ngIf="item.smallGraphOption"
+                             [options]="item.smallGraphOption" data-toggle="modal" (click)="selectModelData(item)"
+                           data-target="#myModal1" style="cursor: pointer;"></chart>
+                  <span style="border-right: 1px solid #E2E9EF;height: 15px;display: block;position: absolute;top: 10px;right: 0;"></span>
+                </div>
+              </td>
+              <td>
+                <div style="position: relative;display: flex;padding-right: 0px;margin: 0 auto;">
+                  <div style="width: 80%;float: left;padding-top: 4px;">
+                    <div class="progress">
+                      <div class="progress-bar" *ngIf="item.percentage" [ngStyle]="item.percentage"
+                           style="margin-top: -5px;"></div>
+                    </div>
+                  </div>
+                  <div class="f-bold"
+                       style="width: 20%;float: left;text-align: right;padding: 0 0px 0 10px;font-size: 12px;margin-top: 11px;">
+                    {{item.percentage.width}}
+                  </div>
+                </div>
+
+              </td>
+              <td style="overflow: hidden; width:30%">
+                <div [ngClass]="{'arrow-up': item.showRecomendation && !item.hideRecommendation,'arrow-down':!item.showRecomendation && !item.hideRecommendation}"
+                     (click)="toggleRecomendation(item, i)" class="bb-bx" id="topbar{{i}}">
+                    <span
+                      [ngStyle]="{'top': !item.hideRecommendation ? '9px': '0px','border-left': '1px solid #E2E9EF','height': '15px', 'display': 'block',
+                      'position': 'absolute', 'left': '0'}" id="border{{i}}"></span>
+                  <div class="content" id="content{{i}}">
+                    {{item.recommendation}}
+                    <span class="io"></span>
+                  </div>
+                  <span class="click-recomment" *ngIf="!item.hideRecommendation"
+                        style="position: absolute;right:-5px;top:24px;transform: translate(-50%, -50%);cursor: pointer;font-size: 12px;"
+                        id="arrow{{i}}">
+                      <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 16px;"></i>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr class="bb-table-51" [hidden]="!item.showDetails">
+              <td colspan="6">
+                <div class="text-left" style="padding: 10px 10px 0;">
+                  <div style="position: relative;">
+                    <div style="display: inline-block;">Sample of problems</div>
+                    <div style="display: inline-block;float: right;">
+                      <span style="font-size:12px">To see all the details, please download the excel file.</span>
+                      <a href="" class="c-gray" style="padding: 0 10px">
+                        <img src="../../../../../../assets/images/icon_download.png" alt="" style="width: 15px;margin-top: -2px;">
+                      </a>
+                      <span (click)="item.showDetails = false" class="close-box-table" data-id="51">X</span>
+                    </div>
+                  </div>
+                  <div style="padding-top: 5px;">
+                    <ul style="padding-left: 15px;">
+                      <li *ngFor="let detail of item.details">
+                        <a href="{{detail}}" target="_blank">{{detail}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </ng-container>
+          <tr *ngIf="pagedItems.length == 0" style="width: 100%;text-align: center;">
+            <td  class="text-center" colspan="6">No data</td></tr>
+          </tbody>
+
+        </table>
+        <div>
+          <div class="text-right">
+            Show row &nbsp;&nbsp;
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                      style="min-width: 70px;">
+                <span class="ladb1" style="position: absolute;left: 10px;">{{pageSize}}</span>&nbsp;
+                <span class="btn btn-default btn-circle"
+                      style="background: unset;border:2px solid #ECEEF2;position: absolute;     right: 6px;top: 6px;"><i
+                  class="fa fa-angle-down" aria-hidden="true"></i></span>
+              </button>
+              <ul class="dropdown-menu" style="min-width: 70px;">
+                <li class="dropdown-item"><a (click)="setPageSize(10)">10</a></li>
+                <li class="dropdown-item"><a (click)="setPageSize(25)">25</a></li>
+                <li class="dropdown-item"><a (click)="setPageSize(50)">50</a></li>
+                <li class="dropdown-item"><a (click)="setPageSize(100)">100</a></li>
+              </ul>
+            </div>
+            &nbsp;&nbsp;{{start + 1}} - {{end}} - {{totalLength}} &nbsp;&nbsp;
+
+            <span class="btn btn-default btn-circle" (click)="prevPage()"
+                  style="width: 23px;height: 24px;background: #fff">
+										<i class="fa fa-angle-left" aria-hidden="true"></i>
+									</span>&nbsp;
+            <span class="btn btn-default btn-circle" (click)="nextPage()"
+                  style="width: 23px;height: 24px;background: #fff">
+										<i class="fa fa-angle-right" aria-hidden="true"></i>
+									</span>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="border:none;padding: 15px 25px;">
+        <h5>PROBLEMS EVOLUTION - <span class="vvwarning">{{warningName}}</span></h5>
+        <div style="position: absolute;top: 15px;right: 54px;">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle but-drop" type="button" data-toggle="dropdown"
+                    [ngStyle]="period.type==0 && {'min-width':'210px' }">
+              <span class="ladb">{{period.label}}</span>&nbsp;
+              <span class="btn btn-default btn-circle"
+                    style="background: unset;border:2px solid #ECEEF2;position: absolute;right: 6px;top: 6px;"><i
+                class="fa fa-angle-down" aria-hidden="true"></i></span>
+            </button>
+            <ul class="dropdown-menu dpmenu psdo">
+              <li class="dropdown-item" *ngFor="let item of periodList; index as i" (click)="setPeriod(i)"><a
+                style="padding-left: 10px !important">{{item.label}}</a></li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal"
+                style="font-size: 14px;color: #6b6b6b;opacity: 1;font-weight: 100;margin-top: -25px !important;">X
+        </button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <chart *ngIf="modelOption" [options]="modelOption" id="container-line-3" class="bg-watermark" style="display:block; width: 100% !important;">
+          </chart>
+          <div class="box-bg-logo">
+            <img src="../../../../../../assets/images/watermark.png" alt="" style="width:150px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="confirmModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content confirm-content">
+      <div class="modal-header" style="border:none;padding: 15px 25px;">
+        <h3 class="confirm-title">Confirmation</h3>
+        <button type="button" class="close" data-dismiss="modal"
+                style="font-size: 14px;color: #6b6b6b;opacity: 1;font-weight: 100;margin-top: -36px !important;">X
+        </button>
+
+        <div style="margin-top: 70px;">
+          <span>Are you sure you want to change label type?</span>
+        </div>
+      </div>
+      <div class="confirm-body">
+        <button class="confirm-ok" (click)="changeLabel(toggleLabelItem)" data-dismiss="modal">OK</button>
+        <button class="confirm-cancel" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.box-bg-logo-b,.box-bg-logo-c,.box-bg-logo-d,.box-bg-logo-e,.box-bg-logo-f,.box-bg-logo-g,.box-bg-logo-h,.box-bg-logo-i {
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /*	transition: 1s;*/
+}
