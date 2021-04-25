@@ -27,6 +27,7 @@ export const SERVICES = {
     "piracy_content_duplication_interface": `${API_M}/duplicate_external_text/1.0`,
     "global_search_vision": `${API_M}/New2WebServiceGlobalSearchVision`,
     "offline_comparison": `${API_M}/offline_comparison`,
+    "manage_user": `${API_M}/New2WebServiceSettingUsers/1.0`,
 };
 
 export const MONETORING_TYPE: string = environment.MONETORING_TYPE; // test, demo, normal

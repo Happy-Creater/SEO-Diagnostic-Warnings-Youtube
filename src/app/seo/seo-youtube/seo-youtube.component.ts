@@ -46,66 +46,19 @@ export class SeoYoutubeComponent {
 
   ngAfterViewInit() {
 
-    if (environment.MONETORING_TYPE == 'demo') {
-      this.channelYoutube.init("new1", 1);
-      // this.channelYoutube.init("new1", 1151);
-      this.unsubscribeChannelYoutube = this.channelYoutube.initChannelYoutube
-        .subscribe((mList) => {
-          if (mList[0] != null && mList[0].id != undefined) {
-            this.channelYoutubeValueList = mList;
-
-            this.renderDropDownChannelYoutube(this.channelYoutubeValueList);
-            this.channelYoutube.setChannelYoutube(this.channelYoutubeValueList[0]);
-            this.channelYoutubeSelected = this.channelYoutubeValueList[0].id;
-
-            /** About calendar */
-            this.validateDateYoutube();
-            /**============= */
-          }
-        });
-    }
+   
 
     this.unsubscribeGlobalVariable = this.globalVariable.websiteChange
       .subscribe((value) => {
-        // console.log('Web change.');
         if (value !== null) {
-
-          // if (this.unsubscribeChannelYoutube != null) {
-          //   this.unsubscribeChannelYoutube.unsubscribe();
-          // }
-          // this.channelYoutube.init(value.account, value.webId);
-          // this.channelYoutube.init("new1", 1151);
-          // console.log('Web change 2.');
           this.createChannelYoutubeSelected();
-          // this.unsubscribeChannelYoutube = this.channelYoutube.initChannelYoutube
-          //   .subscribe((mList) => {
-          //     this.isSubscribe = true;
-
-          //     if (this.isSubscribe) {
-          //       if (mList != null && mList[0] != null && mList[0].id != undefined) {
-          //         this.channelYoutubeValueList = mList;
-
-          //         this.renderDropDownChannelYoutube(this.channelYoutubeValueList);
-          //         this.channelYoutube.setChannelYoutube(this.channelYoutubeValueList[0]);
-          //         this.channelYoutubeSelected = this.channelYoutubeValueList[0].id;
-
-          //         /** About calendar */
-          //         this.validateDateYoutube();
-          //         /**============= */
-          //       }
-          //     }
-
-          //   });
         }
       });
 
     if (!this.isSubscribe) {
-      // console.log('Web isSubscribe 1.');
       this.unsubscribeGlobalVariable = this.globalVariable.websiteChange
         .subscribe((value) => {
-          // console.log('Web isSubscribe 2.');
           if (value !== null) {
-            // console.log('Web isSubscribe 3.');
             this.channelYoutube.init(value.account, value.webId);
           }
           this.createChannelYoutubeSelected();
@@ -115,19 +68,16 @@ export class SeoYoutubeComponent {
   }
 
   createChannelYoutubeSelected() {
-    // console.log('Web createChannelYoutubeSelected 1.');
     this.unsubscribeChannelYoutube = this.channelYoutube.initChannelYoutube
       .subscribe((mList) => {
         this.isSubscribe = true;
-        // console.log('Web createChannelYoutubeSelected 2.');
         if (this.isSubscribe) {
-          // console.log('Web createChannelYoutubeSelected 3.');
           if (mList != null && mList[0] != null && mList[0].id != undefined) {
             this.channelYoutubeValueList = mList;
 
             this.renderDropDownChannelYoutube(this.channelYoutubeValueList);
             this.channelYoutube.setChannelYoutube(this.channelYoutubeValueList[0]);
-            this.channelYoutubeSelected = this.channelYoutubeValueList[0].id;
+            this.channelYoutubeSelected = this.channelYoutubeValueList[0].id;//example web youtube id
 
             /** About calendar */
             this.validateDateYoutube();
@@ -153,15 +103,9 @@ export class SeoYoutubeComponent {
   itemChannelYoutubeOption: DropdownItem[];
 
   onChannelYoutubeChange(channelYoutubeIdSelected) {
-    // console.log('EVENT YOUTUBE onChannelYoutubeChange,');
-    // console.log(channelYoutubeIdSelected);
 
     for (let tmp of this.channelYoutubeValueList) {
       if (tmp.id == channelYoutubeIdSelected) {
-        // console.log('1. select ');
-        // console.log(tmp);
-        // console.log('2. select ');
-        // console.log(this.channelYoutubeSelected);
         this.channelYoutube.setChannelYoutube(tmp);
         this.channelYoutubeSelected = channelYoutubeIdSelected;
 
@@ -175,8 +119,7 @@ export class SeoYoutubeComponent {
 
   renderDropDownChannelYoutube(mList) {
 
-    // console.log('>>>>>>>>>>> RENDER YOUTUBE DROPDOWN');
-    // console.log(mList);
+
 
     let dropDownTmp: TmpItem[] = new Array();
     for (let tmp of mList) {
@@ -204,9 +147,6 @@ export class SeoYoutubeComponent {
         .set('module', 'youtube');
       this.request.get(`${config.SERVICES.manage_calendar}/calendar/get_scan_date_specific_module`, urlSearchParams)
         .finally(() => {
-          // console.log('this.firstScanDate::' + this.firstScanDate);
-          // console.log('this.lastScanDate::' + this.lastScanDate);
-          // console.log('this.current::' + this.current);
           this.setCalendarDateYoutube();
         })
         .subscribe(res => {
